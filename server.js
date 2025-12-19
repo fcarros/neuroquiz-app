@@ -9,6 +9,15 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
+// 1. Decirle a Express que sirva los archivos estáticos de la carpeta actual
+app.use(express.static(__dirname));
+
+// 2. Ruta explícita para la página principal
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// ----------------------
 const server = http.createServer(app);
 const io = new Server(server);
 const upload = multer({ dest: 'uploads/' });
@@ -273,3 +282,4 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
