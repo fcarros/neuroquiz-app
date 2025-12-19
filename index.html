@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroQuiz - AI Powered Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+
+    <div class="container mx-auto px-4 max-w-6xl text-center">
+        <!-- Logo -->
+        <h1 class="text-9xl font-extrabold mb-12 neon-text tracking-tighter">
+            NEURO<span class="text-blue-500">QUIZ</span>
+        </h1>
+
+        <!-- VIEW: LANDING -->
+        <div id="view-landing" class="glass-panel p-16 space-y-12 animate-fade-in">
+            <h2 class="text-5xl font-black mb-12 text-gray-300 tracking-tight">CHOOSE YOUR ROLE</h2>
+            <div class="flex flex-col md:flex-row gap-12 justify-center">
+                <button onclick="showHostSetup()"
+                    class="btn-primary text-5xl py-12 px-24 font-black tracking-widest hover:scale-105 transition-transform shadow-[0_0_40px_rgba(59,130,246,0.5)]">
+                    HOST
+                </button>
+                <button onclick="showPlayerJoin()"
+                    class="btn-secondary text-5xl py-12 px-24 font-black tracking-widest hover:scale-105 transition-transform shadow-[0_0_40px_rgba(168,85,247,0.5)]">
+                    JOIN
+                </button>
+            </div>
+        </div>
+
+        <!-- VIEW: HOST SETUP -->
+        <div id="view-host-setup" class="glass-panel p-16 hidden">
+            <h2 class="text-6xl font-black mb-12">UPLOAD MATERIAL</h2>
+            <p class="text-gray-300 text-3xl mb-12">Upload a PDF and AI will generate the quiz.</p>
+
+            <form id="upload-form" class="space-y-12">
+                <div class="grid grid-cols-3 gap-8">
+                    <div>
+                        <label class="block text-left text-gray-400 mb-4 text-3xl font-bold uppercase">Questions</label>
+                        <input type="number" id="num-questions" min="3" max="20" value="10"
+                            class="w-full px-8 py-8 rounded-2xl bg-gray-800 border-4 border-blue-500/30 focus:border-blue-500 focus:outline-none text-white text-center text-5xl font-black shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all" />
+                    </div>
+                    <div>
+                        <label
+                            class="block text-left text-gray-400 mb-4 text-3xl font-bold uppercase">Difficulty</label>
+                        <select id="difficulty"
+                            class="w-full px-8 py-8 rounded-2xl bg-gray-800 border-4 border-blue-500/30 focus:border-blue-500 focus:outline-none text-white text-center text-4xl font-black shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
+                            <option value="Easy">Easy</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-left text-gray-400 mb-4 text-3xl font-bold uppercase">Time (s)</label>
+                        <select id="time-limit"
+                            class="w-full px-8 py-8 rounded-2xl bg-gray-800 border-4 border-blue-500/30 focus:border-blue-500 focus:outline-none text-white text-center text-4xl font-black shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all">
+                            <option value="10">10s</option>
+                            <option value="15">15s</option>
+                            <option value="20" selected>20s</option>
+                            <option value="30">30s</option>
+                            <option value="45">45s</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="file" id="pdf-input" accept=".pdf" class="block w-full text-2xl text-gray-300
+                  file:mr-8 file:py-6 file:px-12
+                  file:rounded-full file:border-0
+                  file:text-2xl file:font-black
+                  file:bg-blue-600 file:text-white
+                  hover:file:bg-blue-700
+                  cursor-pointer
+                " />
+                <button type="submit"
+                    class="btn-primary w-full text-5xl py-8 font-black tracking-widest hover:scale-[1.02] shadow-[0_0_50px_rgba(59,130,246,0.6)]">GENERATE
+                    QUIZ</button>
+            </form>
+            <div id="loading" class="hidden mt-12 flex flex-col items-center">
+                <div class="loader mb-6 scale-[2.5]"></div>
+                <p class="text-3xl animate-pulse font-bold mt-4">Analyzing Neural Patterns...</p>
+            </div>
+        </div>
+
+        <!-- VIEW: HOST LOBBY -->
+        <!-- VIEW: HOST LOBBY -->
+        <div id="view-host-lobby" class="glass-panel p-12 hidden">
+            <h2 class="text-3xl text-gray-400 uppercase tracking-[0.2em] mb-4">Join at neuroquiz.com with PIN:</h2>
+            <div id="lobby-pin"
+                class="text-[10rem] leading-none font-mono font-black text-white mb-12 tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+                Loading...</div>
+
+            <div class="mb-16">
+                <h3 class="text-4xl font-bold mb-8 text-gray-300">Players Ready: <span id="player-count"
+                        class="text-white">0</span></h3>
+                <div id="players-list" class="flex flex-wrap gap-6 justify-center">
+                    <!-- Player badges go here -->
+                </div>
+            </div>
+
+            <button onclick="startGame()"
+                class="btn-primary text-6xl font-black py-12 px-24 w-full shadow-[0_0_60px_rgba(59,130,246,0.6)] hover:scale-[1.02] transition-transform tracking-widest">START
+                GAME 🚀</button>
+        </div>
+
+        <!-- VIEW: PLAYER JOIN -->
+        <div id="view-player-join" class="glass-panel p-8 hidden">
+            <h2 class="text-4xl font-bold mb-8">Enter Game Details</h2>
+            <div class="space-y-6 max-w-lg mx-auto">
+                <input type="text" id="join-pin" placeholder="Game PIN"
+                    class="w-full h-24 px-8 rounded-2xl bg-gray-800 border-4 border-gray-700 focus:border-blue-500 focus:outline-none text-white text-center text-5xl font-black tracking-[0.2em] shadow-lg">
+                <input type="text" id="join-name" placeholder="Nickname"
+                    class="w-full h-24 px-8 rounded-2xl bg-gray-800 border-4 border-gray-700 focus:border-purple-500 focus:outline-none text-white text-center text-5xl font-bold shadow-lg">
+                <button onclick="joinGame()"
+                    class="btn-secondary w-full text-4xl py-8 font-black tracking-widest hover:scale-105 shadow-[0_0_30px_rgba(168,85,247,0.4)]">ENTER</button>
+            </div>
+        </div>
+
+        <!-- VIEW: PLAYER WAITING -->
+        <div id="view-player-waiting" class="glass-panel p-8 hidden">
+            <h2 class="text-3xl font-bold mb-4">You're in!</h2>
+            <p class="text-xl text-gray-400 animate-pulse">See your name on screen?</p>
+        </div>
+
+        <!-- VIEW: GAME QUESTION (HOST) -->
+        <div id="view-host-game" class="glass-panel p-8 hidden w-full">
+            <div class="flex justify-between items-center mb-6">
+                <span class="text-gray-400 text-2xl">Question <span id="current-q-num">1</span>/<span
+                        id="total-q-num">10</span></span>
+                <span id="timer" class="text-5xl font-mono font-bold text-yellow-400">20</span>
+            </div>
+
+            <h2 id="host-question-text"
+                class="text-5xl md:text-6xl font-extrabold mb-12 leading-tight text-white drop-shadow-lg"></h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full h-auto">
+                <div id="opt-text-0"
+                    class="p-10 rounded-3xl bg-red-500/20 border-4 border-red-500/50 flex items-center text-5xl font-bold shadow-[0_0_30px_rgba(239,68,68,0.2)] hover:scale-[1.02] transition-transform">
+                </div>
+                <div id="opt-text-1"
+                    class="p-10 rounded-3xl bg-blue-500/20 border-4 border-blue-500/50 flex items-center text-5xl font-bold shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:scale-[1.02] transition-transform">
+                </div>
+                <div id="opt-text-2"
+                    class="p-10 rounded-3xl bg-yellow-500/20 border-4 border-yellow-500/50 flex items-center text-5xl font-bold shadow-[0_0_30px_rgba(234,179,8,0.2)] hover:scale-[1.02] transition-transform">
+                </div>
+                <div id="opt-text-3"
+                    class="p-10 rounded-3xl bg-green-500/20 border-4 border-green-500/50 flex items-center text-5xl font-bold shadow-[0_0_30px_rgba(34,197,94,0.2)] hover:scale-[1.02] transition-transform">
+                </div>
+            </div>
+
+            <div id="host-answers-count" class="mt-8 text-2xl font-bold text-gray-400">Answers: 0</div>
+            <button id="host-show-results-btn" onclick="showResults()"
+                class="btn-primary mt-4 hidden text-xl py-4 px-8">Show
+                Results</button>
+        </div>
+
+        <!-- VIEW: GAME CONTROLLER (PLAYER) -->
+        <div id="view-player-game" class="p-4 hidden w-full h-full">
+            <div class="grid grid-cols-2 gap-4 h-[60vh]">
+                <button onclick="submitAnswer(0)"
+                    class="option-btn opt-0 flex flex-col items-center justify-center active:scale-95 transition-transform duration-100">
+                    <span class="text-7xl mb-2 font-black">▲</span>
+                    <span class="text-6xl font-black">A</span>
+                </button>
+                <button onclick="submitAnswer(1)"
+                    class="option-btn opt-1 flex flex-col items-center justify-center active:scale-95 transition-transform duration-100">
+                    <span class="text-7xl mb-2 font-black">◆</span>
+                    <span class="text-6xl font-black">B</span>
+                </button>
+                <button onclick="submitAnswer(2)"
+                    class="option-btn opt-2 flex flex-col items-center justify-center active:scale-95 transition-transform duration-100">
+                    <span class="text-7xl mb-2 font-black">●</span>
+                    <span class="text-6xl font-black">C</span>
+                </button>
+                <button onclick="submitAnswer(3)"
+                    class="option-btn opt-3 flex flex-col items-center justify-center active:scale-95 transition-transform duration-100">
+                    <span class="text-7xl mb-2 font-black">■</span>
+                    <span class="text-6xl font-black">D</span>
+                </button>
+            </div>
+            <div id="feedback" class="mt-8 text-center hidden">
+                <h2 id="feedback-text" class="text-4xl font-black mb-2"></h2>
+                <p id="feedback-points" class="text-xl font-mono"></p>
+            </div>
+        </div>
+
+        <!-- VIEW: RESULTS (HOST) -->
+        <div id="view-results"
+            class="glass-panel p-8 hidden w-full bg-gradient-radial from-indigo-900 to-black border-4 border-yellow-500/50">
+            <h2
+                class="text-6xl font-black mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-300 to-yellow-600 drop-shadow-sm uppercase tracking-widest">
+                ROUND RESULTS
+            </h2>
+
+            <!-- Bar Chart -->
+            <div class="grid grid-cols-4 gap-8 h-64 items-end justify-center mb-12 px-12 slide-up">
+                <div class="w-full rounded-t-2xl transition-all duration-1000 flex flex-col justify-end items-center group"
+                    id="bar-0" style="height: 0%">
+                    <div
+                        class="bg-red-500 w-full h-full rounded-t-2xl shadow-[0_0_20px_rgba(239,68,68,0.5)] opacity-80 group-hover:opacity-100">
+                    </div>
+                    <span class="text-3xl font-bold mt-2 text-red-400">A</span>
+                </div>
+                <div class="w-full rounded-t-2xl transition-all duration-1000 flex flex-col justify-end items-center group"
+                    id="bar-1" style="height: 0%">
+                    <div
+                        class="bg-blue-500 w-full h-full rounded-t-2xl shadow-[0_0_20px_rgba(59,130,246,0.5)] opacity-80 group-hover:opacity-100">
+                    </div>
+                    <span class="text-3xl font-bold mt-2 text-blue-400">B</span>
+                </div>
+                <div class="w-full rounded-t-2xl transition-all duration-1000 flex flex-col justify-end items-center group"
+                    id="bar-2" style="height: 0%">
+                    <div
+                        class="bg-yellow-500 w-full h-full rounded-t-2xl shadow-[0_0_20px_rgba(234,179,8,0.5)] opacity-80 group-hover:opacity-100">
+                    </div>
+                    <span class="text-3xl font-bold mt-2 text-yellow-400">C</span>
+                </div>
+                <div class="w-full rounded-t-2xl transition-all duration-1000 flex flex-col justify-end items-center group"
+                    id="bar-3" style="height: 0%">
+                    <div
+                        class="bg-green-500 w-full h-full rounded-t-2xl shadow-[0_0_20px_rgba(34,197,94,0.5)] opacity-80 group-hover:opacity-100">
+                    </div>
+                    <span class="text-3xl font-bold mt-2 text-green-400">D</span>
+                </div>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="mb-12 max-w-4xl mx-auto">
+                <h3 class="text-4xl font-black mb-6 text-left border-b-4 border-gray-700 pb-2 text-white">🏆 TOP PLAYERS
+                </h3>
+                <ul id="leaderboard" class="space-y-4">
+                    <!-- Leaderboard items -->
+                </ul>
+            </div>
+
+            <button onclick="nextQuestion()"
+                class="btn-primary w-full text-3xl py-6 font-black tracking-widest hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(59,130,246,0.6)]">
+                NEXT QUESTION ➔
+            </button>
+        </div>
+
+        <!-- VIEW: GAME OVER (EPIC) -->
+        <div id="view-game-over"
+            class="fixed inset-0 z-50 bg-gradient-to-br from-indigo-900 via-purple-900 to-black flex flex-col items-center justify-center hidden animate-fade-in p-8">
+            <h1
+                class="text-7xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-yellow-600 mb-12 drop-shadow-2xl tracking-tighter uppercase">
+                ¡QUIZ COMPLETED!
+            </h1>
+
+            <div id="final-podium" class="w-full max-w-5xl space-y-8 flex flex-col items-center">
+                <!-- Winner inserted here by JS -->
+            </div>
+
+            <button onclick="location.reload()"
+                class="mt-16 bg-green-500 hover:bg-green-600 text-white text-5xl font-black py-8 px-20 rounded-full shadow-[0_0_50px_rgba(34,197,94,0.6)] hover:scale-105 active:scale-95 transition-all">
+                PLAY AGAIN 🔄
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        const socket = io();
+        let myPin = null;
+        let myRole = null; // 'host' | 'player'
+        let timerInterval = null;
+        let timeLeft = 20;
+
+        // --- Navigation ---
+        function switchView(viewId) {
+            document.querySelectorAll('[id^=view-]').forEach(el => el.classList.add('hidden'));
+            const el = document.getElementById(viewId);
+            if (el) el.classList.remove('hidden');
+        }
+
+        // --- Host Functions ---
+        function showHostSetup() {
+            myRole = 'host';
+            switchView('view-host-setup');
+        }
+
+        document.getElementById('upload-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fileInput = document.getElementById('pdf-input');
+            const numQuestionsInput = document.getElementById('num-questions');
+            const difficultyInput = document.getElementById('difficulty');
+
+            if (fileInput.files.length === 0) return alert('Select a PDF');
+
+            document.getElementById('loading').classList.remove('hidden');
+            const formData = new FormData();
+            formData.append('pdf', fileInput.files[0]);
+            formData.append('numQuestions', numQuestionsInput.value);
+            formData.append('difficulty', difficultyInput.value);
+            formData.append('timeLimit', document.getElementById('time-limit').value);
+
+            try {
+                const res = await fetch('/upload', { method: 'POST', body: formData });
+                const data = await res.json();
+
+                if (data.error) throw new Error(data.error);
+
+                myPin = data.pin;
+                initHostLobby(myPin);
+
+            } catch (err) {
+                showError(err.message);
+                // document.getElementById('loading').classList.add('hidden'); // Keep loading to prevent retry spam? No, user needs to retry.
+                // Logic moved to closeError
+            }
+        });
+
+        function initHostLobby(pin) {
+            socket.emit('host_join', pin);
+        }
+
+        socket.on('host_success', ({ pin }) => {
+            document.getElementById('lobby-pin').innerText = pin;
+            switchView('view-host-lobby');
+        });
+
+        socket.on('player_joined', ({ name, count }) => {
+            const list = document.getElementById('players-list');
+            const badge = document.createElement('div');
+            badge.className = 'px-4 py-2 bg-gray-800 rounded-full border border-gray-600 animate-pulse';
+            badge.innerText = name;
+            list.appendChild(badge);
+            document.getElementById('player-count').innerText = count;
+        });
+
+        function startGame() {
+            socket.emit('start_game', myPin);
+        }
+
+        socket.on('new_question', (data) => {
+            // Reset state
+            clearInterval(timerInterval);
+            timeLeft = data.timeLimit;
+
+            if (myRole === 'host') {
+                document.getElementById('host-question-text').innerText = data.question;
+                document.getElementById('current-q-num').innerText = data.qIndex;
+                document.getElementById('total-q-num').innerText = data.total;
+                document.getElementById('host-answers-count').innerText = "Answers: 0";
+
+                // Set options text
+                data.options.forEach((opt, idx) => {
+                    const el = document.getElementById(`opt-text-${idx}`);
+                    el.innerHTML = `<span class="mr-6 text-7xl drop-shadow-md flex-shrink-0"> ${['▲', '◆', '●', '■'][idx]} </span> <span class="break-words leading-tight filter drop-shadow-lg text-left">${opt}</span>`;
+                    el.className = `p-8 md:p-12 w-full h-auto min-h-[220px] rounded-3xl border-4 flex items-center justify-center text-5xl md:text-6xl font-black opacity-100 shadow-2xl transition-all duration-300 hover:scale-[1.01] `;
+
+                    // Specific Colors with massive glow
+                    const colors = ['red', 'blue', 'yellow', 'green'];
+                    const c = colors[idx];
+                    el.classList.add(`bg-${c}-500/20`, `border-${c}-500/60`, `text-white`, `shadow-${c}-500/30`);
+                });
+
+                document.getElementById('host-show-results-btn').classList.add('hidden');
+                switchView('view-host-game');
+                startTimer();
+            } else {
+                // Player View
+                document.getElementById('feedback').classList.add('hidden');
+                document.querySelectorAll('.option-btn').forEach(b => b.disabled = false);
+                switchView('view-player-game');
+            }
+        });
+
+        function startTimer() {
+            const timerEl = document.getElementById('timer');
+            timerEl.innerText = timeLeft;
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                timerEl.innerText = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    if (myRole === 'host') showResults(); // Auto show results if time out
+                }
+            }, 1000);
+        }
+
+        socket.on('update_answers_count', (count) => {
+            if (myRole === 'host') {
+                document.getElementById('host-answers-count').innerText = `Answers: ${count}`;
+                // If all answered, maybe show button?
+                document.getElementById('host-show-results-btn').classList.remove('hidden');
+            }
+        });
+
+        function showResults() {
+            clearInterval(timerInterval);
+            socket.emit('show_results', myPin);
+        }
+
+        socket.on('question_results', ({ correctAnswer, stats, leaderboard }) => {
+            if (myRole === 'host') {
+                switchView('view-results');
+                // Animate bars
+                const max = Math.max(...stats, 1); // avoid /0
+                stats.forEach((count, idx) => {
+                    const height = (count / max) * 100;
+                    document.getElementById(`bar-${idx}`).style.height = `${height}%`;
+                    // Dim incorrect answers in previous screen
+                });
+
+                // Update Leaderboard
+                const list = document.getElementById('leaderboard');
+                list.innerHTML = '';
+                leaderboard.forEach(p => {
+                    const li = document.createElement('li');
+                    li.className = "flex justify-between bg-gray-800 p-3 rounded";
+                    li.innerHTML = `<span>${p.name}</span><span class="font-bold">${p.score}</span>`;
+                    list.appendChild(li);
+                });
+            }
+        });
+
+        function nextQuestion() {
+            socket.emit('next_question', myPin);
+        }
+
+        socket.on('game_over', (leaderboard) => {
+            switchView('view-game-over');
+            const pod = document.getElementById('final-podium');
+            pod.innerHTML = '';
+
+            if (leaderboard.length > 0) {
+                // Winner
+                const winner = leaderboard[0];
+                const winDiv = document.createElement('div');
+                winDiv.className = "flex flex-col items-center animate-bounce-slow";
+                winDiv.innerHTML = `
+                    <div class="text-[10rem] mb-4 filter drop-shadow-[0_0_30px_rgba(234,179,8,0.8)]">🏆</div>
+                    <div class="text-7xl font-black text-white mb-2 text-shadow-lg">${winner.name}</div>
+                    <div class="text-5xl font-bold text-yellow-400">${winner.score} PTS</div>
+                `;
+                pod.appendChild(winDiv);
+
+                // Runners up
+                if (leaderboard.length > 1) {
+                    const othersDiv = document.createElement('div');
+                    othersDiv.className = "flex gap-12 mt-12";
+                    leaderboard.slice(1, 3).forEach((p, i) => {
+                        const d = document.createElement('div');
+                        d.className = "text-center opacity-80";
+                        d.innerHTML = `
+                            <div class="text-6xl mb-2">${['🥈', '🥉'][i]}</div>
+                            <div class="text-4xl font-bold text-white">${p.name}</div>
+                            <div class="text-3xl text-gray-300">${p.score} pts</div>
+                        `;
+                        othersDiv.appendChild(d);
+                    });
+                    pod.appendChild(othersDiv);
+                }
+            }
+        });
+
+        // --- Player Functions ---
+        function showPlayerJoin() {
+            myRole = 'player';
+            switchView('view-player-join');
+        }
+
+        function joinGame() {
+            const pin = document.getElementById('join-pin').value;
+            const name = document.getElementById('join-name').value;
+            if (!pin || !name) return alert('Fill all fields');
+
+            myPin = pin;
+            socket.emit('player_join', { pin, name });
+        }
+
+        socket.on('join_success', ({ name }) => {
+            switchView('view-player-waiting');
+        });
+
+        function submitAnswer(idx) {
+            document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+            socket.emit('submit_answer', { pin: myPin, answerIndex: idx, timeLeft });
+
+            // Show waiting state
+            document.getElementById('feedback').classList.remove('hidden');
+            document.getElementById('feedback-text').innerText = "Sent!";
+            document.getElementById('feedback-text').className = "text-4xl font-black mb-2 text-gray-500";
+            document.getElementById('feedback-points').innerText = "Waiting for results...";
+        }
+
+        socket.on('answer_result', ({ correct, points }) => {
+            document.getElementById('feedback').classList.remove('hidden');
+            const txt = document.getElementById('feedback-text');
+            if (correct) {
+                txt.innerText = "CORRECT!";
+                txt.className = "text-4xl font-black mb-2 text-green-500 animate-bounce";
+                document.getElementById('feedback-points').innerText = `+${points} pts`;
+            } else {
+                txt.innerText = "WRONG";
+                txt.className = "text-4xl font-black mb-2 text-red-500 shake";
+                document.getElementById('feedback-points').innerText = `+0 pts`;
+            }
+        });
+
+        socket.on('error', (msg) => showError(msg));
+
+        // Error Modal Logic
+        function showError(msg) {
+            const modal = document.getElementById('error-modal');
+            const music = document.getElementById('error-content');
+            document.getElementById('error-msg').innerText = msg;
+            modal.classList.remove('hidden');
+        }
+
+        function closeError() {
+            document.getElementById('error-modal').classList.add('hidden');
+            document.getElementById('loading').classList.add('hidden'); // Also hide loader
+        }
+    </script>
+
+    <!-- ERROR MODAL -->
+    <div id="error-modal"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div id="error-content"
+            class="bg-slate-900 border border-red-500 rounded-xl p-8 max-w-md w-full mx-4 shadow-2xl shadow-red-500/20 transform animate-bounce-in">
+            <h3 class="text-2xl font-bold text-red-500 mb-4 flex items-center gap-2">
+                ⚠️ Error Detected
+            </h3>
+            <p id="error-msg"
+                class="text-white text-lg mb-8 bg-red-500/10 p-4 rounded border border-red-500/20 font-mono"></p>
+            <button onclick="closeError()"
+                class="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded transition-colors">
+                ACKNOWLEDGE
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
