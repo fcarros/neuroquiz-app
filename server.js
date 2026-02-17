@@ -22,8 +22,6 @@ const server = http.createServer(app);
 const io = new Server(server);
 const upload = multer({ dest: 'uploads/' });
 
-// Serve static files
-app.use(express.static('public'));
 
 console.log("-----------------------------------------");
 console.log("Server Starting...");
@@ -119,6 +117,21 @@ app.post('/upload', upload.single('pdf'), async (req, res) => {
             throw new Error("Invalid JSON structure from OpenAI: missing 'questions' array");
         }
 
+        // Validate each question
+        questions = questions.filter(q =>
+            typeof q.question === 'string' &&
+            Array.isArray(q.options) &&
+            q.options.length === 4 &&
+            q.options.every(o => typeof o === 'string') &&
+            Number.isInteger(q.correctIndex) &&
+            q.correctIndex >= 0 &&
+            q.correctIndex <= 3
+        );
+
+        if (questions.length === 0) {
+            throw new Error("No valid questions generated");
+        }
+
         // Create Game
         const pin = generatePIN();
         games[pin] = {
@@ -127,17 +140,20 @@ app.post('/upload', upload.single('pdf'), async (req, res) => {
             hostSocket: null,
             state: 'lobby',
             currentQuestion: -1,
+            timeLimit: parseInt(req.body.timeLimit) || 20,
             answers: {} // { questionIndex: { playerId: { answerIndex, score } } }
         };
-
-        // Clean up uploaded file
-        fs.unlinkSync(req.file.path);
 
         res.json({ pin, questionsCount: questions.length });
 
     } catch (error) {
         console.error('Error processing PDF:', error);
         res.status(500).json({ error: error.message || 'Failed to generate quiz' });
+    } finally {
+        // Clean up uploaded file
+        if (req.file && req.file.path) {
+            try { fs.unlinkSync(req.file.path); } catch (_) {}
+        }
     }
 });
 
@@ -251,7 +267,22 @@ io.on('connection', (socket) => {
     });
 
     socket.on('disconnect', () => {
-        // Handle disconnects? detailed handling skipped for MVP
+        for (const pin in games) {
+            const game = games[pin];
+            if (game.hostSocket === socket.id) {
+                io.to(pin).emit('game_cancelled');
+                delete games[pin];
+                return;
+            }
+            if (game.players[socket.id]) {
+                const name = game.players[socket.id].name;
+                delete game.players[socket.id];
+                if (game.hostSocket) {
+                    io.to(game.hostSocket).emit('player_left', { name, count: Object.keys(game.players).length });
+                }
+                return;
+            }
+        }
     });
 });
 
@@ -276,6 +307,7 @@ function endGame(pin) {
     game.state = 'finished';
     const leaderboard = Object.values(game.players).sort((a, b) => b.score - a.score);
     io.to(pin).emit('game_over', leaderboard);
+    setTimeout(() => { delete games[pin]; }, 5 * 60 * 1000);
 }
 
 const PORT = process.env.PORT || 3000;
