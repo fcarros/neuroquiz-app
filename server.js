@@ -34,8 +34,15 @@ console.log("-----------------------------------------");
 // Game State
 const games = {};
 
-// AI Setup (OpenAI)
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// AI Setup (OpenAI) — lazy init to allow server to start without key
+let openai = null;
+function getOpenAI() {
+    if (!openai) {
+        if (!process.env.OPENAI_API_KEY) throw new Error('Server missing OpenAI API Key');
+        openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    }
+    return openai;
+}
 
 // Helper: Generate PIN
 function generatePIN() {
@@ -98,7 +105,7 @@ app.post('/upload', upload.single('pdf'), async (req, res) => {
 
         console.log("Sending request to OpenAI...");
 
-        const completion = await openai.chat.completions.create({
+        const completion = await getOpenAI().chat.completions.create({
             model: "gpt-4o",
             messages: [
                 { role: "system", content: "You are a helpful assistant designed to output valid JSON for a quiz app." },
