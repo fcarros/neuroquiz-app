@@ -82,7 +82,8 @@ app.post('/upload', upload.single('pdf'), async (req, res) => {
 
         const difficulty = req.body.difficulty || "Medium";
 
-        const prompt = `Based on the following text, generate ${numQuestions} multiple-choice quiz questions. 
+        const prompt = `Based on the following text, generate ${numQuestions} multiple-choice quiz questions.
+        IMPORTANT: All questions and options MUST be written in Spanish.
         Each question MUST have 4 options (A, B, C, D) and one correct answer.
         Difficulty Level: ${difficulty}.
         - If Easy: Use simple vocabulary and direct questions.
