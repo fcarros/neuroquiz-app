@@ -11,7 +11,7 @@
     "quiz",
     "socket.io",
     "ai",
-    "gemini",
+    "openai",
     "education"
   ],
   "author": "",
