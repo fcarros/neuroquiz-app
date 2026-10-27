@@ -91,6 +91,6 @@ Fase 1 en curso (rama `v2`).
 - [x] Carpeta de prompts reorganizada y auditoría en `docs/`.
 - [x] `.gitignore` ajustado.
 - [x] `CLAUDE.md` creado.
-- [ ] README reescrito.
+- [x] README reescrito.
 - [ ] `docs/decision-tiempo-real.md`: comparativa y propuesta de stack.
 - [ ] **Pendiente de Fran**: elegir servicio de tiempo real antes de la fase 3.
