@@ -92,5 +92,6 @@ Fase 1 en curso (rama `v2`).
 - [x] `.gitignore` ajustado.
 - [x] `CLAUDE.md` creado.
 - [x] README reescrito.
-- [ ] `docs/decision-tiempo-real.md`: comparativa y propuesta de stack.
+- [x] `docs/decision-tiempo-real.md`: comparativa (recomendación: Ably; alternativa: Firebase) y propuesta de stack.
+- [x] Verificado que la v1 sigue arrancando igual.
 - [ ] **Pendiente de Fran**: elegir servicio de tiempo real antes de la fase 3.

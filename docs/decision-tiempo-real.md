@@ -176,3 +176,74 @@ Cloudflare / PartyKit
 [v2]: https://vercel.com/docs/functions/websockets
 [v3]: https://vercel.com/docs/functions/limitations
 [v4]: https://vercel.com/kb/guide/publish-and-subscribe-to-realtime-data-on-vercel
+
+---
+
+# Propuesta de stack para la v2
+
+Solo propuesta: en esta fase no se migra nada ni se instala nada.
+
+## Tecnologías
+
+Las mismas que en «Aula Trivial», para compartir conocimiento y código:
+
+| Pieza | Elección | Motivo |
+|---|---|---|
+| Build | **Vite** | Genera una web estática que Vercel publica tal cual, sin servidor |
+| UI | **React + TypeScript** | Las 10 «vistas» actuales pasan a ser componentes. Los tipos evitan errores como el del `timeLeft` |
+| Estilos | **Tailwind** | Las variables de `styles.css` pasan a ser tokens del tema. Se reduce el CSS en línea (hoy hay 94 `style=`) |
+| Validación | **zod** | Un único esquema del mazo (formato Trivial v1) y validación de cada mensaje que llega por tiempo real |
+| Tests | **vitest** | Para el motor de partida y el validador, que son funciones puras |
+| Tiempo real | SDK del servicio elegido (`ably` si se elige Ably) | Siempre detrás de una interfaz `Transporte` propia, para poder cambiar de proveedor |
+| Función | `api/token.ts` en Vercel (solo si el servicio la necesita) | Firma los tokens temporales con la clave en una variable de entorno |
+| QR | Una librería local (por decidir en la fase 3 o la 5) | Elimina la dependencia de `api.qrserver.com` |
+
+Lo que **no** propongo:
+- Next.js, porque no hace falta renderizado en servidor.
+- Un gestor de estado externo: basta con un `useReducer` sobre el motor puro.
+
+## Organización propuesta
+
+```
+src/
+  mazo/        # esquema zod del mazo (formato Trivial v1) + tests  ← compartible
+  motor/       # partida como reductor puro: estados, reloj, puntuación + tests
+  transporte/  # interfaz Transporte + adaptador del servicio elegido
+  profesor/    # pantallas del proyector (sala, pregunta, resultados, podio)
+  alumno/      # pantallas del móvil (unirse, botones, feedback, posición)
+  ui/          # componentes visuales comunes (bloques de opción, temporizador, podio)
+api/token.ts   # función de Vercel para credenciales temporales (si aplica)
+```
+
+## Compartir el validador de mazos con Aula Trivial
+
+1. **Fase 2 (recomendado para empezar):** copiar el esquema zod del Trivial a
+   `src/mazo/` sin tocar los nombres de los campos y con los mismos tests. Para
+   NeuroQuiz, `categorias` y `color` son opcionales o se ignoran. Así un mazo
+   válido en un juego es válido en el otro.
+2. **Más adelante:** extraerlo a un paquete común, por ejemplo un repositorio
+   `aula-mazos` con el esquema y los mazos, que los dos juegos importen. La
+   forma exacta (paquete npm privado, dependencia git o monorepo) se decide
+   cuando haya dos consumidores estables.
+
+## Qué conservar del código actual
+
+| Conservar | De dónde | Cómo |
+|---|---|---|
+| Paleta y tokens (fondo `#0f172a`, neón azul y morado, rojo, azul, amarillo y verde) | `styles.css:7-21` | Como tema de Tailwind |
+| Bloques de opción con forma (▲◆●■) y color | `styles.css:135-162`, `index.html:143-146` | Componente `Opcion` |
+| Rejilla 2×2 del móvil a pantalla casi completa, con el amarillo en texto oscuro | `index.html:159-164`, `styles.css:165-195` | Componente `BotonesAlumno` |
+| Temporizador circular en SVG con cambio de color | `index.html:127-135,346-381` | Componente `Temporizador`, que ya no se encarga de medir el tiempo |
+| Pantalla de resultados: pregunta, correcta resaltada, barras y top | `index.html:182-223,438-488` | Se mantiene, y se añade la `explicacion` del mazo |
+| Podio 2-1-3 con confeti | `index.html:225-237,511-536,620-636`, `styles.css` | Componente `Podio` |
+| PIN grande y QR en la sala de espera | `index.html:74-92` | Se mantiene, con QR local |
+| Flujo de vistas: rol → sala → pregunta → resultados → podio | `index.html` | Máquina de estados del motor |
+| Fórmula de puntuación por rapidez | `server.js:57-61` | En el motor, con el reloj del profesor y un tope |
+| Validación «4 opciones + índice 0-3» | `server.js:129-137` | Ya cubierta por el esquema del mazo |
+
+Lo que **no** se conserva:
+- `server.js` como servidor, sustituido por el servicio de tiempo real y la
+  función de tokens.
+- El flujo de subida de PDF. Vuelve en la fase 6, protegido.
+- El estado identificado por `socket.id`.
+- Los textos en inglés.
