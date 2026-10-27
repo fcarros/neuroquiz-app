@@ -4,3 +4,9 @@ node_modules/
 uploads/
 *.log
 *_log.txt
+.env.*
+!.env.example
+.claude/settings.local.json
+.vercel/
+dist/
+coverage/
