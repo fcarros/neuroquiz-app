@@ -82,6 +82,8 @@ export function crearCliente({
     let conectadoDesde = 0;
     let dejarDeEscuchar: (() => void) | null = null;
     const oyentes = new Set<() => void>();
+    /** Sube con cada `detener`: una conexión que termina después ya no vale. */
+    let generacion = 0;
 
     const cambiar = (parcial: Partial<EstadoCliente>) => {
         estado = { ...estado, ...parcial };
@@ -124,6 +126,7 @@ export function crearCliente({
     };
 
     const detener = () => {
+        generacion++;
         pararReintentos();
         dejarDeEscuchar?.();
         dejarDeEscuchar = null;
@@ -132,12 +135,16 @@ export function crearCliente({
         saludo = null;
     };
 
+    /** Conecta a la sala; `false` si mientras tanto se ha detenido el cliente. */
     const conectar = async (identificacion: Identificacion) => {
-        yo = identificacion;
+        const mia = generacion;
         dejarDeEscuchar?.();
         await transporte.conectar(identificacion.pin, { rol: 'jugador', id: identificacion.id });
+        if (mia !== generacion) { transporte.desconectar(); return false; }
+        yo = identificacion;
         dejarDeEscuchar = transporte.alRecibir(recibir);
         cambiar({ ...INICIAL, conexion: 'conectando', pin: identificacion.pin });
+        return true;
     };
 
     return {
@@ -150,7 +157,7 @@ export function crearCliente({
         async reanudar() {
             const guardada = almacen.leer();
             if (!guardada) return false;
-            await conectar(guardada);
+            if (!await conectar(guardada)) return false;
             saludo = () => transporte.enviarAlProfesor({ tipo: 'hola', id: guardada.id, secreto: guardada.secreto });
             saludarHastaRespuesta();
             return true;
@@ -160,7 +167,7 @@ export function crearCliente({
             const guardada = almacen.leer();
             const identificacion = guardada?.pin === pin ? guardada : { pin, id: nuevaClave(), secreto: nuevaClave() };
             almacen.guardar(identificacion);
-            await conectar(identificacion);
+            if (!await conectar(identificacion)) return;
             saludo = () => transporte.enviarAlProfesor({ tipo: 'unirse', id: identificacion.id, secreto: identificacion.secreto, nombre });
             saludarHastaRespuesta();
         },

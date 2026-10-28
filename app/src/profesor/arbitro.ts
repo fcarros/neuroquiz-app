@@ -44,6 +44,7 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
     const oyentes = new Set<() => void>();
     let descartados = 0;
     let dejarDeEscuchar: (() => void) | null = null;
+    let detenido = false;
 
     const enviarPersonal = (id: string, forzar = false) => {
         const vista = vistaJugador(estado, id);
@@ -73,6 +74,7 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
     };
 
     const aplicar = (accion: Accion) => {
+        if (detenido) return false;
         const nuevo = reducir(estado, accion);
         if (nuevo === estado) return false;
         estado = nuevo;
@@ -105,6 +107,7 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
     return {
         async iniciar() {
             await transporte.conectar(estado.pin, { rol: 'profesor' });
+            if (detenido) { transporte.desconectar(); return; }
             dejarDeEscuchar = transporte.alRecibir(recibir);
             // Tras recargar, los móviles que siguen abiertos reciben su vista sin pedirla.
             ultimaComun = null;
@@ -112,6 +115,7 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
             sincronizar();
         },
         detener() {
+            detenido = true;
             dejarDeEscuchar?.();
             transporte.desconectar();
         },

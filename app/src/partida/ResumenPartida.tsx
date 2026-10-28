@@ -4,6 +4,7 @@ interface Props {
     partida: PartidaPreparada;
     onVolver: () => void;
     onOtraSeleccion: () => void;
+    onAbrirSala: () => void;
 }
 
 const contar = (valores: string[]) => {
@@ -16,7 +17,7 @@ const contar = (valores: string[]) => {
  * Resumen de la partida creada. Se ve en el proyector, así que no muestra
  * las respuestas correctas.
  */
-export function ResumenPartida({ partida, onVolver, onOtraSeleccion }: Props) {
+export function ResumenPartida({ partida, onVolver, onOtraSeleccion, onAbrirSala }: Props) {
     const { preguntas } = partida;
     const porCategoria = contar(preguntas.map(p => p.categoria));
     const porDificultad = contar(preguntas.map(p => (p.dificultad ? NOMBRE_DIFICULTAD[p.dificultad] : 'Sin indicar')));
@@ -59,7 +60,10 @@ export function ResumenPartida({ partida, onVolver, onOtraSeleccion }: Props) {
                     <BotonSecundario onClick={onVolver}>Volver a configurar</BotonSecundario>
                     <BotonSecundario onClick={onOtraSeleccion}>Elegir otras preguntas</BotonSecundario>
                 </div>
-                <p className="font-texto text-[22px] text-texto-2">La sala de espera llega en la fase 3.</p>
+                <button type="button" onClick={onAbrirSala}
+                    className="min-h-[72px] rounded-full bg-acento px-14 font-titulo text-[32px] font-extrabold text-sobre-acento hover:brightness-110 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-acento">
+                    Abrir sala
+                </button>
             </div>
         </section>
     );
