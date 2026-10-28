@@ -1,0 +1,3395 @@
+{
+  "formato": 1,
+  "id": "cdi-t1-marco-global",
+  "titulo": "Tema 1 · El marco global",
+  "modulo": "Comercio Digital Internacional",
+  "descripcion": "Comercio digital internacional: el marco global. 240 preguntas, 40 por categoría.",
+  "categorias": [
+    {
+      "color": "azul",
+      "nombre": "Globalización y comercio digital"
+    },
+    {
+      "color": "rosa",
+      "nombre": "Conceptos y modelos"
+    },
+    {
+      "color": "amarillo",
+      "nombre": "Marketing digital"
+    },
+    {
+      "color": "marron",
+      "nombre": "El cliente online"
+    },
+    {
+      "color": "verde",
+      "nombre": "Desafíos"
+    },
+    {
+      "color": "naranja",
+      "nombre": "Instituciones"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "p001",
+      "color": "azul",
+      "enunciado": "¿Qué es la globalización de los mercados?",
+      "opciones": [
+        "La integración de mercados hasta funcionar casi como uno solo",
+        "El traslado de la producción a los países de menor coste",
+        "La eliminación de las monedas nacionales en todo el mundo",
+        "La sustitución del comercio físico por el comercio en línea"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Es el proceso por el que se integran los mercados de bienes, servicios, capitales y trabajo."
+    },
+    {
+      "id": "p002",
+      "color": "azul",
+      "enunciado": "¿Qué mercados abarca la integración propia de la globalización?",
+      "opciones": [
+        "Solo bienes físicos transportados por mar",
+        "Solo servicios prestados a través de internet",
+        "Bienes, servicios, capitales y trabajo",
+        "Solo materias primas, energía y alimentos"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "La globalización integra los cuatro tipos de mercado, no solo el de mercancías."
+    },
+    {
+      "id": "p003",
+      "color": "azul",
+      "enunciado": "¿Cuál de estos es uno de los cuatro motores de la globalización?",
+      "opciones": [
+        "La liberalización comercial",
+        "La moneda única internacional",
+        "La centralización de la producción",
+        "La armonización fiscal mundial"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Los cuatro motores son el transporte barato, la liberalización comercial, el mercado único europeo y la digitalización."
+    },
+    {
+      "id": "p004",
+      "color": "azul",
+      "enunciado": "¿Qué hito se considera decisivo en el abaratamiento del transporte?",
+      "opciones": [
+        "La normalización del contenedor",
+        "La creación de la moneda única",
+        "La apertura de los marketplaces",
+        "La aparición del correo electrónico"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "El contenedor hizo rentable mover mercancía a larga distancia."
+    },
+    {
+      "id": "p005",
+      "color": "azul",
+      "enunciado": "¿Qué motor de la globalización eliminó aduanas y aranceles entre los Estados miembros?",
+      "opciones": [
+        "La digitalización del comercio",
+        "El arancel exterior común",
+        "La normalización del contenedor",
+        "El mercado único europeo"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El mercado único suprimió aduanas, aranceles y buena parte de las barreras técnicas entre los Estados miembros. El arancel exterior común se aplica hacia fuera."
+    },
+    {
+      "id": "p006",
+      "color": "azul",
+      "enunciado": "¿Qué añadió la digitalización a los otros motores de la globalización?",
+      "opciones": [
+        "Transporte marítimo más barato gracias al contenedor",
+        "Libre circulación de mercancías sin aduanas entre países",
+        "Presencia permanente, información inmediata y cobro remoto",
+        "Aranceles más bajos negociados en acuerdos bilaterales"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Lo digital aportó lo que faltaba: estar presente siempre, informar al instante y cobrar a distancia."
+    },
+    {
+      "id": "p007",
+      "color": "azul",
+      "enunciado": "Al vender a otro país de la UE en lugar de fuera, ¿qué desaparece?",
+      "opciones": [
+        "La gestión de devoluciones",
+        "La traducción de la web",
+        "La aduana y el arancel",
+        "El coste del transporte"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Dentro del mercado único no hay aduana ni arancel; el idioma, el transporte y las devoluciones siguen ahí."
+    },
+    {
+      "id": "p008",
+      "color": "azul",
+      "enunciado": "Antes de lo digital, ¿cómo llegaban normalmente los pedidos del exterior?",
+      "opciones": [
+        "Por licitaciones electrónicas públicas",
+        "Directamente a la tienda en línea propia",
+        "A través del distribuidor o del agente",
+        "Mediante un marketplace internacional"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "El intermediario canalizaba los pedidos, con sus márgenes y sus tiempos."
+    },
+    {
+      "id": "p009",
+      "color": "azul",
+      "enunciado": "Hoy, ¿qué gasto sustituye en buena medida a ferias y catálogos para darse a conocer fuera?",
+      "opciones": [
+        "El alquiler de oficinas en cada país",
+        "La contratación de agentes en cada mercado",
+        "El mantenimiento de una presencia en línea",
+        "La impresión de catálogos en varios idiomas"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "La presencia permanente en línea tiene un coste asumible incluso para una microempresa."
+    },
+    {
+      "id": "p010",
+      "color": "azul",
+      "enunciado": "¿Qué idea resume el tema sobre la barrera de entrada al comercio internacional?",
+      "opciones": [
+        "Ha bajado, pero no ha desaparecido: ha cambiado de sitio",
+        "Es hoy más alta que antes de la digitalización",
+        "Ha desaparecido por completo gracias a internet",
+        "Solo existe ya para vender fuera de la Unión Europea"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La barrera ya no es estar presente, sino la confianza, la logística y la seguridad."
+    },
+    {
+      "id": "p011",
+      "color": "azul",
+      "enunciado": "En comercio electrónico, ¿cómo se describe la posición de España?",
+      "opciones": [
+        "Equilibrada: compra y vende fuera casi lo mismo",
+        "Aislada: apenas compra ni vende a otros países",
+        "Importadora neta: compra fuera más de lo que vende",
+        "Exportadora neta: vende fuera más de lo que compra"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Los españoles gastan en tiendas extranjeras mucho más de lo que los extranjeros gastan en tiendas españolas."
+    },
+    {
+      "id": "p012",
+      "color": "azul",
+      "enunciado": "¿Dónde se queda casi todo el gasto de los españoles en tiendas en línea extranjeras?",
+      "opciones": [
+        "En comercios de la Unión Europea",
+        "En comercios de Latinoamérica",
+        "En comercios de Estados Unidos",
+        "En comercios del sudeste asiático"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Casi todo el gasto exterior va a comercios del mercado único."
+    },
+    {
+      "id": "p013",
+      "color": "azul",
+      "enunciado": "Un compañero dice que internet creó el comercio internacional. ¿Por qué se equivoca?",
+      "opciones": [
+        "Porque lo digital aún no permite cobrar a clientes de otros países",
+        "Porque es anterior: lo digital solo rebajó su precio de entrada",
+        "Porque los aranceles siguen impidiendo vender fuera por internet",
+        "Porque internet solo sirve para vender dentro de cada país"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El contenedor, la liberalización y el mercado único son anteriores; lo digital abarató estar presente."
+    },
+    {
+      "id": "p014",
+      "color": "azul",
+      "enunciado": "¿Por qué la Unión Europea es el destino natural de una primera exportación?",
+      "opciones": [
+        "Porque el mercado único eliminó aduanas y aranceles",
+        "Porque sus consumidores prefieren comprar en español",
+        "Porque en sus mercados apenas existe competencia local",
+        "Porque el transporte en la Unión está subvencionado"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Sin aduanas ni aranceles, la primera exportación es más sencilla y barata."
+    },
+    {
+      "id": "p015",
+      "color": "azul",
+      "enunciado": "¿Por qué vender dentro y fuera de la UE son operaciones muy distintas aunque en pantalla se parezcan?",
+      "opciones": [
+        "Porque dentro de la UE no se pueden vender servicios",
+        "Porque fuera está prohibido vender a consumidores",
+        "Porque fuera no se puede cobrar con medios electrónicos",
+        "Porque fuera aparecen despacho, documentación y tributos"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Esos trámites afectan al plazo, al coste y a la experiencia del cliente."
+    },
+    {
+      "id": "p016",
+      "color": "azul",
+      "enunciado": "El tema advierte que lo digital no elimina lo anterior. ¿Qué quiere decir?",
+      "opciones": [
+        "Que los catálogos impresos siguen siendo obligatorios",
+        "Que el distribuidor es imprescindible para cobrar fuera",
+        "Que la tienda en línea sustituye por completo a las ferias",
+        "Que ferias y distribuidores siguen existiendo y siendo útiles"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La columna de «ahora» se suma a la de «antes»: los canales tradicionales conservan su utilidad."
+    },
+    {
+      "id": "p017",
+      "color": "azul",
+      "enunciado": "¿Qué cambió en el cobro de las operaciones internacionales de poco importe?",
+      "opciones": [
+        "Se cobra al comprar, por medios electrónicos, aunque sea poco",
+        "Siguen haciendo falta instrumentos bancarios lentos y caros",
+        "El cobro se aplaza siempre hasta que llega la mercancía",
+        "Solo se puede cobrar si interviene un distribuidor local"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Antes los instrumentos bancarios eran lentos y costosos para importes pequeños; hoy se cobra en el momento."
+    },
+    {
+      "id": "p018",
+      "color": "azul",
+      "enunciado": "¿Qué ventaja tiene la venta directa al cliente final frente a la venta por distribuidor?",
+      "opciones": [
+        "El cliente deja de exigir plazos de entrega concretos",
+        "Ya no hace falta adaptar el idioma de la web al mercado",
+        "Desaparecen los costes del transporte internacional",
+        "La empresa conserva el margen que era del intermediario"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Vender directo o en un marketplace deja para la empresa el margen del intermediario."
+    },
+    {
+      "id": "p019",
+      "color": "azul",
+      "enunciado": "¿Qué cambió en la forma de obtener información de un mercado exterior?",
+      "opciones": [
+        "Solo la proporcionan los agentes comerciales locales",
+        "Se obtiene únicamente visitando las ferias del sector",
+        "Hay que encargar siempre un estudio a una consultora",
+        "Hay bases oficiales gratuitas consultables en minutos"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Antes la información era cara, lenta y a menudo desactualizada; hoy hay bases oficiales gratuitas."
+    },
+    {
+      "id": "p020",
+      "color": "azul",
+      "enunciado": "¿Por qué los cuatro motores explican que el comercio digital funcione distinto según el destino?",
+      "opciones": [
+        "Porque solo actúan en los países de la OMC",
+        "Porque dependen del idioma de cada tienda",
+        "Porque no actúan igual en todos los mercados",
+        "Porque dejaron de actuar al llegar internet"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Por ejemplo, el mercado único solo actúa dentro de la UE; fuera hay aduana y arancel."
+    },
+    {
+      "id": "p021",
+      "color": "azul",
+      "enunciado": "España es importadora neta en comercio electrónico. ¿Qué indica eso sobre la demanda?",
+      "opciones": [
+        "Que existe, pero la están atendiendo empresas de fuera",
+        "Que no hay demanda internacional de producto español",
+        "Que los consumidores españoles apenas compran en línea",
+        "Que el comercio electrónico está en claro retroceso"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El problema no es la falta de demanda, sino que se satisface desde fuera."
+    },
+    {
+      "id": "p022",
+      "color": "azul",
+      "enunciado": "Si casi todo el gasto exterior de los españoles va a la UE, ¿qué se deduce de las barreras?",
+      "opciones": [
+        "Son cuotas de importación que fija cada Estado miembro",
+        "Son sobre todo aranceles que encarecen el producto español",
+        "No son arancelarias: son de visibilidad, confianza y logística",
+        "Son requisitos aduaneros entre los Estados miembros"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Dentro del mercado único no hay aduanas: las trabas son de visibilidad, confianza, idioma y logística."
+    },
+    {
+      "id": "p023",
+      "color": "azul",
+      "enunciado": "Un español compra con naturalidad en tiendas alemanas. Según el tema, ¿qué implica esa simetría?",
+      "opciones": [
+        "Que las tiendas alemanas son mejores que las españolas",
+        "Que España debería limitar las compras en el exterior",
+        "Que un alemán también puede comprar en una tienda española",
+        "Que el consumidor alemán no compra fuera de su país"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La simetría es la oportunidad: lo que hace el comprador español lo puede hacer el alemán."
+    },
+    {
+      "id": "p024",
+      "color": "azul",
+      "enunciado": "Según el tema, el desequilibrio no está en el comprador extranjero. ¿Dónde está entonces?",
+      "opciones": [
+        "En que el consumidor extranjero desconfía de España",
+        "En que los aranceles europeos frenan al producto español",
+        "En que las empresas españolas son demasiado pequeñas",
+        "En que la empresa española sea visible y creíble allí"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La diferencia está en si la empresa está presente, es visible y resulta creíble en ese mercado."
+    },
+    {
+      "id": "p025",
+      "color": "azul",
+      "enunciado": "¿Por qué el tamaño ya no es la barrera para captar el gasto en línea exterior?",
+      "opciones": [
+        "Porque muchas pymes lo captan haciendo bien unas pocas cosas",
+        "Porque las grandes empresas han dejado de vender en línea",
+        "Porque los marketplaces solo admiten a empresas pequeñas",
+        "Porque las ayudas públicas cubren todo el coste de exportar"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Aparecer en las búsquedas, ofrecer el pago local y entregar con un plazo creíble está al alcance de una pyme."
+    },
+    {
+      "id": "p026",
+      "color": "azul",
+      "enunciado": "¿Por qué antes era tan difícil exportar para una empresa pequeña?",
+      "opciones": [
+        "No existían medios de transporte internacional regulares",
+        "La ley impedía exportar a empresas con pocos empleados",
+        "Los clientes extranjeros no aceptaban pedidos pequeños",
+        "Darse a conocer exigía una inversión alta antes de vender"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Ferias, catálogos y agentes suponían una inversión alta y previa a la primera venta."
+    },
+    {
+      "id": "p027",
+      "color": "azul",
+      "enunciado": "Una conservera de Vigo vende en Portugal y Francia y duda entre México y Alemania. Pensando en trámites, ¿qué debe prever?",
+      "opciones": [
+        "En Alemania habrá aduana; en México, al vender en línea, no",
+        "En México habrá despacho, documentos y tributos; en Alemania no",
+        "En ninguno habrá trámites, porque la venta se hace en línea",
+        "En ambos habrá despacho y tributos, como en cualquier exportación"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Alemania está en el mercado único; México no, y allí aparecen despacho, documentos y tributos."
+    },
+    {
+      "id": "p028",
+      "color": "azul",
+      "enunciado": "Una quesería de Arzúa cree que exportar exige un distribuidor en cada país y mucho volumen. ¿Qué le dirías?",
+      "opciones": [
+        "Hoy puede vender directo y en poca cantidad a muchos destinos",
+        "Solo puede exportar si se presenta antes a licitaciones",
+        "Debe esperar a crecer y contratar una red de agentes",
+        "Tiene razón: sin volumen la operación nunca sale a cuenta"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La digitalización rebajó la escala mínima viable y permite la venta directa al cliente final."
+    },
+    {
+      "id": "p029",
+      "color": "azul",
+      "enunciado": "Una bodega del Ribeiro ve que muchos alemanes compran vino en línea a tiendas francesas. ¿Qué lectura haría el tema?",
+      "opciones": [
+        "Debe esperar a que esa demanda se agote en Francia",
+        "Un arancel entre España y Alemania frena al vino español",
+        "Hay demanda: falta que la bodega sea visible y creíble allí",
+        "Los alemanes nunca comprarán vino a tiendas españolas"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Por simetría, ese cliente puede comprar a una tienda española si esta está presente y genera confianza."
+    },
+    {
+      "id": "p030",
+      "color": "azul",
+      "enunciado": "Una empresa de software de Santiago, con tres empleados, vende licencias a clientes de veinte países. ¿Qué idea del tema ilustra?",
+      "opciones": [
+        "Que lo digital rebajó el coste de estar presente fuera",
+        "Que la liberalización suprimió los aranceles del software",
+        "Que el comercio internacional nació con internet",
+        "Que el mercado único eliminó las barreras técnicas"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El caso muestra la aportación específica de lo digital: estar presente fuera cuesta poco."
+    },
+    {
+      "id": "p031",
+      "color": "azul",
+      "enunciado": "Un fabricante de maquinaria de Ourense va a ferias desde hace años. Su gerente cree que con una tienda en línea ya sobran. ¿Qué le responderías?",
+      "opciones": [
+        "Que deje las ferias y venda solo en marketplaces",
+        "Que tiene razón: las ferias son obsoletas con internet",
+        "Que las ferias solo sirven ya para vender a la administración",
+        "Que ferias y distribuidores siguen siendo útiles"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El tema insiste en que los canales tradicionales siguen siendo útiles y conviven con los digitales."
+    },
+    {
+      "id": "p032",
+      "color": "azul",
+      "enunciado": "Una cosmética de Valencia pagaba a un agente en Francia un margen por pedido. Ahora vende directo en su web. ¿Qué cambio aprovecha?",
+      "opciones": [
+        "Encontrar información del mercado en bases oficiales",
+        "Exportar en pequeñas cantidades a muchos destinos",
+        "Recibir pedidos sin intermediario y quedarse su margen",
+        "Cobrar con instrumentos bancarios tradicionales"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La venta directa deja para la empresa el margen que antes se llevaba el agente."
+    },
+    {
+      "id": "p033",
+      "color": "azul",
+      "enunciado": "Un taller de cerámica de Lugo quiere saber qué requisitos y aranceles tendría en Canadá. Antes habría encargado un estudio. ¿Qué haría hoy?",
+      "opciones": [
+        "Consultar bases de datos oficiales gratuitas en minutos",
+        "Contratar un agente en Canadá para que lo averigüe",
+        "Preguntarlo a sus clientes españoles más habituales",
+        "Esperar a la siguiente feria del sector en Canadá"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Hoy existen bases oficiales gratuitas con aranceles, requisitos y estadísticas."
+    },
+    {
+      "id": "p034",
+      "color": "azul",
+      "enunciado": "Una marisquería de Cambados cobra los pedidos pequeños del extranjero por transferencia bancaria y muchos clientes renuncian. ¿Qué ventaja desaprovecha?",
+      "opciones": [
+        "Darse a conocer con presencia permanente en línea",
+        "Encontrar información de mercado en bases oficiales",
+        "Recibir pedidos sin pasar por un distribuidor local",
+        "Cobrar al instante por medios electrónicos"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Lo digital permite cobrar al instante incluso operaciones de importe reducido."
+    },
+    {
+      "id": "p035",
+      "color": "azul",
+      "enunciado": "Dos pymes venden lo mismo: una a Bélgica y otra a Marruecos. La segunda tiene más quejas por retrasos y cobros extra. ¿Causa más probable?",
+      "opciones": [
+        "En Marruecos no se aceptan pagos por medios electrónicos",
+        "Fuera de la UE hay despacho y tributos que alargan y encarecen",
+        "Los clientes marroquíes son mucho más exigentes con los plazos",
+        "Su web carga mucho más despacio desde otro continente"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Bélgica está en el mercado único; Marruecos no, y allí aparecen trámites que alargan y encarecen."
+    },
+    {
+      "id": "p036",
+      "color": "azul",
+      "enunciado": "Una zapatería de Elche lee que España compra en línea fuera mucho más de lo que vende. Su socio lo ve como amenaza. ¿Cómo lo reinterpretarías?",
+      "opciones": [
+        "Indica que el calzado español es más caro que el extranjero",
+        "Es una señal clara de que no debe intentar vender fuera",
+        "Es mercado disponible que atiende otro y podría atender ella",
+        "Significa que solo puede vender a clientes españoles"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Cada punto del desequilibrio es mercado disponible para quien sepa salir a buscarlo."
+    },
+    {
+      "id": "p037",
+      "color": "azul",
+      "enunciado": "Una pyme de cosmética quiere vender en Polonia y cree que su gran problema serán los aranceles. ¿Qué le dirías?",
+      "opciones": [
+        "Necesitará un certificado de origen para cada envío",
+        "Pagará el arancel exterior común en cada venta a Polonia",
+        "No hay arancel en la UE; su reto es ser visible y creíble",
+        "Debe calcular el arancel polaco antes de fijar sus precios"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Polonia está en el mercado único: las barreras son de visibilidad, confianza, idioma y logística."
+    },
+    {
+      "id": "p038",
+      "color": "azul",
+      "enunciado": "Un vivero de Pontevedra recibe pedidos de Países Bajos, pero enviar cada planta cuesta casi lo que vale. ¿Qué muestra el caso?",
+      "opciones": [
+        "Que su web no es visible en los buscadores neerlandeses",
+        "Que debería vender solo a clientes de fuera de la UE",
+        "Que lo digital abarata estar presente, no mover la mercancía",
+        "Que el mercado único no se aplica a los productos agrícolas"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Recibir el pedido es instantáneo; transportar la caja sigue costando lo que cuesta."
+    },
+    {
+      "id": "p039",
+      "color": "azul",
+      "enunciado": "Un fabricante de muebles de Valencia lleva décadas enviando contenedores a Estados Unidos. ¿Qué motor hizo rentable mover sus muebles tan lejos?",
+      "opciones": [
+        "El abaratamiento del transporte",
+        "La digitalización del comercio",
+        "El mercado único europeo",
+        "La armonización fiscal mundial"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El contenedor abarató el transporte y volvió rentable la larga distancia; el mercado único no afecta a EE. UU."
+    },
+    {
+      "id": "p040",
+      "color": "azul",
+      "enunciado": "Una casa rural del Courel quiere captar viajeros neerlandeses sin viajar a ferias. ¿Qué le ofrece hoy lo digital?",
+      "opciones": [
+        "Un acuerdo bilateral entre España y Países Bajos para turismo",
+        "Un arancel reducido para los servicios turísticos",
+        "La eliminación de los costes de viaje de sus futuros clientes",
+        "Presencia permanente en línea, visible desde cualquier país"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La presencia en línea sustituye a la inversión previa en ferias y catálogos."
+    },
+    {
+      "id": "p041",
+      "color": "rosa",
+      "enunciado": "¿Qué es el comercio electrónico?",
+      "opciones": [
+        "La promoción de productos y servicios a través de redes sociales",
+        "La compraventa de bienes o servicios por medios electrónicos",
+        "Toda la actividad comercial apoyada en medios digitales",
+        "Convertir en digital lo que antes era analógico"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es la transacción hecha por medios electrónicos; el comercio digital es el conjunto más amplio."
+    },
+    {
+      "id": "p042",
+      "color": "rosa",
+      "enunciado": "¿Qué término abarca toda la actividad comercial apoyada en medios digitales, de captar a fidelizar?",
+      "opciones": [
+        "Aprovisionamiento electrónico",
+        "Comercio digital",
+        "Comercio electrónico",
+        "Digitalización"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "El comercio digital incluye dar a conocer, captar, vender, cobrar, entregar, la posventa y la fidelización."
+    },
+    {
+      "id": "p043",
+      "color": "rosa",
+      "enunciado": "¿Qué es la digitalización, según el tema?",
+      "opciones": [
+        "Pasar a digital lo analógico sin cambiar el proceso",
+        "Captar, vender y fidelizar por medios digitales",
+        "Comprar a proveedores mediante plataformas en línea",
+        "Vender por internet a clientes de otros países"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Es incorporar tecnología a un proceso existente, como pasar el registro de pedidos a una hoja de cálculo."
+    },
+    {
+      "id": "p044",
+      "color": "rosa",
+      "enunciado": "¿Qué significa B2C?",
+      "opciones": [
+        "Empresa a consumidor final",
+        "Empresa a administración",
+        "Empresa a empresa",
+        "Consumidor a consumidor"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Business to consumer: la empresa vende al consumidor final."
+    },
+    {
+      "id": "p045",
+      "color": "rosa",
+      "enunciado": "¿En qué modelo un particular vende a otro a través de una plataforma?",
+      "opciones": [
+        "B2C",
+        "B2A",
+        "B2B",
+        "C2C"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Consumer to consumer: segunda mano y venta entre particulares."
+    },
+    {
+      "id": "p046",
+      "color": "rosa",
+      "enunciado": "¿Qué modelo corresponde a las licitaciones y la contratación pública electrónica?",
+      "opciones": [
+        "B2B",
+        "B2C",
+        "C2C",
+        "B2A"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Business to administration: la empresa vende a la administración pública."
+    },
+    {
+      "id": "p047",
+      "color": "rosa",
+      "enunciado": "¿Qué es un e-marketplace?",
+      "opciones": [
+        "Un sistema para gestionar compras a proveedores",
+        "La tienda en línea de una sola empresa",
+        "Una plataforma donde el precio se forma por pujas",
+        "Un sitio que reúne la oferta de muchos vendedores"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El mercado electrónico agrupa a muchos vendedores en un mismo sitio."
+    },
+    {
+      "id": "p048",
+      "color": "rosa",
+      "enunciado": "¿Cómo se llama la web de venta propia de una empresa?",
+      "opciones": [
+        "Subasta electrónica o e-auction",
+        "Aprovisionamiento o e-procurement",
+        "Mercado electrónico o e-marketplace",
+        "Tienda en línea o e-shop"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El e-shop es la web de venta de una empresa."
+    },
+    {
+      "id": "p049",
+      "color": "rosa",
+      "enunciado": "¿En qué tipo de negocio electrónico el precio se forma por pujas?",
+      "opciones": [
+        "En la tienda en línea o e-shop",
+        "En la subasta electrónica o e-auction",
+        "En el mercado electrónico o e-marketplace",
+        "En el aprovisionamiento o e-procurement"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "En la e-auction el precio lo fijan las pujas de los compradores."
+    },
+    {
+      "id": "p050",
+      "color": "rosa",
+      "enunciado": "¿Qué es el e-procurement?",
+      "opciones": [
+        "La venta electrónica directa al consumidor final",
+        "La gestión electrónica de compras y proveedores",
+        "La reunión de muchos vendedores en una misma web",
+        "La subasta en línea de excedentes de producción"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es el aprovisionamiento electrónico: la empresa gestiona por medios digitales sus compras."
+    },
+    {
+      "id": "p051",
+      "color": "rosa",
+      "enunciado": "¿Con qué criterio se nombran los modelos B2C, B2B, C2C y B2A?",
+      "opciones": [
+        "Por quién está en cada extremo de la operación",
+        "Por el canal digital que se utiliza para vender",
+        "Por el país en el que se realiza la venta",
+        "Por el importe medio de cada operación"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "El modelo depende de quién vende y quién compra, no del canal ni del importe."
+    },
+    {
+      "id": "p052",
+      "color": "rosa",
+      "enunciado": "¿Qué exige el modelo B2A, según el tema?",
+      "opciones": [
+        "Certificado digital y trámites telemáticos",
+        "Venta exclusiva a través de marketplaces",
+        "Precios cerrados sin negociación previa",
+        "Un distribuidor en el país de destino"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La contratación pública electrónica requiere certificado digital y tramitación telemática."
+    },
+    {
+      "id": "p053",
+      "color": "rosa",
+      "enunciado": "¿Qué diferencia al comercio electrónico del comercio digital?",
+      "opciones": [
+        "Son sinónimos que se usan de forma distinta según el país",
+        "El electrónico incluye la posventa; el digital, solo la venta",
+        "El electrónico es la transacción; el digital, toda la actividad",
+        "El digital es para empresas; el electrónico, para consumidores"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "El comercio electrónico es una parte del digital: la compraventa en sí."
+    },
+    {
+      "id": "p054",
+      "color": "rosa",
+      "enunciado": "¿Por qué el tema insiste en no usar como sinónimos digitalización, comercio electrónico y comercio digital?",
+      "opciones": [
+        "Porque marcan hasta dónde llega el cambio en una empresa",
+        "Porque la ley obliga a distinguirlos en las facturas",
+        "Porque solo uno de ellos sirve para vender al exterior",
+        "Porque cada uno corresponde a un modelo de negocio distinto"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Van del más estrecho al más amplio y muestran cuánto se ha transformado la empresa."
+    },
+    {
+      "id": "p055",
+      "color": "rosa",
+      "enunciado": "¿Cómo suelen ser las operaciones B2B comparadas con las B2C?",
+      "opciones": [
+        "Más numerosas, de importe pequeño y sin negociación previa",
+        "Iguales en número, pero siempre de importe más bajo",
+        "Menos numerosas, de menor importe y sin relación duradera",
+        "Menos numerosas, de más importe y con negociación previa"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "En B2B hay menos operaciones, de más importe, con relaciones largas y negociación."
+    },
+    {
+      "id": "p056",
+      "color": "rosa",
+      "enunciado": "¿En qué modelo pesa especialmente la normativa de protección del consumidor del destino?",
+      "opciones": [
+        "En el B2C",
+        "En el B2B",
+        "En el e-procurement",
+        "En el B2A"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Cuando se vende al consumidor final se aplica la normativa de consumo del país de destino."
+    },
+    {
+      "id": "p057",
+      "color": "rosa",
+      "enunciado": "¿Qué manda en una venta B2C internacional?",
+      "opciones": [
+        "El precio negociado y las condiciones de pago",
+        "La confianza, la experiencia de compra y el plazo",
+        "El certificado digital y los trámites telemáticos",
+        "La fiabilidad del suministro a largo plazo"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Con muchas operaciones pequeñas, lo decisivo es la confianza, la experiencia y la entrega."
+    },
+    {
+      "id": "p058",
+      "color": "rosa",
+      "enunciado": "¿Por qué interesa el C2C a una empresa aunque no venda entre particulares?",
+      "opciones": [
+        "Porque es obligatorio vender también artículos de segunda mano",
+        "Como fuente de información de mercado y a veces como competencia",
+        "Porque sustituye a las licitaciones de la administración",
+        "Porque es el modelo con mayor importe medio por operación"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La venta entre particulares informa sobre el mercado y puede competir con la empresa."
+    },
+    {
+      "id": "p059",
+      "color": "rosa",
+      "enunciado": "¿Qué diferencia la clasificación por tipo de negocio electrónico de la de B2C, B2B, C2C y B2A?",
+      "opciones": [
+        "Clasifica a las empresas según su tamaño",
+        "Clasifica las ventas según el país de destino",
+        "Describe quién vende, pero no a quién se vende",
+        "Describe qué hace la plataforma, no quién la usa"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "E-shop, e-marketplace, e-procurement y e-auction describen la función de la plataforma."
+    },
+    {
+      "id": "p060",
+      "color": "rosa",
+      "enunciado": "¿Qué distingue un e-shop de un e-marketplace?",
+      "opciones": [
+        "El e-shop sirve para comprar; el marketplace, para vender",
+        "El e-shop funciona con pujas; el marketplace, con precio fijo",
+        "El e-shop vende a empresas; el marketplace, a consumidores",
+        "El e-shop es de una empresa; el marketplace reúne a muchas"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La tienda en línea es propia; el mercado electrónico agrupa la oferta de muchos vendedores."
+    },
+    {
+      "id": "p061",
+      "color": "rosa",
+      "enunciado": "¿Qué elementos aparecen al añadir el adjetivo «internacional» al comercio digital?",
+      "opciones": [
+        "Una tienda en línea, una pasarela de pago y un dominio propio",
+        "Divisas, idiomas, transporte y normas distintas por destino",
+        "Un catálogo digital y un registro de pedidos electrónico",
+        "Solo el coste adicional del transporte de la mercancía"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Lo internacional añade divisas, idiomas, transporte, requisitos de entrada, normas de consumo y expectativas distintas."
+    },
+    {
+      "id": "p062",
+      "color": "rosa",
+      "enunciado": "¿Puede una misma empresa operar a la vez en varios modelos de negocio digital?",
+      "opciones": [
+        "No: la ley obliga a cada empresa a elegir un único modelo",
+        "Sí: puede vender a empresas, consumidores y administración",
+        "Solo si se trata de una gran empresa con varias marcas",
+        "Solo si vende exclusivamente dentro de la Unión Europea"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El tema lo indica expresamente: una empresa puede operar en varios modelos a la vez."
+    },
+    {
+      "id": "p063",
+      "color": "rosa",
+      "enunciado": "¿Por qué una empresa muy digitalizada puede no hacer comercio electrónico?",
+      "opciones": [
+        "Porque para vender en línea hay que operar en B2A",
+        "Porque el comercio electrónico es solo para grandes empresas",
+        "Porque la digitalización impide usar tiendas en línea",
+        "Porque digitalizar procesos no implica vender en línea"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La digitalización transforma procesos; el comercio electrónico exige la compraventa por medios electrónicos."
+    },
+    {
+      "id": "p064",
+      "color": "rosa",
+      "enunciado": "¿Puede una empresa vender en línea sin haber transformado todo su comercio?",
+      "opciones": [
+        "No: vender en línea exige haber digitalizado toda la actividad",
+        "Sí, pero solo cuando vende a otras empresas",
+        "No: el comercio electrónico incluye siempre la posventa",
+        "Sí: puede hacer comercio electrónico sin comercio digital pleno"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Puede tener la transacción en línea sin haber llevado a lo digital la captación, la posventa o la fidelización."
+    },
+    {
+      "id": "p065",
+      "color": "rosa",
+      "enunciado": "Además de la transacción, ¿qué incluye el comercio digital?",
+      "opciones": [
+        "La conversión de los documentos de papel a formato PDF",
+        "Captar, cobrar, entregar, atender la posventa y fidelizar",
+        "Solo el cobro con tarjeta y el envío de la factura en papel",
+        "La gestión electrónica de las compras a los proveedores"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El comercio digital es el conjunto de la actividad comercial apoyada en medios digitales."
+    },
+    {
+      "id": "p066",
+      "color": "rosa",
+      "enunciado": "¿Qué manda en una relación B2B internacional?",
+      "opciones": [
+        "Precio, condiciones de pago y suministro fiable",
+        "Las opiniones públicas de otros consumidores",
+        "El certificado digital y la tramitación telemática",
+        "La experiencia de compra y la rapidez de la entrega"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "En B2B la relación es larga y se negocian precio, pago y suministro fiable."
+    },
+    {
+      "id": "p067",
+      "color": "rosa",
+      "enunciado": "Una panadería de Betanzos lleva los encargos en una aplicación en vez de en un cuaderno, pero solo vende en el mostrador. ¿Qué ha hecho?",
+      "opciones": [
+        "Comercio digital, porque trabaja con medios digitales",
+        "Comercio B2B, porque gestiona encargos de clientes",
+        "Comercio electrónico, porque usa una aplicación",
+        "Digitalizar un proceso, sin hacer comercio electrónico"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Ha pasado a digital un proceso existente, pero no vende por medios electrónicos."
+    },
+    {
+      "id": "p068",
+      "color": "rosa",
+      "enunciado": "Un cliente suizo compra un jersey en la web de una marca de Ourense y paga con tarjeta. ¿Qué parte es comercio electrónico en sentido estricto?",
+      "opciones": [
+        "El boletín que recibirá tras la compra",
+        "La compra y el pago en la tienda en línea",
+        "El seguimiento del envío hasta Suiza",
+        "La campaña que atrajo al cliente a la web"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El comercio electrónico es la transacción; lo demás forma parte del comercio digital."
+    },
+    {
+      "id": "p069",
+      "color": "rosa",
+      "enunciado": "Una bodega de Cambados vende en su web, envía boletines, lanza campañas y sigue los envíos. ¿Qué concepto describe todo ese conjunto?",
+      "opciones": [
+        "Comercio electrónico",
+        "Digitalización",
+        "E-procurement",
+        "Comercio digital"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Abarca captar, vender, entregar y fidelizar: es comercio digital, no solo electrónico."
+    },
+    {
+      "id": "p070",
+      "color": "rosa",
+      "enunciado": "Una empresa de software de Vigo vende licencias a un ayuntamiento portugués mediante licitación electrónica. ¿En qué modelo opera?",
+      "opciones": [
+        "C2C: consumidor a consumidor",
+        "B2C: empresa a consumidor",
+        "B2A: empresa a administración",
+        "B2B: empresa a empresa"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Un ayuntamiento es administración pública, aunque sea extranjera."
+    },
+    {
+      "id": "p071",
+      "color": "rosa",
+      "enunciado": "Una tienda de ropa infantil de Zaragoza vende a familias de Francia e Italia por su web. ¿Qué normativa de consumo debe tener en cuenta?",
+      "opciones": [
+        "Solo la española, por ser una empresa con sede en España",
+        "La de contratación pública de cada Estado miembro",
+        "La de protección del consumidor de cada país de destino",
+        "Ninguna en concreto, porque la venta se hace en línea"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "En B2C se aplica la normativa de consumo del país del comprador."
+    },
+    {
+      "id": "p072",
+      "color": "rosa",
+      "enunciado": "Un fabricante de envases ve sus productos revendidos en una web de segunda mano entre particulares. ¿Para qué le sirve esa información?",
+      "opciones": [
+        "Para gestionar sus compras a proveedores",
+        "Para conocer el mercado y vigilar a la competencia",
+        "Para presentarse a licitaciones públicas de envases",
+        "Para vender allí sus envases a otras empresas del sector"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El C2C interesa a la empresa como fuente de información y, a veces, como competencia."
+    },
+    {
+      "id": "p073",
+      "color": "rosa",
+      "enunciado": "Una cadena hotelera de Canarias organiza en línea las compras a sus proveedores de lencería y alimentos. ¿Qué tipo de negocio electrónico usa?",
+      "opciones": [
+        "E-marketplace",
+        "E-auction",
+        "E-shop",
+        "E-procurement"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Gestiona sus compras y proveedores: es aprovisionamiento electrónico."
+    },
+    {
+      "id": "p074",
+      "color": "rosa",
+      "enunciado": "Una lonja quiere vender lotes de pescado por internet al mejor postor, con compradores de varios países. ¿Qué tipo de negocio le encaja?",
+      "opciones": [
+        "Una tienda en línea propia",
+        "Una subasta electrónica",
+        "Un portal de licitación pública",
+        "Un sistema de aprovisionamiento"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Si el precio se forma por pujas, es una e-auction."
+    },
+    {
+      "id": "p075",
+      "color": "rosa",
+      "enunciado": "Tras comprar, un cliente francés recibe un boletín y el seguimiento de su envío. ¿Qué indica eso de la empresa vendedora?",
+      "opciones": [
+        "Que opera en el modelo C2C con ese cliente francés",
+        "Que se ha digitalizado, pero no vende en línea",
+        "Que hace comercio digital, no solo comercio electrónico",
+        "Que usa un sistema de aprovisionamiento electrónico"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Seguimiento y boletín van más allá de la transacción: son comercio digital."
+    },
+    {
+      "id": "p076",
+      "color": "rosa",
+      "enunciado": "Una empresa de recambios industriales de Gijón vende a talleres de Portugal con precios negociados y pago aplazado. ¿Qué debe cuidar más?",
+      "opciones": [
+        "Certificado digital y trámites telemáticos",
+        "Opiniones públicas y rapidez del proceso de compra",
+        "La normativa de consumo del país de destino",
+        "Precio, condiciones de pago y suministro fiable"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Es B2B: mandan el precio, las condiciones de pago y la fiabilidad del suministro."
+    },
+    {
+      "id": "p077",
+      "color": "rosa",
+      "enunciado": "Una empresa de cerámica de Castellón vende a constructoras y a particulares. ¿Cómo se clasifica su actividad?",
+      "opciones": [
+        "En C2C, porque tiene dos tipos de cliente",
+        "Solo en B2C, porque vende también a particulares",
+        "Solo en B2B, porque vende también a empresas",
+        "Opera a la vez en B2B y en B2C"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Una misma empresa puede operar en varios modelos según quién compre."
+    },
+    {
+      "id": "p078",
+      "color": "rosa",
+      "enunciado": "Una quesería gallega que ya vende en línea en España empieza a vender a Dinamarca. ¿Qué cambia al añadir «internacional»?",
+      "opciones": [
+        "Desaparecen los costes de transporte de cada envío",
+        "Aparecen otra divisa, otro idioma y otras normas",
+        "Ya no necesita mantener una tienda en línea propia",
+        "Deja de ser comercio electrónico y pasa a ser B2A"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Lo internacional añade divisas, idiomas, transporte y normativas distintas."
+    },
+    {
+      "id": "p079",
+      "color": "rosa",
+      "enunciado": "Una editorial de Santiago publica su catálogo en PDF en la web, pero atiende los pedidos por teléfono. ¿Qué le falta para hacer comercio electrónico?",
+      "opciones": [
+        "Llevar el registro de pedidos en una hoja de cálculo",
+        "Organizar subastas electrónicas de sus libros",
+        "Pasar a un modelo de venta a la administración",
+        "Que la compraventa se haga por medios electrónicos"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Tener un PDF es digitalización; el comercio electrónico exige la transacción electrónica."
+    },
+    {
+      "id": "p080",
+      "color": "rosa",
+      "enunciado": "Una startup de A Coruña crea una web donde artesanos de toda Europa venden sus productos a cambio de una comisión. ¿Qué ha creado?",
+      "opciones": [
+        "Una e-auction",
+        "Un sistema de e-procurement",
+        "Un e-shop",
+        "Un e-marketplace"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Reúne la oferta de muchos vendedores en un mismo sitio."
+    },
+    {
+      "id": "p081",
+      "color": "amarillo",
+      "enunciado": "¿Qué es el marketing digital?",
+      "opciones": [
+        "La publicidad impresa enviada a otros países",
+        "La gestión electrónica de las compras a proveedores",
+        "Las acciones de comercialización por medios digitales",
+        "La venta de productos a través de una tienda en línea"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Es el conjunto de acciones de comercialización ejecutadas por medios digitales."
+    },
+    {
+      "id": "p082",
+      "color": "amarillo",
+      "enunciado": "¿Cuáles son las dos ventajas del marketing digital que el tradicional no ofrece?",
+      "opciones": [
+        "La gratuidad y la inmediatez",
+        "El contacto personal y la confianza",
+        "La segmentación y la medición",
+        "El alcance local y la exclusividad"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Permite dirigirse a un perfil concreto y saber qué resultado tiene cada acción."
+    },
+    {
+      "id": "p083",
+      "color": "amarillo",
+      "enunciado": "¿Qué ventaja del marketing digital considera el tema la más importante?",
+      "opciones": [
+        "La gratuidad",
+        "La segmentación",
+        "La creatividad",
+        "La medición"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Saber cuántos vieron, entraron y compraron permite decidir con datos."
+    },
+    {
+      "id": "p084",
+      "color": "amarillo",
+      "enunciado": "¿Qué es el SEO?",
+      "opciones": [
+        "Enviar boletines a los clientes registrados",
+        "Aparecer en los buscadores mediante pago",
+        "Aparecer en los buscadores por vía natural",
+        "Medir de dónde llegan las visitas a la web"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "SEO es el posicionamiento natural; SEM, el de pago."
+    },
+    {
+      "id": "p085",
+      "color": "amarillo",
+      "enunciado": "¿Qué elemento del marketing digital aporta notoriedad y contacto directo con el público?",
+      "opciones": [
+        "El sitio propio",
+        "El correo electrónico",
+        "Las redes sociales",
+        "La analítica"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Las redes dan notoriedad, contacto directo e información barata sobre el mercado."
+    },
+    {
+      "id": "p086",
+      "color": "amarillo",
+      "enunciado": "¿Cuál es el único espacio digital que la empresa controla por completo?",
+      "opciones": [
+        "El buscador",
+        "El sitio propio",
+        "El marketplace",
+        "Las redes sociales"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Su web o tienda es la sede de la empresa en internet."
+    },
+    {
+      "id": "p087",
+      "color": "amarillo",
+      "enunciado": "¿Qué elemento del marketing digital mide de dónde llega la gente y dónde abandona?",
+      "opciones": [
+        "La analítica",
+        "Los contenidos",
+        "El posicionamiento",
+        "Las redes sociales"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La analítica mide qué funciona y cuánto cuesta cada venta."
+    },
+    {
+      "id": "p088",
+      "color": "amarillo",
+      "enunciado": "¿Qué incluye el elemento «correo y automatización»?",
+      "opciones": [
+        "Anuncios de pago en los buscadores del país",
+        "Boletines, seguimiento y recuperación de carritos",
+        "Perfiles de empresa en las redes sociales",
+        "Fichas técnicas, guías de uso y casos prácticos"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es la comunicación directa con quien ha dejado sus datos."
+    },
+    {
+      "id": "p089",
+      "color": "amarillo",
+      "enunciado": "¿Cuál de estos NO es uno de los elementos básicos del marketing digital?",
+      "opciones": [
+        "Los contenidos",
+        "La feria sectorial",
+        "Las redes sociales",
+        "La analítica"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Los seis son sitio propio, buscadores, contenidos, redes, correo y automatización, y analítica."
+    },
+    {
+      "id": "p090",
+      "color": "amarillo",
+      "enunciado": "¿Qué tipo de contenidos recomienda publicar el tema?",
+      "opciones": [
+        "Fichas técnicas, guías de uso y casos",
+        "Noticias de actualidad general",
+        "Ofertas de empleo de la empresa",
+        "Anuncios con descuentos y sorteos"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Son contenidos útiles que atraen y generan confianza."
+    },
+    {
+      "id": "p091",
+      "color": "amarillo",
+      "enunciado": "Cuando se combinan los dos tipos de marketing, ¿cuál suele cerrar la operación?",
+      "opciones": [
+        "La analítica web",
+        "El posicionamiento de pago",
+        "El marketing digital",
+        "El marketing tradicional"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Lo habitual es que el digital identifique el interés y el tradicional cierre la operación."
+    },
+    {
+      "id": "p092",
+      "color": "amarillo",
+      "enunciado": "¿A quién puede dirigirse un mensaje de marketing digital?",
+      "opciones": [
+        "A un perfil definido por país, idioma o interés",
+        "Solo a quien pase por delante del anuncio",
+        "A todo el público de un país, sin distinción alguna",
+        "Solo a los clientes que ya le han comprado antes"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Es la segmentación: un mensaje para un perfil concreto de un país concreto."
+    },
+    {
+      "id": "p093",
+      "color": "amarillo",
+      "enunciado": "¿Qué problema antiguo del comercio internacional resuelve el marketing digital?",
+      "opciones": [
+        "Llegar a un mercado desconocido sin gastar antes una fortuna",
+        "Reducir el coste del transporte marítimo de la mercancía",
+        "Evitar los aranceles de entrada al mercado de destino",
+        "Compensar las diferencias de huso horario con el cliente"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Permite probar un mercado con poco presupuesto antes de invertir en él."
+    },
+    {
+      "id": "p094",
+      "color": "amarillo",
+      "enunciado": "¿Por qué la medición permite «probar» un mercado?",
+      "opciones": [
+        "Asegura una posición fija en los buscadores del país",
+        "Hace innecesario fijar un presupuesto para la campaña",
+        "Permite conocer en persona la opinión de cada cliente",
+        "Se sabe quién vio, entró y compró, y se decide con datos"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Con datos de resultado se decide si se invierte en el mercado o se descarta."
+    },
+    {
+      "id": "p095",
+      "color": "amarillo",
+      "enunciado": "Según el tema, ¿son alternativos el marketing tradicional y el digital?",
+      "opciones": [
+        "Sí: el digital ha sustituido por completo al tradicional",
+        "Sí: cada empresa debe elegir uno y descartar el otro",
+        "No: el tradicional detecta el interés y el digital cierra",
+        "No: el digital detecta el interés y el tradicional cierra"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Se complementan: el digital localiza dónde hay interés y el trato personal cierra."
+    },
+    {
+      "id": "p096",
+      "color": "amarillo",
+      "enunciado": "¿Qué aporta el marketing tradicional que el digital no da?",
+      "opciones": [
+        "La corrección del mensaje en apenas unos días",
+        "El contacto personal y la confianza de verse",
+        "La medición exacta de cuánto cuesta cada venta",
+        "La posibilidad de probar varios mercados a la vez"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El trato directo en la negociación sigue siendo su gran aportación."
+    },
+    {
+      "id": "p097",
+      "color": "amarillo",
+      "enunciado": "¿En qué se diferencia el coste de entrada del marketing digital del tradicional?",
+      "opciones": [
+        "Es igual, pero se paga después de vender",
+        "Es alto y previo, frente a uno bajo y escalable",
+        "Es bajo y escalable, frente a uno alto y previo",
+        "Es gratuito, frente a uno alto y previo"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Se empieza con poco y se amplía si funciona; la feria exige gastar antes."
+    },
+    {
+      "id": "p098",
+      "color": "amarillo",
+      "enunciado": "¿Por qué el posicionamiento en buscadores capta al cliente más cualificado?",
+      "opciones": [
+        "Porque muestra el anuncio a todo el que navega por internet",
+        "Porque garantiza la compra de todo el que hace clic",
+        "Porque sustituye a la tienda en línea de la empresa",
+        "Porque llega a quien ya busca el producto en su idioma y país"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Quien busca ya tiene la necesidad: es el cliente más cualificado que existe."
+    },
+    {
+      "id": "p099",
+      "color": "amarillo",
+      "enunciado": "¿Por qué los contenidos son clave cuando el cliente está lejos?",
+      "opciones": [
+        "Sustituyen al certificado de origen del producto",
+        "Sustituyen al transporte internacional de la mercancía",
+        "Sustituyen a la visita comercial al cliente lejano",
+        "Sustituyen a la pasarela de pago de la tienda en línea"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Fichas, guías y casos dan al cliente lejano la información que le daría un comercial."
+    },
+    {
+      "id": "p100",
+      "color": "amarillo",
+      "enunciado": "¿Por qué el correo es especialmente valioso para fidelizar?",
+      "opciones": [
+        "Es el único canal digital que permite vender a otras empresas",
+        "Garantiza aparecer el primero en los buscadores del país",
+        "Buena relación coste-resultado y no depende de plataformas ajenas",
+        "Elimina la necesidad de mantener una web propia de la empresa"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Es directo, barato y no depende de las reglas de ninguna plataforma."
+    },
+    {
+      "id": "p101",
+      "color": "amarillo",
+      "enunciado": "¿Por qué las redes sociales adecuadas cambian de un mercado a otro?",
+      "opciones": [
+        "Porque el público usa plataformas distintas según el país",
+        "Porque cada país prohíbe alguna red social extranjera",
+        "Porque las redes solo sirven para vender a consumidores",
+        "Porque el idioma de cada red lo fija la propia empresa"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Varían por país y según se venda a empresa o a consumidor."
+    },
+    {
+      "id": "p102",
+      "color": "amarillo",
+      "enunciado": "¿Qué elemento convierte la internacionalización en prueba y ajuste en lugar de una apuesta?",
+      "opciones": [
+        "Los contenidos",
+        "La analítica",
+        "El sitio propio",
+        "Las redes sociales"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Medir qué funciona permite corregir en lugar de apostar a ciegas."
+    },
+    {
+      "id": "p103",
+      "color": "amarillo",
+      "enunciado": "En velocidad de corrección, ¿qué ventaja tiene el marketing digital?",
+      "opciones": [
+        "Solo se corrige al cerrar el ejercicio contable",
+        "Se ajusta en días; el tradicional, en la próxima feria",
+        "Se ajusta en meses; el tradicional, en unos pocos días",
+        "No admite cambios una vez que se ha lanzado la campaña"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El mensaje, el público o el mercado se ajustan sobre la marcha."
+    },
+    {
+      "id": "p104",
+      "color": "amarillo",
+      "enunciado": "¿Qué sabe la empresa del resultado con el marketing tradicional frente al digital?",
+      "opciones": [
+        "Una impresión general, frente a datos de cada venta",
+        "Nada en el tradicional y solo las visitas en el digital",
+        "Lo mismo en ambos casos: solo el número de contactos",
+        "Datos de cada venta, frente a una impresión general"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El digital dice cuántos vieron, entraron y compraron, y cuánto costó cada venta."
+    },
+    {
+      "id": "p105",
+      "color": "amarillo",
+      "enunciado": "¿Por qué el sitio propio es la base de todo el marketing digital?",
+      "opciones": [
+        "Es la única forma de medir de dónde llegan las visitas",
+        "Es el único canal que permite aparecer en los buscadores",
+        "Es la sede de la empresa en internet y el único que controla",
+        "Es el canal más barato para fidelizar a los clientes"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Redes, buscadores y correo llevan al sitio propio, el único espacio digital que la empresa controla por completo."
+    },
+    {
+      "id": "p106",
+      "color": "amarillo",
+      "enunciado": "¿Por qué el marketing digital permite probar varios mercados a la vez?",
+      "opciones": [
+        "Porque los buscadores son iguales en todos los países",
+        "Porque no hace falta adaptar el idioma de los anuncios",
+        "Porque las ferias internacionales ya no se celebran",
+        "Por su bajo coste de entrada y su capacidad de medición"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Con poco presupuesto y datos de resultado se pueden comparar mercados en paralelo."
+    },
+    {
+      "id": "p107",
+      "color": "amarillo",
+      "enunciado": "Una conservera de Boiro tiene poco presupuesto y duda entre Bélgica y Dinamarca. ¿Qué le recomendarías según el tema?",
+      "opciones": [
+        "Imprimir catálogos en ambos idiomas y enviarlos por correo",
+        "Ir a una feria en cada país antes de decidir nada",
+        "Elegir el país más grande y gastar allí todo el presupuesto",
+        "Campañas pequeñas en ambos, medir y apostar por el que responda"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El marketing digital permite probar mercados con poco y decidir con datos."
+    },
+    {
+      "id": "p108",
+      "color": "amarillo",
+      "enunciado": "Una cosmética natural de Granada anuncia sus productos en Francia, pero no sabe cuántas ventas le generan. ¿Qué elemento le falta?",
+      "opciones": [
+        "La analítica",
+        "Los contenidos",
+        "El sitio propio",
+        "Las redes sociales"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Sin analítica no sabe de dónde llega la gente ni cuánto cuesta cada venta."
+    },
+    {
+      "id": "p109",
+      "color": "amarillo",
+      "enunciado": "Un fabricante de maquinaria quiere captar a compradores alemanes que ya buscan su tipo de máquina en internet. ¿En qué debe invertir?",
+      "opciones": [
+        "Catálogos impresos para la próxima feria",
+        "Más presencia en redes sociales españolas",
+        "Posicionamiento en buscadores en alemán",
+        "Un boletín para sus clientes actuales"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Quien ya busca el producto en su idioma es el cliente más cualificado."
+    },
+    {
+      "id": "p110",
+      "color": "amarillo",
+      "enunciado": "Una tienda de té de Barcelona tiene muchos carritos abandonados de clientes registrados. ¿Qué elemento le ayuda a recuperarlos?",
+      "opciones": [
+        "Posicionamiento natural",
+        "Contenidos del blog",
+        "Correo y automatización",
+        "Redes sociales"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La recuperación de carritos es una función típica del correo automatizado."
+    },
+    {
+      "id": "p111",
+      "color": "amarillo",
+      "enunciado": "Un fabricante de válvulas vende a ingenieros de Chile que deciden sin ninguna visita comercial. ¿Qué elemento debería reforzar?",
+      "opciones": [
+        "Las redes sociales de consumo",
+        "Los contenidos: fichas, guías y casos",
+        "Los anuncios en vallas publicitarias",
+        "Los sorteos en redes sociales"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Los contenidos sustituyen a la visita comercial cuando el cliente decide solo."
+    },
+    {
+      "id": "p112",
+      "color": "amarillo",
+      "enunciado": "Una bodega del Bierzo vende casi todo en un marketplace que cambia sus reglas sin avisar. ¿Qué le daría más independencia?",
+      "opciones": [
+        "Pagar más anuncios en la plataforma",
+        "Publicar más en el marketplace",
+        "Reforzar su sitio propio",
+        "Bajar precios dentro del marketplace"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "El sitio propio es el único espacio digital que controla por completo."
+    },
+    {
+      "id": "p113",
+      "color": "amarillo",
+      "enunciado": "Una textil de Ourense lanzó una campaña en Italia y en tres días casi nadie entra desde el anuncio. ¿Qué haría con marketing digital?",
+      "opciones": [
+        "Esperar a la próxima edición de la feria",
+        "Retirarse de Italia de forma definitiva",
+        "Mantener la campaña sin cambios hasta fin de año",
+        "Ajustar el mensaje o el público sobre la marcha"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La ventaja del digital es corregir en días, sin esperar a la siguiente feria."
+    },
+    {
+      "id": "p114",
+      "color": "amarillo",
+      "enunciado": "Un fabricante de mobiliario de oficina detecta con campañas digitales interés real en Suecia. ¿Qué paso sería habitual después?",
+      "opciones": [
+        "Cerrar las operaciones con trato personal en una feria",
+        "Seguir solo con anuncios y descartar el trato directo",
+        "Abandonar el marketing digital porque ya ha cumplido",
+        "Contratar de inmediato agentes comerciales en toda Europa"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El digital identifica dónde hay interés y el tradicional suele cerrar la operación."
+    },
+    {
+      "id": "p115",
+      "color": "amarillo",
+      "enunciado": "Una agencia de viajes de Santiago quiere llegar a jubilados neerlandeses interesados en el Camino. ¿Qué ventaja digital aprovecha?",
+      "opciones": [
+        "La medición del coste de cada venta",
+        "El contacto personal propio de una feria",
+        "La segmentación por país, perfil e interés",
+        "La gratuidad de las redes sociales"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Dirigir el mensaje a un perfil muy concreto de un país concreto es segmentar."
+    },
+    {
+      "id": "p116",
+      "color": "amarillo",
+      "enunciado": "Un fabricante de piezas de Vigo vende a empresas en Polonia. Su socio quiere usar las mismas redes que usa con consumidores españoles. ¿Qué falla?",
+      "opciones": [
+        "Las redes útiles cambian según el país y el tipo de cliente",
+        "Las redes solo funcionan con anuncios de pago",
+        "En Polonia está prohibido hacer publicidad en redes sociales",
+        "Las redes sociales no sirven en ningún caso para vender"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Las plataformas donde está el público varían por país y por tipo de cliente."
+    },
+    {
+      "id": "p117",
+      "color": "amarillo",
+      "enunciado": "Una quesería gasta lo mismo en una feria en Lyon que en anuncios en Francia: la feria dio contactos; los anuncios, ventas medibles. ¿Qué ventaja ha visto?",
+      "opciones": [
+        "La segmentación del público",
+        "El contacto personal",
+        "La medición del resultado",
+        "El posicionamiento natural"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Sabe cuánta gente vio, entró y compró: eso es medir."
+    },
+    {
+      "id": "p118",
+      "color": "amarillo",
+      "enunciado": "Una zapatería de Elche aparece la primera en los buscadores españoles, pero en Austria nadie la encuentra. ¿Qué debe hacer?",
+      "opciones": [
+        "Mejorar todavía más su posición en buscadores españoles",
+        "Trabajar el posicionamiento en alemán para ese mercado",
+        "Enviar más boletines a sus clientes de España",
+        "Crear más perfiles en redes sociales españolas"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Hay que aparecer cuando se busca en el idioma y el país del cliente."
+    },
+    {
+      "id": "p119",
+      "color": "amarillo",
+      "enunciado": "Una cosmética que nunca ha exportado tiene poco presupuesto. Su socio quiere gastarlo entero en un estand en Dubái. ¿Qué le objetarías?",
+      "opciones": [
+        "Que en Dubái no existe demanda de productos cosméticos",
+        "Que las ferias están prohibidas para las empresas pequeñas",
+        "Que la feria le dará más datos que una campaña digital",
+        "Que con anuncios medibles podría probar antes varios mercados"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El coste de una feria es alto y previo; el digital permite probar con poco y medir."
+    },
+    {
+      "id": "p120",
+      "color": "amarillo",
+      "enunciado": "Un fabricante de juguetes de Ibi pierde alcance cada vez que una red social cambia su algoritmo. ¿Qué canal no depende de ninguna plataforma ajena?",
+      "opciones": [
+        "Las fichas de producto en un marketplace",
+        "El correo a quien ha dejado sus datos",
+        "Los perfiles en otras redes sociales",
+        "La publicidad en esa misma red social"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El correo tiene la mejor relación coste-resultado y no depende de terceros."
+    },
+    {
+      "id": "p121",
+      "color": "marron",
+      "enunciado": "¿Qué falta en la venta a distancia que sí hay en una tienda física?",
+      "opciones": [
+        "Un catálogo completo de los productos",
+        "Alguien que resuelva las dudas al momento",
+        "Un medio de pago para cerrar la compra",
+        "Un precio de venta fijado de antemano"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Sin dependiente, todo lo necesario para decidir debe estar en la pantalla."
+    },
+    {
+      "id": "p122",
+      "color": "marron",
+      "enunciado": "¿Cuál es la primera fase del recorrido de compra?",
+      "opciones": [
+        "La consideración",
+        "La compra",
+        "La posventa",
+        "El descubrimiento"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Primero el cliente sabe que la empresa existe; después compara, compra y opina."
+    },
+    {
+      "id": "p123",
+      "color": "marron",
+      "enunciado": "¿En qué fase el cliente compara precio total, plazo, devoluciones y opiniones?",
+      "opciones": [
+        "En el descubrimiento",
+        "En la posventa",
+        "En la compra",
+        "En la consideración"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "La consideración es la fase de comparar."
+    },
+    {
+      "id": "p124",
+      "color": "marron",
+      "enunciado": "¿En qué fase del recorrido se produce el mayor abandono?",
+      "opciones": [
+        "En el descubrimiento",
+        "En la consideración",
+        "En la compra",
+        "En la posventa"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Es el momento de decidir y pagar, y donde más clientes se pierden."
+    },
+    {
+      "id": "p125",
+      "color": "marron",
+      "enunciado": "¿En qué fase el cliente recibe el pedido, lo usa y opina?",
+      "opciones": [
+        "En la posventa",
+        "En la consideración",
+        "En la compra",
+        "En el descubrimiento"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "En la posventa se decide si repite y qué escribe en público."
+    },
+    {
+      "id": "p126",
+      "color": "marron",
+      "enunciado": "¿Qué hace el cliente online antes de comprar, según el tema?",
+      "opciones": [
+        "Solo se fija en el diseño y las fotos de la web",
+        "Llama siempre a la tienda para confirmar antes el pedido",
+        "Consulta varias tiendas, lee opiniones y compara precios",
+        "Compra directamente en la primera tienda que encuentra"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Es un cliente informado que compara; por eso la información debe ser completa y honesta."
+    },
+    {
+      "id": "p127",
+      "color": "marron",
+      "enunciado": "¿Desde qué dispositivo se hace una parte muy importante de la compra en línea?",
+      "opciones": [
+        "Desde el teléfono móvil",
+        "Desde la televisión inteligente",
+        "Desde la consola de videojuegos",
+        "Desde el ordenador de sobremesa"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Una tienda que no funcione bien en el móvil pierde la mayoría de sus oportunidades."
+    },
+    {
+      "id": "p128",
+      "color": "marron",
+      "enunciado": "¿Qué espera el cliente internacional en cuanto a idioma y moneda?",
+      "opciones": [
+        "El idioma y la divisa del vendedor",
+        "Inglés y precios siempre en dólares",
+        "Su idioma y los precios en su divisa",
+        "Cualquier idioma, si el precio es bajo"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Traducir con soltura y mostrar su moneda aumenta la conversión."
+    },
+    {
+      "id": "p129",
+      "color": "marron",
+      "enunciado": "¿Qué compensa la desconfianza hacia una tienda extranjera desconocida?",
+      "opciones": [
+        "Precios mostrados en la divisa del vendedor",
+        "Un diseño llamativo con muchas animaciones",
+        "Opiniones, contacto visible y devoluciones claras",
+        "Un catálogo con muchísimos productos distintos"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Son las señales que sustituyen a conocer la tienda."
+    },
+    {
+      "id": "p130",
+      "color": "marron",
+      "enunciado": "¿Qué le pasa a la posventa cuando el cliente opina en público?",
+      "opciones": [
+        "Se convierte en una obligación legal en cada país",
+        "Deja de ser un coste y pasa a ser parte del marketing",
+        "Pasa a gestionarla siempre la plataforma de venta",
+        "Deja de ser necesaria para la empresa vendedora"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "La experiencia, buena o mala, acaba escrita y afecta a futuros clientes."
+    },
+    {
+      "id": "p131",
+      "color": "marron",
+      "enunciado": "¿Qué necesita la empresa en la fase de descubrimiento?",
+      "opciones": [
+        "Seguimiento del envío y atención en el idioma del cliente",
+        "Valoraciones y una política de devoluciones clara",
+        "Un proceso de pago corto y con el precio final visible",
+        "Ser visible en el destino, en su idioma y donde se mira"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Primero hay que ser encontrado en el mercado de destino."
+    },
+    {
+      "id": "p132",
+      "color": "marron",
+      "enunciado": "¿Qué fuente cita el tema para conocer cómo compra el cliente de un país antes de entrar?",
+      "opciones": [
+        "Los informes de la OMC",
+        "Las fichas de mercado del ICEX",
+        "Las redes sociales del destino",
+        "La estadística de la CNMC"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Las fichas del ICEX recogen ese tipo de datos de cada mercado."
+    },
+    {
+      "id": "p133",
+      "color": "marron",
+      "enunciado": "¿Por qué el cliente online suele marcharse sin preguntar?",
+      "opciones": [
+        "Si la información no está en la pantalla, no puede decidir",
+        "Porque desconfía de cualquier tienda de su propio país",
+        "Porque prefiere siempre comprar en tiendas físicas",
+        "Porque las tiendas en línea no permiten hacer preguntas"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "No hay dependiente: lo que no está en la pantalla no existe para él."
+    },
+    {
+      "id": "p134",
+      "color": "marron",
+      "enunciado": "¿Por qué la exageración en la información de producto perjudica al vendedor?",
+      "opciones": [
+        "Porque los buscadores la eliminan de sus resultados",
+        "Porque el cliente compara, la detecta y la penaliza",
+        "Porque alarga demasiado el tiempo de carga de la página",
+        "Porque está prohibida en todas las tiendas de la UE"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El cliente está informado: la información debe ser completa y honesta."
+    },
+    {
+      "id": "p135",
+      "color": "marron",
+      "enunciado": "¿Por qué cada formulario adicional cuesta ventas?",
+      "opciones": [
+        "Porque obliga al cliente a cambiar de divisa",
+        "Porque cada formulario encarece el envío internacional",
+        "Porque el cliente es impaciente y abandona procesos largos",
+        "Porque los formularios no funcionan desde el extranjero"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Abandona las páginas lentas y los procesos con demasiados pasos."
+    },
+    {
+      "id": "p136",
+      "color": "marron",
+      "enunciado": "¿Qué efecto tiene una traducción automática mal revisada?",
+      "opciones": [
+        "Reduce la conversión en lugar de aumentarla",
+        "Mejora el posicionamiento en los buscadores",
+        "No tiene ningún efecto sobre las ventas",
+        "Aumenta la confianza del cliente extranjero"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Produce el efecto contrario al buscado con la traducción."
+    },
+    {
+      "id": "p137",
+      "color": "marron",
+      "enunciado": "¿Para qué sirve a la empresa conocer las cuatro fases del recorrido de compra?",
+      "opciones": [
+        "Para decidir qué productos debe fabricar",
+        "Para cobrar en cada fase una parte del precio",
+        "Para saber en qué fase pierde a los clientes",
+        "Para cumplir una obligación legal europea"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Es la pregunta que después responde la analítica."
+    },
+    {
+      "id": "p138",
+      "color": "marron",
+      "enunciado": "¿Sobre qué fases del recorrido actúan principalmente los tres desafíos?",
+      "opciones": [
+        "Sobre la compra y la posventa",
+        "Sobre la consideración y la posventa",
+        "Sobre el descubrimiento y la consideración",
+        "Sobre el descubrimiento y la compra"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Es donde la venta internacional se pierde con más frecuencia."
+    },
+    {
+      "id": "p139",
+      "color": "marron",
+      "enunciado": "¿Qué necesita la empresa en la fase de compra?",
+      "opciones": [
+        "Muchas fichas técnicas y guías de uso del producto",
+        "Proceso corto, precio final visible y el pago usado allí",
+        "Seguimiento del envío y atención en su idioma",
+        "Ser visible en los buscadores en el idioma del cliente"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Es el momento de mayor abandono: todo debe ser fácil y sin sorpresas."
+    },
+    {
+      "id": "p140",
+      "color": "marron",
+      "enunciado": "Un cliente está comparando tiendas. ¿Qué hará que se decida por una?",
+      "opciones": [
+        "La que pida más datos en el formulario de registro",
+        "La que deje los gastos de envío para el final",
+        "La tienda con más animaciones y vídeos en portada",
+        "Información completa, opiniones y devoluciones claras"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "En la consideración necesita información honesta y señales de confianza."
+    },
+    {
+      "id": "p141",
+      "color": "marron",
+      "enunciado": "Si los rasgos del cliente online son comunes, ¿qué cambia de un mercado a otro?",
+      "opciones": [
+        "Solo el idioma de la web",
+        "Nada: son idénticos en todos",
+        "Su intensidad y su forma",
+        "Solo el precio del producto"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Los rasgos se repiten, pero el pago preferido, los plazos o el peso de las opiniones varían."
+    },
+    {
+      "id": "p142",
+      "color": "marron",
+      "enunciado": "¿Por qué es un error caro suponer que el cliente alemán compra como el español?",
+      "opciones": [
+        "Porque pago, plazos y expectativas varían mucho por país",
+        "Porque Alemania no forma parte del mercado único",
+        "Porque el idioma es lo único que cambia entre ambos",
+        "Porque los consumidores alemanes no compran en línea"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Cada mercado tiene sus preferencias, y se consultan antes de entrar."
+    },
+    {
+      "id": "p143",
+      "color": "marron",
+      "enunciado": "¿Por qué una tienda que no funciona bien en el móvil pierde ventas?",
+      "opciones": [
+        "Porque el móvil es obligatorio para comprar en el extranjero",
+        "Porque los pagos con tarjeta solo se hacen desde el móvil",
+        "Porque gran parte de la navegación y compra se hace en el móvil",
+        "Porque los buscadores solo muestran tiendas para móvil"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Pierde la mayoría de sus oportunidades si falla en el teléfono."
+    },
+    {
+      "id": "p144",
+      "color": "marron",
+      "enunciado": "¿Por qué la fase de posventa es decisiva?",
+      "opciones": [
+        "Ahí se produce el mayor número de abandonos del carrito",
+        "Ahí el cliente descubre que la empresa existe",
+        "Ahí el cliente compara precios con otras tiendas",
+        "Ahí se decide si repite y qué escribe en público"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La posventa determina la repetición y la reputación."
+    },
+    {
+      "id": "p145",
+      "color": "marron",
+      "enunciado": "¿Qué aspectos varían de un mercado a otro según el tema?",
+      "opciones": [
+        "El tipo de producto que se puede vender en línea",
+        "La obligación de abrir una tienda física en el país",
+        "Solo el idioma de la web y el de las facturas emitidas",
+        "Pago preferido, plazos, opiniones y dominio nacional"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "También varía la tolerancia a comprar en otro idioma."
+    },
+    {
+      "id": "p146",
+      "color": "marron",
+      "enunciado": "¿Por qué mostrar los precios en la moneda del cliente aumenta la conversión?",
+      "opciones": [
+        "Porque responde a lo que espera: comprar en su divisa",
+        "Porque mejora la posición en los buscadores",
+        "Porque evita pagar impuestos en el país de destino",
+        "Porque elimina los gastos de envío internacionales"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El cliente espera su idioma y su divisa; dárselos facilita la compra."
+    },
+    {
+      "id": "p147",
+      "color": "marron",
+      "enunciado": "Una tienda de mantas de lana de Ourense recibe visitas de Bélgica, pero abandonan al ver el envío al final. ¿Qué debe cambiar?",
+      "opciones": [
+        "Exigir registro antes de mostrar el carrito",
+        "Quitar las fichas de producto para acortar la compra",
+        "Subir el precio para incluir un regalo en el pedido",
+        "Mostrar el precio total, con envío, desde el principio"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Descubrir tarde el precio final es la primera causa de abandono del carrito."
+    },
+    {
+      "id": "p148",
+      "color": "marron",
+      "enunciado": "Una tienda de cerámica tarda mucho en cargar y pide varios formularios antes de pagar. ¿Qué rasgo del cliente ignora?",
+      "opciones": [
+        "Que desconfía de lo desconocido",
+        "Que opina en público",
+        "Que espera su divisa",
+        "Que es impaciente"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El cliente abandona páginas lentas y procesos con demasiados pasos."
+    },
+    {
+      "id": "p149",
+      "color": "marron",
+      "enunciado": "Una marca de bolsos de Ubrique no muestra opiniones, teléfono ni dirección. Los visitantes suecos no compran. ¿Qué rasgo explica el problema?",
+      "opciones": [
+        "Desconfía de lo que no conoce",
+        "Espera precios en su divisa",
+        "Compra desde el teléfono móvil",
+        "Es impaciente con la carga"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Opiniones, contacto visible y devoluciones claras compensan esa desconfianza."
+    },
+    {
+      "id": "p150",
+      "color": "marron",
+      "enunciado": "Casi todas las visitas extranjeras de una tienda de ropa de montaña llegan desde el móvil, y la web se descuadra en pantallas pequeñas. ¿Qué prioriza?",
+      "opciones": [
+        "Abrir perfiles en más redes sociales",
+        "Añadir más idiomas a la tienda",
+        "Ampliar el catálogo de productos",
+        "Que la tienda funcione bien en el móvil"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Una tienda que falla en el móvil pierde la mayoría de sus oportunidades."
+    },
+    {
+      "id": "p151",
+      "color": "marron",
+      "enunciado": "Una almazara de Jaén traduce su web al alemán con un traductor automático sin revisar y sus ventas en Austria caen. ¿Qué explica la caída?",
+      "opciones": [
+        "El alemán no es un idioma útil para vender en Austria",
+        "La mala traducción produce el efecto contrario al buscado",
+        "Los austriacos prefieren comprar las webs en español",
+        "Traducir la web siempre reduce las ventas al exterior"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Traducir bien aumenta la conversión; una traducción automática mal revisada la reduce."
+    },
+    {
+      "id": "p152",
+      "color": "marron",
+      "enunciado": "Un cliente francés recibe su pedido roto y debe escribir varias veces para que le respondan. ¿En qué fase falla la empresa?",
+      "opciones": [
+        "En el descubrimiento",
+        "En la posventa",
+        "En la consideración",
+        "En la compra"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Gestionar incidencias sin obligar a insistir es lo que pide la posventa."
+    },
+    {
+      "id": "p153",
+      "color": "marron",
+      "enunciado": "Una tienda de semillas de Murcia no aparece cuando los italianos buscan su producto en italiano. ¿En qué fase pierde a esos clientes?",
+      "opciones": [
+        "En la compra",
+        "En el descubrimiento",
+        "En la posventa",
+        "En la consideración"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Si no es visible en el destino y en su idioma, el cliente ni siquiera sabe que existe."
+    },
+    {
+      "id": "p154",
+      "color": "marron",
+      "enunciado": "Los visitantes de una bodega comparan su web con otras y se van sin añadir nada al carrito: no hay opiniones ni política de devoluciones. ¿En qué fase los pierde?",
+      "opciones": [
+        "En la posventa",
+        "En la compra",
+        "En el descubrimiento",
+        "En la consideración"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Al comparar, el cliente busca información completa y señales de confianza."
+    },
+    {
+      "id": "p155",
+      "color": "marron",
+      "enunciado": "Una cosmética abre Polonia copiando su tienda española tal cual: mismos medios de pago, plazos y dominio. ¿Qué error comete?",
+      "opciones": [
+        "Suponer que allí se compra igual que en España",
+        "Usar una tienda en línea en lugar de un marketplace",
+        "Mostrar el precio total demasiado pronto",
+        "Vender a un país que está fuera del mercado único"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El pago preferido, los plazos o el dominio nacional cambian de un mercado a otro."
+    },
+    {
+      "id": "p156",
+      "color": "marron",
+      "enunciado": "Una marca de calzado recibe una reseña negativa en un foro sueco por un cambio de talla mal gestionado. ¿Qué rasgo del cliente muestra?",
+      "opciones": [
+        "Que espera su propia divisa",
+        "Que es impaciente al comprar",
+        "Que da su opinión en público",
+        "Que compra desde el móvil"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La experiencia acaba escrita en algún sitio: la posventa también es marketing."
+    },
+    {
+      "id": "p157",
+      "color": "marron",
+      "enunciado": "Antes de entrar en Japón, una conservera quiere saber qué medios de pago y plazos esperan allí. ¿Qué haría primero?",
+      "opciones": [
+        "Preguntar a sus clientes españoles habituales",
+        "Consultar las fichas de mercado del ICEX",
+        "Copiar la configuración de su tienda española",
+        "Consultar la estadística trimestral de la CNMC"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Las fichas de mercado del ICEX recogen ese tipo de datos antes de entrar."
+    },
+    {
+      "id": "p158",
+      "color": "marron",
+      "enunciado": "Un comprador danés ya ha pagado unos muebles y espera la entrega. ¿Qué necesita en ese momento?",
+      "opciones": [
+        "Un formulario para volver a registrarse",
+        "Seguimiento del envío y atención en su idioma",
+        "Más anuncios del producto que ya ha comprado",
+        "Un descuento para comprar otro mueble igual"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "En la posventa necesita información del envío y una atención que no le obligue a insistir."
+    },
+    {
+      "id": "p159",
+      "color": "marron",
+      "enunciado": "Una tienda de té de Madrid muestra la web solo en español y los precios en euros a clientes de Suecia y Chequia. ¿Qué mejora tendría más efecto?",
+      "opciones": [
+        "Una sección de noticias de la empresa",
+        "Un registro obligatorio más completo",
+        "Más fotos de producto en la portada",
+        "Su divisa y una traducción bien revisada"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El cliente espera su idioma y su divisa; dárselos aumenta la conversión."
+    },
+    {
+      "id": "p160",
+      "color": "marron",
+      "enunciado": "Una tienda de pesca asturiana tiene muchas visitas irlandesas y muchos productos en el carrito, pero casi ninguna compra terminada. ¿Dónde busca el fallo?",
+      "opciones": [
+        "En el descubrimiento: visibilidad en buscadores",
+        "En la consideración: falta de fichas técnicas",
+        "En la compra: proceso, precio final y medio de pago",
+        "En la posventa: seguimiento de los envíos"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Si ya llegan y llenan el carrito, se pierden al pagar."
+    },
+    {
+      "id": "p161",
+      "color": "verde",
+      "enunciado": "¿Cómo se manifiestan los tres desafíos del comercio digital internacional?",
+      "opciones": [
+        "Como subidas de aranceles entre los países",
+        "Como caídas de posición en los buscadores del país",
+        "Como sanciones de la aduana del país de destino",
+        "Como abandono: el cliente no compra o no repite"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Los tres acaban en un cliente que no compra o no vuelve."
+    },
+    {
+      "id": "p162",
+      "color": "verde",
+      "enunciado": "¿Qué desafío afecta a todo el recorrido de compra y también a la propia empresa?",
+      "opciones": [
+        "La traducción",
+        "La confianza en el pago",
+        "La seguridad digital",
+        "La logística"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "No actúa en un momento concreto: protege al cliente y a la empresa."
+    },
+    {
+      "id": "p163",
+      "color": "verde",
+      "enunciado": "¿Qué desafío se manifiesta sobre todo cuando el cliente recibe el pedido?",
+      "opciones": [
+        "La segmentación",
+        "La confianza en el pago",
+        "La logística",
+        "La seguridad digital"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Coste, plazo y devoluciones al cruzar la frontera."
+    },
+    {
+      "id": "p164",
+      "color": "verde",
+      "enunciado": "¿Con qué se resuelven los desafíos, según el tema?",
+      "opciones": [
+        "Con información clara, buenos acuerdos y prevención",
+        "Con aranceles, cuotas y licencias de importación",
+        "Con precios más altos y un catálogo más reducido",
+        "Con más tecnología, más servidores y más software"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Ninguno se resuelve con más tecnología: son problemas de confianza, coste y riesgo."
+    },
+    {
+      "id": "p165",
+      "color": "verde",
+      "enunciado": "Además de generar confianza, ¿qué es identificar la empresa en la tienda en línea?",
+      "opciones": [
+        "Una recomendación voluntaria",
+        "Una obligación legal",
+        "Una exigencia solo fuera de la UE",
+        "Un requisito solo de marketplaces"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Razón social, domicilio, identificación fiscal y contacto real son obligatorios."
+    },
+    {
+      "id": "p166",
+      "color": "verde",
+      "enunciado": "¿Qué se recomienda hacer con los datos de tarjeta de los clientes?",
+      "opciones": [
+        "Enviarlos por correo al departamento de cobros",
+        "No almacenarlos en la propia tienda",
+        "Pedirlos de nuevo por teléfono",
+        "Guardarlos para agilizar la compra"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Se usan pasarelas de pago reconocidas y no se guardan en la tienda."
+    },
+    {
+      "id": "p167",
+      "color": "verde",
+      "enunciado": "¿Qué es el sustituto natural de la confianza que da una tienda física?",
+      "opciones": [
+        "Las opiniones de otros clientes",
+        "Unos precios muy por debajo",
+        "Un catálogo de productos muy amplio",
+        "Un diseño web muy llamativo"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Las opiniones de otros clientes generan la confianza que en una tienda física da verla."
+    },
+    {
+      "id": "p168",
+      "color": "verde",
+      "enunciado": "¿Qué derecho del consumidor europeo es el punto de partida de la política de devoluciones?",
+      "opciones": [
+        "El derecho de desistimiento",
+        "El derecho de rectificación",
+        "El derecho de acceso",
+        "El derecho al olvido"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "El desistimiento permite al consumidor echarse atrás en la compra a distancia."
+    },
+    {
+      "id": "p169",
+      "color": "verde",
+      "enunciado": "¿Cuál de estos es uno de los riesgos de seguridad del comercio digital?",
+      "opciones": [
+        "La suplantación de identidad",
+        "La subida de los aranceles",
+        "El retraso en la aduana",
+        "La rotura del embalaje"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Los demás son problemas logísticos o arancelarios, no de seguridad."
+    },
+    {
+      "id": "p170",
+      "color": "verde",
+      "enunciado": "¿Qué problema logístico es exclusivo del comercio internacional?",
+      "opciones": [
+        "El plazo de entrega",
+        "Los trámites aduaneros",
+        "Las devoluciones",
+        "El coste del envío"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Los otros cuatro existen también en el mercado interior."
+    },
+    {
+      "id": "p171",
+      "color": "verde",
+      "enunciado": "¿A quién afecta una brecha de datos personales?",
+      "opciones": [
+        "Solo a la empresa, nunca a sus clientes",
+        "Solo a la pasarela de pago contratada",
+        "Al cliente, y la empresa responde",
+        "Al transportista que entrega los pedidos"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Se accede a los datos del cliente, pero la empresa responde por ello."
+    },
+    {
+      "id": "p172",
+      "color": "verde",
+      "enunciado": "¿Qué regulan las nuevas normas europeas sobre plataformas que cita el tema?",
+      "opciones": [
+        "La divisa obligatoria en todos los pagos en línea europeos",
+        "Obligaciones de plataformas y límites a las más grandes",
+        "Los aranceles que se aplican entre los Estados miembros",
+        "El precio máximo de los envíos internacionales de paquetes"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Unas fijan obligaciones a plataformas y mercados; otras limitan prácticas de las grandes."
+    },
+    {
+      "id": "p173",
+      "color": "verde",
+      "enunciado": "¿Qué tienen en común los tres desafíos del comercio digital internacional?",
+      "opciones": [
+        "Solo afectan a las ventas fuera de la Unión Europea",
+        "No son técnicos: se afrontan con decisiones comerciales",
+        "Dependen únicamente de la normativa aduanera",
+        "Son técnicos y exigen invertir en más tecnología"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La tecnología existe y es asequible; son problemas de confianza, coste y riesgo."
+    },
+    {
+      "id": "p174",
+      "color": "verde",
+      "enunciado": "¿Por qué la logística es el desafío donde lo digital choca con lo físico?",
+      "opciones": [
+        "Porque internet encarece el transporte de mercancías",
+        "Porque los pedidos en línea no se pueden enviar fuera",
+        "Porque la logística ya está totalmente automatizada",
+        "Porque el pedido llega al instante, pero la caja no"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Recibir un pedido es inmediato; entregarlo cuesta lo mismo que siempre."
+    },
+    {
+      "id": "p175",
+      "color": "verde",
+      "enunciado": "¿Por qué el seguimiento del envío reduce el trabajo de posventa?",
+      "opciones": [
+        "Porque evita que el pedido tenga que pasar por la aduana",
+        "Porque permite cobrar los gastos de envío dos veces",
+        "Porque elimina la necesidad de entregar el pedido",
+        "Porque un cliente informado no escribe ni desconfía"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Con avisos en cada hito, las consultas bajan de forma drástica."
+    },
+    {
+      "id": "p176",
+      "color": "verde",
+      "enunciado": "¿Por qué conviene «prometer de menos y entregar antes»?",
+      "opciones": [
+        "Porque la ley prohíbe dar plazos de entrega concretos",
+        "Porque cumplir o mejorar el plazo genera confianza",
+        "Porque el cliente no mira el plazo antes de comprar",
+        "Porque así se pueden cobrar envíos más caros"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Un plazo realista que se cumple funciona mejor que uno optimista que se incumple."
+    },
+    {
+      "id": "p177",
+      "color": "verde",
+      "enunciado": "¿Qué dos direcciones tiene la seguridad digital?",
+      "opciones": [
+        "La seguridad del vendedor y la de la plataforma",
+        "La seguridad de la web y la del marketplace",
+        "La seguridad del cliente y la de la propia empresa",
+        "La seguridad del transporte y la del almacén"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La empresa responde de la seguridad del cliente y de la suya depende su continuidad."
+    },
+    {
+      "id": "p178",
+      "color": "verde",
+      "enunciado": "¿Por qué ofrecer los medios de pago habituales del destino influye tanto en las ventas?",
+      "opciones": [
+        "Porque elimina el riesgo de suplantación de identidad",
+        "Porque evita tener que aceptar devoluciones",
+        "Porque reduce el coste del envío internacional",
+        "Porque el cliente no paga con una forma que no conoce"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Es una de las decisiones que más afectan a la conversión."
+    },
+    {
+      "id": "p179",
+      "color": "verde",
+      "enunciado": "¿En qué se diferencia el fraude en el pago de la suplantación de identidad?",
+      "opciones": [
+        "El fraude ocurre fuera de la UE; la suplantación, dentro",
+        "El fraude es interno; la suplantación es siempre externa",
+        "El fraude afecta a la web; la suplantación, al almacén",
+        "El fraude usa tarjetas ajenas; la suplantación imita"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La suplantación usa correos y webs falsas para engañar a clientes o empleados."
+    },
+    {
+      "id": "p180",
+      "color": "verde",
+      "enunciado": "¿Por qué una brecha de datos es más que un problema técnico?",
+      "opciones": [
+        "Porque impide seguir vendiendo en marketplaces europeos",
+        "Porque implica pagar aranceles por los datos perdidos",
+        "Porque obliga a cerrar la tienda en línea para siempre",
+        "Porque implica daño reputacional, notificación y sanciones"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Además del daño a la imagen, hay obligaciones legales y posibles multas."
+    },
+    {
+      "id": "p181",
+      "color": "verde",
+      "enunciado": "¿Por qué los trámites de frontera son la principal causa de mala experiencia en envíos a terceros países?",
+      "opciones": [
+        "Pueden retener el envío o generar un coste inesperado",
+        "Porque obligan a cambiar de transportista en la frontera",
+        "Porque impiden hacer cualquier seguimiento del pedido",
+        "Porque prohíben las devoluciones desde esos países"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Despachos, documentación y tributos pueden retrasar y encarecer la entrega."
+    },
+    {
+      "id": "p182",
+      "color": "verde",
+      "enunciado": "¿Cómo se aborda el coste del envío en los pedidos pequeños?",
+      "opciones": [
+        "Subiendo al doble el precio de todos los productos",
+        "Dejando de vender a clientes de otros países",
+        "Pedido mínimo, tarifas negociadas y reparto del coste",
+        "Ocultando los gastos de envío hasta el último paso"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Se repiensa el tamaño mínimo, se negocia con el operador y se decide qué parte absorbe la empresa."
+    },
+    {
+      "id": "p183",
+      "color": "verde",
+      "enunciado": "¿Qué implica el nuevo marco europeo para una empresa que vende en un marketplace?",
+      "opciones": [
+        "Más obligaciones de información y más derechos",
+        "La obligación de cerrar su tienda en línea propia",
+        "La prohibición de vender en plataformas de otros países",
+        "La exención de cumplir las normas de consumo europeas"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Las normas regulan a las plataformas y dan derechos y deberes al vendedor."
+    },
+    {
+      "id": "p184",
+      "color": "verde",
+      "enunciado": "¿Por qué la interrupción del servicio es especialmente grave en campaña?",
+      "opciones": [
+        "Porque obliga a devolver todos los pedidos anteriores",
+        "Porque la ley sanciona cerrar la tienda durante la campaña",
+        "Porque en campaña los datos se pierden sin remedio",
+        "Porque una tienda caída no vende y en campaña cuesta más"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "En los picos de venta, cada hora sin servicio supone muchas ventas perdidas."
+    },
+    {
+      "id": "p185",
+      "color": "verde",
+      "enunciado": "¿Por qué la política de devoluciones debe estar escrita antes de la compra?",
+      "opciones": [
+        "Porque así la empresa puede cambiarla en cada pedido",
+        "Porque las devoluciones internacionales están prohibidas",
+        "El cliente quiere saber cómo funcionará antes de decidir",
+        "Porque solo es válida si se publica tras el pago"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Saber de antemano cómo devolver reduce el miedo a comprar."
+    },
+    {
+      "id": "p186",
+      "color": "verde",
+      "enunciado": "¿Por qué conseguir las primeras opiniones de clientes requiere un esfuerzo deliberado?",
+      "opciones": [
+        "Porque la ley exige un mínimo antes de empezar a vender",
+        "Porque solo opinan por sí solos los clientes satisfechos",
+        "Porque sustituyen a la confianza de la tienda física",
+        "Porque las plataformas cobran por publicar cada opinión"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Sin opiniones no hay confianza, y las primeras hay que buscarlas activamente."
+    },
+    {
+      "id": "p187",
+      "color": "verde",
+      "enunciado": "Un cliente suizo de una tienda de jamones recibe al llegar el paquete un cobro inesperado de tributos y lo rechaza. ¿Qué debió hacer la tienda?",
+      "opciones": [
+        "Cambiar de transportista para todos sus envíos a Suiza",
+        "Retirar la política de devoluciones de su tienda en línea",
+        "Enviar el jamón en un embalaje mucho más resistente",
+        "Elegir las condiciones de entrega e informar del precio total"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Fuera del mercado único hay tributos: hay que prever quién los paga e informarlo antes del pago."
+    },
+    {
+      "id": "p188",
+      "color": "verde",
+      "enunciado": "Una marca de ropa de Vigo recibe muchos correos de Italia preguntando «¿dónde está mi pedido?». No da número de seguimiento. ¿Qué debe hacer?",
+      "opciones": [
+        "Dejar de enviar pedidos a Italia",
+        "Ampliar el horario del teléfono de atención",
+        "Ofrecer seguimiento y avisos automáticos",
+        "Bajar el precio de los envíos a Italia"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "El seguimiento con avisos en cada hito reduce mucho las consultas de posventa."
+    },
+    {
+      "id": "p189",
+      "color": "verde",
+      "enunciado": "Una tienda de vinos promete entrega en dos días en Finlandia y tarda una semana; las quejas se disparan. ¿Qué consejo aplica?",
+      "opciones": [
+        "Prometer un plazo aún más corto",
+        "Quitar de la web toda referencia al plazo",
+        "Prometer de menos y entregar antes",
+        "Cobrar un suplemento a quien se queje"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Un plazo realista que se cumple genera más confianza que uno optimista incumplido."
+    },
+    {
+      "id": "p190",
+      "color": "verde",
+      "enunciado": "Un empleado de administración de una pyme recibe un correo que imita a su banco y pide una transferencia urgente. ¿Qué riesgo es?",
+      "opciones": [
+        "Interrupción del servicio",
+        "Suplantación de identidad",
+        "Fraude en el pago",
+        "Brecha de datos personales"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Imitar a alguien de confianza para conseguir una transferencia es suplantación."
+    },
+    {
+      "id": "p191",
+      "color": "verde",
+      "enunciado": "Una tienda de bicicletas sufre un acceso no autorizado a su base de clientes. Además del daño a su imagen, ¿qué debe asumir?",
+      "opciones": [
+        "El cierre automático de su tienda en línea",
+        "El pago de aranceles por los datos que han salido",
+        "La devolución del importe de todas sus ventas",
+        "Obligaciones de notificación y posibles sanciones"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Una brecha de datos personales conlleva notificar y puede acarrear sanciones."
+    },
+    {
+      "id": "p192",
+      "color": "verde",
+      "enunciado": "Una tienda de electrónica recibe reclamaciones de cargos que los titulares de las tarjetas no reconocen. ¿Qué riesgo sufre?",
+      "opciones": [
+        "Suplantación de identidad",
+        "Interrupción del servicio",
+        "Programas maliciosos",
+        "Fraude en el pago"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Uso de tarjetas ajenas y cargos indebidos que la empresa acaba asumiendo."
+    },
+    {
+      "id": "p193",
+      "color": "verde",
+      "enunciado": "Un programa cifra los archivos de una distribuidora, pide un rescate y la deja sin poder trabajar. ¿Qué riesgo se ha materializado?",
+      "opciones": [
+        "Fraude en el pago",
+        "Programas maliciosos",
+        "Desconfianza en el pago",
+        "Suplantación de identidad"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Es secuestro de información con la actividad detenida hasta recuperarla."
+    },
+    {
+      "id": "p194",
+      "color": "verde",
+      "enunciado": "Una librería de viejo de Salamanca vende a Bélgica, pero enviar un libro barato cuesta casi lo que el libro. ¿Qué propone el tema?",
+      "opciones": [
+        "Ocultar el coste del envío hasta el final",
+        "Dejar de vender libros a través de internet",
+        "Repensar el pedido mínimo y negociar tarifas",
+        "Cobrar los envíos solo contra reembolso"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Ante el coste del envío: pedido mínimo, tarifas negociadas y decidir cuánto absorbe la empresa."
+    },
+    {
+      "id": "p195",
+      "color": "verde",
+      "enunciado": "Los clientes austriacos de una tienda de zapatillas preguntan antes de comprar cómo devolver si la talla no vale. No hay nada escrito. ¿Qué debe hacer?",
+      "opciones": [
+        "Responder a cada cliente cuando lo pregunte",
+        "Publicar antes el procedimiento y su coste",
+        "Prohibir las devoluciones internacionales",
+        "Incluir una hoja de reclamaciones en el paquete"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El cliente quiere saber antes de comprar cómo funcionará la devolución."
+    },
+    {
+      "id": "p196",
+      "color": "verde",
+      "enunciado": "Una joyería en línea pide la tarjeta en una página sin conexión cifrada y guarda los datos en su servidor. ¿Qué debería hacer?",
+      "opciones": [
+        "Aceptar solo pagos de clientes de su propio país",
+        "Guardar los datos también en un servidor de copia",
+        "Usar conexión cifrada y una pasarela reconocida",
+        "Pedir además el código de la tarjeta por correo"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Es la respuesta a «¿están seguros mis datos?»: cifrado, pasarela reconocida y no almacenar tarjetas."
+    },
+    {
+      "id": "p197",
+      "color": "verde",
+      "enunciado": "Un marketplace europeo retira sin explicación las fichas de un artesano de Toledo. ¿Qué cambia para él el nuevo marco normativo europeo?",
+      "opciones": [
+        "Que la plataforma no tiene obligaciones con él",
+        "Que ya no puede reclamar nada a la plataforma",
+        "Que tiene más derechos frente a la plataforma",
+        "Que debe abrir una tienda física para seguir"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Las nuevas normas dan al vendedor más obligaciones de información, pero también más derechos."
+    },
+    {
+      "id": "p198",
+      "color": "verde",
+      "enunciado": "Una tienda nueva de complementos lleva un mes sin ventas en Francia y no tiene ninguna opinión de compradores. ¿Qué debe hacer?",
+      "opciones": [
+        "Ocultar la sección de opiniones de la web",
+        "Buscar activamente sus primeras valoraciones",
+        "Bajar los precios por debajo del coste",
+        "Esperar a que los clientes opinen por su cuenta"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Conseguir las primeras opiniones es una tarea comercial deliberada."
+    },
+    {
+      "id": "p199",
+      "color": "verde",
+      "enunciado": "La tienda en línea de una marca deportiva deja de funcionar varias horas en plena campaña de rebajas. ¿Qué riesgo se ha materializado?",
+      "opciones": [
+        "Interrupción del servicio",
+        "Brecha de datos personales",
+        "Suplantación de identidad",
+        "Fraude en el pago"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Una tienda caída no vende, y en campaña el coste es alto."
+    },
+    {
+      "id": "p200",
+      "color": "verde",
+      "enunciado": "Un cliente irlandés no compra porque no encuentra en la web quién es la empresa ni cómo contactar. ¿Qué debe añadir la tienda?",
+      "opciones": [
+        "Más fotos del producto y del equipo",
+        "Enlaces a todos sus perfiles sociales",
+        "Un apartado de noticias del sector",
+        "Razón social, domicilio, NIF y contacto real"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La identificación completa responde a «no sé quién está detrás» y además es obligatoria."
+    },
+    {
+      "id": "p201",
+      "color": "naranja",
+      "enunciado": "¿Qué organismo administra las normas del comercio entre países y sirve de foro para resolver diferencias?",
+      "opciones": [
+        "La Enterprise Europe Network",
+        "El Centro de Comercio Internacional",
+        "La Organización Mundial del Comercio",
+        "ICEX España Exportación e Inversiones"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "La OMC fija el marco: no discriminación, acuerdos multilaterales y solución de controversias."
+    },
+    {
+      "id": "p202",
+      "color": "naranja",
+      "enunciado": "¿De quién es competencia la política comercial común en Europa?",
+      "opciones": [
+        "De la Unión Europea",
+        "De las cámaras de comercio",
+        "De la OMC",
+        "De cada Estado miembro"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La Unión negocia los acuerdos comerciales en nombre de los Estados miembros."
+    },
+    {
+      "id": "p203",
+      "color": "naranja",
+      "enunciado": "¿Qué es el Centro de Comercio Internacional?",
+      "opciones": [
+        "Una red europea de apoyo a pymes con sede en cada región",
+        "Una agencia conjunta de la OMC y Naciones Unidas para pymes",
+        "La entidad pública estatal española de exportación",
+        "El organismo gallego de promoción económica"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Está orientado específicamente a las pequeñas y medianas empresas."
+    },
+    {
+      "id": "p204",
+      "color": "naranja",
+      "enunciado": "¿Qué red europea ofrece asesoramiento gratuito y búsqueda de socios, con presencia en cada región?",
+      "opciones": [
+        "Organización Mundial del Comercio",
+        "Cámara de Comercio de España",
+        "Enterprise Europe Network",
+        "Centro de Comercio Internacional"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "También informa sobre normativa europea."
+    },
+    {
+      "id": "p205",
+      "color": "naranja",
+      "enunciado": "¿Qué entidad publica estudios de mercado por país y sector y programas de iniciación a la exportación?",
+      "opciones": [
+        "La EEN",
+        "La CNMC",
+        "El ICEX",
+        "La OMC"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "ICEX España Exportación e Inversiones es la entidad pública estatal de internacionalización."
+    },
+    {
+      "id": "p206",
+      "color": "naranja",
+      "enunciado": "¿Qué institución expide documentos como los certificados de origen?",
+      "opciones": [
+        "El Instituto Galego de Promoción",
+        "La Enterprise Europe Network",
+        "La Organización Mundial del Comercio",
+        "Las cámaras de comercio"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Las cámaras expiden determinados documentos de comercio exterior."
+    },
+    {
+      "id": "p207",
+      "color": "naranja",
+      "enunciado": "¿Qué es el Igape?",
+      "opciones": [
+        "La cámara de comercio de toda Galicia",
+        "El organismo gallego de promoción económica",
+        "La red europea de apoyo a pymes en Galicia",
+        "La oficina comercial de España en Galicia"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es el Instituto Galego de Promoción Económica, de la Xunta de Galicia."
+    },
+    {
+      "id": "p208",
+      "color": "naranja",
+      "enunciado": "¿Quién gestiona el arancel exterior común?",
+      "opciones": [
+        "La Cámara de Comercio de España",
+        "La Organización Mundial del Comercio",
+        "La Unión Europea",
+        "Cada Estado miembro por separado"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Forma parte de la política comercial común de la Unión."
+    },
+    {
+      "id": "p209",
+      "color": "naranja",
+      "enunciado": "¿Qué institución aporta conocimiento sobre el terreno del mercado de destino?",
+      "opciones": [
+        "La cámara de comercio de la provincia de origen",
+        "El instituto autonómico de promoción de la empresa",
+        "La Comisión Nacional de los Mercados",
+        "La Oficina Económica y Comercial de España allí"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Es la red de la Administración española en los mercados de destino."
+    },
+    {
+      "id": "p210",
+      "color": "naranja",
+      "enunciado": "¿Qué tipo de organismos financian la operación y cubren el riesgo de impago?",
+      "opciones": [
+        "La Enterprise Europe Network y sus oficinas regionales",
+        "Entidades de apoyo financiero y de cobertura de riesgos",
+        "La Organización Mundial del Comercio y sus acuerdos",
+        "Las cámaras de comercio y su red de oficinas provinciales"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Figuran en «otros organismos», junto a los aduaneros y tributarios."
+    },
+    {
+      "id": "p211",
+      "color": "naranja",
+      "enunciado": "¿Qué coordina la Cámara de Comercio de España?",
+      "opciones": [
+        "La red de cámaras territoriales",
+        "Las oficinas comerciales en el exterior",
+        "Los institutos autonómicos de promoción",
+        "Las negociaciones comerciales de la OMC"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Las cámaras están en todo el territorio y una cámara estatal las coordina."
+    },
+    {
+      "id": "p212",
+      "color": "naranja",
+      "enunciado": "Según el tema, ¿cuál es la barrera real para usar el apoyo institucional?",
+      "opciones": [
+        "Que exige haber exportado antes",
+        "Su elevado coste",
+        "Que es solo para grandes empresas",
+        "No saber que existe"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Casi todo es gratuito: el problema es que la empresa no sabe que existe."
+    },
+    {
+      "id": "p213",
+      "color": "naranja",
+      "enunciado": "¿Qué aporta la OMC a una empresa exportadora aunque nunca trate con ella?",
+      "opciones": [
+        "Le expide los certificados de origen de la mercancía",
+        "Le concede ayudas para traducir su tienda en línea",
+        "Le busca socios comerciales en otros países",
+        "Fija el marco de reglas en el que se mueve todo lo demás"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Sus principios y acuerdos ordenan el comercio entre países."
+    },
+    {
+      "id": "p214",
+      "color": "naranja",
+      "enunciado": "¿Por qué los acuerdos comerciales los negocia la UE y no cada Estado miembro?",
+      "opciones": [
+        "Porque los Estados miembros delegan en la OMC esa tarea",
+        "Porque lo decide cada año la Cámara de Comercio de España",
+        "Porque la política comercial común es competencia de la Unión",
+        "Porque cada Estado solo negocia con sus países vecinos"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La Unión negocia en nombre de los Estados y gestiona el arancel exterior común."
+    },
+    {
+      "id": "p215",
+      "color": "naranja",
+      "enunciado": "¿En qué se diferencian el ICEX y el Igape?",
+      "opciones": [
+        "El ICEX es privado; el Igape, público",
+        "El ICEX es europeo; el Igape, estatal",
+        "El ICEX es estatal; el Igape, gallego",
+        "Son el mismo organismo con distinto nombre"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "El ICEX actúa en toda España; el Igape apoya a las empresas gallegas."
+    },
+    {
+      "id": "p216",
+      "color": "naranja",
+      "enunciado": "¿Qué diferencia a Enterprise Europe Network del Centro de Comercio Internacional?",
+      "opciones": [
+        "La EEN es una agencia de la ONU; el CCI, una red europea",
+        "La EEN es española; el CCI, una red de cámaras de comercio",
+        "La EEN depende del ICEX; el CCI, del Igape",
+        "La EEN es una red europea; el CCI, una agencia de OMC y ONU"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La EEN tiene presencia en cada región; el CCI es una agencia conjunta orientada a pymes."
+    },
+    {
+      "id": "p217",
+      "color": "naranja",
+      "enunciado": "¿Por qué el tema considera competencia profesional conocer el mapa de instituciones?",
+      "opciones": [
+        "Porque es obligatorio inscribirse en todas para exportar",
+        "Porque las instituciones cobran por cada consulta",
+        "Porque solo así se puede abrir una tienda en línea",
+        "Porque hay mucho apoyo gratuito que las empresas desconocen"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "El problema habitual no es que falte ayuda, sino no saber que existe."
+    },
+    {
+      "id": "p218",
+      "color": "naranja",
+      "enunciado": "¿Por qué hay que revisar cada año las convocatorias de ayudas?",
+      "opciones": [
+        "Porque la OMC las renueva en cada ronda comercial",
+        "Porque solo se pueden solicitar una vez en la vida",
+        "Porque las ayudas se pagan siempre por adelantado",
+        "Porque cambian cada año y no pueden darse por vigentes"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Las convocatorias concretas cambian: hay que consultarlas en la fuente."
+    },
+    {
+      "id": "p219",
+      "color": "naranja",
+      "enunciado": "En el orden de uso del mapa de instituciones, ¿qué se consulta para decidir a qué mercado ir?",
+      "opciones": [
+        "Las convocatorias de ayudas del Igape",
+        "Estadísticas de comercio y estudios del ICEX",
+        "La red europea de apoyo a pymes",
+        "La oficina comercial de cada país"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Primero se decide el mercado con datos; luego vienen requisitos, financiación y socios."
+    },
+    {
+      "id": "p220",
+      "color": "naranja",
+      "enunciado": "En el orden de uso del mapa, ¿para qué se usan las herramientas de la Comisión Europea?",
+      "opciones": [
+        "Para financiar la salida con ayudas autonómicas",
+        "Para expedir los certificados de origen",
+        "Para encontrar socios comerciales en otros países",
+        "Para conocer las condiciones de entrada del producto"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Ofrecen información gratuita sobre acceso a mercados, aranceles y requisitos de producto."
+    },
+    {
+      "id": "p221",
+      "color": "naranja",
+      "enunciado": "En el orden de uso del mapa, ¿a qué se acude para financiar la salida al exterior?",
+      "opciones": [
+        "A las estadísticas de comercio exterior del ICEX",
+        "A la oficina económica y comercial del país de destino",
+        "A los programas de la Organización Mundial del Comercio",
+        "A las convocatorias del organismo autonómico y del ICEX"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La financiación llega por las convocatorias autonómicas y del ICEX."
+    },
+    {
+      "id": "p222",
+      "color": "naranja",
+      "enunciado": "¿Cuándo es el momento de recurrir a la oficina económica y comercial del país de destino?",
+      "opciones": [
+        "Para gestionar las ayudas autonómicas a la exportación",
+        "Para expedir certificados de origen de la mercancía",
+        "Para resolver dudas sobre el terreno en ese mercado",
+        "Para negociar acuerdos comerciales de la Unión"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Conoce el mercado y sus reglas y apoya directamente a la empresa que quiere entrar."
+    },
+    {
+      "id": "p223",
+      "color": "naranja",
+      "enunciado": "¿Qué distingue a las cámaras de comercio de otras instituciones del tema?",
+      "opciones": [
+        "Son organismos que negocian el arancel exterior común",
+        "Son agencias de Naciones Unidas dedicadas a las pymes",
+        "Son corporaciones de derecho público y de proximidad",
+        "Son oficinas de la Administración en otros países"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Están en todo el territorio y dan formación, asesoramiento y documentos de exportación."
+    },
+    {
+      "id": "p224",
+      "color": "naranja",
+      "enunciado": "¿Qué tienen de especial algunas líneas del Igape para este módulo?",
+      "opciones": [
+        "Son las únicas ayudas que existen en toda España",
+        "Apoyan la internacionalización por medios digitales",
+        "Las gestiona directamente la OMC desde Ginebra",
+        "Solo financian la asistencia a ferias presenciales"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Hay líneas orientadas expresamente a internacionalizarse por medios digitales."
+    },
+    {
+      "id": "p225",
+      "color": "naranja",
+      "enunciado": "Además del mercado único, ¿qué pone la UE a disposición de las empresas?",
+      "opciones": [
+        "Ayudas autonómicas para traducir la tienda en línea",
+        "Herramientas gratuitas sobre acceso a mercados y requisitos",
+        "Asesoramiento presencial de proximidad en cada provincia",
+        "Certificados de origen para cada envío al exterior"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "A través de la Comisión ofrece información sobre aranceles y requisitos de producto."
+    },
+    {
+      "id": "p226",
+      "color": "naranja",
+      "enunciado": "¿Qué tipo de información ofrece el Centro de Comercio Internacional?",
+      "opciones": [
+        "Estadísticas por producto y mercado y de competitividad",
+        "Datos trimestrales del comercio electrónico en España",
+        "Certificados de origen y otros documentos de exportación",
+        "Fichas país con las prácticas comerciales de cada destino"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "También tiene programas de apoyo a la internacionalización de pymes."
+    },
+    {
+      "id": "p227",
+      "color": "naranja",
+      "enunciado": "Una pyme de mejillones de Vilagarcía busca un socio distribuidor en Alemania y no sabe por dónde empezar. ¿A quién acude?",
+      "opciones": [
+        "A Enterprise Europe Network y a su cámara",
+        "A la Organización Mundial del Comercio",
+        "A la Comisión Nacional de los Mercados",
+        "A las herramientas de acceso de la Comisión"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Para encontrar socios, el mapa remite a la red europea de apoyo a pymes y a las cámaras."
+    },
+    {
+      "id": "p228",
+      "color": "naranja",
+      "enunciado": "Una fábrica de muebles de Lalín duda entre Francia, Bélgica y Países Bajos para empezar a exportar. ¿Qué consulta primero?",
+      "opciones": [
+        "Las convocatorias de ayudas del Igape",
+        "La red europea de apoyo a pymes",
+        "La oficina comercial de cada país",
+        "Estadísticas de comercio y estudios del ICEX"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Para decidir a qué mercado ir se usan las estadísticas y los estudios de mercado."
+    },
+    {
+      "id": "p229",
+      "color": "naranja",
+      "enunciado": "Un fabricante de juguetes quiere saber qué requisitos debe cumplir su producto para entrar en Japón. ¿Qué herramienta usa según el tema?",
+      "opciones": [
+        "La estadística de la CNMC",
+        "El registro de la Cámara de Comercio",
+        "Las herramientas de la Comisión Europea",
+        "Las convocatorias de ayudas del ICEX"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Para conocer las condiciones de entrada del producto, el mapa indica la Comisión Europea."
+    },
+    {
+      "id": "p230",
+      "color": "naranja",
+      "enunciado": "Una conservera necesita un certificado de origen para un envío a Colombia. ¿Dónde lo solicita?",
+      "opciones": [
+        "En la cámara de comercio",
+        "En la OMC",
+        "En el Igape",
+        "En la Enterprise Europe Network"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Las cámaras expiden documentos de comercio exterior como el certificado de origen."
+    },
+    {
+      "id": "p231",
+      "color": "naranja",
+      "enunciado": "Una empresa de calzado que ya vende en México tiene dudas sobre una práctica comercial local. ¿Quién la ayuda sobre el terreno?",
+      "opciones": [
+        "La Enterprise Europe Network de su región",
+        "La cámara de comercio de su provincia en España",
+        "La Oficina Económica y Comercial de España allí",
+        "El Centro de Comercio Internacional"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Para dudas sobre el terreno, la oficina económica y comercial del país de destino."
+    },
+    {
+      "id": "p232",
+      "color": "naranja",
+      "enunciado": "Una empresa de cerámica de Castellón busca ayudas autonómicas para internacionalizarse. ¿Dónde debe mirar?",
+      "opciones": [
+        "En el organismo de promoción de su comunidad",
+        "En la Comisión Nacional de los Mercados",
+        "En el Igape, que da ayudas en toda España",
+        "En la Organización Mundial del Comercio"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Cada comunidad tiene su propio organismo; el Igape es solo para las empresas gallegas."
+    },
+    {
+      "id": "p233",
+      "color": "naranja",
+      "enunciado": "Un exportador de aceite que vende a Estados Unidos teme que un cliente nuevo no le pague. ¿Qué tipo de organismo puede cubrirle?",
+      "opciones": [
+        "La oficina comercial de España en el destino",
+        "Una entidad de cobertura del riesgo de impago",
+        "La cámara de comercio, con un certificado de origen",
+        "La Enterprise Europe Network de su región"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Entre los «otros organismos» están los de financiación y cobertura de riesgos."
+    },
+    {
+      "id": "p234",
+      "color": "naranja",
+      "enunciado": "Un país aplica a un producto europeo un trato discriminatorio contrario a lo acordado. ¿En qué marco se resuelve el conflicto entre Estados?",
+      "opciones": [
+        "En el Instituto Galego de Promoción Económica",
+        "En el sistema de solución de diferencias de la OMC",
+        "En la Cámara de Comercio de España y sus delegaciones",
+        "En la Enterprise Europe Network de cada región"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La OMC sirve de foro para resolver las diferencias comerciales entre países."
+    },
+    {
+      "id": "p235",
+      "color": "naranja",
+      "enunciado": "Una empresa de software quiere saber qué países importan más su tipo de producto y cómo es la competencia allí, con un organismo supranacional para pymes. ¿Cuál?",
+      "opciones": [
+        "La Enterprise Europe Network",
+        "La Cámara de Comercio de España",
+        "El Centro de Comercio Internacional",
+        "La Organización Mundial del Comercio"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Ofrece estadísticas por producto y mercado y análisis de competitividad, orientado a pymes."
+    },
+    {
+      "id": "p236",
+      "color": "naranja",
+      "enunciado": "Una cooperativa de Ourense cree que la ayuda pública es solo para grandes empresas y nunca la ha buscado. ¿Qué le dirías?",
+      "opciones": [
+        "Que tiene razón: el apoyo es solo para grandes empresas",
+        "Que solo puede pedir ayudas tras exportar varios años",
+        "Casi todo es gratuito: el freno es no saber que existe",
+        "Que debe pagar una cuota para acceder a cualquier ayuda"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Gran parte del apoyo es gratuito o subvencionado y está al alcance de las pymes."
+    },
+    {
+      "id": "p237",
+      "color": "naranja",
+      "enunciado": "Una pyme gallega quiere volver a pedir la ayuda del Igape que obtuvo hace años, con los mismos requisitos y sin mirar la convocatoria. ¿Qué riesgo corre?",
+      "opciones": [
+        "Que haya cambiado: las convocatorias varían cada año",
+        "Ninguno: las ayudas autonómicas no cambian nunca",
+        "Que el Igape solo conceda una ayuda por empresa",
+        "Que la ayuda haya pasado a gestionarla la OMC"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Las convocatorias concretas cambian cada año y hay que consultarlas en la fuente."
+    },
+    {
+      "id": "p238",
+      "color": "naranja",
+      "enunciado": "Un aserradero asturiano quiere saber qué arancel tendrá su madera en Corea del Sur. ¿Por qué ese arancel no lo negocia España por su cuenta?",
+      "opciones": [
+        "Porque la política comercial es competencia de la UE",
+        "Porque lo negocia cada empresa con su cliente",
+        "Porque lo decide el Igape para cada sector",
+        "Porque lo fija cada cámara de comercio provincial"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La Unión negocia los acuerdos comerciales en nombre de los Estados miembros."
+    },
+    {
+      "id": "p239",
+      "color": "naranja",
+      "enunciado": "Un emprendedor de A Coruña quiere formación y asesoramiento cercano para dar sus primeros pasos exportando. ¿Qué institución le encaja mejor?",
+      "opciones": [
+        "La Organización Mundial del Comercio",
+        "La oficina comercial en el destino",
+        "Su cámara de comercio",
+        "El Centro de Comercio Internacional"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Las cámaras ofrecen formación, asesoramiento de proximidad y programas de iniciación."
+    },
+    {
+      "id": "p240",
+      "color": "naranja",
+      "enunciado": "Una bodega del Ribeiro ya ha elegido Canadá y ha comprobado los requisitos de entrada de su vino. ¿Qué paso del mapa le toca ahora?",
+      "opciones": [
+        "Inscribirse en la CNMC como exportadora",
+        "Volver a consultar las estadísticas de mercado",
+        "Pedir a la OMC que le rebaje el arancel",
+        "Buscar financiación en el Igape y el ICEX"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Tras elegir mercado y conocer los requisitos, el siguiente paso es financiar la salida."
+    }
+  ]
+}

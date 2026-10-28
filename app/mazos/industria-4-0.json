@@ -1,0 +1,754 @@
+{
+  "formato": 1,
+  "id": "industria-4-0",
+  "titulo": "Industria 4.0",
+  "modulo": "Digitalización",
+  "categorias": [
+    {
+      "color": "azul",
+      "nombre": "Realidad Aumentada"
+    },
+    {
+      "color": "rosa",
+      "nombre": "Tecnologías Habilitadoras"
+    },
+    {
+      "color": "amarillo",
+      "nombre": "Big Data"
+    },
+    {
+      "color": "marron",
+      "nombre": "Casos de Uso"
+    },
+    {
+      "color": "verde",
+      "nombre": "Industria 4.0"
+    },
+    {
+      "color": "naranja",
+      "nombre": "Regla de las 4 Vs"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "p001",
+      "color": "amarillo",
+      "enunciado": "¿Cuál es el papel principal del Big Data en la Industria 4.0?",
+      "opciones": [
+        "Administrar tareas operativas",
+        "Hacer seguimiento de las ventas",
+        "Capturar, gestionar y procesar datos complejos",
+        "Diseñar nuevos productos"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p002",
+      "color": "amarillo",
+      "enunciado": "¿Qué ejemplo ilustra el 'Valor' en la regla de las 4 Vs de Big Data?",
+      "opciones": [
+        "Aumentar la producción sin análisis",
+        "Reducir la velocidad de una máquina",
+        "Bajar la temperatura del horno 3 grados para ahorrar energía",
+        "Aumentar el número de dispositivos conectados"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p003",
+      "color": "azul",
+      "enunciado": "¿Qué característica distingue a la Realidad Aumentada de la Realidad Virtual?",
+      "opciones": [
+        "La RA reemplaza el mundo real",
+        "La RA superpone información digital sin ocultar el entorno real",
+        "La RV es mejor para actividades al aire libre",
+        "La RV incrementa la visión del mundo físico"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p004",
+      "color": "azul",
+      "enunciado": "¿Cuál es uno de los pilares técnicos de la Realidad Aumentada?",
+      "opciones": [
+        "Creación de contenido en 2D",
+        "Registro en dos dimensiones",
+        "Interactividad en tiempo real",
+        "Uso exclusivo de gafas especiales"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p005",
+      "color": "rosa",
+      "enunciado": "¿Qué son las Tecnologías Habilitadoras Digitales (THD)?",
+      "opciones": [
+        "Tecnologías para juegos",
+        "Tecnologías que permiten la transformación digital de sectores productivos",
+        "Aplicaciones móviles para entretenimiento",
+        "Redes de comunicación social"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p006",
+      "color": "rosa",
+      "enunciado": "¿Cómo se relaciona la Realidad Aumentada con la Industria 4.0?",
+      "opciones": [
+        "No tiene relación con la industria",
+        "Es una THD que mejora la eficiencia y reduce errores",
+        "Es una tecnología obsoleta",
+        "Es exclusiva para el entretenimiento"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p007",
+      "color": "verde",
+      "enunciado": "¿Por qué se considera el Big Data el 'cerebro' de la Industria 4.0?",
+      "opciones": [
+        "Porque controla maquinaria pesada",
+        "Debido a su capacidad para mejorar decisiones basadas en datos",
+        "Por ser una tendencia de moda",
+        "Para incrementar la producción de datos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p008",
+      "color": "verde",
+      "enunciado": "¿Cómo está transformando la Realidad Aumentada los flujos de trabajo en la industria?",
+      "opciones": [
+        "Al eliminar la necesidad de personal",
+        "Mejorando la seguridad y reduciendo errores humanos",
+        "Introduciendo distracciones visuales",
+        "A través del diseño gráfico"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p009",
+      "color": "naranja",
+      "enunciado": "¿Cuál de las siguientes opciones es una de las '4 Vs' del Big Data?",
+      "opciones": [
+        "Versatilidad",
+        "Vehemencia",
+        "Velocidad",
+        "Visibilidad"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p010",
+      "color": "naranja",
+      "enunciado": "¿Por qué es importante el 'Volumen' en el Big Data?",
+      "opciones": [
+        "Porque implica grandes cantidades de datos necesarios para análisis profundos",
+        "Indica que todos los datos deben ser procesados manualmente",
+        "Solo importa para empresas pequeñas",
+        "Es irrelevante si hay alta velocidad"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": "p011",
+      "color": "marron",
+      "enunciado": "¿Cómo se aplica la Realidad Aumentada en el sector de la arquitectura?",
+      "opciones": [
+        "Proporcionando estadísticas de mercado",
+        "Al visualizar instalaciones antes de su construcción",
+        "Solo para fines recreativos",
+        "Para diseñar interiores de vehículos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p012",
+      "color": "marron",
+      "enunciado": "¿Cuál es una aplicación de la Realidad Aumentada en el sector sanitario?",
+      "opciones": [
+        "Simulaciones virtuales a pacientes fuera del hospital",
+        "Visualizar estructuras anatómicas sobre el paciente",
+        "Exclusiva para consultas online",
+        "Organizar citas médicas"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p013",
+      "color": "amarillo",
+      "enunciado": "¿Qué distingue al Big Data de una simple base de datos tradicional?",
+      "opciones": [
+        "Capacidad de procesar grandes volúmenes de datos",
+        "Uso exclusivo en la industria del entretenimiento",
+        "Se limita a hojas de cálculo grandes",
+        "Solo almacena datos numéricos"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": "p014",
+      "color": "amarillo",
+      "enunciado": "¿Cómo ayuda el Big Data en el mantenimiento predictivo?",
+      "opciones": [
+        "Analizando tendencias de mercado",
+        "Prediciendo fallos antes de que ocurran",
+        "Organizando empleados",
+        "Diseñando productos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p015",
+      "color": "azul",
+      "enunciado": "¿Cuál es una diferencia clave entre la Realidad Aumentada y la Realidad Mixta?",
+      "opciones": [
+        "RA supera la realidad, RM la sustituye",
+        "RA permite interacción completa, RM no",
+        "RA muestra objetos superpuestos, RM los integra",
+        "RA requiere gafas especiales, RM usa cascos"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p016",
+      "color": "azul",
+      "enunciado": "¿Cuál es un pilar fundamental para la experiencia de Realidad Aumentada?",
+      "opciones": [
+        "Interactividad retardada",
+        "Eliminación del mundo físico",
+        "Registro en dos dimensiones",
+        "Combinación de lo real y lo virtual"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": "p017",
+      "color": "rosa",
+      "enunciado": "¿Qué ventaja ofrecen las Tecnologías Habilitadoras Digitales en la transformación digital?",
+      "opciones": [
+        "Sustituyen la necesidad de datos",
+        "Simplifican el acceso a tecnologías arcaicas",
+        "Facilitan la toma de decisiones rápidas",
+        "Están limitadas a la industria educativa"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p018",
+      "color": "rosa",
+      "enunciado": "¿Por qué el Big Data y la Realidad Aumentada se consideran Tecnologías Habilitadoras?",
+      "opciones": [
+        "Porque son tecnologías antiguas",
+        "Porque solo se usan en educación",
+        "Porque no interactúan con el mundo real",
+        "Porque ayudan a la transformación digital"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": "p019",
+      "color": "verde",
+      "enunciado": "¿Cuál es un beneficio de aplicar la Industria 4.0 en la manufactura?",
+      "opciones": [
+        "Aumento de costos",
+        "Disminución de eficiencia",
+        "Visión limitada del mercado",
+        "Mejora de la eficiencia operativa"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": "p020",
+      "color": "verde",
+      "enunciado": "¿Qué papel juegan las TDH en la Industria 4.0?",
+      "opciones": [
+        "Obstruyen la innovación",
+        "Permiten el avance digital",
+        "Reducen la productividad",
+        "Generan resistencia al cambio"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p021",
+      "color": "naranja",
+      "enunciado": "¿Qué representa la 'Variedad' en la regla de las 4 Vs del Big Data?",
+      "opciones": [
+        "El tipo único de datos",
+        "Los distintos formatos de datos",
+        "La cantidad de datos",
+        "La velocidad de procesamiento"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p022",
+      "color": "naranja",
+      "enunciado": "¿Por qué la 'Velocidad' es crucial en el Big Data?",
+      "opciones": [
+        "Permite decisiones basadas en datos de ayer",
+        "Facilita el análisis de datos pasados",
+        "Garantiza respuestas rápidas basadas en datos actuales",
+        "Se enfoca solo en datos estáticos"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p023",
+      "color": "marron",
+      "enunciado": "¿Cómo se está utilizando la RA en el sector educativo?",
+      "opciones": [
+        "Para crear realidad virtual sinusal",
+        "Convierte elementos abstractos en representaciones tangibles",
+        "Elimina la necesidad de profesores",
+        "Sustituye los libros por pantallas"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p024",
+      "color": "marron",
+      "enunciado": "¿Qué beneficio aporta la RA al sector de la arquitectura?",
+      "opciones": [
+        "Aumenta los costos de construcción",
+        "Reduce la precisión en el diseño",
+        "Permite visualizar el diseño antes de la inversión",
+        "Inhibe la creatividad del diseñador"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p025",
+      "color": "amarillo",
+      "enunciado": "¿Qué significa 'Valor' en el contexto de Big Data?",
+      "opciones": [
+        "La cantidad de datos generados",
+        "La utilidad de convertir datos en decisiones",
+        "La velocidad a la que se procesan los datos",
+        "La diversidad de tipos de datos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p026",
+      "color": "amarillo",
+      "enunciado": "¿Cuál es una aplicación del Big Data en la inteligencia de negocio?",
+      "opciones": [
+        "Analizar datos externos para entender tendencias del mercado",
+        "Crear gráficos 3D sobre objetos reales",
+        "Simular entornos virtuales para entrenamiento",
+        "Mejorar la interfaz de usuario de aplicaciones móviles"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": "p027",
+      "color": "azul",
+      "enunciado": "¿Qué es la Realidad Aumentada?",
+      "opciones": [
+        "Una tecnología que reemplaza completamente la realidad",
+        "Una tecnología que superpone información digital sobre el mundo real",
+        "Un sistema de procesamiento de datos masivos",
+        "Un método de virtualización completa para entrenamiento"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p028",
+      "color": "azul",
+      "enunciado": "¿Qué permite el registro en tres dimensiones en la Realidad Aumentada?",
+      "opciones": [
+        "Integrar completamente elementos virtuales con el mundo real",
+        "Generar entornos completamente digitales",
+        "Alinear la información digital con los objetos reales",
+        "Crear gráficos 3D sin interacción con el entorno físico"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p029",
+      "color": "rosa",
+      "enunciado": "¿Cómo contribuyen las Tecnologías Habilitadoras al sector productivo?",
+      "opciones": [
+        "Solo mejorando la experiencia del usuario",
+        "Transformando digitalmente empresas y sectores productivos",
+        "Aumentando el coste de producción",
+        "Solo creando aplicaciones móviles más rápidas"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p030",
+      "color": "rosa",
+      "enunciado": "¿Qué es una característica común de las Tecnologías Habilitadoras Digitales como el Big Data y la Realidad Aumentada?",
+      "opciones": [
+        "Facilitan la transformación digital en la industria",
+        "Reducen el uso de dispositivos móviles",
+        "Eliminan la necesidad de tecnología robótica",
+        "Funcionan exclusivamente offline"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": "p031",
+      "color": "verde",
+      "enunciado": "¿Qué rol juega el Big Data en la Industria 4.0?",
+      "opciones": [
+        "Aumentar la presencia de dispositivos portátiles",
+        "Ser el cerebro que permite el procesamiento y análisis de grandes volúmenes de datos",
+        "Eliminar la necesidad de energía renovable",
+        "Simplificar las tareas administrativas tradicionales"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p032",
+      "color": "verde",
+      "enunciado": "¿Cómo impacta la Realidad Aumentada en la Industria 4.0?",
+      "opciones": [
+        "Proporciona análisis de datos en tiempo real",
+        "Enriquece la percepción sensorial del entorno físico con datos digitales",
+        "Reduce la necesidad de bases de datos",
+        "Elimina el uso de maquinaria automatizada"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p033",
+      "color": "naranja",
+      "enunciado": "¿Cuál es un aspecto importante del 'Valor' en las 4 Vs del Big Data?",
+      "opciones": [
+        "Generar más datos que los competidores",
+        "Convertir datos en decisiones empresariales útiles",
+        "Incrementar la velocidad de los servidores",
+        "Aumentar la variedad de servicios ofrecidos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p034",
+      "color": "naranja",
+      "enunciado": "¿Qué implica la 'Variedad' en la regla de las 4 Vs del Big Data?",
+      "opciones": [
+        "La capacidad de almacenar más datos al mismo tiempo",
+        "La diversidad de tipos de datos que pueden ser procesados",
+        "El coste de almacenamiento de datos",
+        "La rapidez en la actualización de bases de datos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p035",
+      "color": "marron",
+      "enunciado": "¿Cómo se implementa la RA en el sector educación?",
+      "opciones": [
+        "Simulando mundos virtuales completos",
+        "Convirtiendo elementos abstractos en representaciones tangibles",
+        "Eliminando la necesidad de profesores",
+        "Usando solamente gráficos estáticos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p036",
+      "color": "marron",
+      "enunciado": "¿De qué manera ayuda la RA en el sector industrial?",
+      "opciones": [
+        "A través de la simulación completa de maquinaria",
+        "Ofreciendo asistencia técnica remota con guías visuales",
+        "Reduciendo el uso de maquinaria pesada",
+        "Eliminando la necesidad de capacitación del personal"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p037",
+      "color": "amarillo",
+      "enunciado": "¿Cuál es una característica clave que diferencia al Big Data de las hojas de cálculo tradicionales?",
+      "opciones": [
+        "La capacidad de generar gráficos",
+        "El uso de fórmulas avanzadas",
+        "La capacidad de capturar y procesar datos complejos",
+        "La posibilidad de compartir en la nube"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p038",
+      "color": "amarillo",
+      "enunciado": "¿Qué aspecto del Big Data permite el mantenimiento predictivo en las fábricas?",
+      "opciones": [
+        "Volumen",
+        "Variedad",
+        "Valor",
+        "Velocidad"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": "p039",
+      "color": "azul",
+      "enunciado": "¿Qué pilar técnico de la Realidad Aumentada asegura que la información digital reacciona inmediatamente a la interacción del usuario?",
+      "opciones": [
+        "Combinación de lo real y lo virtual",
+        "Interactividad en tiempo real",
+        "Registro en tres dimensiones",
+        "Integración de sonidos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p040",
+      "color": "azul",
+      "enunciado": "En la Realidad Aumentada, ¿qué actividad puede beneficiarse al visualizar estructuras anatómicas sobre el paciente?",
+      "opciones": [
+        "Entretenimiento",
+        "Sanidad",
+        "Educación musical",
+        "Arquitectura"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p041",
+      "color": "rosa",
+      "enunciado": "¿Qué tecnología enriquecida por las Tecnologías Habilitadoras permite la superposición de información digital sobre el mundo real?",
+      "opciones": [
+        "Realidad Virtual",
+        "Big Data",
+        "Blockchain",
+        "Realidad Aumentada"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": "p042",
+      "color": "rosa",
+      "enunciado": "¿Qué aspecto diferencial tiene la Realidad Aumentada frente a la Realidad Virtual?",
+      "opciones": [
+        "Permite la inmersión total en un entorno digital",
+        "Sustituye completamente la realidad",
+        "Enriquece el entorno real con datos digitales",
+        "Requiere cascos cerrados para su uso"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p043",
+      "color": "verde",
+      "enunciado": "¿Qué papel juega el Big Data en la digitalización de una fábrica moderna?",
+      "opciones": [
+        "Es un complemento de la automatización",
+        "Es el principal cerebro que procesa la información compleja",
+        "Reemplaza a los operadores humanos",
+        "Es una herramienta para diseño gráfico"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p044",
+      "color": "verde",
+      "enunciado": "Dentro de la Industria 4.0, ¿cómo se define el papel de la Realidad Aumentada?",
+      "opciones": [
+        "Como un sustituto de los entornos físicos existentes",
+        "Como una herramienta para enriquecer la percepción sensorial sobre el entorno físico",
+        "Como un proceso aislado de la digitalización",
+        "Como la base del mantenimiento de equipos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p045",
+      "color": "naranja",
+      "enunciado": "¿Qué importancia tiene el 'Volumen' dentro de la regla de las 4 Vs en Big Data?",
+      "opciones": [
+        "Permite determinar la velocidad de los datos",
+        "Es crucial para manejar la diversidad de tipos de datos",
+        "Se refiere a la cantidad masiva de datos generados",
+        "Aporta valor económico directamente"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p046",
+      "color": "naranja",
+      "enunciado": "Dentro de las 4 Vs, ¿cuál se refiere a la capacidad para procesar y valorar la utilidad de datos en la toma de decisiones?",
+      "opciones": [
+        "Volumen",
+        "Variedad",
+        "Velocidad",
+        "Valor"
+      ],
+      "correcta": 3
+    },
+    {
+      "id": "p047",
+      "color": "marron",
+      "enunciado": "¿Cómo está transformando los flujos de trabajo la Realidad Aumentada en sectores como la industria informática?",
+      "opciones": [
+        "Creando entornos virtuales alternativos",
+        "Facilitando la asistencia técnica remota con guías visibles sobre los equipos",
+        "Generando mundos completamente digitales para pruebas",
+        "Mejorando las posibilidades de teletrabajo"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p048",
+      "color": "marron",
+      "enunciado": "¿Qué uso tiene la Realidad Aumentada en el sector del deporte?",
+      "opciones": [
+        "Visualización de estadísticas de partidos en tiempo real",
+        "Análisis biomecánico inmediato con superposición de ángulos sobre los atletas",
+        "Crear equipos virtuales para entrenamiento",
+        "Sustitución de entrenadores en análisis táctico"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p049",
+      "color": "amarillo",
+      "enunciado": "¿Cuál es una función crítica del Big Data en la minería de datos?",
+      "opciones": [
+        "Almacenamiento de información",
+        "Facilitación de patrones ocultos",
+        "Transformación de texto a imagen",
+        "Reducción de costes inmediatos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p050",
+      "color": "amarillo",
+      "enunciado": "¿Cómo ayuda el Big Data en la predicción de tendencias empresariales?",
+      "opciones": [
+        "Proporcionando datos del pasado",
+        "Análisis de patrones de consumo",
+        "Incrementando el tiempo de procesamiento",
+        "Limitando el acceso a datos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p051",
+      "color": "azul",
+      "enunciado": "¿Qué dispositivo es esencial para la implementación de la Realidad Aumentada?",
+      "opciones": [
+        "Sigilosa CPU",
+        "Cámaras y sensores",
+        "Pantalla LED grande",
+        "Impresora 3D"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p052",
+      "color": "azul",
+      "enunciado": "¿Qué tecnología permite integrar modelos 3D en el entorno físico en tiempo real?",
+      "opciones": [
+        "Realidad Aumentada",
+        "Realidad Virtual",
+        "Realidad Mixta",
+        "Simulación Física"
+      ],
+      "correcta": 0
+    },
+    {
+      "id": "p053",
+      "color": "rosa",
+      "enunciado": "¿De qué manera mejora la digitalización la eficiencia en la industria?",
+      "opciones": [
+        "Aumentando únicamente la cantidad de datos",
+        "Optimizando procesos y toma de decisiones",
+        "Reduciendo la interacción humana",
+        "Digitalizando solamente la comunicación"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p054",
+      "color": "rosa",
+      "enunciado": "¿Cuál es un beneficio directo de implementar Tecnologías Habilitadoras en una empresa?",
+      "opciones": [
+        "Reducción de personal",
+        "Incremento de costes operativos",
+        "Innovación en productos y servicios",
+        "Regulación estricta de datos"
+      ],
+      "correcta": 2
+    },
+    {
+      "id": "p055",
+      "color": "verde",
+      "enunciado": "¿Qué característica define principalmente a la Industria 4.0?",
+      "opciones": [
+        "Uso exclusivo de tecnologías de la información",
+        "Producción automatizada y conectada",
+        "Reducción del mercado laboral",
+        "Producción manual intensiva"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p056",
+      "color": "verde",
+      "enunciado": "¿Cómo contribuye la digitalización al desarrollo sostenible en la Industria 4.0?",
+      "opciones": [
+        "Reduciendo el uso de tecnología obsoleta",
+        "Facilitando la gestión eficiente de recursos",
+        "Limitando las capacidades digitales",
+        "Focalizándose solo en el aumento de producción"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p057",
+      "color": "naranja",
+      "enunciado": "¿Por qué es importante la 'Velocidad' en la regla de las 4 Vs del Big Data?",
+      "opciones": [
+        "Para almacenar más datos",
+        "Para procesar datos en tiempo real",
+        "Para reducir costes de infraestructura",
+        "Para mejorar la seguridad de los datos"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p058",
+      "color": "naranja",
+      "enunciado": "¿Qué rol juega la 'Variedad' en las aplicaciones de Big Data?",
+      "opciones": [
+        "Uniformidad de formatos de datos",
+        "Flexibilidad en el análisis de diferentes tipos de datos",
+        "Reducción de la diversidad de datos",
+        "Mantenimiento de datos estructurados únicamente"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p059",
+      "color": "marron",
+      "enunciado": "¿Cómo se utiliza la Realidad Aumentada en la arquitectura?",
+      "opciones": [
+        "Evitando la planificación de cambios de diseño",
+        "Visualizando instalaciones en espacios vacíos",
+        "Realizando cálculos estructurales",
+        "Eliminando la dependencia de modelaje 3D"
+      ],
+      "correcta": 1
+    },
+    {
+      "id": "p060",
+      "color": "marron",
+      "enunciado": "¿Qué ventaja ofrece la Realidad Aumentada en el sector farmacéutico?",
+      "opciones": [
+        "Automatización de consultas",
+        "Verificación visual de existencias",
+        "Producción masiva sin control",
+        "Eliminación de errores manuales en la producción"
+      ],
+      "correcta": 1
+    }
+  ]
+}

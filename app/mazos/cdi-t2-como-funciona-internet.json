@@ -1,0 +1,3395 @@
+{
+  "formato": 1,
+  "id": "cdi-t2-como-funciona-internet",
+  "titulo": "Tema 2 · Cómo funciona internet",
+  "modulo": "Comercio Digital Internacional",
+  "descripcion": "Cómo funciona internet: la infraestructura del comercio digital. 240 preguntas, 40 por categoría.",
+  "categorias": [
+    {
+      "color": "azul",
+      "nombre": "Origen y TCP/IP"
+    },
+    {
+      "color": "rosa",
+      "nombre": "Web, DNS y correo"
+    },
+    {
+      "color": "amarillo",
+      "nombre": "Conexiones"
+    },
+    {
+      "color": "marron",
+      "nombre": "Proveedor y red de oficina"
+    },
+    {
+      "color": "verde",
+      "nombre": "VPN y redes privadas"
+    },
+    {
+      "color": "naranja",
+      "nombre": "Dominio, hosting y HTTPS"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "p001",
+      "color": "azul",
+      "enunciado": "¿Qué es internet?",
+      "opciones": [
+        "Una red de redes que hablan el mismo idioma técnico",
+        "Un gran servidor central que guarda todas las webs",
+        "Una empresa que vende acceso a páginas web",
+        "Un programa que se instala para poder navegar"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Son millones de redes independientes que han acordado entenderse entre sí."
+    },
+    {
+      "id": "p002",
+      "color": "azul",
+      "enunciado": "¿Quién es el propietario de internet?",
+      "opciones": [
+        "El Gobierno de Estados Unidos",
+        "El laboratorio europeo CERN",
+        "Nadie en concreto",
+        "Las grandes operadoras"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Nadie es su dueño y nadie puede apagarla por completo."
+    },
+    {
+      "id": "p003",
+      "color": "azul",
+      "enunciado": "¿Cómo se llamaba la red de la que nació internet?",
+      "opciones": [
+        "EURONET",
+        "ETHERNET",
+        "ARPANET",
+        "TELENET"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "ARPANET conectaba unos pocos ordenadores universitarios."
+    },
+    {
+      "id": "p004",
+      "color": "azul",
+      "enunciado": "¿Qué es un protocolo?",
+      "opciones": [
+        "Un ordenador que atiende peticiones de forma permanente",
+        "Un conjunto de reglas acordadas para que dos partes se entiendan",
+        "Un cable especial que une ordenadores de redes distintas",
+        "Un programa que protege los equipos frente a los virus"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es un acuerdo previo de funcionamiento, como lo es un incoterm en un envío."
+    },
+    {
+      "id": "p005",
+      "color": "azul",
+      "enunciado": "¿Qué conjunto de reglas une todas las redes que forman internet?",
+      "opciones": [
+        "HTML y URL",
+        "ADSL y RDSI",
+        "TCP/IP",
+        "DNS y HTTP"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "TCP/IP es el idioma común que permite que redes distintas se entiendan."
+    },
+    {
+      "id": "p006",
+      "color": "azul",
+      "enunciado": "¿Qué es una dirección IP?",
+      "opciones": [
+        "El nombre comercial que la empresa registra en internet",
+        "Un número que identifica a un equipo mientras está conectado",
+        "La contraseña que protege la red wifi de la oficina",
+        "La ruta que lleva a una página concreta dentro de un sitio web"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Cada equipo conectado tiene una dirección IP que lo identifica."
+    },
+    {
+      "id": "p007",
+      "color": "azul",
+      "enunciado": "¿Qué parte de TCP/IP trocea la información en paquetes numerados?",
+      "opciones": [
+        "TCP",
+        "DNS",
+        "IP",
+        "HTML"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "TCP trocea, numera, comprueba que llega todo y pide reenviar lo perdido."
+    },
+    {
+      "id": "p008",
+      "color": "azul",
+      "enunciado": "¿Qué parte de TCP/IP da una dirección a cada equipo y busca la ruta hasta él?",
+      "opciones": [
+        "IP",
+        "URL",
+        "HTTP",
+        "TCP"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "IP se ocupa de la dirección y del camino disponible en cada momento."
+    },
+    {
+      "id": "p009",
+      "color": "azul",
+      "enunciado": "¿Qué tipo de dirección IP tiene la mayoría de las empresas?",
+      "opciones": [
+        "Una fija, asignada de forma permanente",
+        "Una compartida con su agente registrador",
+        "Una elegida libremente por la empresa",
+        "Una dinámica, distinta en cada conexión"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El proveedor suele asignar una dirección distinta cada vez que la empresa se conecta."
+    },
+    {
+      "id": "p010",
+      "color": "azul",
+      "enunciado": "¿Quién puso en marcha ARPANET?",
+      "opciones": [
+        "El Departamento de Defensa de EE. UU.",
+        "La Comisión Europea",
+        "El laboratorio europeo CERN",
+        "Una operadora telefónica privada de EE. UU."
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Fue su agencia de investigación, con un objetivo militar y universitario."
+    },
+    {
+      "id": "p011",
+      "color": "azul",
+      "enunciado": "¿Qué objetivo de diseño tenía ARPANET?",
+      "opciones": [
+        "Que las empresas pudieran vender sus productos a otros países",
+        "Que la comunicación sobreviviera aunque fallara parte de la red",
+        "Que las llamadas resultaran más baratas que por línea telefónica",
+        "Que los datos viajaran siempre por una única ruta fija y segura"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "La información buscaría cualquier camino disponible en lugar de una ruta fija."
+    },
+    {
+      "id": "p012",
+      "color": "azul",
+      "enunciado": "En la analogía del envío internacional, ¿a qué equivale la IP?",
+      "opciones": [
+        "Al seguro que cubre la mercancía",
+        "A la dirección del destinatario en el albarán",
+        "Al precinto que cierra el contenedor",
+        "Al packing list con todos los bultos numerados"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Dice dónde tiene que acabar el envío, no por qué ruta llegará."
+    },
+    {
+      "id": "p013",
+      "color": "azul",
+      "enunciado": "¿Por qué es tan difícil apagar o censurar internet por completo?",
+      "opciones": [
+        "Porque la protege un tratado firmado en las Naciones Unidas",
+        "Porque sus servidores principales están en satélites",
+        "Porque todos los datos viajan cifrados desde su origen",
+        "Porque son muchas redes independientes sin un dueño único"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Al no tener propietario ni centro único, no hay un punto desde el que apagarla."
+    },
+    {
+      "id": "p014",
+      "color": "azul",
+      "enunciado": "¿Por qué nadie garantiza la velocidad de extremo a extremo en internet?",
+      "opciones": [
+        "Porque la ley prohíbe garantizar una velocidad concreta",
+        "Porque TCP reduce la velocidad para cifrar la información",
+        "Porque cada país fija una velocidad máxima de entrada",
+        "Porque los datos cruzan redes de muchos dueños distintos"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Tu proveedor controla su tramo, pero el resto del camino pasa por redes ajenas."
+    },
+    {
+      "id": "p015",
+      "color": "azul",
+      "enunciado": "¿Qué convirtió un conjunto de redes sueltas en una sola red mundial?",
+      "opciones": [
+        "Que se tendiera un cable directo entre continentes",
+        "Que una gran empresa comprara todas esas redes",
+        "Que el uso de TCP/IP pasara a ser obligatorio",
+        "Que se inventara la World Wide Web en el CERN"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La obligatoriedad del idioma común fue lo que unió las redes."
+    },
+    {
+      "id": "p016",
+      "color": "azul",
+      "enunciado": "Si un paquete se pierde por el camino, ¿qué hace TCP?",
+      "opciones": [
+        "Cambia la dirección IP del destino",
+        "Da el archivo por perdido y avisa",
+        "Pide que se reenvíe solo ese paquete",
+        "Pide que se reenvíe el archivo entero"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Como en una expedición fraccionada: si falta un bulto, se reclama solo ese."
+    },
+    {
+      "id": "p017",
+      "color": "azul",
+      "enunciado": "¿Por qué un catálogo llega bien aunque sus paquetes tomen caminos distintos?",
+      "opciones": [
+        "Porque el DNS los agrupa antes de entregarlos",
+        "Porque IP obliga a todos a seguir la misma ruta",
+        "Porque TCP los recoloca por su número al llegar",
+        "Porque el navegador descarta los que llegan tarde"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Los paquetes van numerados y TCP reconstruye el archivo en orden."
+    },
+    {
+      "id": "p018",
+      "color": "azul",
+      "enunciado": "¿Qué diferencia hay entre lo que hacen IP y TCP?",
+      "opciones": [
+        "IP fija la velocidad; TCP elige al proveedor",
+        "IP trocea los datos; TCP busca el camino disponible",
+        "IP dice adónde va; TCP garantiza que llegue completo",
+        "IP cifra los datos; TCP traduce nombres a números"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La dirección y la ruta son cosa de IP; el control de que llegue todo, de TCP."
+    },
+    {
+      "id": "p019",
+      "color": "azul",
+      "enunciado": "¿Por qué el tema compara un protocolo con un incoterm?",
+      "opciones": [
+        "Ambos son acuerdos previos que evitan negociar todo desde cero",
+        "Ambos sirven para cifrar la información que se intercambia",
+        "Ambos fijan el precio final de cada operación de comercio exterior",
+        "Ambos los aprueba la misma organización internacional"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Sin un acuerdo previo, cada operación habría que negociarla desde cero."
+    },
+    {
+      "id": "p020",
+      "color": "azul",
+      "enunciado": "¿En qué se parece TCP a una expedición fraccionada en bultos?",
+      "opciones": [
+        "Cada bulto lleva impreso el nombre comercial del vendedor",
+        "Si falta un bulto, se reclama solo ese y no toda la carga",
+        "El transportista decide libremente el puerto de destino",
+        "Toda la carga viaja junta en un único contenedor cerrado"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "TCP numera los paquetes como un packing list y pide reenviar solo lo que falta."
+    },
+    {
+      "id": "p021",
+      "color": "azul",
+      "enunciado": "¿Por qué muchas tiendas muestran solas el idioma y la divisa del visitante?",
+      "opciones": [
+        "Porque la IP revela aproximadamente su país",
+        "Porque el correo del cliente indica su país",
+        "Porque TCP añade el idioma a cada paquete",
+        "Porque el navegador envía el pasaporte del usuario"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "La dirección IP permite deducir de forma aproximada desde dónde se conecta."
+    },
+    {
+      "id": "p022",
+      "color": "azul",
+      "enunciado": "Cuando un cliente alemán entra en una tienda española, ¿cómo viajan sus datos?",
+      "opciones": [
+        "Saltando de red en red por el camino disponible",
+        "Solo por la red del proveedor de la tienda",
+        "Por un cable dedicado entre Alemania y España",
+        "Siempre por un satélite europeo de órbita baja"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Es la idea heredada de ARPANET: no depender de una ruta concreta."
+    },
+    {
+      "id": "p023",
+      "color": "azul",
+      "enunciado": "¿Por qué una empresa de A Coruña puede vender a Australia sin pedir permiso a nadie?",
+      "opciones": [
+        "Porque España tiene un tratado digital con Australia",
+        "Porque su proveedor paga un canon por vender fuera",
+        "Porque internet no tiene un dueño que deba autorizarlo",
+        "Porque ARPANET firmó acuerdos con todos los países"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La arquitectura de red de redes sin propietario lo hace posible."
+    },
+    {
+      "id": "p024",
+      "color": "azul",
+      "enunciado": "¿Qué distingue una IP fija de una dinámica?",
+      "opciones": [
+        "La fija es gratuita; la dinámica se paga aparte",
+        "La fija es para móviles; la dinámica, para oficinas",
+        "La fija no cambia; la dinámica varía en cada conexión",
+        "La fija va cifrada; la dinámica viaja sin cifrar"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Ojo: la fija suele costar un poco más, no menos."
+    },
+    {
+      "id": "p025",
+      "color": "azul",
+      "enunciado": "¿Por qué conocer el origen de internet no es un simple ejercicio de nostalgia?",
+      "opciones": [
+        "Porque las normas de ARPANET siguen vigentes por ley",
+        "Porque es materia que examinan las aduanas",
+        "Porque explica por qué la red funciona como funciona",
+        "Porque los mismos ordenadores siguen en servicio"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Explica, por ejemplo, la dificultad de censurarla o la forma de las direcciones."
+    },
+    {
+      "id": "p026",
+      "color": "azul",
+      "enunciado": "Según la analogía del albarán, ¿qué no dice la dirección IP?",
+      "opciones": [
+        "Por qué ruta llegará la información",
+        "A qué equipo tiene que llegar el envío",
+        "Dónde debe acabar la información",
+        "Quién es el destinatario final"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Igual que la dirección del albarán, solo indica dónde debe acabar, no el camino."
+    },
+    {
+      "id": "p027",
+      "color": "azul",
+      "enunciado": "Una conservera de Vigo ve que su tienda muestra precios en pesos a un visitante de Chile sin que este lo pida. ¿Qué dato ha usado la tienda?",
+      "opciones": [
+        "El idioma en el que escribió su primer pedido",
+        "El certificado de su navegador",
+        "El dominio de su correo electrónico",
+        "La dirección IP desde la que se conecta"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La IP revela aproximadamente el país del visitante, y la tienda adapta divisa e idioma."
+    },
+    {
+      "id": "p028",
+      "color": "azul",
+      "enunciado": "Un cliente de Japón exige que a su portal de pedidos solo se entre desde una dirección concreta de una empresa de Lugo. ¿Qué debe contratar?",
+      "opciones": [
+        "Una dirección IP fija con su proveedor",
+        "Un dominio con la extensión del país",
+        "Una red wifi de invitados separada",
+        "Un certificado de validación extendida"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El acceso restringido a una IP concreta exige que esa dirección no cambie."
+    },
+    {
+      "id": "p029",
+      "color": "azul",
+      "enunciado": "Falla una de las redes intermedias y aun así una exportadora de Pontevedra sigue recibiendo pedidos de Francia. ¿Qué lo explica?",
+      "opciones": [
+        "El proveedor guarda los pedidos hasta repararlo",
+        "Los datos buscan otra ruta que esté disponible",
+        "TCP deja de numerar los paquetes para ir más rápido",
+        "El DNS reenvía los pedidos por correo electrónico"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Es la lógica de ARPANET: la información no depende de una ruta fija."
+    },
+    {
+      "id": "p030",
+      "color": "azul",
+      "enunciado": "Un cliente de Canadá descarga el catálogo de una empresa de Lugo; un paquete se pierde, pero el PDF se abre bien. ¿Qué ha pasado?",
+      "opciones": [
+        "TCP detectó la falta y pidió reenviar ese paquete",
+        "El navegador rellenó por su cuenta la parte perdida",
+        "El DNS completó el archivo con una copia guardada",
+        "IP descartó ese paquete y entregó el resto igual"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "TCP comprueba que han llegado todos los paquetes y reclama los perdidos."
+    },
+    {
+      "id": "p031",
+      "color": "azul",
+      "enunciado": "El gerente de una empresa de Ferrol afirma: «IP garantiza que el catálogo llegue completo y en orden». ¿Qué le corregirías?",
+      "opciones": [
+        "Eso lo hace HTTPS; IP solo cifra los paquetes",
+        "Eso lo hace TCP; IP da la dirección y busca la ruta",
+        "Nada: IP hace esas dos tareas a la vez",
+        "Eso lo hace el DNS; IP traduce los nombres a números"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Comprobar que llega todo y en orden es tarea de TCP, no de IP."
+    },
+    {
+      "id": "p032",
+      "color": "azul",
+      "enunciado": "Un comercial de una empresa de Bilbao viaja a Marruecos y ve la tienda de su empresa en otra divisa. ¿Por qué?",
+      "opciones": [
+        "El router del hotel ha modificado la tienda",
+        "Su dominio de correo ha cambiado de país al viajar con él",
+        "Su certificado solo es válido dentro de España",
+        "La tienda deduce su país por la IP desde la que conecta"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La tienda lee la IP y le muestra la versión del país desde el que se conecta."
+    },
+    {
+      "id": "p033",
+      "color": "azul",
+      "enunciado": "Un importador de Australia pregunta a una bodega riojana si necesita un permiso especial para conectarse a su tienda en línea. ¿Qué le responde?",
+      "opciones": [
+        "Sí: debe solicitarlo al proveedor de la bodega",
+        "No: internet no tiene dueño al que pedir permiso",
+        "Sí: lo concede la agencia que creó ARPANET",
+        "Solo si la tienda usa un dominio .com"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Al ser una red de redes sin propietario, conectarse no requiere autorización de nadie."
+    },
+    {
+      "id": "p034",
+      "color": "azul",
+      "enunciado": "Una gestoría de Lugo quiere ahorrar dando de baja su IP fija, pero tiene un servidor propio que consultan sus clientes. ¿Qué le aconsejas?",
+      "opciones": [
+        "Cambiarla por un certificado de validación extendida",
+        "Sustituirla por una red wifi de invitados",
+        "Darla de baja: una IP dinámica sirve igual",
+        "Mantenerla: un servidor propio necesita IP fija"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Si la dirección cambia en cada conexión, los clientes dejarían de encontrar el servidor."
+    },
+    {
+      "id": "p035",
+      "color": "azul",
+      "enunciado": "Una empresa de Murcia quiere explicar a su transitario qué equivale en internet al documento de transporte normalizado. ¿Qué elige?",
+      "opciones": [
+        "La VPN, el canal cifrado que une dos puntos de la red",
+        "TCP/IP, el acuerdo que entienden todas las redes",
+        "El HTML, el lenguaje con que se escriben las páginas",
+        "El DNS, que traduce los nombres de dominio a números"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Igual que un documento normalizado, TCP/IP es el acuerdo común que todos entienden."
+    },
+    {
+      "id": "p036",
+      "color": "azul",
+      "enunciado": "Una empresa propone inventarse sus propias reglas de comunicación con un cliente de Kenia en lugar de usar las comunes. ¿Qué inconveniente tendría?",
+      "opciones": [
+        "Sus datos viajarían siempre más rápido",
+        "El cliente no podría ver su dirección IP",
+        "Su dominio dejaría de pertenecer a la empresa",
+        "Habría que acordar cada conexión desde cero"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Sin un protocolo común, cada comunicación necesita negociarse desde cero."
+    },
+    {
+      "id": "p037",
+      "color": "azul",
+      "enunciado": "El gerente de una exportadora de Cádiz teme que, si quiebra su operador, internet deje de funcionar para sus clientes extranjeros. ¿Qué le aclaras?",
+      "opciones": [
+        "Sus clientes extranjeros perderían su conexión",
+        "Internet seguiría: su operador es solo una red más",
+        "Internet se apagaría en toda España hasta repararlo",
+        "El CERN asumiría el control de esa red caída"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Internet son millones de redes independientes; la caída de una no apaga el conjunto."
+    },
+    {
+      "id": "p038",
+      "color": "azul",
+      "enunciado": "Una empresa de Huesca tiene una fibra muy rápida, pero la descarga desde un servidor de Indonesia va lenta. ¿Qué lo explica?",
+      "opciones": [
+        "Su fibra no está preparada para webs extranjeras",
+        "TCP solo funciona a plena velocidad dentro de Europa",
+        "El trayecto cruza redes ajenas que nadie garantiza",
+        "El DNS de Indonesia bloquea a los equipos españoles"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Nadie garantiza la velocidad de extremo a extremo: el camino pasa por redes de otros."
+    },
+    {
+      "id": "p039",
+      "color": "azul",
+      "enunciado": "El técnico de una pyme de Lleida ve que su dirección IP de hoy no coincide con la de ayer y teme un ataque. ¿Qué es lo más probable?",
+      "opciones": [
+        "Que tenga IP dinámica y el proveedor la haya cambiado",
+        "Que su dominio haya pasado a manos de otra empresa",
+        "Que el router haya borrado la red de invitados sin avisar",
+        "Que alguien le haya robado su dirección IP de ayer"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La mayoría de las empresas recibe una IP distinta cada vez que se conecta."
+    },
+    {
+      "id": "p040",
+      "color": "azul",
+      "enunciado": "Dos delegaciones de una cooperativa de Jaén, cada una con un operador distinto, se comunican sin problemas. ¿Por qué?",
+      "opciones": [
+        "El DNS fusiona las dos redes en una sola",
+        "Los dos operadores pertenecen al mismo dueño",
+        "Las dos delegaciones comparten el mismo router",
+        "Las dos redes hablan TCP/IP, el idioma común"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El protocolo común permite que redes de distintos dueños se entiendan."
+    },
+    {
+      "id": "p041",
+      "color": "rosa",
+      "enunciado": "¿Dónde nació la World Wide Web?",
+      "opciones": [
+        "En una operadora de EE. UU.",
+        "En el CERN, en Europa",
+        "En la red militar ARPANET",
+        "En la Comisión Europea"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Nació en el laboratorio europeo de física de partículas."
+    },
+    {
+      "id": "p042",
+      "color": "rosa",
+      "enunciado": "¿Quién creó la World Wide Web?",
+      "opciones": [
+        "Tim Berners-Lee",
+        "Linus Torvalds",
+        "Steve Jobs",
+        "Bill Gates"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La creó en el CERN combinando HTML, URL y HTTP."
+    },
+    {
+      "id": "p043",
+      "color": "rosa",
+      "enunciado": "¿En qué lenguaje se escriben las páginas web?",
+      "opciones": [
+        "DNS",
+        "URL",
+        "HTML",
+        "HTTP"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "HTML es el lenguaje para escribir páginas; HTTP es el procedimiento para pedirlas."
+    },
+    {
+      "id": "p044",
+      "color": "rosa",
+      "enunciado": "¿Qué es una URL?",
+      "opciones": [
+        "El servidor donde está alojada la web",
+        "La dirección completa de un recurso concreto",
+        "El lenguaje en que se escriben las páginas",
+        "El protocolo que cifra la comunicación"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Identifica de forma única cada página o recurso."
+    },
+    {
+      "id": "p045",
+      "color": "rosa",
+      "enunciado": "¿Qué es HTTP?",
+      "opciones": [
+        "El lenguaje para escribir páginas web",
+        "El sistema que traduce los nombres en números",
+        "La dirección única de cada página",
+        "El procedimiento para pedir y recibir páginas"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Es la tercera pieza de la web, junto al HTML y la URL."
+    },
+    {
+      "id": "p046",
+      "color": "rosa",
+      "enunciado": "¿Qué significan las siglas DNS?",
+      "opciones": [
+        "Red de direcciones seguras",
+        "Servidor de nombres digitales",
+        "Sistema de datos numéricos",
+        "Sistema de nombres de dominio"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Domain Name System: sistema de nombres de dominio."
+    },
+    {
+      "id": "p047",
+      "color": "rosa",
+      "enunciado": "¿Qué hace el DNS?",
+      "opciones": [
+        "Aloja los archivos de la tienda en un servidor propio",
+        "Cifra los datos que viajan entre el cliente y la tienda",
+        "Trocea la información en paquetes numerados y ordenados",
+        "Traduce nombres de dominio en direcciones numéricas"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Las personas escriben nombres; las máquinas necesitan números."
+    },
+    {
+      "id": "p048",
+      "color": "rosa",
+      "enunciado": "En una dirección de correo, ¿qué va a la derecha de la arroba?",
+      "opciones": [
+        "El dominio",
+        "El protocolo",
+        "El buzón",
+        "La ruta"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "A la izquierda va el buzón y a la derecha el dominio."
+    },
+    {
+      "id": "p049",
+      "color": "rosa",
+      "enunciado": "En https://www.empresa.es/catalogo/mesas, ¿qué es «/catalogo/mesas»?",
+      "opciones": [
+        "El protocolo",
+        "La ruta",
+        "El subdominio",
+        "La extensión"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "La ruta indica la página concreta dentro del sitio."
+    },
+    {
+      "id": "p050",
+      "color": "rosa",
+      "enunciado": "¿Qué indica la «s» final de «https»?",
+      "opciones": [
+        "Que el sitio es de una sociedad",
+        "Que la web tiene un subdominio",
+        "Que la comunicación va cifrada",
+        "Que la empresa está en España"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "La «s» señala que la comunicación viaja cifrada."
+    },
+    {
+      "id": "p051",
+      "color": "rosa",
+      "enunciado": "¿Qué dos partes de una URL decide y registra la empresa?",
+      "opciones": [
+        "El nombre de dominio y su extensión",
+        "El subdominio y el protocolo",
+        "El protocolo y la ruta de la página",
+        "La ruta y el subdominio"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Son las únicas partes que la empresa registra y paga."
+    },
+    {
+      "id": "p052",
+      "color": "rosa",
+      "enunciado": "¿Qué es «www» en una dirección web?",
+      "opciones": [
+        "La extensión de primer nivel",
+        "El nombre de dominio registrado",
+        "El protocolo de comunicación",
+        "El subdominio, una convención"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Hoy muchas empresas prescinden de él."
+    },
+    {
+      "id": "p053",
+      "color": "rosa",
+      "enunciado": "¿Por qué es incorrecto usar «internet» y «la web» como sinónimos?",
+      "opciones": [
+        "Porque la web es solo uno de los servicios de internet",
+        "Porque internet es bastante más moderna que la web",
+        "Porque internet solo sirve para el correo y las llamadas",
+        "Porque la web funciona sin necesidad de conectarse a internet"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Internet es la infraestructura; la web circula por ella, como el correo o las videollamadas."
+    },
+    {
+      "id": "p054",
+      "color": "rosa",
+      "enunciado": "¿Qué tres ideas combinó Berners-Lee al crear la web?",
+      "opciones": [
+        "Un protocolo de cifrado, una red privada y un buscador",
+        "Una red militar, unos satélites y un cable entre continentes",
+        "Un nombre de dominio, un alojamiento y un certificado de seguridad",
+        "Un lenguaje de páginas, una dirección única y un modo de pedirlas"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Son el HTML, la URL y el HTTP."
+    },
+    {
+      "id": "p055",
+      "color": "rosa",
+      "enunciado": "¿Por qué hoy cualquiera puede publicar una tienda sin pagar derechos a nadie?",
+      "opciones": [
+        "Porque la web se liberó sin patentes",
+        "Porque los dominios son siempre gratuitos",
+        "Porque la patente del HTML ya ha caducado",
+        "Porque el CERN paga los derechos de todos"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Que naciera en Europa y se liberara sin patentes lo hizo posible."
+    },
+    {
+      "id": "p056",
+      "color": "rosa",
+      "enunciado": "¿Por qué el dominio se considera un activo y el alojamiento un servicio?",
+      "opciones": [
+        "El dominio se compra una sola vez y es para siempre",
+        "El alojamiento lo paga siempre el proveedor de internet",
+        "El nombre se conserva aunque cambie dónde está la web",
+        "El dominio guarda todos los archivos de la página web"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "El alojamiento se contrata y se cambia; el nombre permanece."
+    },
+    {
+      "id": "p057",
+      "color": "rosa",
+      "enunciado": "¿Por qué el correo sigue siendo clave en el comercio internacional?",
+      "opciones": [
+        "Es el canal formal: ofertas, pedidos y prueba escrita",
+        "Es el único medio que funciona sin necesidad de internet",
+        "Sustituye por ley a los contratos firmados en papel",
+        "Es más rápido que cualquier videollamada con clientes"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Ahí se cruzan ofertas, se confirman pedidos y queda constancia escrita."
+    },
+    {
+      "id": "p058",
+      "color": "rosa",
+      "enunciado": "¿Por qué conviene usar el dominio propio también en el correo?",
+      "opciones": [
+        "Hace que todos los correos de la empresa viajen cifrados",
+        "Permite enviar archivos adjuntos de cualquier tamaño",
+        "Transmite solidez a compradores que no conocen la empresa",
+        "Evita tener que contratar un alojamiento para la web"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Una cuenta gratuita no proyecta la misma solidez ante un comprador desconocido."
+    },
+    {
+      "id": "p059",
+      "color": "rosa",
+      "enunciado": "¿Qué relación suele haber entre el dominio del correo y el de la web?",
+      "opciones": [
+        "El correo no usa dominio, solo una dirección IP",
+        "La web usa el dominio y el correo el www",
+        "Normalmente es el mismo dominio de la empresa",
+        "Cada uno exige una extensión distinta"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Lo habitual es que web y correo compartan el dominio de la empresa."
+    },
+    {
+      "id": "p060",
+      "color": "rosa",
+      "enunciado": "En la analogía del registro mercantil, ¿qué equivale a cambiar de nave conservando la razón social?",
+      "opciones": [
+        "Cambiar de dominio manteniendo el alojamiento",
+        "Cambiar de alojamiento manteniendo el dominio",
+        "Pasar de una IP dinámica a una IP fija",
+        "Renovar el certificado sin cambiar de servidor"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Se actualiza la dirección asociada al nombre, pero el nombre no cambia."
+    },
+    {
+      "id": "p061",
+      "color": "rosa",
+      "enunciado": "¿Qué relación temporal hay entre el correo electrónico y la web?",
+      "opciones": [
+        "El correo apareció después de la web",
+        "El correo es anterior a la web",
+        "La web sustituyó al correo en los noventa",
+        "Los dos nacieron juntos en el CERN"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El correo ya existía cuando nació la web."
+    },
+    {
+      "id": "p062",
+      "color": "rosa",
+      "enunciado": "¿Por qué hace falta el DNS?",
+      "opciones": [
+        "Sin él, cada página tendría que escribirse en otro lenguaje",
+        "Las máquinas se localizan por números y las personas usan nombres",
+        "Sin él, los paquetes llegarían siempre desordenados al destino",
+        "Sin él, los datos viajarían sin cifrar por toda la red pública"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Nadie recordaría el número de un servidor para comprar unas mesas."
+    },
+    {
+      "id": "p063",
+      "color": "rosa",
+      "enunciado": "¿Qué diferencia hay entre una URL y un nombre de dominio?",
+      "opciones": [
+        "La URL se registra y se paga; el dominio no hace falta",
+        "Son exactamente lo mismo, escrito de distinta manera",
+        "El dominio incluye la ruta de cada página y la URL, en cambio, no",
+        "La URL señala un recurso concreto; el dominio es una parte"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La URL incluye protocolo, dominio, extensión y ruta."
+    },
+    {
+      "id": "p064",
+      "color": "rosa",
+      "enunciado": "¿Por qué merece la pena saber leer una URL?",
+      "opciones": [
+        "Cambia cada vez que el cliente se conecta a la red",
+        "Es lo que se comparte con clientes, campañas y facturas",
+        "Hay que reescribirla en HTML cada vez que se publica",
+        "El DNS solo admite direcciones revisadas por personas"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Es la dirección que aparece en todo lo que la empresa comunica."
+    },
+    {
+      "id": "p065",
+      "color": "rosa",
+      "enunciado": "Se puede usar internet sin usar la web. ¿Qué ejemplo lo demuestra?",
+      "opciones": [
+        "Leer un catálogo publicado en una página",
+        "Comparar precios en una web de ofertas",
+        "Hacer una videollamada con un cliente",
+        "Visitar la tienda de un proveedor"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La videollamada es otro servicio de internet distinto de la web."
+    },
+    {
+      "id": "p066",
+      "color": "rosa",
+      "enunciado": "Al escribir el nombre de una tienda en el navegador, ¿qué ocurre primero?",
+      "opciones": [
+        "El servidor envía la página sin consultar nada antes",
+        "El router traduce el nombre a una ruta dentro de la tienda",
+        "La autoridad de certificación envía la página pedida",
+        "El navegador pregunta al DNS por la dirección del servidor"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Primero se traduce el nombre a la dirección numérica del servidor."
+    },
+    {
+      "id": "p067",
+      "color": "rosa",
+      "enunciado": "Una conservera de Cambados cambia de proveedor de alojamiento y su director quiere reimprimir los catálogos con la nueva dirección web. ¿Qué le dices?",
+      "opciones": [
+        "No hace falta: el dominio no cambia al mudar la web",
+        "Sí: cada alojamiento obliga a usar otro dominio",
+        "Solo si el nuevo servidor está fuera de España",
+        "Sí: la extensión pasa a ser la del país del servidor"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El nombre de dominio es independiente de dónde esté alojada la tienda."
+    },
+    {
+      "id": "p068",
+      "color": "rosa",
+      "enunciado": "Un comprador de Suecia desconfía de una oferta enviada desde una cuenta de correo gratuita por una empresa de Lugo. ¿Qué le recomiendas a la empresa?",
+      "opciones": [
+        "Enviar la misma oferta desde varias cuentas gratuitas",
+        "Cambiar la extensión de su web a la de Suecia",
+        "Usar direcciones con el dominio propio de la empresa",
+        "Adjuntar la oferta solo como enlace de descarga"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Una dirección corporativa transmite una solidez que una cuenta gratuita no da."
+    },
+    {
+      "id": "p069",
+      "color": "rosa",
+      "enunciado": "Una agencia propone a una empresa de Toledo quitar el «www» de su dirección web. ¿Qué parte de la dirección cambia?",
+      "opciones": [
+        "La extensión que la sitúa en un país",
+        "El nombre de dominio que la empresa registró y paga",
+        "Solo el subdominio, del que se puede prescindir",
+        "El protocolo que cifra la comunicación"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "El www es una convención heredada; quitarlo no afecta al dominio registrado."
+    },
+    {
+      "id": "p070",
+      "color": "rosa",
+      "enunciado": "Un cliente de Polonia no llega a la tienda de una empresa de Burgos escribiendo su nombre, pero sí tecleando su dirección numérica. ¿Dónde está el fallo?",
+      "opciones": [
+        "En el certificado: la conexión no va cifrada",
+        "En el DNS: el nombre no se traduce a la dirección",
+        "En TCP: los paquetes llegan desordenados",
+        "En el alojamiento: el servidor de la tienda está caído"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Si con la dirección numérica funciona, el servidor está bien; falla la traducción del nombre."
+    },
+    {
+      "id": "p071",
+      "color": "rosa",
+      "enunciado": "Un exportador de Albacete dice: «Nuestros clientes no usan la web, solo nos escriben correos». ¿Qué afirmación es correcta?",
+      "opciones": [
+        "Usan internet, aunque no usen la web",
+        "No usan ni internet ni la web",
+        "No usan internet, porque el correo va aparte",
+        "Usan la web, porque el correo forma parte de ella"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El correo es un servicio de internet distinto de la web."
+    },
+    {
+      "id": "p072",
+      "color": "rosa",
+      "enunciado": "Una startup de Málaga teme tener que pagar derechos por usar HTML y HTTP en su tienda. ¿Qué le respondes?",
+      "opciones": [
+        "Sí: se pagan cada año al CERN",
+        "Solo si vende fuera de la Unión Europea",
+        "No: la web se liberó sin patentes",
+        "Sí: van incluidos en el precio del dominio"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La web se liberó sin patentes, por eso cualquiera puede publicar sin pagar derechos."
+    },
+    {
+      "id": "p073",
+      "color": "rosa",
+      "enunciado": "Una empresa de Vigo quiere que un cliente de Perú llegue directamente a la ficha de un producto y no a la portada. ¿Qué debe incluir en el enlace?",
+      "opciones": [
+        "Solo el nombre de dominio con su extensión",
+        "La ruta de esa página dentro del sitio",
+        "Un protocolo distinto del habitual",
+        "Un subdominio distinto para ese cliente"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La ruta es la parte de la URL que lleva a una página concreta."
+    },
+    {
+      "id": "p074",
+      "color": "rosa",
+      "enunciado": "Un importador de Chile y una empresa de Huelva acuerdan un precio por videollamada. ¿Qué conviene hacer después?",
+      "opciones": [
+        "Confirmarlo por correo para dejar prueba escrita",
+        "Publicarlo en la web pública de la empresa",
+        "Grabarlo en la red de invitados de la oficina",
+        "Anotarlo solo en la intranet que usa la plantilla"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El correo es el canal formal donde se conserva la prueba de lo acordado."
+    },
+    {
+      "id": "p075",
+      "color": "rosa",
+      "enunciado": "Tras mudar su tienda a otro alojamiento, una empresa de Logroño ve que su nombre sigue llevando a los servidores antiguos. ¿Qué falta?",
+      "opciones": [
+        "Registrar un dominio nuevo con otra extensión distinta",
+        "Actualizar la dirección a la que apunta el dominio",
+        "Comprar un certificado de validación extendida",
+        "Pedir una IP fija para la oficina de Logroño"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El registro del DNS sigue asociando el nombre a la dirección antigua."
+    },
+    {
+      "id": "p076",
+      "color": "rosa",
+      "enunciado": "Una empresa de Palencia hace videollamadas, envía correos y tiene tienda en línea. ¿Cuál de esas actividades es propiamente la web?",
+      "opciones": [
+        "Las videollamadas que hace con los clientes",
+        "La conexión de fibra que tiene la oficina",
+        "La tienda que se consulta con el navegador",
+        "Los correos con ofertas y confirmaciones"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La web son las páginas que se piden y se ven con el navegador."
+    },
+    {
+      "id": "p077",
+      "color": "rosa",
+      "enunciado": "Una empresa imprime su dirección en las facturas empezando por «http://» en vez de «https://». ¿Qué le adviertes?",
+      "opciones": [
+        "Que el dominio indicado no es de la empresa",
+        "Que esa dirección indica comunicación sin cifrar",
+        "Que la ruta lleva a una página equivocada del sitio",
+        "Que la extensión no corresponde a su país"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Sin la «s», la dirección no indica comunicación cifrada."
+    },
+    {
+      "id": "p078",
+      "color": "rosa",
+      "enunciado": "Una empresa de Huesca tiene su web en cartonhuesca.es y su correo comercial en ventas@cartonhuesca.com. ¿Qué incoherencia hay?",
+      "opciones": [
+        "El buzón «ventas» no se admite en el correo",
+        "El correo no usa el mismo dominio que la web",
+        "La web debería llevar una arroba en la dirección",
+        "El correo debería incluir la ruta de la web"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Lo recomendable es que correo y web compartan el dominio propio."
+    },
+    {
+      "id": "p079",
+      "color": "rosa",
+      "enunciado": "Una empresa de Mérida encarga a un diseñador «escribir las páginas» de su tienda. ¿Qué pieza de la web trabaja ese encargo?",
+      "opciones": [
+        "La URL",
+        "El HTML",
+        "El HTTP",
+        "El DNS"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "HTML es el lenguaje con el que se escriben las páginas."
+    },
+    {
+      "id": "p080",
+      "color": "rosa",
+      "enunciado": "Una empresa de Tarragona imprime en un folleto https://www.vinostarragona.es/ofertas. ¿Qué parte de esa dirección registró y paga la empresa?",
+      "opciones": [
+        "www.vinostarragona",
+        "https://www",
+        "/ofertas",
+        "vinostarragona.es"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El nombre de dominio y su extensión son lo único que la empresa registra; el www es un subdominio y /ofertas, la ruta."
+    },
+    {
+      "id": "p081",
+      "color": "amarillo",
+      "enunciado": "¿Qué mide el ancho de banda de una conexión?",
+      "opciones": [
+        "Cuánto cuesta cada gigabyte",
+        "Cuántos datos caben a la vez",
+        "Cuánto tarda un dato en llegar",
+        "Cuántas horas funciona al mes"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "En la analogía de la carretera, son los carriles."
+    },
+    {
+      "id": "p082",
+      "color": "amarillo",
+      "enunciado": "En la analogía de la carretera, ¿qué representa la latencia?",
+      "opciones": [
+        "Lo que tarda un camión en recorrerla",
+        "Cuántos carriles tiene la carretera",
+        "Cuántos camiones caben a la vez",
+        "El peaje que se paga por usarla"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La latencia es el tiempo de recorrido, no la capacidad."
+    },
+    {
+      "id": "p083",
+      "color": "amarillo",
+      "enunciado": "¿Qué es la velocidad de subida?",
+      "opciones": [
+        "La de enviar datos desde la empresa a la red",
+        "La de la conexión móvil en desplazamiento",
+        "La máxima que figura en el contrato",
+        "La de descargar archivos y páginas desde internet"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Enviar pedidos con fotos, videollamadas o actualizar la tienda es subida."
+    },
+    {
+      "id": "p084",
+      "color": "amarillo",
+      "enunciado": "¿Cómo transmite la información la fibra óptica?",
+      "opciones": [
+        "Con pulsos de luz por un hilo de vidrio",
+        "Con señales que rebotan en un satélite",
+        "Con impulsos eléctricos por un par de cobre",
+        "Con ondas de radio entre dos antenas"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Por eso alcanza velocidades muy altas y no se degrada con la distancia."
+    },
+    {
+      "id": "p085",
+      "color": "amarillo",
+      "enunciado": "¿Qué es el «último tramo» de una conexión?",
+      "opciones": [
+        "El cable submarino que une los continentes",
+        "El que va desde la central hasta el local",
+        "El último paquete que envía TCP",
+        "La parte final de una dirección web"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es lo que distingue unas conexiones de otras."
+    },
+    {
+      "id": "p086",
+      "color": "amarillo",
+      "enunciado": "¿Qué tecnología llevó internet a los hogares españoles aprovechando el cobre?",
+      "opciones": [
+        "RDSI",
+        "FTTH",
+        "HFC",
+        "ADSL"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Dio velocidades muy superiores sin ocupar el teléfono."
+    },
+    {
+      "id": "p087",
+      "color": "amarillo",
+      "enunciado": "¿Qué conexión fue la típica de las empresas en los años noventa?",
+      "opciones": [
+        "El ADSL",
+        "El 5G",
+        "La RDSI",
+        "La fibra"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Digitalizó la línea de cobre y permitía hablar y transmitir datos a la vez."
+    },
+    {
+      "id": "p088",
+      "color": "amarillo",
+      "enunciado": "¿Qué es la RTB?",
+      "opciones": [
+        "Una red híbrida de fibra óptica y cable coaxial",
+        "La línea telefónica tradicional sobre cobre",
+        "Una red móvil de cuarta generación para empresas",
+        "La red de fibra óptica que llega hasta el hogar"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Red telefónica básica: para conectarse ocupaba la línea."
+    },
+    {
+      "id": "p089",
+      "color": "amarillo",
+      "enunciado": "¿Qué siglas corresponden a la red híbrida de fibra y cable coaxial?",
+      "opciones": [
+        "HFC",
+        "RDSI",
+        "RTB",
+        "FTTH"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Heredada de las operadoras de televisión por cable."
+    },
+    {
+      "id": "p090",
+      "color": "amarillo",
+      "enunciado": "¿Cuál es hoy el estándar de conexión por cable en España?",
+      "opciones": [
+        "El ADSL",
+        "La RDSI",
+        "La fibra óptica",
+        "El cable coaxial"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "La fibra está muy extendida en España."
+    },
+    {
+      "id": "p091",
+      "color": "amarillo",
+      "enunciado": "¿Qué aporta sobre todo el 5G frente al 4G?",
+      "opciones": [
+        "Conexión sin necesidad de operador",
+        "Cobertura en lugares sin ninguna antena",
+        "Cifrado automático de todas las llamadas",
+        "Menos latencia, además de más velocidad"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Su gran mejora es la reducción de la latencia."
+    },
+    {
+      "id": "p092",
+      "color": "amarillo",
+      "enunciado": "¿Qué conexión necesita visión directa, o casi, con un repetidor cercano?",
+      "opciones": [
+        "La fibra óptica",
+        "La conexión vía satélite",
+        "La red móvil 5G",
+        "La inalámbrica terrestre"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Enlaza por radio un punto con otro, normalmente desde un repetidor."
+    },
+    {
+      "id": "p093",
+      "color": "amarillo",
+      "enunciado": "¿Qué diferencia hay entre ancho de banda y latencia?",
+      "opciones": [
+        "El primero es cuántos datos caben; la otra, cuánto tardan",
+        "El primero mide la subida y la otra, la bajada",
+        "Son dos nombres distintos para la misma medida",
+        "El primero es propio de la fibra; la otra, del satélite"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Mucha capacidad no implica que cada dato llegue rápido."
+    },
+    {
+      "id": "p094",
+      "color": "amarillo",
+      "enunciado": "¿Por qué España pudo apagar su red de cobre antes que otros países europeos?",
+      "opciones": [
+        "Porque la Unión Europea la obligó a hacerlo",
+        "Porque su fibra ya estaba muy extendida",
+        "Porque el 5G sustituyó todas las líneas fijas",
+        "Porque el ADSL era más caro que la fibra"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Sin esa cobertura previa de fibra, el apagado no habría sido posible."
+    },
+    {
+      "id": "p095",
+      "color": "amarillo",
+      "enunciado": "¿Por qué los satélites de órbita baja han hecho viable el uso profesional?",
+      "opciones": [
+        "Porque no necesitan ningún tipo de antena",
+        "Porque al estar más cerca reducen la latencia",
+        "Porque dan más subida que cualquier conexión por cable",
+        "Porque son más baratos que la fibra"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Están mucho más cerca que los satélites tradicionales."
+    },
+    {
+      "id": "p096",
+      "color": "amarillo",
+      "enunciado": "¿Qué ventaja tiene la fibra frente al cobre según la distancia al local?",
+      "opciones": [
+        "Funciona sin estar conectada a ninguna central",
+        "Llega más lejos sin necesidad de ningún cable",
+        "Usa la línea telefónica sin ocuparla",
+        "No se degrada con la distancia como el cobre"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "El cobre pierde calidad con la distancia; la fibra no."
+    },
+    {
+      "id": "p097",
+      "color": "amarillo",
+      "enunciado": "¿Por qué en una videollamada con Corea importa más la latencia que los carriles?",
+      "opciones": [
+        "Porque una videollamada no consume nada de ancho de banda",
+        "Si cada frase tarda en llegar, la conversación se rompe",
+        "Porque Corea limita el ancho de banda de entrada al país",
+        "Porque la latencia solo afecta a las descargas de archivos"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Por muchos carriles que haya, si cada frase tarda, no se puede conversar."
+    },
+    {
+      "id": "p098",
+      "color": "amarillo",
+      "enunciado": "¿Qué inconvenientes tienen las conexiones inalámbricas frente al cable?",
+      "opciones": [
+        "No permiten mover los equipos y exigen visión directa",
+        "Son más estables pero no admiten videollamadas",
+        "Más interferencias y, en el satélite, más latencia",
+        "Solo llegan a locales donde ya hay fibra instalada"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "A cambio aportan movilidad y llegan donde el cable no llega."
+    },
+    {
+      "id": "p099",
+      "color": "amarillo",
+      "enunciado": "¿Por qué el peso de una página es un asunto comercial y no solo técnico?",
+      "opciones": [
+        "Con conexión lenta, el cliente no espera a que cargue",
+        "Los buscadores cobran a la tienda por cada megabyte",
+        "El certificado solo protege páginas muy ligeras",
+        "Una página pesada encarece el registro del dominio"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Una tienda pesada puede ser inutilizable en mercados con conexiones lentas."
+    },
+    {
+      "id": "p100",
+      "color": "amarillo",
+      "enunciado": "¿Qué distingue una oferta de conexión empresarial de una doméstica?",
+      "opciones": [
+        "Siempre es de fibra y la doméstica nunca",
+        "Permite conectar más de un ordenador",
+        "Incluye siempre un dominio .com gratuito de regalo",
+        "Garantiza velocidad y un plazo de reparación"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Esos compromisos suelen ser lo que justifica el precio."
+    },
+    {
+      "id": "p101",
+      "color": "amarillo",
+      "enunciado": "¿Qué relación hay entre la brecha digital y el mercado de una exportadora?",
+      "opciones": [
+        "Fija los aranceles que paga en cada país",
+        "Decide la extensión de dominio que debe usar",
+        "Determina la velocidad de su fibra en origen",
+        "Marca hasta dónde llega su mercado digital"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Donde mucha gente no tiene conexión, sigue haciendo falta otra vía de venta."
+    },
+    {
+      "id": "p102",
+      "color": "amarillo",
+      "enunciado": "¿Por qué se estudian hoy RTB, RDSI y ADSL si ya no se comercializan en España?",
+      "opciones": [
+        "Explican la evolución y siguen operativas en otros mercados",
+        "Porque son obligatorias como conexión de respaldo en empresas",
+        "Porque las exigen los contratos de muchos operadores actuales",
+        "Porque vuelven a instalarse en las zonas rurales de España"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Dan contexto y ayudan a entender a clientes de otros países."
+    },
+    {
+      "id": "p103",
+      "color": "amarillo",
+      "enunciado": "¿Por qué el tema dice que la pregunta no es «cuál es la mejor conexión»?",
+      "opciones": [
+        "Porque importa cuál sirve para lo que hace la empresa",
+        "Porque hoy todas las conexiones son prácticamente iguales",
+        "Porque la mejor es siempre la conexión por satélite",
+        "Porque la conexión la elige siempre el proveedor"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "La elección depende de la actividad: subida, continuidad, latencia y contrato."
+    },
+    {
+      "id": "p104",
+      "color": "amarillo",
+      "enunciado": "¿Qué cambió la RDSI respecto a la línea telefónica clásica?",
+      "opciones": [
+        "Permitió hablar y transmitir datos a la vez",
+        "Sustituyó el par de cobre por un hilo de vidrio",
+        "Llevó internet a los teléfonos móviles",
+        "Eliminó la necesidad de las centrales"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Digitalizó la misma línea de cobre."
+    },
+    {
+      "id": "p105",
+      "color": "amarillo",
+      "enunciado": "¿Qué actividad de una empresa consume sobre todo velocidad de bajada?",
+      "opciones": [
+        "Enviar un pedido con fotografías",
+        "Actualizar las fotos de la tienda",
+        "Descargar el catálogo de un proveedor",
+        "Mantener una videollamada con un cliente"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Descargar es bajada; enviar y actualizar es subida."
+    },
+    {
+      "id": "p106",
+      "color": "amarillo",
+      "enunciado": "¿Qué supuso el apagado del cobre para las empresas que vendían en línea?",
+      "opciones": [
+        "La pérdida del correo corporativo y sus archivos",
+        "Una mejora clara, sobre todo en velocidad de subida",
+        "Una caída de velocidad hasta la llegada del 5G",
+        "La obligación de cambiar el nombre de dominio de su tienda"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Actualizar catálogos y hacer videollamadas dejó de ser un cuello de botella."
+    },
+    {
+      "id": "p107",
+      "color": "amarillo",
+      "enunciado": "Una quesería de Arzúa hace videollamadas diarias con importadores de Japón que se cortan, aunque descarga muy rápido. ¿Qué debería revisar?",
+      "opciones": [
+        "El certificado de su tienda en línea",
+        "La latencia y la velocidad de subida",
+        "Solo la velocidad de bajada contratada",
+        "La extensión del dominio de la quesería"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Una videollamada depende de la latencia y de la subida, no de la bajada."
+    },
+    {
+      "id": "p108",
+      "color": "amarillo",
+      "enunciado": "Un estudio textil de Ourense envía muestras en alta resolución a clientes de Milán; los envíos tardan mucho aunque las descargas vuelan. ¿Qué falla?",
+      "opciones": [
+        "La velocidad de bajada contratada",
+        "La latencia de la conexión satélite",
+        "La velocidad de subida contratada",
+        "El DNS de la tienda del estudio"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Enviar archivos es subida, y muchas ofertas la tienen muy limitada."
+    },
+    {
+      "id": "p109",
+      "color": "amarillo",
+      "enunciado": "Una granja de Lugo sin fibra quiere vender en línea; tiene un repetidor visible a poca distancia. ¿Qué conexión encaja mejor?",
+      "opciones": [
+        "Una RDSI como la de las empresas de antes",
+        "Una inalámbrica terrestre desde ese repetidor",
+        "Un ADSL sobre su antigua línea telefónica de cobre",
+        "Una red HFC de televisión por cable"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Es la solución de acceso donde no ha llegado la fibra; el ADSL ya no existe."
+    },
+    {
+      "id": "p110",
+      "color": "amarillo",
+      "enunciado": "Una constructora de Huelva monta una oficina temporal en un lugar aislado, sin cable ni repetidor a la vista. ¿Qué conexión le sirve?",
+      "opciones": [
+        "Fibra óptica",
+        "ADSL sobre cobre",
+        "Satélite de órbita baja",
+        "Inalámbrica terrestre"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "El satélite llega a ubicaciones aisladas, y el de órbita baja tiene latencia razonable."
+    },
+    {
+      "id": "p111",
+      "color": "amarillo",
+      "enunciado": "Una tienda en línea de Zaragoza recibe pedidos de América de madrugada y pierde ventas cuando su fibra cae. ¿Qué debería contratar?",
+      "opciones": [
+        "Una red wifi de invitados separada",
+        "Más ancho de banda en su conexión de fibra principal",
+        "Una conexión de respaldo móvil que entre sola",
+        "Un segundo dominio con extensión .com"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Es el criterio de continuidad del servicio."
+    },
+    {
+      "id": "p112",
+      "color": "amarillo",
+      "enunciado": "Un exportador de aceite de Jaén vende en un mercado con conexiones lentas y su web tiene vídeos que se reproducen solos. ¿Qué haría?",
+      "opciones": [
+        "Contratar más velocidad de subida en su oficina de Jaén",
+        "Pasar la tienda a un servidor dedicado",
+        "Usar un dominio con la extensión de ese país",
+        "Aligerar la página y quitar los vídeos automáticos"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El problema está en la conexión del cliente; la solución es una página más ligera."
+    },
+    {
+      "id": "p113",
+      "color": "amarillo",
+      "enunciado": "Una comercial de una empresa de Burgos recorre ferias en varios países y necesita cobrar con terminal y consultar el stock. ¿Qué conexión es la típica?",
+      "opciones": [
+        "Un satélite tradicional",
+        "La red móvil 4G o 5G",
+        "Una inalámbrica terrestre",
+        "Una línea de fibra propia"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La red móvil es la propia del equipo comercial en desplazamiento y de las ferias."
+    },
+    {
+      "id": "p114",
+      "color": "amarillo",
+      "enunciado": "Una cooperativa que recibe pedidos de todo el mundo duda entre una fibra barata «hasta» gran velocidad y otra garantizada y con plazo de reparación. ¿Qué elige?",
+      "opciones": [
+        "La de «hasta», porque su velocidad máxima anunciada es mayor",
+        "La de «hasta», añadiendo un dominio .com",
+        "La garantizada, que asegura servicio y reparación",
+        "Cualquiera, porque las dos garantizan lo mismo"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Si de la conexión dependen los pedidos, compensan los compromisos del contrato."
+    },
+    {
+      "id": "p115",
+      "color": "amarillo",
+      "enunciado": "Una empresa de Gijón usa en tiempo real un sistema compartido con su fábrica de Vietnam y todo va con retraso, pese a su fibra rápida. ¿Qué criterio falla?",
+      "opciones": [
+        "El tipo de alojamiento",
+        "La latencia de la conexión",
+        "La titularidad del dominio",
+        "La velocidad de bajada"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "En el trabajo en tiempo real con el otro extremo del mundo manda la latencia."
+    },
+    {
+      "id": "p116",
+      "color": "amarillo",
+      "enunciado": "A una pyme de Lleida le ofrecen «reactivar su ADSL» como opción barata para la oficina. ¿Qué le dices?",
+      "opciones": [
+        "Que le conviene si vende a mercados que aún usan red de cobre",
+        "Que es más estable que la fibra en los polígonos",
+        "Que es una buena opción como conexión de respaldo",
+        "Que no es posible: el ADSL ya no se presta en España"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Con el cierre de la red de cobre desapareció el ADSL en España."
+    },
+    {
+      "id": "p117",
+      "color": "amarillo",
+      "enunciado": "Una empresa de Toledo quiere vender en países donde gran parte de la población no tiene internet. ¿Qué conclusión saca del tema?",
+      "opciones": [
+        "Le basta con traducir la tienda al idioma local",
+        "Debe esperar a que esos países tengan fibra",
+        "Debe alojar la tienda en servidores de cada país",
+        "Allí seguirá necesitando un distribuidor local"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La brecha digital marca hasta dónde llega el mercado digital de la empresa."
+    },
+    {
+      "id": "p118",
+      "color": "amarillo",
+      "enunciado": "Un productor de quesos de una aldea asturiana sin fibra, pero con buena cobertura 5G, quiere vender en línea. ¿Qué opción es viable?",
+      "opciones": [
+        "Usar la red 5G como acceso principal",
+        "Pedir a su operador una línea ADSL",
+        "Contratar una RDSI de las de antes",
+        "Conectarse a una red HFC de cable"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El 5G ha hecho viables actividades rurales que antes no lo eran."
+    },
+    {
+      "id": "p119",
+      "color": "amarillo",
+      "enunciado": "Una exportadora de Lugo usa como respaldo una inalámbrica terrestre igual que su conexión principal. ¿Qué le advertirías?",
+      "opciones": [
+        "Que la inalámbrica terrestre solo sirve para barcos, obras y ferias",
+        "Que esa tecnología es de acceso; de respaldo va mejor la móvil",
+        "Que debe sustituirla por una línea ADSL de respaldo",
+        "Que no hace falta respaldo si tiene una IP fija"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El tema la describe como solución de acceso, no de respaldo; el respaldo típico es móvil."
+    },
+    {
+      "id": "p120",
+      "color": "amarillo",
+      "enunciado": "Una empresa de Soria descarga a diario informes de proveedores y casi nunca envía archivos ni hace videollamadas. ¿Qué medida le importa más?",
+      "opciones": [
+        "La cobertura del satélite",
+        "La latencia de la línea",
+        "La velocidad de subida",
+        "La velocidad de bajada"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Su actividad principal es descargar, es decir, bajada."
+    },
+    {
+      "id": "p121",
+      "color": "marron",
+      "enunciado": "¿Qué significan las siglas ISP?",
+      "opciones": [
+        "Servidor de identidad pública",
+        "Protocolo de seguridad de internet",
+        "Sistema de interconexión privada",
+        "Proveedor de servicios de internet"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Internet Service Provider: la empresa que da acceso a la red."
+    },
+    {
+      "id": "p122",
+      "color": "marron",
+      "enunciado": "¿A qué figura del comercio exterior equivale el ISP?",
+      "opciones": [
+        "Al banco que financia",
+        "Al operador de transporte",
+        "A la cámara de comercio",
+        "Al agente de aduanas"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "No es dueño de las carreteras, pero tiene los medios para que tu mercancía entre en la red."
+    },
+    {
+      "id": "p123",
+      "color": "marron",
+      "enunciado": "¿Qué equipo recibe la conexión del proveedor y la reparte en la oficina?",
+      "opciones": [
+        "El servidor",
+        "La VPN",
+        "El DNS",
+        "El router"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Hace de puerta: todo lo que entra y sale pasa por él."
+    },
+    {
+      "id": "p124",
+      "color": "marron",
+      "enunciado": "¿Qué es una red de invitados?",
+      "opciones": [
+        "Una VPN para los comerciales que están de viaje",
+        "Una red para que los clientes compren en la tienda en línea",
+        "La red que usa el proveedor para sus técnicos de averías",
+        "Una red aparte con internet, pero sin acceso a lo interno"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Da internet a las visitas sin dejarles llegar a los equipos de la empresa."
+    },
+    {
+      "id": "p125",
+      "color": "marron",
+      "enunciado": "¿Cuál es el primer paso al configurar el router, y el más olvidado?",
+      "opciones": [
+        "Instalar una VPN para los viajes del equipo",
+        "Contratar una IP fija",
+        "Cambiar las contraseñas de fábrica",
+        "Registrar el nombre de dominio"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Las claves de fábrica de muchos modelos son públicas."
+    },
+    {
+      "id": "p126",
+      "color": "marron",
+      "enunciado": "¿Qué servicios añadidos suele ofrecer un ISP además del acceso?",
+      "opciones": [
+        "Traducción de la web y diseño de catálogos",
+        "Correo, alojamiento web y a veces el dominio",
+        "Asesoría fiscal, contable y laboral",
+        "Transporte y seguro de la mercancía"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Muchas pymes los contratan sin pensarlo."
+    },
+    {
+      "id": "p127",
+      "color": "marron",
+      "enunciado": "¿Qué tiene el router que el fabricante corrige cuando aparecen fallos de seguridad?",
+      "opciones": [
+        "Una dirección IP fija",
+        "Un programa interno",
+        "Un certificado digital",
+        "Un nombre de dominio"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Por eso hay que mantener el equipo actualizado."
+    },
+    {
+      "id": "p128",
+      "color": "marron",
+      "enunciado": "¿Qué tipo de velocidad es un compromiso real del operador?",
+      "opciones": [
+        "La velocidad máxima",
+        "La velocidad garantizada",
+        "La velocidad media anunciada",
+        "La velocidad «hasta»"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Las cifras «hasta» no son un compromiso; la garantizada sí."
+    },
+    {
+      "id": "p129",
+      "color": "marron",
+      "enunciado": "¿Qué característica distingue a la red inalámbrica de las demás?",
+      "opciones": [
+        "Es más estable que cualquier red por cable",
+        "Su señal no se detiene en las paredes del local",
+        "Funciona sin necesidad de ningún proveedor",
+        "Es la única red que no necesita ningún router"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Llega al portal, a la acera y al local de al lado."
+    },
+    {
+      "id": "p130",
+      "color": "marron",
+      "enunciado": "¿Qué equipos conviene conectar por cable en la oficina?",
+      "opciones": [
+        "Los que están siempre en el mismo sitio",
+        "Los equipos que traen los proveedores",
+        "Los portátiles de los comerciales de viaje",
+        "Los móviles de las visitas y proveedores"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Ordenador de administración, impresora o sistema del almacén."
+    },
+    {
+      "id": "p131",
+      "color": "marron",
+      "enunciado": "¿Qué nombre de red wifi recomienda el tema?",
+      "opciones": [
+        "El nombre comercial completo de la empresa",
+        "El modelo exacto del router, para poder localizarlo",
+        "Uno que no identifique a la empresa ni al equipo",
+        "La calle y el número del local de la empresa"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Un nombre revelador facilita el ataque dirigido."
+    },
+    {
+      "id": "p132",
+      "color": "marron",
+      "enunciado": "¿Qué es el compromiso de reparación de un contrato?",
+      "opciones": [
+        "El plazo para cambiar de operador sin penalización",
+        "Lo que tarda el operador en restablecer el servicio",
+        "El tiempo que tarda la instalación de la fibra",
+        "La garantía del router durante toda su vida"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "También importa qué compensa si no lo cumple."
+    },
+    {
+      "id": "p133",
+      "color": "marron",
+      "enunciado": "¿Por qué el router es la primera línea de defensa de la empresa?",
+      "opciones": [
+        "Porque bloquea por sí solo cualquier tipo de virus",
+        "Porque guarda una copia de todos los archivos",
+        "Porque cifra todos los correos de la empresa",
+        "Porque todo lo que entra y sale pasa por él"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Al ser la puerta de entrada y salida, es el primer punto que hay que proteger."
+    },
+    {
+      "id": "p134",
+      "color": "marron",
+      "enunciado": "¿Qué coste oculto tiene contratar acceso, correo, web y dominio con un solo proveedor?",
+      "opciones": [
+        "El dominio caduca antes de lo que estaba previsto",
+        "La conexión pierde velocidad en las horas punta",
+        "Cambiar de operador se vuelve mucho más laborioso",
+        "Se pierde el certificado de seguridad de la tienda"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Al cambiar habría que mover también el correo, la web y el dominio."
+    },
+    {
+      "id": "p135",
+      "color": "marron",
+      "enunciado": "¿Por qué es un riesgo un router que lleva años sin actualizar?",
+      "opciones": [
+        "Pierde velocidad de bajada con el paso del tiempo",
+        "Sus fallos de seguridad conocidos siguen sin corregir",
+        "Hace caducar el nombre de dominio de la empresa",
+        "Deja de admitir la conexión de dispositivos móviles"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Un equipo sin actualizar es una puerta abierta."
+    },
+    {
+      "id": "p136",
+      "color": "marron",
+      "enunciado": "¿Por qué hay que saber qué dispositivos están conectados a la red?",
+      "opciones": [
+        "El router solo admite unos pocos dispositivos",
+        "La ley obliga a publicar la lista en la web",
+        "El proveedor cobra por cada dispositivo conectado",
+        "No se detecta a un intruso si no hay inventario"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Un equipo desconocido es una señal de alarma, pero solo si sabes cuáles son los tuyos."
+    },
+    {
+      "id": "p137",
+      "color": "marron",
+      "enunciado": "¿Por qué es peligroso que el portátil de un proveedor entre en la red principal?",
+      "opciones": [
+        "Cambia sin querer la clave de administración del router",
+        "Consume toda la velocidad contratada por la empresa",
+        "Hace caducar el certificado de la tienda en línea",
+        "Puede estar infectado y llegar a contabilidad y clientes"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Comparte red con la contabilidad y el fichero de clientes."
+    },
+    {
+      "id": "p138",
+      "color": "marron",
+      "enunciado": "¿Por qué es arriesgado llamar a la red wifi como la empresa?",
+      "opciones": [
+        "Indica qué hay detrás y facilita un ataque dirigido",
+        "Lo prohíbe el contrato firmado con el proveedor de internet",
+        "Impide usar la VPN desde fuera de la oficina",
+        "Reduce el alcance de la señal dentro del local"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Da información a quien quiera atacar a esa empresa en concreto."
+    },
+    {
+      "id": "p139",
+      "color": "marron",
+      "enunciado": "¿Por qué es arriesgado trabajar con datos de la empresa en la wifi abierta de un hotel?",
+      "opciones": [
+        "Las credenciales pueden quedar expuestas",
+        "Desactiva el certificado de la tienda",
+        "Consume todos los datos de la tarifa móvil",
+        "Cambia la IP fija de la empresa"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Además, la red podría ser falsa e imitar el nombre del establecimiento."
+    },
+    {
+      "id": "p140",
+      "color": "marron",
+      "enunciado": "¿Qué diferencia hay entre velocidad garantizada y velocidad máxima?",
+      "opciones": [
+        "Son lo mismo con nombres comerciales distintos",
+        "La garantizada es un compromiso; la máxima no",
+        "La máxima es la mínima que se asegura siempre",
+        "La garantizada solo existe en ofertas domésticas"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La garantizada aparece en ofertas empresariales y sí obliga al operador."
+    },
+    {
+      "id": "p141",
+      "color": "marron",
+      "enunciado": "¿Por qué la titularidad del dominio aparece en la lista de comprobación del proveedor?",
+      "opciones": [
+        "Porque cada operador obliga a usar su propio dominio",
+        "Porque el proveedor fija por ley la extensión del dominio",
+        "Debe figurar a nombre de la empresa, no del proveedor",
+        "Porque sin dominio no se puede contratar la fibra"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Que el dominio quede a nombre de otro es el error más caro y más frecuente."
+    },
+    {
+      "id": "p142",
+      "color": "marron",
+      "enunciado": "¿Por qué conviene revisar las condiciones de salida antes de firmar?",
+      "opciones": [
+        "Para conocer la velocidad máxima que se anuncia",
+        "Para saber cuánto tarda la instalación de la fibra",
+        "Para elegir el modelo de router que van a instalar",
+        "Para saber qué se lleva la empresa si decide cambiar"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Permanencia, penalizaciones y, sobre todo, qué te llevas al irte."
+    },
+    {
+      "id": "p143",
+      "color": "marron",
+      "enunciado": "¿Por qué el cable es preferible para los equipos que no se mueven?",
+      "opciones": [
+        "Es más estable y no se accede a ellos desde la calle",
+        "Es el único medio que admite conectar impresoras",
+        "Evita tener que actualizar el programa del router",
+        "Es bastante más barato que cualquier conexión wifi"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "La wifi se oye desde fuera; el cable no."
+    },
+    {
+      "id": "p144",
+      "color": "marron",
+      "enunciado": "¿Por qué quien lleva lo comercial en una pyme debe entender la configuración de la red?",
+      "opciones": [
+        "Porque suele ser quien acaba tomando esas decisiones",
+        "Porque el proveedor no instala nada sin su firma",
+        "Porque la ley lo exige a los técnicos de comercio exterior",
+        "Porque solo así puede registrar el dominio"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "En las pymes no suele haber un informático que decida por ellos."
+    },
+    {
+      "id": "p145",
+      "color": "marron",
+      "enunciado": "¿Qué evita una clave wifi larga y propia frente a una de fábrica?",
+      "opciones": [
+        "Que los clientes extranjeros no encuentren la tienda",
+        "Que la conexión pierda parte de su velocidad de subida",
+        "Que un tercero entre y llegue a equipos y archivos",
+        "Que el dominio de la empresa caduque sin avisar"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Con clave débil o de fábrica, cualquiera en el alcance puede conectarse."
+    },
+    {
+      "id": "p146",
+      "color": "marron",
+      "enunciado": "¿Por qué son un riesgo las contraseñas que trae el router de fábrica?",
+      "opciones": [
+        "Solo permiten conectar un dispositivo",
+        "El operador las cambia cada mes sin avisar a nadie",
+        "Caducan a las pocas semanas de instalarlo",
+        "Las de muchos modelos son públicas y conocidas"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Cualquiera puede encontrarlas, por eso cambiarlas es el primer paso."
+    },
+    {
+      "id": "p147",
+      "color": "marron",
+      "enunciado": "El gerente de una empresa de Betanzos ve un móvil conectado a su red y no sabe si es de alguien de la plantilla. ¿Qué medida le faltaba?",
+      "opciones": [
+        "Contratar una IP fija con el operador",
+        "Tener inventariado qué equipos usan la red",
+        "Registrar el dominio con extensión .eu",
+        "Pasar la tienda a alojamiento en la nube"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "No se puede detectar lo que no se ha inventariado."
+    },
+    {
+      "id": "p148",
+      "color": "marron",
+      "enunciado": "Un proveedor de visita en una conservera de Bueu pide la clave wifi para su portátil. ¿Qué haría la empresa?",
+      "opciones": [
+        "Prestarle el ordenador de contabilidad",
+        "Conectarlo por cable al ordenador de administración",
+        "Darle la clave de la red principal",
+        "Darle acceso a la red de invitados separada"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La red de invitados da internet sin acceso a los equipos internos."
+    },
+    {
+      "id": "p149",
+      "color": "marron",
+      "enunciado": "Una empresa de Murcia instala un router nuevo y lo deja tal como viene de fábrica. ¿Qué riesgo corre?",
+      "opciones": [
+        "Que la tienda pierda su certificado HTTPS",
+        "Que la fibra se degrade con la distancia al local",
+        "Que alguien entre con las claves de fábrica, conocidas",
+        "Que el dominio pase a figurar a nombre del operador de fibra"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Las contraseñas por defecto de muchos modelos son públicas."
+    },
+    {
+      "id": "p150",
+      "color": "marron",
+      "enunciado": "Una pyme de Santander tiene acceso, correo, web y dominio con un único operador y otro le ofrece mejor precio. ¿Qué debe prever?",
+      "opciones": [
+        "Que mover correo, web y dominio hará laborioso el cambio",
+        "Que perderá su nombre de dominio al cambiar",
+        "Que deberá sustituir todos sus ordenadores",
+        "Que el cambio será inmediato y sin ninguna tarea pendiente"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Es el coste oculto de concentrarlo todo en un proveedor."
+    },
+    {
+      "id": "p151",
+      "color": "marron",
+      "enunciado": "Al cambiar de agencia, una empresa de Ávila descubre que su dominio figura a nombre de la agencia anterior. ¿Qué punto de la lista de comprobación falló?",
+      "opciones": [
+        "La titularidad del dominio",
+        "La dirección IP fija",
+        "La velocidad garantizada",
+        "El compromiso de reparación"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El titular del dominio debe ser siempre la empresa."
+    },
+    {
+      "id": "p152",
+      "color": "marron",
+      "enunciado": "La wifi de una empresa de transportes de Vitoria lleva el nombre de la empresa y el modelo del router. ¿Qué cambiarías?",
+      "opciones": [
+        "La velocidad de bajada contratada con el operador de fibra",
+        "La extensión del dominio de la empresa",
+        "El tipo de alojamiento de la web",
+        "El nombre, para que no identifique empresa ni equipo"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Un nombre revelador indica qué hay detrás y facilita el ataque."
+    },
+    {
+      "id": "p153",
+      "color": "marron",
+      "enunciado": "Una empresa de Teruel conecta por wifi su impresora y el ordenador de administración, y la señal llega a la calle. ¿Qué harías?",
+      "opciones": [
+        "Contratar más velocidad de fibra",
+        "Instalar una VPN en la impresora de la oficina",
+        "Conectar esos equipos fijos por cable",
+        "Quitar la clave para evitar cortes"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Los equipos fijos van mejor por cable: más estable y no accesible desde fuera."
+    },
+    {
+      "id": "p154",
+      "color": "marron",
+      "enunciado": "En un hotel de Lisboa, un comercial de una empresa de Vigo ve dos redes con el nombre del hotel, una de ellas sin clave. ¿Qué riesgo hay?",
+      "opciones": [
+        "Que el hotel le cobre aparte por usar la segunda red",
+        "Que una sea falsa e imite al hotel para robar datos",
+        "Que las dos reduzcan a la mitad la velocidad de su portátil",
+        "Que su portátil pase de tener IP fija a IP dinámica"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Las redes falsas que imitan el nombre del establecimiento exponen las credenciales."
+    },
+    {
+      "id": "p155",
+      "color": "marron",
+      "enunciado": "Una startup de Pamplona prevé cambiar pronto de operador. ¿Qué apartado del contrato debe mirar con más atención?",
+      "opciones": [
+        "Las condiciones de salida: permanencia y penalizaciones",
+        "El modelo de router que le van a instalar en la oficina",
+        "La velocidad máxima que se anuncia en la oferta comercial",
+        "El horario de atención comercial que ofrece el operador"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Si va a cambiar, le interesa saber qué le cuesta irse y qué se lleva."
+    },
+    {
+      "id": "p156",
+      "color": "marron",
+      "enunciado": "La fibra de una tienda en línea de Tarragona sufre una avería y el operador tarda días en arreglarla sin compensar nada. ¿Qué debió revisar antes de firmar?",
+      "opciones": [
+        "El nombre de la red wifi que usa la oficina",
+        "El compromiso de reparación y su compensación",
+        "La configuración de la red de invitados del local",
+        "La titularidad del nombre de dominio de la tienda"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El compromiso de reparación fija plazos y compensaciones."
+    },
+    {
+      "id": "p157",
+      "color": "marron",
+      "enunciado": "Una empresa de Palma tiene un router muy antiguo que funciona bien y nunca se ha actualizado. ¿Qué le adviertes?",
+      "opciones": [
+        "Que sin actualizar es una puerta abierta a ataques",
+        "Que impide conectar equipos por cable",
+        "Que pierde velocidad de bajada con los años",
+        "Que obliga a renovar el dominio con más frecuencia"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El fabricante corrige fallos de seguridad mediante actualizaciones."
+    },
+    {
+      "id": "p158",
+      "color": "marron",
+      "enunciado": "Un vecino del local de una asesoría de Lleida se conecta a su wifi con la clave que traía el router. ¿Qué medida lo habría evitado?",
+      "opciones": [
+        "Una dirección IP fija contratada con el operador de fibra",
+        "Una red de invitados separada para los clientes",
+        "Un nombre de red que incluya el de la asesoría",
+        "Una clave larga y propia con el cifrado más reciente"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Es la medida frente al riesgo de clave débil o de fábrica."
+    },
+    {
+      "id": "p159",
+      "color": "marron",
+      "enunciado": "El gerente de una empresa de Melilla cree que su ISP es dueño de todas las redes por las que viajan sus pedidos a Asia. ¿Qué le aclaras?",
+      "opciones": [
+        "Solo gestiona el nombre de dominio de la empresa",
+        "Le da acceso a la red, como un operador de transporte",
+        "Es el dueño de todas las redes por las que pasa el trayecto",
+        "Es quien aloja siempre la tienda de la empresa"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Como el operador de transporte, no es dueño de las carreteras del mundo."
+    },
+    {
+      "id": "p160",
+      "color": "marron",
+      "enunciado": "Una empresa de Huesca comparte edificio y la señal de su wifi llega al negocio de al lado. ¿Qué implica?",
+      "opciones": [
+        "Que su velocidad de subida aumenta por compartirla",
+        "Que cualquiera en ese alcance puede intentar entrar",
+        "Que el vecino paga una parte de su conexión",
+        "Que su dominio pasa a ser compartido con el vecino"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La red inalámbrica no se detiene en las paredes del local."
+    },
+    {
+      "id": "p161",
+      "color": "verde",
+      "enunciado": "¿Qué significan las siglas VPN?",
+      "opciones": [
+        "Valija de paquetes en red",
+        "Red pública verificada",
+        "Vía de protocolo nacional",
+        "Red privada virtual"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Virtual Private Network."
+    },
+    {
+      "id": "p162",
+      "color": "verde",
+      "enunciado": "¿Qué crea una VPN?",
+      "opciones": [
+        "Una red wifi abierta para los clientes que visitan la tienda",
+        "Un dominio privado que no aparece en ningún buscador",
+        "Un canal cerrado y cifrado entre un dispositivo y la empresa",
+        "Una conexión de fibra directa entre dos oficinas de la empresa"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Para quien está fuera, lo que circula por ese canal es ilegible."
+    },
+    {
+      "id": "p163",
+      "color": "verde",
+      "enunciado": "¿Con qué analogía explica el tema la VPN?",
+      "opciones": [
+        "Una autovía de carriles",
+        "El registro mercantil",
+        "La valija diplomática",
+        "El packing list"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Viaja por rutas públicas, pero precintada."
+    },
+    {
+      "id": "p164",
+      "color": "verde",
+      "enunciado": "¿Qué usa la VPN como medio de transporte de los datos?",
+      "opciones": [
+        "La red de cobre",
+        "Un cable dedicado",
+        "Un satélite propio",
+        "La propia internet"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Usa internet, pero dentro de un envoltorio cifrado."
+    },
+    {
+      "id": "p165",
+      "color": "verde",
+      "enunciado": "¿Quién puede entrar en una intranet?",
+      "opciones": [
+        "El personal y los distribuidores",
+        "Solo los clientes de la tienda",
+        "Cualquiera que tenga navegador",
+        "Solo el personal de la empresa"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "La intranet es para trabajar por dentro."
+    },
+    {
+      "id": "p166",
+      "color": "verde",
+      "enunciado": "¿Quién puede entrar en una extranet?",
+      "opciones": [
+        "El personal y terceros autorizados",
+        "Cualquier visitante de la web pública",
+        "Solo el proveedor de internet",
+        "Solo el personal de la empresa"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Distribuidores, proveedores, transitarios o clientes grandes."
+    },
+    {
+      "id": "p167",
+      "color": "verde",
+      "enunciado": "En la analogía de las instalaciones de la empresa, ¿qué es la extranet?",
+      "opciones": [
+        "La zona de muelles",
+        "La tienda de la calle",
+        "El aparcamiento público",
+        "Las oficinas de arriba"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Un espacio intermedio para transitarios y distribuidores identificados."
+    },
+    {
+      "id": "p168",
+      "color": "verde",
+      "enunciado": "En esa misma analogía, ¿qué es la intranet?",
+      "opciones": [
+        "La zona de muelles y de carga",
+        "Las oficinas del piso de arriba",
+        "La sala de exposición",
+        "La tienda abierta a la calle"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Solo entra el personal."
+    },
+    {
+      "id": "p169",
+      "color": "verde",
+      "enunciado": "¿Qué ejemplo corresponde a una intranet?",
+      "opciones": [
+        "La tienda en línea de la empresa",
+        "La web corporativa",
+        "El manual de procedimientos de exportación",
+        "El portal de pedidos para los distribuidores"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Junto a plantillas de documentos y directorio interno."
+    },
+    {
+      "id": "p170",
+      "color": "verde",
+      "enunciado": "¿Qué ejemplo corresponde a una extranet?",
+      "opciones": [
+        "La tienda en línea donde compra el público",
+        "El directorio interno con los teléfonos de la plantilla",
+        "El portal de tarifas y pedidos de los distribuidores",
+        "La web corporativa abierta a cualquier visitante"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Cada distribuidor consulta su tarifa, cursa pedidos y sigue sus envíos."
+    },
+    {
+      "id": "p171",
+      "color": "verde",
+      "enunciado": "¿Para qué sirve la parte de la empresa abierta en internet?",
+      "opciones": [
+        "Para la comunicación interna",
+        "Para pedidos de distribuidores",
+        "Para darse a conocer y vender",
+        "Para guardar las plantillas"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "La tienda y la web corporativa están abiertas a cualquiera."
+    },
+    {
+      "id": "p172",
+      "color": "verde",
+      "enunciado": "¿Qué ve quien intercepta por el camino el tráfico de una VPN?",
+      "opciones": [
+        "Información ilegible",
+        "El texto de los correos",
+        "Solo las contraseñas",
+        "Los datos sin cifrar"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Solo los dos extremos pueden abrir el envoltorio."
+    },
+    {
+      "id": "p173",
+      "color": "verde",
+      "enunciado": "¿Qué diferencia hay entre una intranet y una extranet?",
+      "opciones": [
+        "La intranet solo funciona sin conexión a internet",
+        "La extranet es pública y puede entrar cualquiera",
+        "La intranet usa una tecnología y un navegador distintos",
+        "La extranet abre el acceso a terceros autorizados"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La intranet es solo para la plantilla; la extranet, también para terceros autorizados."
+    },
+    {
+      "id": "p174",
+      "color": "verde",
+      "enunciado": "¿Qué cambia realmente entre internet, intranet y extranet?",
+      "opciones": [
+        "El tipo de cable que las une",
+        "Quién tiene permiso para entrar",
+        "El protocolo que traduce nombres",
+        "La tecnología y el navegador"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La tecnología es la misma; la diferencia es de permisos."
+    },
+    {
+      "id": "p175",
+      "color": "verde",
+      "enunciado": "¿En qué se parece una VPN a la valija diplomática?",
+      "opciones": [
+        "Llega siempre antes que el resto de los envíos comerciales",
+        "Solo puede enviarse entre dos embajadas del mismo país",
+        "Viaja por rutas exclusivas que nadie más puede usar",
+        "Viaja por rutas públicas, pero nadie puede abrirla"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Va por la red pública, pero precintada para todos menos los extremos."
+    },
+    {
+      "id": "p176",
+      "color": "verde",
+      "enunciado": "¿Qué problema resuelve una extranet con distribuidores de varios países?",
+      "opciones": [
+        "Todos ven la misma tarifa pública y negocian por teléfono",
+        "Elimina la necesidad de tener distribuidores en cada país",
+        "Cada uno ve solo sus condiciones y pide sin cruzar correos",
+        "Sustituye el contrato de distribución por un correo"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Cada distribuidor tiene condiciones distintas y necesita ver solo lo suyo."
+    },
+    {
+      "id": "p177",
+      "color": "verde",
+      "enunciado": "¿Por qué una extranet funciona mejor que enviar tarifas adjuntas por correo?",
+      "opciones": [
+        "Reduce errores, deja registro y sirve en cualquier huso horario",
+        "Permite publicar las tarifas a todo el público",
+        "Hace innecesarios los contratos con los distribuidores",
+        "Es gratuita y funciona sin ninguna necesidad de conexión a internet"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Sustituye el intercambio interminable de correos por un espacio común."
+    },
+    {
+      "id": "p178",
+      "color": "verde",
+      "enunciado": "¿Por qué una VPN protege al trabajar desde una wifi ajena?",
+      "opciones": [
+        "Porque cifra los datos aunque la red sea insegura",
+        "Porque aumenta la velocidad de la red del hotel",
+        "Porque desconecta al resto de usuarios de esa wifi",
+        "Porque convierte la wifi pública en una red privada"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "La red sigue siendo insegura, pero lo que circula por el canal es ilegible."
+    },
+    {
+      "id": "p179",
+      "color": "verde",
+      "enunciado": "¿Qué tres usos tiene la VPN en una empresa que vende fuera?",
+      "opciones": [
+        "Cifrar el correo, eliminar virus y hacer copias de la tienda",
+        "Crear la intranet, sustituir al router y dar wifi a las visitas",
+        "Acelerar la fibra, registrar dominios y alojar la tienda fuera",
+        "Acceso remoto, seguridad en wifi ajena y ver la tienda como otro país"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Son los tres usos concretos que describe el tema."
+    },
+    {
+      "id": "p180",
+      "color": "verde",
+      "enunciado": "¿Por qué una VPN permite ver la tienda como un cliente de otro país?",
+      "opciones": [
+        "Porque cambia la extensión del dominio por la de ese país",
+        "Porque traduce automáticamente cada página al idioma de ese país",
+        "Porque descarga una copia de la tienda guardada en ese país",
+        "Porque la conexión sale por ese país y la tienda lo toma por local"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La tienda detecta el país por la IP de salida."
+    },
+    {
+      "id": "p181",
+      "color": "verde",
+      "enunciado": "¿Por qué la zona de muelles representa bien la extranet?",
+      "opciones": [
+        "Es donde se guardan los procedimientos internos",
+        "Es el espacio reservado solo al personal de la empresa",
+        "Es la zona abierta a cualquiera que pase por la calle",
+        "Entran transitarios y distribuidores identificados"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Es un espacio intermedio: ni abierto al público ni solo para la plantilla."
+    },
+    {
+      "id": "p182",
+      "color": "verde",
+      "enunciado": "¿Por qué no basta una intranet para dar acceso a un transitario?",
+      "opciones": [
+        "Porque la intranet es pública y abierta a todos",
+        "Porque la intranet no admite documentos de envío",
+        "Porque los transitarios no usan ningún navegador",
+        "Porque la intranet es solo para el personal propio"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Para terceros autorizados está la extranet."
+    },
+    {
+      "id": "p183",
+      "color": "verde",
+      "enunciado": "¿Qué diferencia hay entre una VPN y una red de invitados?",
+      "opciones": [
+        "La VPN acelera la conexión; la otra la ralentiza a propósito",
+        "La VPN da acceso seguro desde fuera; la otra, internet a visitas",
+        "La VPN es para las visitas; la otra, para el personal de viaje",
+        "Son lo mismo: las dos cifran la red interna de la oficina"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Una sirve para entrar a la empresa desde fuera; la otra, para dar internet sin entrar."
+    },
+    {
+      "id": "p184",
+      "color": "verde",
+      "enunciado": "¿Por qué se llama «privada» una red que viaja por internet, que es pública?",
+      "opciones": [
+        "Porque no figura en ningún registro de nombres de dominio",
+        "Porque la paga la empresa y no el proveedor de internet",
+        "Porque usa cables reservados exclusivamente para la empresa",
+        "Porque solo los dos extremos pueden abrir lo que circula"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Los datos van por la red pública, pero cifrados."
+    },
+    {
+      "id": "p185",
+      "color": "verde",
+      "enunciado": "¿Por qué se considera internet una red pública?",
+      "opciones": [
+        "Cualquiera puede acceder a lo que se publica en ella",
+        "Solo publica información procedente de administraciones",
+        "Es gratuita para todos sus usuarios en cualquier país",
+        "La gestiona un organismo público de carácter internacional"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Por eso la información reservada necesita redes privadas."
+    },
+    {
+      "id": "p186",
+      "color": "verde",
+      "enunciado": "¿Por qué la VPN es útil al gerente que viaja a otro país?",
+      "opciones": [
+        "Hace innecesario el router de la oficina central",
+        "Trabaja como en la oficina sin abrir la red al mundo",
+        "Evita tener que contratar datos móviles en el extranjero",
+        "Le permite registrar dominios nacionales de ese país"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Entra por un túnel cerrado en lugar de exponer la red."
+    },
+    {
+      "id": "p187",
+      "color": "verde",
+      "enunciado": "La comercial de una bodega de Haro entra al sistema de pedidos desde la wifi abierta de un aeropuerto. ¿Qué medida le falta?",
+      "opciones": [
+        "Conectarse a través de la VPN de la empresa",
+        "Usar la red de invitados del aeropuerto",
+        "Cambiar el nombre de su red wifi",
+        "Pedir al operador una dirección IP fija temporal"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "En redes wifi ajenas ocurren la mayoría de los incidentes en viaje."
+    },
+    {
+      "id": "p188",
+      "color": "verde",
+      "enunciado": "Una empresa de Ourense ya tiene extranet, pero su distribuidor mexicano puede ver la tarifa del japonés. ¿Qué falla?",
+      "opciones": [
+        "Los permisos: cada uno debe ver solo lo suyo",
+        "El cifrado: falta un certificado extendido",
+        "La conexión: el distribuidor tiene latencia",
+        "La tecnología: la extranet usa otro navegador"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La extranet es útil precisamente porque cada uno accede solo a lo que le corresponde."
+    },
+    {
+      "id": "p189",
+      "color": "verde",
+      "enunciado": "El responsable de una tienda de Valencia quiere comprobar cómo ve un cliente alemán los precios y gastos de envío. ¿Qué hace?",
+      "opciones": [
+        "Pedir a su operador una IP fija nueva",
+        "Conectarse por VPN con salida en Alemania",
+        "Registrar un dominio con la extensión .de",
+        "Poner el navegador en idioma alemán"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La tienda decide por la IP; cambiar el idioma del navegador no basta."
+    },
+    {
+      "id": "p190",
+      "color": "verde",
+      "enunciado": "Una empresa de Lugo quiere que su plantilla consulte el manual de exportación y las plantillas de documentos, sin acceso de nadie de fuera. ¿Qué necesita?",
+      "opciones": [
+        "Una extranet",
+        "Una web pública",
+        "Una red de invitados",
+        "Una intranet"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Es información interna solo para el personal."
+    },
+    {
+      "id": "p191",
+      "color": "verde",
+      "enunciado": "Un transitario de Róterdam necesita seguir las expediciones de una empresa de Vigo en un espacio no público. ¿Qué se le da?",
+      "opciones": [
+        "Acceso a la intranet de la plantilla",
+        "La clave de la wifi principal",
+        "La publicación de los envíos en la web",
+        "Acceso a la extranet de la empresa"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Los transitarios son terceros autorizados: su sitio es la extranet."
+    },
+    {
+      "id": "p192",
+      "color": "verde",
+      "enunciado": "Una empresa de Badajoz publica en su web pública la lista de precios pactados con cada distribuidor. ¿Qué error comete?",
+      "opciones": [
+        "Debería publicarla bajo un dominio con extensión .eu",
+        "Eso debería ir en una extranet con acceso controlado",
+        "Debería enviarla por la wifi de la oficina a cada uno",
+        "Debería alojarla en un servidor dedicado más potente"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Lo que solo deben ver terceros concretos no va en la parte pública."
+    },
+    {
+      "id": "p193",
+      "color": "verde",
+      "enunciado": "Una empresa de Toledo da una VPN a sus comerciales. Uno pregunta si ya puede trabajar con pedidos desde la wifi de cualquier hotel. ¿Qué le responde?",
+      "opciones": [
+        "No, la VPN solo sirve para ver la tienda",
+        "No, la VPN solo funciona dentro de la oficina",
+        "Sí, siempre que se conecte a través de la VPN",
+        "Sí, pero solo en redes con el nombre del hotel"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La VPN protege los datos aunque la red ajena no sea segura."
+    },
+    {
+      "id": "p194",
+      "color": "verde",
+      "enunciado": "Una empresa de Zamora pone el portal de pedidos para distribuidores en su intranet y estos no pueden entrar. ¿Qué ocurre?",
+      "opciones": [
+        "Los distribuidores necesitan cada uno una dirección IP fija",
+        "Su navegador no es compatible con la tecnología de la intranet",
+        "Falta un certificado HTTPS de validación extendida en la intranet",
+        "La intranet es solo para el personal; necesita una extranet"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La diferencia no es técnica sino de permisos: los terceros van en la extranet."
+    },
+    {
+      "id": "p195",
+      "color": "verde",
+      "enunciado": "Una empresa de Alicante gestiona por correo los pedidos de distribuidores en varios husos horarios y hay errores de tarifas. ¿Qué solución propone el tema?",
+      "opciones": [
+        "Un teléfono de atención comercial en cada país",
+        "Una extranet donde cada uno consulte y curse su pedido",
+        "Una red de invitados separada en la oficina central",
+        "Una cuenta de correo distinta para cada huso horario"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La extranet reduce errores, deja registro y funciona en cualquier huso horario."
+    },
+    {
+      "id": "p196",
+      "color": "verde",
+      "enunciado": "Una empresa de Calatayud quiere que su transportista y distribuidores vean los envíos, pero no el público. ¿A qué zona de sus instalaciones equivale?",
+      "opciones": [
+        "A las oficinas de arriba",
+        "A la zona de muelles",
+        "A la sala de la dirección",
+        "A la tienda de la calle"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Es la extranet: un espacio intermedio para terceros identificados."
+    },
+    {
+      "id": "p197",
+      "color": "verde",
+      "enunciado": "Una tienda de Granada mostraba gastos de envío erróneos a sus clientes del Reino Unido y nadie lo detectó desde España. ¿Por qué?",
+      "opciones": [
+        "Porque el certificado ocultaba los gastos de envío a extranjeros",
+        "Porque el DNS británico traducía mal el nombre de dominio",
+        "Desde España, la tienda les mostraba la versión española",
+        "Porque TCP perdía los paquetes que contenían los precios"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La tienda adapta lo que muestra según la IP; desde España nunca se ve lo que ve el cliente extranjero."
+    },
+    {
+      "id": "p198",
+      "color": "verde",
+      "enunciado": "Una empresa de Santiago quiere que su gerente, de viaje en Chile, acceda a la contabilidad sin abrir la red al mundo. ¿Qué usa?",
+      "opciones": [
+        "Abrir el router a cualquier conexión",
+        "Publicar la contabilidad en la extranet",
+        "Una VPN hacia la red de la empresa",
+        "Enviarse los archivos a un correo gratuito"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La VPN permite trabajar desde fuera como si estuviera en la oficina."
+    },
+    {
+      "id": "p199",
+      "color": "verde",
+      "enunciado": "Una empresa de Linares tiene tienda en línea, portal para distribuidores y un espacio con procedimientos internos. ¿Cómo se clasifican, en ese orden?",
+      "opciones": [
+        "Extranet, intranet e internet",
+        "Internet, extranet e intranet",
+        "Internet, intranet y extranet",
+        "Intranet, extranet e internet"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Público, terceros autorizados y solo personal."
+    },
+    {
+      "id": "p200",
+      "color": "verde",
+      "enunciado": "El gerente de una empresa de Lugo cree que, aunque use VPN, cualquiera verá sus datos porque viajan por internet. ¿Qué le explicas?",
+      "opciones": [
+        "No viajan por internet, sino por un cable propio de la VPN",
+        "Viajan por la red pública, pero cifrados como en una valija",
+        "Solo se ven si el router tiene la clave de fábrica",
+        "Tiene razón: la VPN solo oculta el nombre del dominio"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Como la valija: misma ruta que todos, pero nadie puede abrirla."
+    },
+    {
+      "id": "p201",
+      "color": "naranja",
+      "enunciado": "¿Qué tres cosas necesita una empresa para existir en internet por sí misma?",
+      "opciones": [
+        "Correo, intranet y extranet",
+        "Router, fibra óptica y conexión VPN",
+        "Protocolos TCP, IP y DNS",
+        "Dominio, alojamiento y certificado"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Un nombre, un sitio donde viven las páginas y una prueba de identidad."
+    },
+    {
+      "id": "p202",
+      "color": "naranja",
+      "enunciado": "¿Qué entidad gestiona el registro del dominio .es?",
+      "opciones": [
+        "La CNMC",
+        "EURid",
+        "El CERN",
+        "Red.es"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Es una entidad pública española."
+    },
+    {
+      "id": "p203",
+      "color": "naranja",
+      "enunciado": "¿Qué entidad gestiona el registro del dominio .eu?",
+      "opciones": [
+        "La CNMC",
+        "EURid",
+        "Red.es",
+        "El ICEX"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Lo gestiona por encargo de la Comisión Europea."
+    },
+    {
+      "id": "p204",
+      "color": "naranja",
+      "enunciado": "¿A través de quién se registra un nombre de dominio?",
+      "opciones": [
+        "Un agente registrador acreditado",
+        "La autoridad de certificación",
+        "El operador de la fibra",
+        "Un notario del registro mercantil"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Es la empresa a la que se paga el registro."
+    },
+    {
+      "id": "p205",
+      "color": "naranja",
+      "enunciado": "¿Qué es el alojamiento o hosting?",
+      "opciones": [
+        "El contrato de acceso a internet firmado con el operador",
+        "La prueba de identidad que muestra el candado del navegador",
+        "El nombre con el que los clientes encuentran la tienda en la red",
+        "El espacio en un servidor donde residen los archivos de la web"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Es el sitio donde vive la tienda."
+    },
+    {
+      "id": "p206",
+      "color": "naranja",
+      "enunciado": "¿Quién emite los certificados que acreditan un dominio?",
+      "opciones": [
+        "El agente registrador del dominio",
+        "El propio navegador del cliente",
+        "Una autoridad de certificación",
+        "El proveedor de servicios de internet"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Es un tercero de confianza."
+    },
+    {
+      "id": "p207",
+      "color": "naranja",
+      "enunciado": "¿Cuál es la extensión internacional por defecto?",
+      "opciones": [
+        ".shop",
+        ".es",
+        ".com",
+        ".eu"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Es la que el comprador teclea por costumbre."
+    },
+    {
+      "id": "p208",
+      "color": "naranja",
+      "enunciado": "¿Qué tipo de extensión es .de?",
+      "opciones": [
+        "Genérica",
+        "De país",
+        "Sectorial",
+        "Europea"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Las de país (ccTLD) indican presencia local."
+    },
+    {
+      "id": "p209",
+      "color": "naranja",
+      "enunciado": "¿Qué es un servidor?",
+      "opciones": [
+        "Un programa para diseñar las páginas de una tienda en línea",
+        "Un ordenador preparado para atender peticiones sin parar",
+        "La empresa que registra el nombre de dominio del cliente",
+        "El cable que une la oficina con la central del operador"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Como un almacén logístico que despacha pedidos a todas horas."
+    },
+    {
+      "id": "p210",
+      "color": "naranja",
+      "enunciado": "¿Qué ocurre si un dominio no se renueva?",
+      "opciones": [
+        "Se prorroga solo durante otro periodo",
+        "Queda libre y cualquiera puede registrarlo",
+        "Pasa automáticamente al proveedor de alojamiento",
+        "Pasa a ser de Red.es para siempre"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "No se compra: se registra por un periodo y hay que renovarlo."
+    },
+    {
+      "id": "p211",
+      "color": "naranja",
+      "enunciado": "¿Qué modalidad de alojamiento es la más barata?",
+      "opciones": [
+        "El dedicado",
+        "El compartido",
+        "El de la nube",
+        "El servidor propio"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Muchos sitios conviven en un mismo servidor."
+    },
+    {
+      "id": "p212",
+      "color": "naranja",
+      "enunciado": "¿Cómo se llaman los certificados en los que se comprueba documentalmente la empresa?",
+      "opciones": [
+        "Básicos y gratuitos",
+        "De dominio compartido",
+        "De cifrado automático",
+        "De validación extendida"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Son los que sí acreditan identidad de verdad."
+    },
+    {
+      "id": "p213",
+      "color": "naranja",
+      "enunciado": "¿Qué diferencia hay entre el dominio y el alojamiento?",
+      "opciones": [
+        "Son lo mismo, contratado con un único proveedor",
+        "El dominio es gratuito; el alojamiento se paga",
+        "El dominio es el nombre; el alojamiento, donde vive la web",
+        "El dominio guarda los archivos; el alojamiento, el nombre"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Se contratan por separado y pueden estar con proveedores distintos."
+    },
+    {
+      "id": "p214",
+      "color": "naranja",
+      "enunciado": "¿Qué diferencia hay entre cifrado e identificación en HTTPS?",
+      "opciones": [
+        "El cifrado protege los datos; la identificación acredita al dueño",
+        "El cifrado es para el correo; la identificación, para la web",
+        "El cifrado acredita al dueño; la identificación protege los datos",
+        "Son la misma garantía explicada con dos palabras distintas"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Es la diferencia entre precintar un contenedor y acreditar quién lo envía."
+    },
+    {
+      "id": "p215",
+      "color": "naranja",
+      "enunciado": "¿Por qué el candado del navegador no significa que la tienda sea de fiar?",
+      "opciones": [
+        "Porque los certificados básicos son gratuitos y automáticos",
+        "Porque el candado solo protege los correos electrónicos de la tienda",
+        "Porque el candado lo pone la propia tienda en su página",
+        "Porque el candado caduca cada día y nadie lo revisa"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "También las páginas fraudulentas pueden tenerlo."
+    },
+    {
+      "id": "p216",
+      "color": "naranja",
+      "enunciado": "¿Cuándo conviene una extensión .eu?",
+      "opciones": [
+        "Al no tener ningún tipo de vínculo con la Unión Europea",
+        "Al vender en varios países de la UE con una sola tienda",
+        "Al vender solo en Alemania con una tienda propia allí",
+        "Al vender sobre todo a mercados de fuera de Europa"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Presenta a la empresa como europea sin atarla a un país."
+    },
+    {
+      "id": "p217",
+      "color": "naranja",
+      "enunciado": "¿Cuándo es .com la apuesta segura?",
+      "opciones": [
+        "Al vender en muchos mercados sin priorizar ninguno",
+        "Al dirigirse sobre todo a los compradores alemanes",
+        "Al querer presentarse como empresa europea",
+        "Al buscar un nombre que describa el sector"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Es la extensión internacional por defecto."
+    },
+    {
+      "id": "p218",
+      "color": "naranja",
+      "enunciado": "¿Qué ventaja e inconveniente tienen extensiones como .shop o .tienda?",
+      "opciones": [
+        "Permiten lograr el nombre, pero el comprador las reconoce menos",
+        "Generan confianza local, pero solo valen en un país",
+        "Son las más reconocidas, pero exigen residir en el país del registro",
+        "Son gratuitas, pero no admiten tiendas en línea"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Sirven cuando el .com está ocupado, a costa de menos reconocimiento."
+    },
+    {
+      "id": "p219",
+      "color": "naranja",
+      "enunciado": "¿Qué exige el dominio .es para registrarlo?",
+      "opciones": [
+        "Residir en España de forma permanente",
+        "Un vínculo o interés legítimo con España",
+        "Ser ciudadano de un Estado de la UE",
+        "Tener la sede en un país hispanohablante"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "No exige residencia: puede registrarse desde cualquier lugar del mundo."
+    },
+    {
+      "id": "p220",
+      "color": "naranja",
+      "enunciado": "¿Quién puede registrar un dominio .eu?",
+      "opciones": [
+        "Solo las administraciones públicas de los Estados miembros",
+        "Cualquier persona o empresa del mundo, sin ningún requisito",
+        "Organizaciones y residentes de la UE y ciudadanos de la Unión",
+        "Solo empresas con sede social en un país de la zona euro"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "También Islandia, Liechtenstein y Noruega; los ciudadanos de la Unión, residan donde residan."
+    },
+    {
+      "id": "p221",
+      "color": "naranja",
+      "enunciado": "¿Por qué es grave dejar caducar un dominio?",
+      "opciones": [
+        "Otro puede registrarlo, y recuperarlo es lento y caro",
+        "El operador da de baja la conexión de fibra",
+        "El certificado pasa automáticamente al nuevo dueño del dominio",
+        "La tienda pierde todos sus archivos y sus pedidos"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Y con el dominio se va la marca en internet."
+    },
+    {
+      "id": "p222",
+      "color": "naranja",
+      "enunciado": "Antes de elegir nombre para entrar en un país, ¿qué dos comprobaciones distintas pide el tema?",
+      "opciones": [
+        "Si el alojamiento es dedicado y si el certificado es gratuito",
+        "Si el país tiene fibra óptica y si el operador ofrece allí IP fija",
+        "Si el idioma es el mismo y si la divisa es el euro allí",
+        "Si la extensión nacional está libre y si la marca está registrada"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Son dos comprobaciones distintas y las dos importan."
+    },
+    {
+      "id": "p223",
+      "color": "naranja",
+      "enunciado": "¿Qué alojamiento conviene a un negocio con picos fuertes de campaña?",
+      "opciones": [
+        "El compartido, por ser el más barato de todos",
+        "El de la nube, que se amplía según la demanda",
+        "Un ordenador instalado en la propia oficina",
+        "Un servidor dedicado fijo durante todo el año"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Los recursos crecen y se reducen y se paga por lo consumido."
+    },
+    {
+      "id": "p224",
+      "color": "naranja",
+      "enunciado": "¿Por qué hoy no es viable una tienda sin HTTPS?",
+      "opciones": [
+        "Porque solo con HTTPS se puede ver la web desde otros países",
+        "Porque sin HTTPS no se puede renovar el nombre de dominio",
+        "Avisos del navegador, penalización y rechazo de las pasarelas",
+        "Porque los servidores sin HTTPS se apagan durante la noche"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Es la condición mínima para que alguien introduzca su tarjeta."
+    },
+    {
+      "id": "p225",
+      "color": "naranja",
+      "enunciado": "¿Qué significa tener la tienda «en la nube»?",
+      "opciones": [
+        "Que su nombre de dominio no pertenece a ningún país concreto",
+        "Que no está guardada en ningún equipo físico concreto del mundo",
+        "Que está en servidores físicos de un proveedor especializado",
+        "Que la tienda funciona sin necesidad de conexión a internet"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Los servidores son máquinas en edificios y países concretos."
+    },
+    {
+      "id": "p226",
+      "color": "naranja",
+      "enunciado": "¿Qué tienen en común dominio, alojamiento y certificado?",
+      "opciones": [
+        "Se contratan aparte, se pagan por periodos y pueden cambiarse",
+        "Los gestiona Red.es para todas las empresas que son españolas",
+        "Se pagan una sola vez y duran mientras exista la página web",
+        "Los da siempre el mismo proveedor en un único contrato conjunto"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Confundirlos es el origen de la mayoría de los sustos."
+    },
+    {
+      "id": "p227",
+      "color": "naranja",
+      "enunciado": "Los clientes de una tienda de Ourense escriben su nombre y no la encuentran; el alojamiento confirma que su servidor funciona. ¿Qué revisa?",
+      "opciones": [
+        "El certificado: puede haber caducado sin aviso",
+        "El servidor: puede estar caído desde esta mañana",
+        "El router: puede estar bloqueando las visitas",
+        "El dominio: puede haber caducado o no resolver"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Si el nombre no resuelve, el problema está en el dominio."
+    },
+    {
+      "id": "p228",
+      "color": "naranja",
+      "enunciado": "La tienda de una empresa de Vigo carga, pero el navegador avisa a los clientes de un problema de seguridad. ¿A quién llama primero?",
+      "opciones": [
+        "Al fabricante del router",
+        "A quien le gestiona el certificado",
+        "Al proveedor de la fibra de la oficina",
+        "Al agente registrador del dominio"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Un aviso de seguridad del navegador apunta al certificado."
+    },
+    {
+      "id": "p229",
+      "color": "naranja",
+      "enunciado": "Los clientes de una empresa de Lugo llegan a su dirección, pero la página no carga y da error. El dominio está al día. ¿Dónde mira?",
+      "opciones": [
+        "En la extensión",
+        "En el alojamiento",
+        "En el registrador",
+        "En el certificado"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Si el nombre resuelve pero la página no carga, el fallo es del alojamiento."
+    },
+    {
+      "id": "p230",
+      "color": "naranja",
+      "enunciado": "Una empresa de Murcia va a vender solo en Alemania y duda entre .com y .de. ¿Qué le aconseja el tema?",
+      "opciones": [
+        "El .de, porque allí se prefiere la extensión nacional",
+        "El .eu, porque solo venderá en un país europeo",
+        "El .com, porque es el que más confianza da en Alemania",
+        "Un .shop, porque describe mejor la actividad"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "En países como Alemania el comprador tiende claramente a la extensión nacional."
+    },
+    {
+      "id": "p231",
+      "color": "naranja",
+      "enunciado": "Una empresa de Bilbao vende en Francia, Italia y Países Bajos con una sola tienda y quiere presentarse como europea. ¿Qué extensión elige?",
+      "opciones": [
+        ".fr",
+        ".shop",
+        ".es",
+        ".eu"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Presenta a la empresa como europea sin atarla a un solo país."
+    },
+    {
+      "id": "p232",
+      "color": "naranja",
+      "enunciado": "Una empresa de Lugo quiere el nombre de su marca en .com, pero ya está ocupado. ¿Qué alternativa recoge el tema?",
+      "opciones": [
+        "Una sectorial como .shop, aunque sea menos reconocida",
+        "Un .es, aunque exige residencia en España",
+        "Un .eu, aunque solo sirve para vender en España",
+        "Usar ese .com igualmente, porque los nombres no tienen dueño"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Las sectoriales permiten conseguir el nombre cuando el .com está ocupado."
+    },
+    {
+      "id": "p233",
+      "color": "naranja",
+      "enunciado": "Una empresa mexicana con interés legítimo en España quiere un .es, pero cree que debe residir aquí. ¿Qué le dices?",
+      "opciones": [
+        "Solo si tramita el registro directamente con EURid",
+        "Solo si abre antes una sede física en territorio español",
+        "No puede: el .es exige residencia permanente en España",
+        "Puede registrarlo: basta un vínculo o interés legítimo"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El .es no exige residencia y se registra mediante agentes acreditados."
+    },
+    {
+      "id": "p234",
+      "color": "naranja",
+      "enunciado": "Una ciudadana española que vive en Chile quiere registrar un .eu para su negocio. ¿Puede hacerlo?",
+      "opciones": [
+        "Solo si su negocio tiene sede social en España",
+        "Solo si lo tramita directamente con Red.es",
+        "No: el .eu exige residir en un Estado de la Unión Europea",
+        "Sí: los ciudadanos de la Unión pueden, vivan donde vivan"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Los ciudadanos de la Unión pueden registrarlo con independencia de dónde residan."
+    },
+    {
+      "id": "p235",
+      "color": "naranja",
+      "enunciado": "Una tienda de cosmética de Valencia con alojamiento compartido se cae en cada campaña de rebajas. ¿Qué cambio propones?",
+      "opciones": [
+        "Contratar un certificado extendido",
+        "Cambiar el dominio a un .com",
+        "Pasar a un alojamiento en la nube",
+        "Contratar más fibra en la oficina"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La nube amplía recursos según la demanda en los picos."
+    },
+    {
+      "id": "p236",
+      "color": "naranja",
+      "enunciado": "Una pyme de Lalín empieza a vender en línea, no tiene equipo técnico y no quiere montar servidor ni programa. ¿Qué modalidad le encaja?",
+      "opciones": [
+        "Un alojamiento compartido programado a mano",
+        "Un servidor dedicado para ella sola",
+        "Una plataforma de comercio electrónico",
+        "Un servidor instalado en su oficina"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Aporta programa y alojamiento en un solo servicio por una cuota."
+    },
+    {
+      "id": "p237",
+      "color": "naranja",
+      "enunciado": "Una tienda nueva de una empresa de León vende a Austria; sus clientes no la conocen y quiere acreditar de verdad quién es. ¿Qué contrata?",
+      "opciones": [
+        "Un certificado básico y gratuito",
+        "Un dominio con extensión de Austria",
+        "Un alojamiento en un servidor dedicado",
+        "Un certificado de validación extendida"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "En la validación extendida la autoridad comprueba documentalmente la empresa."
+    },
+    {
+      "id": "p238",
+      "color": "naranja",
+      "enunciado": "Una empresa de Cuenca dejó la renovación automática de su dominio, pero la tarjeta asociada caducó. ¿Qué riesgo corre?",
+      "opciones": [
+        "Que el dominio caduque y lo registre otro",
+        "Que la tienda pierda el candado HTTPS",
+        "Que su operador le cambie la IP dinámica",
+        "Que el alojamiento borre todos sus archivos"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La renovación automática solo funciona si la tarjeta sigue vigente."
+    },
+    {
+      "id": "p239",
+      "color": "naranja",
+      "enunciado": "Una empresa de Toledo va a entrar en Brasil con su marca y ve que el dominio con extensión brasileña está libre. ¿Puede decidir ya el nombre?",
+      "opciones": [
+        "Sí: si el dominio está libre, la marca también lo está",
+        "No: falta comprobar si la marca está registrada allí",
+        "No: antes debe registrar obligatoriamente un dominio .eu",
+        "Sí, pero solo si aloja la tienda en servidores de Brasil"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Dominio libre y marca disponible son dos comprobaciones distintas."
+    },
+    {
+      "id": "p240",
+      "color": "naranja",
+      "enunciado": "Un cliente irlandés va a pagar en la tienda de una empresa de Huelva que no usa HTTPS; el navegador le avisa y la pasarela rechaza el pago. ¿Qué falta?",
+      "opciones": [
+        "Un certificado para servir la tienda por HTTPS",
+        "Un dominio con la extensión nacional de Irlanda",
+        "Un alojamiento en un servidor dedicado propio",
+        "Una dirección IP fija contratada para la oficina"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Sin HTTPS, los navegadores avisan y los proveedores de pago no operan."
+    }
+  ]
+}
