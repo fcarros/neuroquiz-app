@@ -18,6 +18,7 @@ import { mkdtempSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSyn
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import qrcode from 'qrcode-generator';
 
 const [raiz, carpeta] = process.argv.slice(2);
 if (!raiz || !carpeta) { console.error('Uso: node scripts/partida-pestanas.mjs <url> <carpeta>'); process.exit(2); }
@@ -174,6 +175,15 @@ try {
     const urlJugar = `${base}#/jugar/${pin}`;
     const enQr = await proyector.evalua(`document.querySelector('svg[role=img]') && [...document.querySelectorAll('strong')].map(e => e.textContent).join(' | ')`);
     console.log(`      dirección en la sala: ${enQr}`);
+    // El QR de la sala debe codificar justo la dirección del móvil: se genera aquí y se comparan los módulos.
+    const esperado = qrcode(0, 'M');
+    esperado.addData(urlJugar);
+    esperado.make();
+    let ruta = '';
+    for (let f = 0; f < esperado.getModuleCount(); f++) for (let c = 0; c < esperado.getModuleCount(); c++) if (esperado.isDark(f, c)) ruta += `M${c} ${f}h1v1h-1z`;
+    const dibujada = await proyector.evalua(`document.querySelector('svg[role=img] path').getAttribute('d')`);
+    comprobar(dibujada === ruta, `el QR codifica ${urlJugar}`);
+    comprobar(enQr.includes(new URL(raiz).host), `la sala muestra ${new URL(raiz).host}`);
     console.log(`      PIN ${pin}; los móviles abren ${urlJugar}`);
     await compruebaQueCabe(proyector, 'sala vacía');
     await proyector.captura('01-proyector-sala-vacia.png');
