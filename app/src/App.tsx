@@ -54,7 +54,7 @@ export default function App() {
             {partida ? (
                 <ResumenPartida partida={partida} onVolver={() => setPartida(null)} onOtraSeleccion={crear} />
             ) : (
-                <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-8">
+                <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,4fr)_minmax(0,8fr)] gap-8">
                     <PanelMazos
                         entradas={biblioteca.entradas}
                         seleccionada={entrada?.clave ?? null}

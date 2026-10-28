@@ -2,7 +2,7 @@ import { useId, type ReactNode } from 'react';
 import { contarPorColor, nombresCategorias, type Mazo } from '../mazo/mazo';
 import type { ColorId } from '../mazo/colores';
 import {
-    NOMBRE_DIFICULTAD, SEGUNDOS, cantidadReal, opcionesCantidad, opcionesDificultad, preguntasConExplicacion,
+    NOMBRE_DIFICULTAD, SEGUNDOS, cantidadReal, explicacionEfectiva, opcionesCantidad, opcionesDificultad, preguntasConExplicacion,
     preguntasDisponibles, type Configuracion,
 } from './configuracion';
 
@@ -21,6 +21,7 @@ export function PanelConfiguracion({ mazo, config, cambios, onCambiar, onCrear }
     const cantidades = opcionesCantidad(mazo, config.categorias);
     const dificultades = opcionesDificultad(mazo, config.categorias, config.cantidad);
     const conExplicacion = preguntasConExplicacion(mazo);
+    const explicacion = explicacionEfectiva(mazo, config);
     const total = cantidadReal(config.cantidad, preguntasDisponibles(mazo, config.categorias, config.dificultad).length);
     const cambiar = (parcial: Partial<Configuracion>) => onCambiar({ ...config, ...parcial });
 
@@ -32,79 +33,82 @@ export function PanelConfiguracion({ mazo, config, cambios, onCambiar, onCrear }
     const todasLasCategorias = mazo.categorias.length === config.categorias.length;
 
     return (
-        <section className="flex min-h-0 flex-col gap-7 rounded-tarjeta bg-superficie p-8">
+        <section className="flex min-h-0 flex-col gap-5 rounded-tarjeta bg-superficie p-8">
             <div className="flex items-baseline justify-between gap-4">
                 <h2 className="text-[34px] font-extrabold">Configurar partida</h2>
                 <span className="font-texto text-[22px] text-texto-2">{mazo.titulo}</span>
             </div>
 
             {cambios.length > 0 && (
-                <div role="status" className="rounded-3xl bg-acento/15 p-5 font-texto text-[22px] text-acento">
+                <div role="status" className="rounded-3xl bg-acento/15 px-5 py-3 font-texto text-[22px] text-acento">
                     {cambios.map(c => <p key={c}>{c}</p>)}
                 </div>
             )}
 
-            <Grupo
-                titulo="Categorías"
-                accion={!todasLasCategorias && (
-                    <button type="button" onClick={() => cambiar({ categorias: mazo.categorias.map(c => c.color) })}
-                        className="font-texto text-[22px] font-semibold text-texto-2 underline-offset-4 hover:text-texto hover:underline">
-                        Marcar todas
-                    </button>
-                )}
-            >
-                {mazo.categorias.map(({ color }) => {
-                    const activa = config.categorias.includes(color);
-                    const ultima = activa && config.categorias.length === 1;
-                    return (
-                        <Chip key={color} activo={activa} onClick={() => alternarCategoria(color)}
-                            title={ultima ? 'Tiene que quedar al menos una categoría' : undefined}>
-                            <span aria-hidden className="mr-2">{activa ? '✓' : '+'}</span>
-                            {nombres[color]}
-                            <Cuenta>{porColor[color]}</Cuenta>
+            <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto pr-2">
+                <Grupo
+                    titulo="Categorías"
+                    accion={!todasLasCategorias && (
+                        <button type="button" onClick={() => cambiar({ categorias: mazo.categorias.map(c => c.color) })}
+                            className="font-texto text-[22px] font-semibold text-texto-2 underline-offset-4 hover:text-texto hover:underline">
+                            Marcar todas
+                        </button>
+                    )}
+                >
+                    {mazo.categorias.map(({ color }) => {
+                        const activa = config.categorias.includes(color);
+                        const ultima = activa && config.categorias.length === 1;
+                        return (
+                            <Chip key={color} activo={activa} onClick={() => alternarCategoria(color)}
+                                title={ultima ? 'Tiene que quedar al menos una categoría' : undefined}>
+                                <span aria-hidden className="mr-2">{activa ? '✓' : '+'}</span>
+                                {nombres[color]}
+                                <Cuenta>{porColor[color]}</Cuenta>
+                            </Chip>
+                        );
+                    })}
+                </Grupo>
+
+                <Grupo titulo="Número de preguntas">
+                    {cantidades.map(o => (
+                        <Chip key={String(o.valor)} activo={config.cantidad === o.valor} desactivado={!o.posible}
+                            onClick={() => cambiar({ cantidad: o.valor })}
+                            title={o.posible ? undefined : 'No hay tantas preguntas en las categorías elegidas'}>
+                            {o.valor === 'todas' ? <>Todas <Cuenta>{o.preguntas}</Cuenta></> : o.valor}
                         </Chip>
-                    );
-                })}
-            </Grupo>
-
-            <Grupo titulo="Número de preguntas">
-                {cantidades.map(o => (
-                    <Chip key={String(o.valor)} activo={config.cantidad === o.valor} desactivado={!o.posible}
-                        onClick={() => cambiar({ cantidad: o.valor })}
-                        title={o.posible ? undefined : 'No hay tantas preguntas en las categorías elegidas'}>
-                        {o.valor === 'todas' ? <>Todas <Cuenta>{o.preguntas}</Cuenta></> : o.valor}
-                    </Chip>
-                ))}
-            </Grupo>
-
-            <Grupo titulo="Dificultad">
-                {dificultades.map(o => (
-                    <Chip key={o.valor} activo={config.dificultad === o.valor} desactivado={!o.posible}
-                        onClick={() => cambiar({ dificultad: o.valor })}
-                        title={o.posible ? undefined : `Solo hay ${o.disponibles} preguntas de esta dificultad en las categorías elegidas`}>
-                        {NOMBRE_DIFICULTAD[o.valor]}
-                        <Cuenta>{o.disponibles}</Cuenta>
-                    </Chip>
-                ))}
-            </Grupo>
-
-            <div className="grid grid-cols-2 gap-7">
-                <Grupo titulo="Segundos por pregunta">
-                    {SEGUNDOS.map(s => (
-                        <Chip key={s} activo={config.segundos === s} onClick={() => cambiar({ segundos: s })}>{s}</Chip>
                     ))}
                 </Grupo>
 
-                <Grupo titulo="Explicación tras cada pregunta"
-                    nota={conExplicacion === 0 ? 'Este mazo no tiene explicaciones.'
-                        : conExplicacion < mazo.preguntas.length ? `${conExplicacion} de ${mazo.preguntas.length} preguntas la tienen.` : undefined}>
-                    <Chip activo={config.mostrarExplicacion} desactivado={conExplicacion === 0}
-                        onClick={() => cambiar({ mostrarExplicacion: true })}>Mostrar</Chip>
-                    <Chip activo={!config.mostrarExplicacion} onClick={() => cambiar({ mostrarExplicacion: false })}>No mostrar</Chip>
+                <Grupo titulo="Dificultad">
+                    {dificultades.map(o => (
+                        <Chip key={o.valor} activo={config.dificultad === o.valor} desactivado={!o.posible}
+                            onClick={() => cambiar({ dificultad: o.valor })}
+                            title={o.posible ? undefined : `Solo hay ${o.disponibles} preguntas de esta dificultad en las categorías elegidas`}>
+                            {NOMBRE_DIFICULTAD[o.valor]}
+                            <Cuenta>{o.disponibles}</Cuenta>
+                        </Chip>
+                    ))}
                 </Grupo>
+
+                <div className="grid grid-cols-[auto_1fr] gap-x-16">
+                    <Grupo titulo="Segundos por pregunta">
+                        {SEGUNDOS.map(s => (
+                            <Chip key={s} activo={config.segundos === s} onClick={() => cambiar({ segundos: s })}>{s}</Chip>
+                        ))}
+                    </Grupo>
+
+                    <Grupo titulo="Explicación tras cada pregunta"
+                        nota={conExplicacion === 0 ? 'Este mazo no tiene explicaciones.'
+                            : conExplicacion < mazo.preguntas.length ? `${conExplicacion} de ${mazo.preguntas.length} preguntas la tienen.` : undefined}>
+                        <Chip activo={explicacion} desactivado={conExplicacion === 0}
+                            onClick={() => cambiar({ mostrarExplicacion: true })}>Mostrar</Chip>
+                        <Chip activo={!explicacion} desactivado={conExplicacion === 0}
+                            onClick={() => cambiar({ mostrarExplicacion: false })}>No mostrar</Chip>
+                    </Grupo>
+                </div>
             </div>
 
-            <div className="mt-auto flex items-center justify-between gap-6 border-t-2 border-borde pt-7">
+            <div className="flex items-center justify-between gap-6 border-t-2 border-borde pt-5">
                 <p className="cifras font-texto text-[24px] text-texto-2">
                     <strong className="font-titulo text-[30px] text-texto">{total} preguntas</strong>
                     {' · '}{config.segundos} s cada una
@@ -127,8 +131,10 @@ function Grupo({ titulo, accion, nota, children }: { titulo: string; accion?: Re
                 <h3 id={id} className="text-[24px] font-bold text-texto-2">{titulo}</h3>
                 {accion}
             </div>
-            <div className="flex flex-wrap gap-3">{children}</div>
-            {nota && <p className="font-texto text-[22px] text-texto-2">{nota}</p>}
+            <div className="flex flex-wrap items-center gap-3">
+                {children}
+                {nota && <p className="ml-2 font-texto text-[22px] text-texto-2">{nota}</p>}
+            </div>
         </div>
     );
 }

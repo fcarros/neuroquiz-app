@@ -33,6 +33,7 @@ export interface Configuracion {
     dificultad: FiltroDificultad;
     cantidad: Cantidad;
     segundos: Segundos;
+    /** Preferencia del profesor; solo se aplica si el mazo tiene explicaciones. */
     mostrarExplicacion: boolean;
 }
 
@@ -91,6 +92,10 @@ export function opcionesDificultad(mazo: Mazo, categorias: readonly ColorId[], c
 export const preguntasConExplicacion = (mazo: Mazo) =>
     mazo.preguntas.filter(p => p.explicacion?.trim()).length;
 
+/** Si se mostrará la explicación: la preferencia, siempre que el mazo tenga alguna. */
+export const explicacionEfectiva = (mazo: Mazo, config: Configuracion) =>
+    config.mostrarExplicacion && preguntasConExplicacion(mazo) > 0;
+
 /** ¿Se ofrece esta combinación en la interfaz? */
 export function esPosible(mazo: Mazo, config: Configuracion): boolean {
     const colores = new Set(mazo.preguntas.map(p => p.color));
@@ -139,12 +144,9 @@ export function ajustarConfiguracion(mazo: Mazo, config: Configuracion): Ajuste 
         dificultad = 'todas';
     }
 
-    let mostrarExplicacion = config.mostrarExplicacion;
-    if (mostrarExplicacion && preguntasConExplicacion(mazo) === 0) mostrarExplicacion = false;
-
     const segundos = (SEGUNDOS as readonly number[]).includes(config.segundos) ? config.segundos : CONFIGURACION_INICIAL.segundos;
 
-    return { config: { categorias, cantidad, dificultad, segundos, mostrarExplicacion }, cambios };
+    return { config: { ...config, categorias, cantidad, dificultad, segundos }, cambios };
 }
 
 // --- Selección de preguntas ---
@@ -204,7 +206,7 @@ export function prepararPartida(mazo: Mazo, config: Configuracion, semilla: numb
     return {
         mazo: { id: mazo.id, titulo: mazo.titulo, modulo: mazo.modulo },
         segundos: config.segundos,
-        mostrarExplicacion: config.mostrarExplicacion,
+        mostrarExplicacion: explicacionEfectiva(mazo, config),
         preguntas,
     };
 }

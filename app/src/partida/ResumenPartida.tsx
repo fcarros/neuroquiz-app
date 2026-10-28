@@ -48,7 +48,7 @@ export function ResumenPartida({ partida, onVolver, onOtraSeleccion }: Props) {
                         <li key={p.id} className="flex gap-4 border-b border-borde py-2 last:border-0">
                             <span className="cifras w-10 shrink-0 text-right font-titulo font-bold text-texto-2">{i + 1}</span>
                             <span className="flex-1">{p.enunciado}</span>
-                            <span className="shrink-0 rounded-full bg-superficie px-3 text-texto-2">{p.categoria}</span>
+                            <span className="shrink-0 self-start whitespace-nowrap rounded-full bg-superficie px-3 text-texto-2">{p.categoria}</span>
                         </li>
                     ))}
                 </ol>

@@ -67,8 +67,7 @@ describe('ajustes', () => {
     const m = mazoConDificultades();
 
     it('no toca una configuración posible', () => {
-        // El mazo de prueba no tiene explicaciones: «mostrar» se apagaría.
-        const c = config({ cantidad: 15, dificultad: 'facil', mostrarExplicacion: false });
+        const c = config({ cantidad: 15, dificultad: 'facil' });
         expect(ajustarConfiguracion(m, c)).toEqual({ config: c, cambios: [] });
     });
 
@@ -84,9 +83,12 @@ describe('ajustes', () => {
         expect(r.cambios[0]).toMatch(/dificultad/);
     });
 
-    it('desactiva la explicación si el mazo no tiene ninguna', () => {
-        expect(ajustarConfiguracion(INDUSTRIA, config({ mostrarExplicacion: true })).config.mostrarExplicacion).toBe(false);
-        expect(ajustarConfiguracion(CDI1, config({ mostrarExplicacion: true })).config.mostrarExplicacion).toBe(true);
+    it('la explicación solo se muestra si el mazo tiene, sin perder la preferencia', () => {
+        const c = config({ mostrarExplicacion: true });
+        expect(ajustarConfiguracion(INDUSTRIA, c).config.mostrarExplicacion).toBe(true);
+        expect(prepararPartida(INDUSTRIA, c, 1).mostrarExplicacion).toBe(false);
+        expect(prepararPartida(CDI1, c, 1).mostrarExplicacion).toBe(true);
+        expect(prepararPartida(CDI1, config({ mostrarExplicacion: false }), 1).mostrarExplicacion).toBe(false);
     });
 
     it('sin categorías vuelve a todas', () => {
