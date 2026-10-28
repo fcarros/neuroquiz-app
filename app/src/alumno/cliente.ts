@@ -124,8 +124,12 @@ export function crearCliente({
         pararReintentos();
         const v = m.vista;
         let elegida = estado.elegida;
-        // El profesor no tiene nuestra respuesta (p. ej. recargó justo entonces): se puede volver a responder.
-        if (v.estado === 'dentro' && elegida && v.respondida === null && estado.comun?.fase === 'pregunta') elegida = null;
+        const { comun } = estado;
+        // El profesor no tiene nuestra respuesta (p. ej. recargó justo entonces): se la reenvía.
+        // Si ya no la admite (fuera de tiempo), su vista no cambia y no se repite más.
+        if (v.estado === 'dentro' && elegida && v.respondida === null && comun?.fase === 'pregunta' && comun.indice === elegida.indice && yo) {
+            transporte.enviarAlProfesor({ tipo: 'responder', id: yo.id, secreto: yo.secreto, indice: elegida.indice, opcion: elegida.opcion });
+        }
         if (v.estado === 'dentro' && v.respondida) elegida = null;
         cambiar({ personal: v, conexion: 'conectado', elegida });
     };

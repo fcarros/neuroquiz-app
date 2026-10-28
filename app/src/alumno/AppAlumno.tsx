@@ -82,7 +82,12 @@ function Contenido({ e, cliente, pinRuta }: { e: EstadoCliente; cliente: Cliente
                 <Marco yo={personal}>
                     {personal.resultado?.indice === comun.indice
                         ? <Resultado comun={comun} yo={personal} />
-                        : <Aviso titulo="Ya estás dentro">Has llegado con esta pregunta cerrada. Juegas desde la siguiente.</Aviso>}
+                        : (
+                            // Su resultado aún no ha llegado (el profesor reparte los envíos) o se unió con la pregunta cerrada.
+                            <Aviso titulo="Pregunta cerrada">
+                                La correcta era la <strong className="font-titulo">{letra(comun.correcta)}</strong>: {comun.opciones[comun.correcta]}. Mira la pantalla.
+                            </Aviso>
+                        )}
                 </Marco>
             );
         case 'final':

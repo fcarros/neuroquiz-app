@@ -1,4 +1,4 @@
-import { clasificacion, puntosPorAcierto } from './calculos';
+import { clasificacion, preguntasJugadas, puntosPorAcierto } from './calculos';
 import { buscarJugador, limiteMs, type EstadoPartida } from './estado';
 
 /**
@@ -32,16 +32,17 @@ export type VistaJugador =
         nombre: string;
         puntos: number;
         puesto: number;
-        /**
-         * Cuántos juegan; solo con la pregunta cerrada o al final. Así una
-         * llegada no obliga a reenviar la vista de todos (mensajes de Ably).
-         */
+        /** Cuántos juegan (no en la sala: así cada llegada no obliga a reenviar la vista de todos). */
         jugadores: number | null;
         racha: number;
         aciertos: number;
         /** Lo que ha respondido en la pregunta abierta (sin decir si acierta). */
         respondida: { indice: number; opcion: number } | null;
-        /** Cómo le ha ido en la pregunta que se acaba de cerrar. */
+        /**
+         * Cómo le fue en la última pregunta cerrada. Se mantiene al abrir la
+         * siguiente para que la vista no cambie (y no haya que reenviarla a
+         * todos); el móvil solo lo enseña si coincide con la pregunta cerrada.
+         */
         resultado: { indice: number; acierto: boolean; puntos: number; ms: number | null; opcion: number | null } | null;
     };
 
@@ -78,24 +79,26 @@ export function vistaJugador(estado: EstadoPartida, id: string): VistaJugador {
     const tabla = clasificacion(estado);
     const m = tabla.find(x => x.id === id)!;
     const r = estado.indice >= 0 ? estado.respuestas[estado.indice][id] : undefined;
-    const p = estado.partida.preguntas[estado.indice];
+    const ultima = preguntasJugadas(estado).at(-1);
+    const ru = ultima !== undefined ? estado.respuestas[ultima][id] : undefined;
+    const bien = ultima !== undefined && ru?.opcion === estado.partida.preguntas[ultima].correcta;
 
     return {
         estado: 'dentro',
         nombre: jugador.nombre,
         puntos: m.puntos,
         puesto: m.puesto,
-        jugadores: estado.fase === 'sala' || estado.fase === 'pregunta' ? null : tabla.length,
+        jugadores: estado.fase === 'sala' ? null : tabla.length,
         racha: m.racha,
         aciertos: m.aciertos,
         respondida: estado.fase === 'pregunta' && r ? { indice: estado.indice, opcion: r.opcion } : null,
-        resultado: estado.fase === 'respuesta' && jugador.desde <= estado.indice
+        resultado: ultima !== undefined && jugador.desde <= ultima
             ? {
-                indice: estado.indice,
-                acierto: r?.opcion === p.correcta,
-                puntos: r?.opcion === p.correcta ? puntosPorAcierto(r.ms, limiteMs(estado)) : 0,
-                ms: r?.ms ?? null,
-                opcion: r?.opcion ?? null,
+                indice: ultima,
+                acierto: bien,
+                puntos: bien ? puntosPorAcierto(ru!.ms, limiteMs(estado)) : 0,
+                ms: ru?.ms ?? null,
+                opcion: ru?.opcion ?? null,
             }
             : null,
     };

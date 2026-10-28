@@ -12,5 +12,5 @@
     "moduleDetection": "force",
     "skipLibCheck": true
   },
-  "include": ["vite.config.ts", "eslint.config.js", "api", "pruebas"]
+  "include": ["vite.config.ts", "vitest.real.config.ts", "eslint.config.js", "api", "pruebas"]
 }

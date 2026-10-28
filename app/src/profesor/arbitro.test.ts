@@ -223,7 +223,7 @@ describe('reconexión', () => {
 
         // El profesor recarga; mientras tanto Bea responde y su mensaje se pierde.
         arbitro.detener();
-        bea.cliente.responder(0);
+        bea.cliente.responder(correctaActual(arbitro));
         await espera();
         expect(bea.cliente.estado().elegida).not.toBeNull();
         avanzar(3_000);
@@ -232,13 +232,11 @@ describe('reconexión', () => {
 
         expect(nuevo.estado().jugadores.map(j => j.nombre)).toEqual(['Ana', 'Bea']);
         expect(nuevo.estado().respuestas[0][nuevo.estado().jugadores[0].id]).toEqual({ opcion: correctaActual(nuevo), ms: 4_000 });
-        // Los móviles reciben su vista sin pedirla; el tiempo sigue contando desde que se abrió la pregunta.
-        expect(bea.cliente.estado().comun).toMatchObject({ fase: 'pregunta', restanteMs: 13_000 });
-        // Bea ve que su respuesta no llegó y puede volver a responder.
-        expect(bea.cliente.estado().elegida).toBeNull();
-        bea.cliente.responder(correctaActual(nuevo));
+        // El móvil de Bea recibe su vista sin pedirla, ve que su respuesta no llegó y la reenvía solo.
+        // El tiempo sigue contando desde que se abrió la pregunta: llega a los 7 s (825 puntos).
         await espera();
         expect(nuevo.estado().fase).toBe('respuesta');
+        expect(nuevo.estado().respuestas[0][nuevo.estado().jugadores[1].id].ms).toBe(7_000);
         expect(clasificacion(nuevo.estado()).map(m => [m.nombre, m.puntos])).toEqual([['Ana', 900], ['Bea', 825]]);
         expect(cargarPartida(almacen)?.fase).toBe('respuesta');
     });

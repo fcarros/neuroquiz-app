@@ -3,7 +3,7 @@
 // BroadcastChannel. Usa el protocolo DevTools con el WebSocket de Node, sin
 // dependencias.
 //
-// Usa el transporte local (?transporte=local). Uso, con
+// Uso (TRANSPORTE=ably para probar con Ably de verdad), con
 // `npm run build && npx vite preview --port 4173 --strictPort` en marcha:
 //   node scripts/partida-pestanas.mjs http://localhost:4173/ <carpeta-capturas>
 // Otra ruta de Chrome: variable CHROME.
@@ -21,8 +21,10 @@ import { fileURLToPath } from 'node:url';
 const [raiz, carpeta] = process.argv.slice(2);
 if (!raiz || !carpeta) { console.error('Uso: node scripts/partida-pestanas.mjs <url> <carpeta>'); process.exit(2); }
 mkdirSync(carpeta, { recursive: true });
-// Pestañas del mismo navegador: transporte local (la web compilada usa Ably por defecto).
-const base = `${raiz.replace(/\/$/, '')}/?transporte=local`;
+// Por defecto, transporte local (pestañas del mismo navegador). Con TRANSPORTE=ably,
+// Ably de verdad: cada móvil va en un contexto aislado (su propio localStorage).
+const TRANSPORTE = process.env.TRANSPORTE === 'ably' ? 'ably' : 'local';
+const base = `${raiz.replace(/\/$/, '')}/?transporte=${TRANSPORTE}`;
 const CHROME = process.env.CHROME ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const PUERTO = 9334;
 const MAZO = resolve(dirname(fileURLToPath(import.meta.url)), 'datos/mazo-verificacion.json');
@@ -63,7 +65,8 @@ const cmd = (method, params = {}, sessionId) => new Promise((r, rechazar) => {
 await cmd('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath: descargas });
 
 async function abrir(nombre, { ancho, alto, movil }) {
-    const { targetId } = await cmd('Target.createTarget', { url: 'about:blank' });
+    const contexto = TRANSPORTE === 'ably' && movil ? (await cmd('Target.createBrowserContext')).browserContextId : undefined;
+    const { targetId } = await cmd('Target.createTarget', { url: 'about:blank', ...(contexto && { browserContextId: contexto }) });
     const { sessionId } = await cmd('Target.attachToTarget', { targetId, flatten: true });
     const errores = [];
     oyentes.set(sessionId, m => {

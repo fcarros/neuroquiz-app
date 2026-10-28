@@ -15,7 +15,8 @@
     "test:watch": "vitest",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc -b",
-    "validar-mazos": "vitest run src/mazo/mazos-incluidos.test.ts"
+    "validar-mazos": "vitest run src/mazo/mazos-incluidos.test.ts",
+    "prueba:ably": "vitest run --config vitest.real.config.ts"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

@@ -59,7 +59,12 @@ const pedirPorDefecto: PedirCredenciales = async cuerpo => {
 /** Conexión real con la librería de Ably. */
 export const clienteAblyReal: CrearClienteAbly = async credenciales => {
     const Ably = await import('ably');
+    let cerrando = false;
+    // Ably también cierra la conexión al recargar o cerrar la página (lo que quede en cola se reenvía al volver).
+    for (const evento of ['pagehide', 'beforeunload']) globalThis.addEventListener?.(evento, () => { cerrando = true; });
     const realtime = new Ably.Realtime({
+        // Al cerrar a propósito (recargar, salir), Ably avisa de los envíos que quedaban en cola: no es un error.
+        logHandler: (mensaje, nivel) => { if (!cerrando && nivel <= 1) console.error(mensaje); },
         authCallback: (_, listo) => {
             credenciales().then(t => listo(null, t as never), (e: unknown) => listo(String(e), null));
         },
@@ -76,7 +81,7 @@ export const clienteAblyReal: CrearClienteAbly = async credenciales => {
         },
         estado: () => realtime.connection.state,
         alCambiarEstado: fn => realtime.connection.on(cambio => fn(cambio.current)),
-        cerrar: () => realtime.close(),
+        cerrar: () => { cerrando = true; realtime.close(); },
     };
 };
 

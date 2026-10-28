@@ -277,6 +277,10 @@ describe('vistas para los móviles', () => {
             puntos: 875, puesto: 1, racha: 1, resultado: { acierto: true, puntos: 875, ms: 5_000, opcion: correcta(e) },
         });
         expect(vistaJugador(e, 'bea')).toMatchObject({ puesto: 2, resultado: { acierto: false, puntos: 0, ms: null, opcion: null } });
+        // Al abrir la siguiente, la vista personal no cambia: no hay que reenviarla a nadie.
+        const antes = JSON.stringify(vistaJugador(e, 'ana'));
+        e = reducir(e, { tipo: 'siguiente', ahora: T0 + 40_000 });
+        expect(JSON.stringify(vistaJugador(e, 'ana'))).toBe(antes);
     });
 
     it('la explicación solo viaja si está activada', () => {

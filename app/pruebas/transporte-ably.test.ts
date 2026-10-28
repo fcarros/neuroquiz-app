@@ -160,7 +160,7 @@ describe('transporte Ably (con un doble que aplica los permisos firmados)', () =
         expect(ana.cliente.estado().comun).toMatchObject({ fase: 'pregunta', indice: 0 });
     });
 
-    it('reconexión del profesor: al volver reenvía todo y la respuesta perdida se puede repetir', async () => {
+    it('reconexión del profesor: al volver reenvía todo y el móvil reenvía la respuesta perdida', async () => {
         const m = montar();
         const { reloj, avanzar } = relojFalso();
         const { arbitro, pin } = await profesor(m, reloj);
@@ -173,14 +173,11 @@ describe('transporte Ably (con un doble que aplica los permisos firmados)', () =
         ana.cliente.responder(0);
         await espera(20);
         expect(ana.cliente.estado().elegida).not.toBeNull();
-        m.ably.restablecer('profesor');
-        await espera(40);
-        expect(arbitro.red()).toBe('conectado');
-        // El profesor no recibió la respuesta (en el doble se pierde; Ably la reentregaría): Ana puede repetirla.
-        expect(ana.cliente.estado().elegida).toBeNull();
         avanzar(1_000);
-        ana.cliente.responder(0);
-        await espera(20);
+        m.ably.restablecer('profesor');
+        await espera(60);
+        expect(arbitro.red()).toBe('conectado');
+        // El profesor no recibió la respuesta (en el doble se pierde): el móvil la reenvía solo.
         expect(arbitro.estado().respuestas[0][arbitro.estado().jugadores[0].id]).toEqual({ opcion: 0, ms: 1_000 });
     });
 
