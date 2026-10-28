@@ -1,4 +1,4 @@
-# NeuroQuiz
+# Aula Quiz (antes NeuroQuiz)
 
 Juego educativo tipo Kahoot para usar en clase con alumnado de FP. El profesor
 proyecta las preguntas y los alumnos responden desde el móvil en tiempo real;
@@ -6,7 +6,15 @@ la rapidez puntúa y al final hay ranking y podio. Una clase: hasta 30 alumnos
 a la vez más el proyector.
 
 Contexto completo del punto de partida: `docs/AUDITORIA.md`. Prompts de cada
-fase: `docs/prompts/`.
+fase: `docs/prompts/`. Guía de diseño obligatoria de la versión nueva:
+`docs/diseno-aula-quiz.md` (opciones identificadas por **letra A-D y color**,
+nunca por formas geométricas).
+
+Conviven dos versiones hasta la fase 4:
+
+- **v1 «NeuroQuiz»** en la raíz (`server.js`, `index.html`, `styles.css`): no
+  se modifica.
+- **v2 «Aula Quiz»** en `app/`: la reescritura.
 
 ## Arquitectura actual (v1, rama `main`)
 
@@ -19,7 +27,7 @@ fase: `docs/prompts/`.
   controla el tiempo.
 - Despliegue previsto en Render (`render.yaml`). No es compatible con Vercel.
 
-## Arquitectura objetivo (v2, rama `v2`)
+## Arquitectura objetivo (v2, carpeta `app/`, rama `v2`)
 
 - **Web estática en Vercel**, sin servidor propio encendido todo el tiempo.
 - **El navegador del profesor es el árbitro**: guarda el estado de la partida
@@ -36,6 +44,26 @@ fase: `docs/prompts/`.
   que los mismos archivos sirvan en los dos juegos.
 - La generación desde PDF vuelve en la fase 6, protegida.
 
+## Estructura de `app/`
+
+- Vite 8 + React 19 + TypeScript 5.9 + Tailwind 4 + zod 4 + vitest 4.1 +
+  ESLint 10. Node 24 (`app/.nvmrc` y `engines`). vitest 5 no admite Node 25
+  (el del Mac de Fran), por eso se usa la 4.1.
+- `src/index.css`: colores, radios y fuentes de la guía en el `@theme` de
+  Tailwind (`bg-fondo`, `bg-superficie`, `text-acento`, `bg-opcion-a`…). Las
+  fuentes (Bricolage Grotesque y Figtree) se alojan en la app con
+  `@fontsource-variable`, sin Google Fonts.
+- `src/mazo/`: formato de mazo copiado del Trivial (ver abajo).
+- `mazos/`: mazos incluidos, empaquetados al compilar (`import.meta.glob`).
+- `src/biblioteca/`: incluidos + importados (localStorage,
+  `aula-quiz:mazos-importados`), importar, exportar y borrar. Todo mazo se
+  valida cada vez que se carga.
+- `src/partida/configuracion.ts`: filtros, combinaciones posibles, ajustes y
+  selección de preguntas (funciones puras). Prioridad: categorías → número →
+  dificultad. Las opciones de cada pregunta se barajan al crear la partida.
+- `src/partida/PanelConfiguracion.tsx` y `ResumenPartida.tsx`: pantallas del
+  profesor. El resumen se ve en el proyector: nunca muestra las correctas.
+
 ## Formato de mazo (copia del Trivial)
 
 `app/src/mazo/` es una **copia** del formato v1 de Aula Trivial
@@ -47,14 +75,30 @@ comprobarlo en `app/src/mazo/ORIGEN.md`. Documentación: `docs/formato-mazo.md`.
 
 ## Fases
 
-1. **Limpieza, cimientos y decisión de tiempo real** ← fase actual
-2. Mazos
+1. Limpieza, cimientos y decisión de tiempo real ✓
+2. Nuevo proyecto, mazos y configuración de partida ✓
+3. **Tiempo real y motor de partida** ← siguiente
 3. Tiempo real y motor de partida
 4. Publicación en Vercel y prueba de carga
 5. Interfaz
 6. Generador desde PDF
 
-## Comandos (versión actual)
+## Comandos
+
+Versión nueva (desde `app/`):
+
+```bash
+npm install            # instalar dependencias
+npm run dev            # desarrollo en http://localhost:5173
+npm run build          # comprobar tipos y compilar a app/dist
+npm run preview        # servir la compilación
+npm test               # tests (vitest)
+npm run lint           # ESLint, sin avisos permitidos
+npm run typecheck      # tipos (tsc -b)
+npm run validar-mazos  # validar los mazos de app/mazos/
+```
+
+Versión antigua (desde la raíz):
 
 ```bash
 npm install        # instalar dependencias
@@ -62,8 +106,8 @@ npm start          # arrancar en http://localhost:3000 (PORT para cambiarlo)
 npm run dev        # arrancar con recarga automática (node --watch)
 ```
 
-Para generar quizzes hace falta `OPENAI_API_KEY` en `.env` (raíz). El
-servidor arranca sin ella, pero `/upload` devuelve error.
+Para generar quizzes en la v1 hace falta `OPENAI_API_KEY` en `.env` (raíz).
+El servidor arranca sin ella, pero `/upload` devuelve error.
 
 ## Convenciones
 
@@ -96,12 +140,28 @@ servidor arranca sin ella, pero `/upload` devuelve error.
 
 ## Estado
 
-Fase 1 en curso (rama `v2`).
+Fases 1 y 2 cerradas (rama `v2`, 2026-10-28). Siguiente: fase 3.
 
-- [x] Carpeta de prompts reorganizada y auditoría en `docs/`.
-- [x] `.gitignore` ajustado.
-- [x] `CLAUDE.md` creado.
-- [x] README reescrito.
-- [x] `docs/decision-tiempo-real.md`: comparativa (recomendación: Ably; alternativa: Firebase) y propuesta de stack.
-- [x] Verificado que la v1 sigue arrancando igual.
-- [x] Servicio de tiempo real elegido: **Ably** (2026-10-28). Se integra en la fase 3; no usarlo antes.
+Hecho en la fase 2:
+
+- [x] Esqueleto de `app/` con el stack acordado, tema de la guía de diseño,
+  `lang="es"`.
+- [x] Formato de mazo v1 copiado del Trivial (37 tests suyos incluidos).
+- [x] Tres mazos incluidos: CDI Tema 1 y Tema 2 (240 preguntas cada uno, con
+  dificultad y explicación) e Industria 4.0 (60, **sin dificultad ni
+  explicaciones**).
+- [x] Biblioteca: importar (validado), exportar y borrar importados.
+- [x] Configuración de partida y resumen; selección al azar sin repetir.
+- [x] 70 tests, tipos, lint y compilación sin errores. Pantalla comprobada en
+  Chrome sin ventana a 1920×1080.
+
+Pendiente:
+
+- [ ] **Fase 3**: Ably (cuenta, función de tokens en Vercel), sala de espera,
+  motor de partida en el navegador del profesor, pantallas del móvil.
+- [ ] La partida preparada aún no se guarda: si se recarga la página, se
+  pierde (la persistencia llega con el motor en la fase 3).
+- [ ] La v1 (`server.js`) sigue en la raíz hasta la fase 4.
+- [ ] Industria 4.0 no tiene dificultades ni explicaciones: con él solo se
+  ofrece «Todas» y no se muestran explicaciones. Habría que completarlo en el
+  Trivial y volver a copiarlo.

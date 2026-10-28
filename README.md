@@ -1,21 +1,63 @@
-# NeuroQuiz
+# Aula Quiz (antes NeuroQuiz)
 
-Juego de preguntas en directo para clase, al estilo Kahoot. El profesor sube
-un PDF con el temario, la IA (OpenAI) genera preguntas tipo test en español y
-los alumnos responden desde el móvil mientras el proyector muestra las
-preguntas, los resultados y el podio final.
+Juego de preguntas en directo para clase, al estilo Kahoot. El proyector
+muestra las preguntas, los resultados y el podio; los alumnos responden desde
+el móvil.
 
-> **Aviso:** esta es la versión actual (v1). En la rama `v2` se está rehaciendo
-> como web estática con mazos de preguntas guardados. Ver `CLAUDE.md`.
+En este repositorio conviven dos versiones mientras dura la reescritura:
 
-## Requisitos
+| | Dónde | Estado |
+|---|---|---|
+| **Aula Quiz** (v2) | carpeta `app/` | En desarrollo (fase 2 de 6): mazos y configuración de partida. Aún no se puede jugar. |
+| **NeuroQuiz** (v1) | raíz (`server.js`, `index.html`) | Funciona: genera las preguntas con IA desde un PDF. |
+
+Plan y estado: `CLAUDE.md`. Guía de diseño: `docs/diseno-aula-quiz.md`.
+
+## Aula Quiz (v2, carpeta `app/`)
+
+### Requisitos
+
+- Node.js 24 (el que usa Vercel; fijado en `app/.nvmrc` y `engines`). Funciona
+  también con Node 25, pero `npm install` mostrará un aviso `EBADENGINE`
+  (solo informativo) porque no es la versión indicada.
+- No necesita claves ni cuentas en esta fase.
+
+### Arranque
+
+```bash
+cd app
+npm install
+npm run dev
+```
+
+Abre `http://localhost:5173` (pensado para el proyector, a 1920×1080).
+
+Otros comandos: `npm test`, `npm run lint`, `npm run typecheck`,
+`npm run build`, `npm run preview` y `npm run validar-mazos`.
+
+### Qué se puede hacer hoy
+
+1. **Elegir mazo.** Vienen incluidos dos temas de Comercio Digital
+   Internacional y uno de Industria 4.0, agrupados por módulo.
+2. **Importar un mazo** propio (`.json`, formato de Aula Trivial, ver
+   `docs/formato-mazo.md`). Se valida y se guarda en ese navegador. Los
+   importados se pueden exportar y borrar.
+3. **Configurar la partida:** categorías, número de preguntas (10, 15, 20, 30
+   o todas), dificultad, segundos por pregunta (10, 20, 30 o 60) y si se
+   muestra la explicación. Solo se ofrecen combinaciones posibles.
+4. **Crear partida:** elige las preguntas al azar y muestra un resumen. La sala
+   de espera y el juego en los móviles llegan en la fase 3.
+
+## NeuroQuiz (v1, raíz)
+
+### Requisitos
 
 - [Node.js](https://nodejs.org/) 18 o superior (probado con Node 25).
 - Una clave de API de OpenAI con saldo (cada quiz generado consume créditos).
 - Que el ordenador del profesor y los móviles lleguen al servidor: misma red
   wifi si se ejecuta en local, o el servidor publicado en internet.
 
-## Instalación
+### Instalación
 
 ```bash
 git clone https://github.com/fcarros/neuroquiz-app.git
@@ -32,7 +74,7 @@ OPENAI_API_KEY=tu_clave_aqui
 
 `.env` está en `.gitignore`: no lo subas nunca al repositorio.
 
-## Arranque
+### Arranque
 
 ```bash
 npm start
@@ -47,7 +89,7 @@ Para que los móviles se conecten en local, usa la IP del ordenador en vez de
 `localhost` (por ejemplo `http://192.168.1.20:3000`); el QR se genera con la
 dirección que tenga abierta el profesor.
 
-## Cómo se juega hoy
+### Cómo se juega hoy
 
 **Profesor (en el proyector)**
 
@@ -70,7 +112,7 @@ dirección que tenga abierta el profesor.
 3. Al responder ven si han acertado y, entre preguntas, su posición si están
    en el top 5.
 
-## Limitaciones conocidas
+### Limitaciones conocidas
 
 - La interfaz está en inglés; las preguntas salen en español.
 - Si un alumno recarga la página, sale de la partida y no puede volver. Si
@@ -81,7 +123,7 @@ dirección que tenga abierta el profesor.
 
 Lista completa en `docs/AUDITORIA.md`.
 
-## Despliegue
+### Despliegue
 
 `render.yaml` describe un servicio web Node para Render. Hay que configurar
 `OPENAI_API_KEY` en el panel. No funciona en Vercel (necesita un servidor con
