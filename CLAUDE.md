@@ -36,6 +36,15 @@ fase: `docs/prompts/`.
   que los mismos archivos sirvan en los dos juegos.
 - La generación desde PDF vuelve en la fase 6, protegida.
 
+## Formato de mazo (copia del Trivial)
+
+`app/src/mazo/` es una **copia** del formato v1 de Aula Trivial
+(`fcarros/Trivial-Antigravity`, rama `v2`, commit `b7f3936`, 2026-10-13):
+`mazo.ts`, `colores.ts`, `azar.ts` y `mazo.test.ts` sin cambios, y
+`crearMazo()` de `pruebas.ts`. No se cambian sus reglas aquí: si el formato
+evoluciona, se cambia en el Trivial y se vuelve a copiar. Detalle y forma de
+comprobarlo en `app/src/mazo/ORIGEN.md`. Documentación: `docs/formato-mazo.md`.
+
 ## Fases
 
 1. **Limpieza, cimientos y decisión de tiempo real** ← fase actual
