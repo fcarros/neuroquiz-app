@@ -61,8 +61,42 @@ Conviven dos versiones hasta la fase 4:
 - `src/partida/configuracion.ts`: filtros, combinaciones posibles, ajustes y
   selección de preguntas (funciones puras). Prioridad: categorías → número →
   dificultad. Las opciones de cada pregunta se barajan al crear la partida.
-- `src/partida/PanelConfiguracion.tsx` y `ResumenPartida.tsx`: pantallas del
-  profesor. El resumen se ve en el proyector: nunca muestra las correctas.
+- `src/partida/PanelConfiguracion.tsx`, `ResumenPartida.tsx` y
+  `Preparacion.tsx`: pantallas del profesor antes de jugar. El resumen se ve
+  en el proyector: nunca muestra las correctas.
+- Rutas (`src/App.tsx`): `/` es el profesor; `/#/jugar/123456` es el móvil
+  (lo que abre el QR). Con `#` no hacen falta redirecciones en Vercel.
+- `src/motor/`: el motor de partida. `estado.ts` tiene el estado (datos
+  planos) y `reducir(estado, acción) → estado`, pura, con el reloj dentro de
+  cada acción (`ahora`). Puntos, rachas, puestos, estadísticas y CSV se
+  calculan desde las respuestas (`calculos.ts`), no se guardan. `vistas.ts`:
+  lo único que sale hacia los móviles (sin secretos y sin la correcta con la
+  pregunta abierta).
+- Reglas: puntos `round(1000 × (1 − t / límite ÷ 2))` con `t` del reloj del
+  profesor; respuestas hasta límite + 500 ms; cierre al acabar el tiempo
+  (+ margen) o al responder todos; «Saltar» anula la pregunta (no cuenta ni
+  rompe rachas); «Terminar» va al podio (si la pregunta estaba abierta, no
+  cuenta); se puede entrar tarde con 0 puntos; expulsar solo en la sala;
+  nombres de hasta 15 caracteres, los repetidos se numeran («Ana 2»).
+- `src/transporte/`: interfaz `Transporte` propia (conectar a la sala,
+  enviar a todos, a un jugador, al profesor, recibir) y la versión local con
+  BroadcastChannel. `mensajes.ts`: esquemas zod; todo lo recibido se valida
+  y se descarta si no cumple. **Para pasar a Ably solo se añade otra
+  implementación de `Transporte`.**
+- `src/profesor/arbitro.ts`: une motor y transporte en la pestaña del
+  profesor; envía a cada móvil solo lo que cambia de su vista y guarda la
+  partida en localStorage (`aula-quiz:partida`, validada al leerla). Al
+  recargar se ofrece «Continuar partida». `AppProfesor.tsx` y
+  `useArbitro.ts` lo conectan con React.
+- `src/proyector/`: sala (PIN, QR con `qrcode-generator`), pregunta,
+  respuesta con top 5, podio y tabla con CSV.
+- `src/alumno/cliente.ts`: el móvil sin interfaz (identidad, saludo con
+  reintentos, respuestas). Id público + secreto en **sessionStorage** (cada
+  pestaña es un alumno). `AppAlumno.tsx`: sus pantallas.
+- `scripts/`: comprobaciones con Chrome sin ventana (protocolo DevTools, sin
+  dependencias). `captura-configuracion.mjs` (fase 2) y
+  `partida-pestanas.mjs` (proyector + 3 móviles, partida de 5 preguntas con
+  el mazo `scripts/datos/mazo-verificacion.json`).
 
 ## Formato de mazo (copia del Trivial)
 
@@ -77,8 +111,9 @@ comprobarlo en `app/src/mazo/ORIGEN.md`. Documentación: `docs/formato-mazo.md`.
 
 1. Limpieza, cimientos y decisión de tiempo real ✓
 2. Nuevo proyecto, mazos y configuración de partida ✓
-3. **Tiempo real y motor de partida** ← siguiente
 3. Tiempo real y motor de partida
+   - 3A. Motor, pantallas y conexión local entre pestañas ✓
+   - 3B. Ably ← siguiente
 4. Publicación en Vercel y prueba de carga
 5. Interfaz
 6. Generador desde PDF
@@ -96,6 +131,8 @@ npm test               # tests (vitest)
 npm run lint           # ESLint, sin avisos permitidos
 npm run typecheck      # tipos (tsc -b)
 npm run validar-mazos  # validar los mazos de app/mazos/
+# Con `npm run build && npx vite preview --port 4173 --strictPort` en marcha:
+node scripts/partida-pestanas.mjs http://localhost:4173/ <carpeta-capturas>
 ```
 
 Versión antigua (desde la raíz):
@@ -140,28 +177,43 @@ El servidor arranca sin ella, pero `/upload` devuelve error.
 
 ## Estado
 
-Fases 1 y 2 cerradas (rama `v2`, 2026-10-28). Siguiente: fase 3.
+Fases 1, 2 y 3A cerradas (rama `v2`, 2026-10-28). Siguiente: fase 3B (Ably).
 
-Hecho en la fase 2:
+Hecho en la fase 3A:
 
-- [x] Esqueleto de `app/` con el stack acordado, tema de la guía de diseño,
-  `lang="es"`.
-- [x] Formato de mazo v1 copiado del Trivial (37 tests suyos incluidos).
-- [x] Tres mazos incluidos: CDI Tema 1 y Tema 2 (240 preguntas cada uno, con
-  dificultad y explicación) e Industria 4.0 (60, **sin dificultad ni
-  explicaciones**).
-- [x] Biblioteca: importar (validado), exportar y borrar importados.
-- [x] Configuración de partida y resumen; selección al azar sin repetir.
-- [x] 70 tests, tipos, lint y compilación sin errores. Pantalla comprobada en
-  Chrome sin ventana a 1920×1080.
+- [x] Motor de partida puro con reloj inyectado; puntuación, rachas, ranking
+  con subidas y bajadas, estadísticas del podio y CSV.
+- [x] Transporte propio con versión local (BroadcastChannel) y mensajes
+  validados con zod.
+- [x] Árbitro en el navegador del profesor, persistencia y reconexión del
+  profesor y de los móviles.
+- [x] Pantallas del proyector (sala con QR, pregunta, respuesta y top 5,
+  podio, tabla con CSV) y del móvil (unirse, esperando, responder,
+  resultado, final).
+- [x] 137 tests (incluida una partida simulada con 30 jugadores); tipos,
+  lint y compilación sin errores; partida de 5 preguntas con proyector y 3
+  móviles en Chrome sin ventana (33 comprobaciones).
 
 Pendiente:
 
-- [ ] **Fase 3**: Ably (cuenta, función de tokens en Vercel), sala de espera,
-  motor de partida en el navegador del profesor, pantallas del móvil.
-- [ ] La partida preparada aún no se guarda: si se recarga la página, se
-  pierde (la persistencia llega con el motor en la fase 3).
+- [ ] **Fase 3B**: transporte con Ably (cuenta, función de tokens en Vercel,
+  permisos por canal: los móviles solo publican al profesor).
+- [ ] 3B: guardar la identidad del alumno en **localStorage** en los móviles
+  reales (hoy sessionStorage, para que cada pestaña sea un alumno): algunos
+  móviles cierran la pestaña al cambiar de aplicación y se perdería.
+- [ ] 3B: el QR usa la dirección con la que se abrió la página del profesor;
+  en `localhost` no sirve para móviles reales.
+- [ ] 3B: con BroadcastChannel cualquier pestaña podría hacerse pasar por el
+  profesor (solo afecta a la prueba local); en Ably lo impedirán los
+  permisos del token.
+- [ ] 3B: volumen de mensajes para el plan gratuito de Ably: en la
+  simulación, unos 141 mensajes del profesor por pregunta con 30 jugadores
+  (uno personal por respuesta, al cerrar y al pasar de pregunta).
+- [ ] Un alumno expulsado puede volver desde otra pestaña con otra
+  identidad; el profesor puede volver a expulsarlo.
 - [ ] La v1 (`server.js`) sigue en la raíz hasta la fase 4.
 - [ ] Industria 4.0 no tiene dificultades ni explicaciones: con él solo se
   ofrece «Todas» y no se muestran explicaciones. Habría que completarlo en el
   Trivial y volver a copiarlo.
+- [ ] El selector de número de preguntas no ofrece menos de 10 (la
+  verificación juega 5 con un mazo de 6 preguntas y una categoría quitada).

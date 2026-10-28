@@ -8,7 +8,7 @@ En este repositorio conviven dos versiones mientras dura la reescritura:
 
 | | Dónde | Estado |
 |---|---|---|
-| **Aula Quiz** (v2) | carpeta `app/` | En desarrollo (fase 2 de 6): mazos y configuración de partida. Aún no se puede jugar. |
+| **Aula Quiz** (v2) | carpeta `app/` | En desarrollo (fase 3A de 6): se juega una partida completa entre pestañas del mismo navegador. Aún no con móviles reales (llega con Ably en la 3B). |
 | **NeuroQuiz** (v1) | raíz (`server.js`, `index.html`) | Funciona: genera las preguntas con IA desde un PDF. |
 
 Plan y estado: `CLAUDE.md`. Guía de diseño: `docs/diseno-aula-quiz.md`.
@@ -21,6 +21,7 @@ Plan y estado: `CLAUDE.md`. Guía de diseño: `docs/diseno-aula-quiz.md`.
   también con Node 25, pero `npm install` mostrará un aviso `EBADENGINE`
   (solo informativo) porque no es la versión indicada.
 - No necesita claves ni cuentas en esta fase.
+- Google Chrome, solo para los scripts de comprobación de `app/scripts/`.
 
 ### Arranque
 
@@ -35,6 +36,14 @@ Abre `http://localhost:5173` (pensado para el proyector, a 1920×1080).
 Otros comandos: `npm test`, `npm run lint`, `npm run typecheck`,
 `npm run build`, `npm run preview` y `npm run validar-mazos`.
 
+Partida de prueba automática en Chrome sin ventana (proyector y 3 móviles):
+
+```bash
+npm run build
+npx vite preview --port 4173 --strictPort   # en otra terminal
+node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
+```
+
 ### Qué se puede hacer hoy
 
 1. **Elegir mazo.** Vienen incluidos dos temas de Comercio Digital
@@ -45,8 +54,42 @@ Otros comandos: `npm test`, `npm run lint`, `npm run typecheck`,
 3. **Configurar la partida:** categorías, número de preguntas (10, 15, 20, 30
    o todas), dificultad, segundos por pregunta (10, 20, 30 o 60) y si se
    muestra la explicación. Solo se ofrecen combinaciones posibles.
-4. **Crear partida:** elige las preguntas al azar y muestra un resumen. La sala
-   de espera y el juego en los móviles llegan en la fase 3.
+4. **Crear partida:** elige las preguntas al azar y muestra un resumen.
+5. **Abrir sala:** PIN de 6 cifras y QR. Los alumnos entran con su nombre
+   (los repetidos se numeran) y el profesor puede expulsar desde la sala.
+6. **Jugar:** pregunta con cuenta atrás; se cierra al acabar el tiempo o al
+   responder todos. Luego, votos, la correcta, «Por qué» y el top 5. Puntos
+   por rapidez: entre 1000 (al instante) y 500 (en el último segundo).
+   Controles: Empezar, Siguiente, Saltar pregunta y Terminar.
+7. **Final:** podio con tres datos de la clase y tabla de todos, descargable
+   en CSV (se abre bien en Excel).
+8. **Recargas:** si el alumno recarga, vuelve solo con sus puntos; si
+   recarga el profesor, se le ofrece continuar la partida.
+
+### Cómo probarlo con varias pestañas
+
+Hoy los «móviles» son pestañas del mismo navegador (se comunican con
+BroadcastChannel). Todas en el **mismo navegador y el mismo perfil**.
+
+1. `cd app && npm run dev` y abre `http://localhost:5173` (el proyector).
+2. Elige un mazo, configura (con 10 s por pregunta se prueba antes) y pulsa
+   **Crear partida** y luego **Abrir sala**. Apunta el PIN.
+3. Abre otra pestaña con `http://localhost:5173/#/jugar/PIN` (cambia PIN por
+   el número). Para verla como un móvil, abre las herramientas de
+   desarrollo (Cmd+Opción+I) y activa la vista de dispositivo (Cmd+Mayús+M).
+4. Escribe un nombre y pulsa **Entrar**. Repite en dos o tres pestañas más
+   (cada pestaña es un alumno distinto; prueba a repetir un nombre).
+5. Vuelve al proyector: verás los nombres. Pulsa **Empezar**.
+6. Responde en cada pestaña de móvil. Si responden todos, la pregunta se
+   cierra sola; si no, al acabar el tiempo.
+7. Prueba a **recargar un móvil** a mitad de pregunta: vuelve con sus puntos.
+   Prueba a **recargar el proyector**: pulsa **Continuar partida**.
+8. Al final, **Ver resultados de todos** y **Descargar CSV**.
+
+Consejo: si una pestaña de móvil está en segundo plano, el navegador puede
+retrasar su cuenta atrás, pero la hora que cuenta es la del proyector.
+Para empezar de cero, en el proyector usa **Nueva partida** o **Cancelar
+partida**.
 
 ## NeuroQuiz (v1, raíz)
 
