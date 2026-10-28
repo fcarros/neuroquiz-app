@@ -15,7 +15,7 @@ import { DIFICULTADES, nombresCategorias, type Dificultad, type Mazo, type Pregu
 export type FiltroDificultad = 'todas' | Dificultad;
 export type Cantidad = number | 'todas';
 
-export const CANTIDADES: readonly Cantidad[] = [10, 15, 20, 30, 'todas'];
+export const CANTIDADES: readonly Cantidad[] = [5, 10, 15, 20, 30, 'todas'];
 export const FILTROS_DIFICULTAD: readonly FiltroDificultad[] = ['todas', ...DIFICULTADES];
 export const SEGUNDOS = [10, 20, 30, 60] as const;
 export type Segundos = typeof SEGUNDOS[number];

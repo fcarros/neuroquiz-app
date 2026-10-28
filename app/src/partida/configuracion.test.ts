@@ -42,10 +42,11 @@ describe('filtros', () => {
 
     it('número: se ofrecen solo los que caben en las categorías elegidas', () => {
         const ofrecidos = (cats: readonly ColorId[]) => opcionesCantidad(m, cats).filter(o => o.posible).map(o => o.valor);
-        expect(ofrecidos(['azul'])).toEqual([10, 'todas']);
-        expect(ofrecidos(['azul', 'rosa'])).toEqual([10, 15, 20, 'todas']);
-        expect(ofrecidos(IDS_COLOR)).toEqual([10, 15, 20, 30, 'todas']);
+        expect(ofrecidos(['azul'])).toEqual([5, 10, 'todas']);
+        expect(ofrecidos(['azul', 'rosa'])).toEqual([5, 10, 15, 20, 'todas']);
+        expect(ofrecidos(IDS_COLOR)).toEqual([5, 10, 15, 20, 30, 'todas']);
         expect(opcionesCantidad(m, ['azul']).find(o => o.valor === 'todas')!.preguntas).toBe(10);
+        expect(prepararPartida(m, config({ cantidad: 5 }), 1).preguntas).toHaveLength(5);
     });
 
     it('dificultad: se ofrecen solo las que cubren el número elegido', () => {

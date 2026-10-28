@@ -3,8 +3,8 @@ import { crearMazo } from '../mazo/pruebas';
 import { CONFIGURACION_INICIAL, prepararPartida, type PartidaPreparada, type Segundos } from '../partida/configuracion';
 import { crearEstado, reducir, type Accion, type EstadoPartida } from './estado';
 
-/** Partida de `n` preguntas (10, 15, 20 o 30) del mazo de prueba. */
-export function partidaDePrueba(n: 10 | 15 | 20 | 30 = 10, segundos: Segundos = 20): PartidaPreparada {
+/** Partida de `n` preguntas (5, 10, 15, 20 o 30) del mazo de prueba. */
+export function partidaDePrueba(n: 5 | 10 | 15 | 20 | 30 = 10, segundos: Segundos = 20): PartidaPreparada {
     return prepararPartida(crearMazo(), { ...CONFIGURACION_INICIAL, cantidad: n, segundos }, 42);
 }
 
