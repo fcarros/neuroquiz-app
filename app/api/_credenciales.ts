@@ -3,7 +3,7 @@ import * as Ably from 'ably';
 import { z } from 'zod';
 import {
     CLIENTE_PROFESOR, PATRON_CLAVE, PATRON_PIN, canalJugador, canalProfesor, canalTodos, canalesSala, idDeSecreto,
-} from '../src/transporte/canales';
+} from '../src/transporte/canales.js';
 
 /**
  * Credenciales temporales de Ably (lógica de `api/ably-token.ts`, aparte

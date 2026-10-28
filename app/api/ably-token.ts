@@ -1,4 +1,4 @@
-import { atenderPeticion, entornoDeProceso } from './_credenciales';
+import { atenderPeticion, entornoDeProceso } from './_credenciales.js';
 
 /**
  * POST /api/ably-token: credenciales temporales de Ably para el profesor o
