@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/bricolage-grotesque';
+@import '@fontsource-variable/figtree';
+
+/* Colores y tipografía de docs/diseno-aula-quiz.md */
+@theme {
+    --color-fondo: #0c0e1a;
+    --color-superficie: #171a2b;
+    --color-superficie-2: #20243a;
+    --color-borde: #2c3150;
+    --color-texto: #f6f4ee;
+    --color-texto-2: #a9aec7;
+    --color-acento: #ffc53d;
+    --color-sobre-acento: #1a1405;
+    --color-correcto: #8bdc5b;
+    --color-correcto-fondo: #1c2b22;
+    --color-bajada: #ff8f75;
+
+    /* Opciones de respuesta: siempre con letra además de color. */
+    --color-opcion-a: #ff6b4a;
+    --color-opcion-b: #34c8ea;
+    --color-opcion-c: #ffc53d;
+    --color-opcion-d: #8bdc5b;
+    --color-sobre-opcion: #14101a;
+
+    --font-titulo: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+    --font-texto: 'Figtree Variable', system-ui, sans-serif;
+
+    --radius-tarjeta: 40px;
+    --radius-opcion: 28px;
+    --radius-opcion-movil: 20px;
+}
+
+@layer base {
+    html {
+        background-color: var(--color-fondo);
+        color: var(--color-texto);
+        font-family: var(--font-texto);
+    }
+
+    h1, h2, h3, button {
+        font-family: var(--font-titulo);
+    }
+}
+
+@utility cifras {
+    font-variant-numeric: tabular-nums;
+}
