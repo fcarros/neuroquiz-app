@@ -78,11 +78,24 @@ Conviven dos versiones hasta la fase 4:
   rompe rachas); «Terminar» va al podio (si la pregunta estaba abierta, no
   cuenta); se puede entrar tarde con 0 puntos; expulsar solo en la sala;
   nombres de hasta 15 caracteres, los repetidos se numeran («Ana 2»).
-- `src/transporte/`: interfaz `Transporte` propia (conectar a la sala,
-  enviar a todos, a un jugador, al profesor, recibir) y la versión local con
-  BroadcastChannel. `mensajes.ts`: esquemas zod; todo lo recibido se valida
-  y se descarta si no cumple. **Para pasar a Ably solo se añade otra
-  implementación de `Transporte`.**
+- `src/transporte/`: interfaz `Transporte` propia (crear sala, conectar,
+  enviar a todos, a un jugador, al profesor, recibir, estado de la red).
+  Dos versiones: `transporte.ts` (local, BroadcastChannel entre pestañas) y
+  `ably.ts` (Ably; la librería se carga solo si se usa). `elegir.ts`: local
+  por defecto en `npm run dev`, Ably en la web compilada; `?transporte=local`
+  o `?transporte=ably` fuerzan uno u otro. `canales.ts`: nombres de canal
+  (`aq:PIN:todos`, `aq:PIN:profesor`, `aq:PIN:j:ID`) e id del jugador
+  (resumen SHA-256 de su secreto). `limitador.ts`: el profesor no pasa de 25
+  envíos por segundo. `mensajes.ts`: esquemas zod; todo lo recibido se valida
+  y se descarta si no cumple. Detalle, límites y cálculos:
+  `docs/decision-tiempo-real.md` («Ably en Aula Quiz»).
+- `api/ably-token.ts` (función de Vercel; lógica en `api/_credenciales.ts`):
+  elige el PIN y firma la prueba de profesor (HMAC, 12 h), y emite
+  TokenRequest de Ably con permisos mínimos por rol. Variables:
+  `ABLY_API_KEY` y `AULA_QUIZ_SECRETO_SALA` (en local, `app/.env.local`,
+  ignorado por git; `npm run dev` y `preview` sirven la función desde
+  `vite.config.ts`). Las importaciones relativas de `api/` llevan `.js`
+  (Node con módulos ES en Vercel).
 - `src/profesor/arbitro.ts`: une motor y transporte en la pestaña del
   profesor; envía a cada móvil solo lo que cambia de su vista y guarda la
   partida en localStorage (`aula-quiz:partida`, validada al leerla). Al
@@ -91,12 +104,20 @@ Conviven dos versiones hasta la fase 4:
 - `src/proyector/`: sala (PIN, QR con `qrcode-generator`), pregunta,
   respuesta con top 5, podio y tabla con CSV.
 - `src/alumno/cliente.ts`: el móvil sin interfaz (identidad, saludo con
-  reintentos, respuestas). Id público + secreto en **sessionStorage** (cada
-  pestaña es un alumno). `AppAlumno.tsx`: sus pantallas.
+  reintentos, respuestas, reenvío de una respuesta perdida, nuevo saludo al
+  reconectar). Identidad por sala (`aula-quiz:jugador:PIN`): con Ably en
+  **localStorage**, en local en sessionStorage (cada pestaña es un alumno).
+  `AppAlumno.tsx`: sus pantallas, con el aviso «Reconectando…».
 - `scripts/`: comprobaciones con Chrome sin ventana (protocolo DevTools, sin
   dependencias). `captura-configuracion.mjs` (fase 2) y
   `partida-pestanas.mjs` (proyector + 3 móviles, partida de 5 preguntas con
-  el mazo `scripts/datos/mazo-verificacion.json`).
+  el mazo `scripts/datos/mazo-verificacion.json`; `TRANSPORTE=ably` para
+  hacerlo con Ably, con un contexto aislado por móvil). Capturas e informes
+  en `app/capturas/` (ignorado por git).
+- `pruebas/`: tests que juntan función y transporte (`ablyFalso.ts`, un
+  doble de Ably que aplica los permisos firmados) y la prueba contra Ably de
+  verdad (`ably.real.test.ts`, fuera de `npm test`).
+- `vercel.json`: publicación (Vite, `npm ci`, `dist`).
 
 ## Formato de mazo (copia del Trivial)
 
@@ -113,8 +134,8 @@ comprobarlo en `app/src/mazo/ORIGEN.md`. Documentación: `docs/formato-mazo.md`.
 2. Nuevo proyecto, mazos y configuración de partida ✓
 3. Tiempo real y motor de partida
    - 3A. Motor, pantallas y conexión local entre pestañas ✓
-   - 3B. Ably ← siguiente
-4. Publicación en Vercel y prueba de carga
+   - 3B. Ably y publicación en Vercel ✓ (falta enlazar el repositorio, ver Estado)
+4. Prueba de carga y retirada de la v1 ← siguiente
 5. Interfaz
 6. Generador desde PDF
 
@@ -132,7 +153,9 @@ npm run lint           # ESLint, sin avisos permitidos
 npm run typecheck      # tipos (tsc -b)
 npm run validar-mazos  # validar los mazos de app/mazos/
 # Con `npm run build && npx vite preview --port 4173 --strictPort` en marcha:
-node scripts/partida-pestanas.mjs http://localhost:4173/ <carpeta-capturas>
+node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
+TRANSPORTE=ably node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
+npm run prueba:ably    # partida real contra Ably: 30 jugadores, 10 preguntas
 ```
 
 Versión antigua (desde la raíz):
@@ -177,43 +200,40 @@ El servidor arranca sin ella, pero `/upload` devuelve error.
 
 ## Estado
 
-Fases 1, 2 y 3A cerradas (rama `v2`, 2026-10-28). Siguiente: fase 3B (Ably).
+Fases 1, 2, 3A y 3B cerradas (rama `v2`, 2026-10-28), salvo la publicación:
+el proyecto de Vercel no se pudo crear porque la integración de GitHub de
+Vercel no tiene acceso a `fcarros/neuroquiz-app`.
 
-Hecho en la fase 3A:
+Hecho en la fase 3B:
 
-- [x] Motor de partida puro con reloj inyectado; puntuación, rachas, ranking
-  con subidas y bajadas, estadísticas del podio y CSV.
-- [x] Transporte propio con versión local (BroadcastChannel) y mensajes
-  validados con zod.
-- [x] Árbitro en el navegador del profesor, persistencia y reconexión del
-  profesor y de los móviles.
-- [x] Pantallas del proyector (sala con QR, pregunta, respuesta y top 5,
-  podio, tabla con CSV) y del móvil (unirse, esperando, responder,
-  resultado, final).
-- [x] 137 tests (incluida una partida simulada con 30 jugadores); tipos,
-  lint y compilación sin errores; partida de 5 preguntas con proyector y 3
-  móviles en Chrome sin ventana (33 comprobaciones).
+- [x] Función de credenciales (`api/ably-token.ts`) con permisos mínimos por
+  rol y prueba HMAC de profesor; secreto en `app/.env.local`.
+- [x] Transporte con Ably detrás de la interfaz, con limitador; transporte
+  local para desarrollo; `?transporte=` para elegir.
+- [x] Identidad por sala en localStorage, aviso «Reconectando…» en móvil y
+  proyector, aviso en la sala si la dirección del QR no sirve para móviles.
+- [x] 5 en las opciones de número de preguntas.
+- [x] 175 tests; prueba real contra Ably (30 jugadores, 10 preguntas,
+  recargas): ≈ 2 800 mensajes, pregunta → móvil 46 ms de mediana.
+- [x] `vercel.json`.
 
 Pendiente:
 
-- [ ] **Fase 3B**: transporte con Ably (cuenta, función de tokens en Vercel,
-  permisos por canal: los móviles solo publican al profesor).
-- [ ] 3B: guardar la identidad del alumno en **localStorage** en los móviles
-  reales (hoy sessionStorage, para que cada pestaña sea un alumno): algunos
-  móviles cierran la pestaña al cambiar de aplicación y se perdería.
-- [ ] 3B: el QR usa la dirección con la que se abrió la página del profesor;
-  en `localhost` no sirve para móviles reales.
-- [ ] 3B: con BroadcastChannel cualquier pestaña podría hacerse pasar por el
-  profesor (solo afecta a la prueba local); en Ably lo impedirán los
-  permisos del token.
-- [ ] 3B: volumen de mensajes para el plan gratuito de Ably: en la
-  simulación, unos 141 mensajes del profesor por pregunta con 30 jugadores
-  (uno personal por respuesta, al cerrar y al pasar de pregunta).
-- [ ] Un alumno expulsado puede volver desde otra pestaña con otra
+- [ ] Dar acceso a la integración de Vercel en GitHub al repositorio,
+  crear el proyecto `aula-quiz` (raíz `app`, rama de producción `v2`) y
+  añadir `ABLY_API_KEY` y `AULA_QUIZ_SECRETO_SALA` en el panel; luego
+  desplegar y comprobar la web publicada.
+- [ ] Comprobar en el panel de Ably que no hay reglas de persistencia
+  (Settings → Rules).
+- [ ] Probar con móviles reales en clase.
+- [ ] El limitador hace que algunos alumnos vean su resultado hasta ~1 s
+  después que el resto (cierre de 31 envíos a 25/s). Si molesta, se puede
+  subir a 40/s o enviar los resultados en un solo mensaje común.
+- [ ] Si la función elige un PIN ya en uso, chocarían dos salas
+  (improbable; comprobarlo exigiría el permiso `channel-metadata`).
+- [ ] Un alumno expulsado puede volver desde otro navegador con otra
   identidad; el profesor puede volver a expulsarlo.
 - [ ] La v1 (`server.js`) sigue en la raíz hasta la fase 4.
 - [ ] Industria 4.0 no tiene dificultades ni explicaciones: con él solo se
   ofrece «Todas» y no se muestran explicaciones. Habría que completarlo en el
   Trivial y volver a copiarlo.
-- [ ] El selector de número de preguntas no ofrece menos de 10 (la
-  verificación juega 5 con un mazo de 6 preguntas y una categoría quitada).

@@ -8,7 +8,7 @@ En este repositorio conviven dos versiones mientras dura la reescritura:
 
 | | Dónde | Estado |
 |---|---|---|
-| **Aula Quiz** (v2) | carpeta `app/` | En desarrollo (fase 3A de 6): se juega una partida completa entre pestañas del mismo navegador. Aún no con móviles reales (llega con Ably en la 3B). |
+| **Aula Quiz** (v2) | carpeta `app/` | En desarrollo (fase 3B de 6): partida completa con móviles reales por Ably; en desarrollo, también entre pestañas. |
 | **NeuroQuiz** (v1) | raíz (`server.js`, `index.html`) | Funciona: genera las preguntas con IA desde un PDF. |
 
 Plan y estado: `CLAUDE.md`. Guía de diseño: `docs/diseno-aula-quiz.md`.
@@ -20,7 +20,17 @@ Plan y estado: `CLAUDE.md`. Guía de diseño: `docs/diseno-aula-quiz.md`.
 - Node.js 24 (el que usa Vercel; fijado en `app/.nvmrc` y `engines`). Funciona
   también con Node 25, pero `npm install` mostrará un aviso `EBADENGINE`
   (solo informativo) porque no es la versión indicada.
-- No necesita claves ni cuentas en esta fase.
+- Para jugar con móviles reales (Ably), `app/.env.local` con dos variables
+  (nunca se suben al repositorio):
+
+  ```
+  ABLY_API_KEY=…                # clave de Ably con Publish, Subscribe y Presence
+  AULA_QUIZ_SECRETO_SALA=…      # secreto para firmar las salas; se genera con:
+  # node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"
+  ```
+
+  Sin ellas, `npm run dev` funciona igual con el transporte local
+  (pestañas).
 - Google Chrome, solo para los scripts de comprobación de `app/scripts/`.
 
 ### Arranque
@@ -31,7 +41,10 @@ npm install
 npm run dev
 ```
 
-Abre `http://localhost:5173` (pensado para el proyector, a 1920×1080).
+Abre `http://localhost:5173` (pensado para el proyector, a 1920×1080). En
+`npm run dev` se usa el transporte local (pestañas); con
+`http://localhost:5173/?transporte=ably` se usa Ably. La web compilada y
+publicada usa Ably por defecto.
 
 Otros comandos: `npm test`, `npm run lint`, `npm run typecheck`,
 `npm run build`, `npm run preview` y `npm run validar-mazos`.
@@ -51,7 +64,7 @@ node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
 2. **Importar un mazo** propio (`.json`, formato de Aula Trivial, ver
    `docs/formato-mazo.md`). Se valida y se guarda en ese navegador. Los
    importados se pueden exportar y borrar.
-3. **Configurar la partida:** categorías, número de preguntas (10, 15, 20, 30
+3. **Configurar la partida:** categorías, número de preguntas (5, 10, 15, 20, 30
    o todas), dificultad, segundos por pregunta (10, 20, 30 o 60) y si se
    muestra la explicación. Solo se ofrecen combinaciones posibles.
 4. **Crear partida:** elige las preguntas al azar y muestra un resumen.
@@ -71,7 +84,8 @@ node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
 Hoy los «móviles» son pestañas del mismo navegador (se comunican con
 BroadcastChannel). Todas en el **mismo navegador y el mismo perfil**.
 
-1. `cd app && npm run dev` y abre `http://localhost:5173` (el proyector).
+1. `cd app && npm run dev` y abre `http://localhost:5173` (el proyector,
+   con el transporte local).
 2. Elige un mazo, configura (con 10 s por pregunta se prueba antes) y pulsa
    **Crear partida** y luego **Abrir sala**. Apunta el PIN.
 3. Abre otra pestaña con `http://localhost:5173/#/jugar/PIN` (cambia PIN por
@@ -90,6 +104,22 @@ Consejo: si una pestaña de móvil está en segundo plano, el navegador puede
 retrasar su cuenta atrás, pero la hora que cuenta es la del proyector.
 Para empezar de cero, en el proyector usa **Nueva partida** o **Cancelar
 partida**.
+
+### Cómo probarlo con móviles reales
+
+Con la web publicada en Vercel (o, para una prueba rápida, `npm run dev --
+--host` en el ordenador y los móviles en la misma wifi: la dirección `http://`
+de la red local no es segura y algunos navegadores no permiten ahí el cálculo
+del id del alumno, así que lo fiable es la web publicada).
+
+1. En el ordenador del proyector, abre la web publicada, prepara la partida
+   y pulsa **Abrir sala**.
+2. Con cada móvil, escanea el QR (o abre la web y escribe el PIN). Escribe un
+   nombre y pulsa **Entrar**.
+3. Pulsa **Empezar** en el proyector y responde desde los móviles.
+4. Prueba a bloquear un móvil unos segundos o a recargarlo: aparece
+   «Reconectando…» y vuelve con sus puntos. Prueba también a recargar el
+   proyector y pulsar **Continuar partida**.
 
 ## NeuroQuiz (v1, raíz)
 

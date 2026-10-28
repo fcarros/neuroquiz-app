@@ -7,6 +7,9 @@ fuente oficial consultada.
 **Decisión tomada (2026-10-28): Ably.** Fran eligió la recomendación de este
 documento; se integra en la fase 3.
 
+> **Implementado en la fase 3B (2026-10-28).** Cómo se usa Ably, límites,
+> cálculos y privacidad: sección «Ably en Aula Quiz», al final.
+
 ## Qué necesitamos
 
 - Una clase: hasta **31 conexiones** (30 móviles + proyector) a la vez.
@@ -248,3 +251,101 @@ Lo que **no** se conserva:
 - El flujo de subida de PDF. Vuelve en la fase 6, protegido.
 - El estado identificado por `socket.id`.
 - Los textos en inglés.
+
+# Ably en Aula Quiz (fase 3B)
+
+## Canales y permisos
+
+Ningún nombre de canal lleva datos personales: solo el PIN y el id aleatorio
+del jugador (un resumen SHA-256 de su secreto).
+
+| Canal | Publica | Escucha |
+|---|---|---|
+| `aq:PIN:todos` | profesor | todos los móviles de la sala |
+| `aq:PIN:profesor` | móviles | solo el profesor |
+| `aq:PIN:j:ID` | profesor | solo ese jugador |
+
+Las credenciales son TokenRequest firmados por `app/api/ably-token.ts` (la
+clave de Ably no sale del servidor) y duran 1 h; la librería las renueva:
+
+- **Jugador:** `subscribe` en `todos` y en su canal, `publish` en `profesor`.
+  Su `clientId` es su id, calculado por la función a partir del secreto: sin
+  el secreto no se puede escuchar el canal de otro. Ably pone el `clientId`
+  en cada mensaje y el profesor descarta los que no cuadran con el id que
+  dicen tener.
+- **Profesor:** `publish`, `subscribe` y `presence` en `aq:PIN:*` (su sala).
+  Solo con la prueba que la función entregó al crear la sala: HMAC-SHA256 de
+  PIN y caducidad (12 h) con `AULA_QUIZ_SECRETO_SALA`. El PIN lo elige la
+  función, así que nadie puede «crear» la sala de otro.
+- Nadie tiene `history`, y la clave tampoco (Publish, Subscribe y Presence).
+
+Riesgo aceptado: la función no comprueba si el PIN que elige ya está en uso
+(haría falta el permiso `channel-metadata`). Con 900 000 PIN posibles y unas
+pocas salas abiertas, la probabilidad es despreciable.
+
+## Privacidad
+
+- Ably guarda los mensajes **2 minutos** por defecto, para que un móvil que
+  pierde la conexión un momento recupere lo que se perdió. No se puede quitar.
+- El historial persistente solo existe si se activa con una regla de canal.
+  No hay que crear ninguna. Comprobarlo en el panel de Ably: la app →
+  **Settings** → **Rules** (reglas de canal): no debe haber ninguna regla con
+  **Persist all messages** ni **Persist last message** activado para `aq` ni
+  para todos los canales.
+- Viajan los nombres que escriben los alumnos (por eso la pantalla recomienda
+  nombre de pila o apodo), sus respuestas y sus puntos. Nada más.
+
+## Límites del plan gratuito y cálculos
+
+Fuente: <https://ably.com/docs/platform/pricing/limits> (consultada el
+2026-10-28).
+
+| Límite (Free) | Valor | Uso con 30 jugadores |
+|---|---|---|
+| Conexiones simultáneas | 200 | 31 |
+| Canales simultáneos | 200 | 32 (2 + 1 por jugador) |
+| Mensajes al mes / por hora | 6 000 000 / 250 000 | ≈ 2 800 por partida de 10 preguntas (medido) |
+| Publicación por canal | 50/s | `profesor`: hasta 30 en ráfaga si responden todos a la vez |
+| Entrada por conexión (lo que publica el profesor) | 50/s | limitado a **25/s** |
+| Salida por conexión (lo que recibe el profesor) | 50/s | hasta 30/s en la ráfaga de respuestas |
+| Conexiones nuevas | 42/s | los alumnos entran a lo largo de segundos |
+| Tamaño de mensaje | 64 KiB | menos de 2 KiB |
+
+Ably cuenta cada mensaje publicado más una entrega por cada suscriptor.
+Por pregunta, con 30 jugadores:
+
+- abrir la pregunta: 1 vista común entregada a 30 → 31;
+- respuestas: 30 publicadas + 30 entregadas al profesor → 60;
+- confirmaciones: 30 + 30 → 60;
+- cerrar: 1 vista común a 30 (31) + 30 resultados personales (60) → 91.
+
+Total ≈ 240 por pregunta; más las entradas a la sala. La prueba real
+(`npm run prueba:ably`, 10 preguntas, 30 jugadores, una recarga de móvil y
+otra de profesor) consumió **2 769 mensajes**: el cupo mensual da para unas
+2 000 partidas así.
+
+Cómo se mantiene lejos de los límites:
+
+- **Limitador en el profesor** (`src/transporte/limitador.ts`): como mucho
+  25 envíos en cualquier ventana de un segundo (la mitad del límite). Si hay
+  uno pendiente para el mismo destino y tipo, el nuevo ocupa su sitio. Al
+  cerrar, sale primero la vista común con la correcta y luego los resultados.
+- **Solo se envía lo que cambia** de la vista de cada móvil. «X han
+  respondido» no viaja: lo pinta solo el proyector. El número de jugadores no
+  va en la vista de la sala, y el último resultado se mantiene al abrir la
+  siguiente pregunta: así no hay que reenviar la vista de los 30.
+- No se usa presence.
+
+## Latencias medidas (prueba real, 2026-10-28, desde un Mac en España)
+
+| Momento | Mediana | p95 | Máx. |
+|---|---|---|---|
+| Entrar en la sala | 625 ms | 962 ms | 965 ms |
+| Pregunta abierta → móvil | 46 ms | 74 ms | 78 ms |
+| Respuesta → confirmación del profesor | 93 ms | 1 149 ms | 1 800 ms |
+| Cierre → resultado en el móvil | 646 ms | 1 045 ms | 1 182 ms |
+
+Los valores altos de las dos últimas filas son el limitador repartiendo el
+cierre (31 envíos a 25/s): unos cuantos alumnos ven su resultado hasta ~1 s
+después que el resto. Mientras tanto, su móvil ya muestra la correcta.
+
