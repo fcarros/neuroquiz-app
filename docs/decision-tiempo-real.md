@@ -4,8 +4,8 @@ Fase 1 · Documentación consultada el **2026-10-27** en las webs oficiales de
 cada servicio (enlaces en cada fila). «No confirmado» = no aparece en ninguna
 fuente oficial consultada.
 
-**Decisión pendiente de Fran antes de la fase 3.** Este documento recomienda,
-no elige.
+**Decisión tomada (2026-10-28): Ably.** Fran eligió la recomendación de este
+documento; se integra en la fase 3.
 
 ## Qué necesitamos
 
@@ -219,8 +219,9 @@ api/token.ts   # función de Vercel para credenciales temporales (si aplica)
 
 1. **Fase 2 (recomendado para empezar):** copiar el esquema zod del Trivial a
    `src/mazo/` sin tocar los nombres de los campos y con los mismos tests. Para
-   NeuroQuiz, `categorias` y `color` son opcionales o se ignoran. Así un mazo
-   válido en un juego es válido en el otro.
+   Aula Quiz se exigen igual (mismo validador, mismas reglas): las categorías
+   sirven de filtro al configurar la partida y sus colores no se muestran.
+   Así un mazo válido en un juego es válido en el otro.
 2. **Más adelante:** extraerlo a un paquete común, por ejemplo un repositorio
    `aula-mazos` con el esquema y los mazos, que los dos juegos importen. La
    forma exacta (paquete npm privado, dependencia git o monorepo) se decide
@@ -231,7 +232,7 @@ api/token.ts   # función de Vercel para credenciales temporales (si aplica)
 | Conservar | De dónde | Cómo |
 |---|---|---|
 | Paleta y tokens (fondo `#0f172a`, neón azul y morado, rojo, azul, amarillo y verde) | `styles.css:7-21` | Como tema de Tailwind |
-| Bloques de opción con forma (▲◆●■) y color | `styles.css:135-162`, `index.html:143-146` | Componente `Opcion` |
+| Bloques de opción con color (sin las formas ▲◆●■: la identidad es **letra A-D + color**, ver `docs/diseno-aula-quiz.md`) | `styles.css:135-162`, `index.html:143-146` | Componente `Opcion` |
 | Rejilla 2×2 del móvil a pantalla casi completa, con el amarillo en texto oscuro | `index.html:159-164`, `styles.css:165-195` | Componente `BotonesAlumno` |
 | Temporizador circular en SVG con cambio de color | `index.html:127-135,346-381` | Componente `Temporizador`, que ya no se encarga de medir el tiempo |
 | Pantalla de resultados: pregunta, correcta resaltada, barras y top | `index.html:182-223,438-488` | Se mantiene, y se añade la `explicacion` del mazo |

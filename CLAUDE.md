@@ -28,7 +28,8 @@ fase: `docs/prompts/`.
 - **Los móviles solo envían su respuesta**. Nunca reciben la correcta antes de
   que el profesor la revele. Cada alumno tiene un identificador secreto para
   que nadie responda por otro y puede volver a entrar con su puntuación.
-- **Servicio de tiempo real externo y gratuito** que solo transporta mensajes.
+- **Servicio de tiempo real externo y gratuito: Ably** (plan Free, decidido el
+  2026-10-28; ver `docs/decision-tiempo-real.md`). Solo transporta mensajes.
   Ninguna clave privada en el frontend: si hace falta, una función pequeña de
   Vercel emite credenciales temporales.
 - **Mazos de preguntas guardados** con el formato de «Aula Trivial» (v1), para
@@ -94,4 +95,4 @@ Fase 1 en curso (rama `v2`).
 - [x] README reescrito.
 - [x] `docs/decision-tiempo-real.md`: comparativa (recomendación: Ably; alternativa: Firebase) y propuesta de stack.
 - [x] Verificado que la v1 sigue arrancando igual.
-- [ ] **Pendiente de Fran**: elegir servicio de tiempo real antes de la fase 3.
+- [x] Servicio de tiempo real elegido: **Ably** (2026-10-28). Se integra en la fase 3; no usarlo antes.
