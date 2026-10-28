@@ -1,0 +1,119 @@
+{
+  "formato": 1,
+  "id": "verificacion-5",
+  "titulo": "Verificación (preguntas largas)",
+  "modulo": "Pruebas",
+  "descripcion": "Mazo para el script de verificación: la pregunta más larga de cada categoría de CDI Tema 1.",
+  "categorias": [
+    {
+      "color": "azul",
+      "nombre": "Globalización y comercio digital"
+    },
+    {
+      "color": "rosa",
+      "nombre": "Conceptos y modelos"
+    },
+    {
+      "color": "amarillo",
+      "nombre": "Marketing digital"
+    },
+    {
+      "color": "marron",
+      "nombre": "El cliente online"
+    },
+    {
+      "color": "verde",
+      "nombre": "Desafíos"
+    },
+    {
+      "color": "naranja",
+      "nombre": "Instituciones"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "p031",
+      "color": "azul",
+      "enunciado": "Un fabricante de maquinaria de Ourense va a ferias desde hace años. Su gerente cree que con una tienda en línea ya sobran. ¿Qué le responderías?",
+      "opciones": [
+        "Que deje las ferias y venda solo en marketplaces",
+        "Que tiene razón: las ferias son obsoletas con internet",
+        "Que las ferias solo sirven ya para vender a la administración",
+        "Que ferias y distribuidores siguen siendo útiles"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El tema insiste en que los canales tradicionales siguen siendo útiles y conviven con los digitales."
+    },
+    {
+      "id": "p079",
+      "color": "rosa",
+      "enunciado": "Una editorial de Santiago publica su catálogo en PDF en la web, pero atiende los pedidos por teléfono. ¿Qué le falta para hacer comercio electrónico?",
+      "opciones": [
+        "Llevar el registro de pedidos en una hoja de cálculo",
+        "Organizar subastas electrónicas de sus libros",
+        "Pasar a un modelo de venta a la administración",
+        "Que la compraventa se haga por medios electrónicos"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Tener un PDF es digitalización; el comercio electrónico exige la transacción electrónica."
+    },
+    {
+      "id": "p116",
+      "color": "amarillo",
+      "enunciado": "Un fabricante de piezas de Vigo vende a empresas en Polonia. Su socio quiere usar las mismas redes que usa con consumidores españoles. ¿Qué falla?",
+      "opciones": [
+        "Las redes útiles cambian según el país y el tipo de cliente",
+        "Las redes solo funcionan con anuncios de pago",
+        "En Polonia está prohibido hacer publicidad en redes sociales",
+        "Las redes sociales no sirven en ningún caso para vender"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Las plataformas donde está el público varían por país y por tipo de cliente."
+    },
+    {
+      "id": "p160",
+      "color": "marron",
+      "enunciado": "Una tienda de pesca asturiana tiene muchas visitas irlandesas y muchos productos en el carrito, pero casi ninguna compra terminada. ¿Dónde busca el fallo?",
+      "opciones": [
+        "En el descubrimiento: visibilidad en buscadores",
+        "En la consideración: falta de fichas técnicas",
+        "En la compra: proceso, precio final y medio de pago",
+        "En la posventa: seguimiento de los envíos"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Si ya llegan y llenan el carrito, se pierden al pagar."
+    },
+    {
+      "id": "p187",
+      "color": "verde",
+      "enunciado": "Un cliente suizo de una tienda de jamones recibe al llegar el paquete un cobro inesperado de tributos y lo rechaza. ¿Qué debió hacer la tienda?",
+      "opciones": [
+        "Cambiar de transportista para todos sus envíos a Suiza",
+        "Retirar la política de devoluciones de su tienda en línea",
+        "Enviar el jamón en un embalaje mucho más resistente",
+        "Elegir las condiciones de entrega e informar del precio total"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Fuera del mercado único hay tributos: hay que prever quién los paga e informarlo antes del pago."
+    },
+    {
+      "id": "p237",
+      "color": "naranja",
+      "enunciado": "Una pyme gallega quiere volver a pedir la ayuda del Igape que obtuvo hace años, con los mismos requisitos y sin mirar la convocatoria. ¿Qué riesgo corre?",
+      "opciones": [
+        "Que haya cambiado: las convocatorias varían cada año",
+        "Ninguno: las ayudas autonómicas no cambian nunca",
+        "Que el Igape solo conceda una ayuda por empresa",
+        "Que la ayuda haya pasado a gestionarla la OMC"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Las convocatorias concretas cambian cada año y hay que consultarlas en la fuente."
+    }
+  ]
+}

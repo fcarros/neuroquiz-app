@@ -48,7 +48,7 @@ export function Respuesta({ estado, onSiguiente, onTerminar }: Props) {
 
             <div className="flex min-h-0 flex-1 gap-6">
                 {explicacion ? (
-                    <section className="flex min-w-0 flex-1 flex-col gap-3 rounded-tarjeta border-2 border-correcto/40 bg-correcto-fondo px-10 py-7">
+                    <section className="flex min-w-0 flex-1 flex-col gap-3 self-start rounded-tarjeta border-2 border-correcto/40 bg-correcto-fondo px-10 py-7">
                         <h2 className="text-[30px] font-extrabold text-correcto">Por qué</h2>
                         <p className="font-texto text-[30px] leading-snug">{explicacion}</p>
                     </section>
@@ -68,7 +68,7 @@ export function Respuesta({ estado, onSiguiente, onTerminar }: Props) {
 
 function Top5({ marcadores }: { marcadores: Marcador[] }) {
     return (
-        <section className="flex w-[680px] shrink-0 flex-col gap-2 rounded-tarjeta bg-superficie px-8 py-6">
+        <section className="flex w-[680px] shrink-0 flex-col gap-2 self-start rounded-tarjeta bg-superficie px-8 py-6">
             <h2 className="text-[28px] font-extrabold">Top 5</h2>
             <ol className="flex flex-col gap-2">
                 {marcadores.map(m => (

@@ -78,6 +78,8 @@ describe('flujo completo', () => {
         let e = conTres();
         e = aplicar(e, responder(e, 'ana', correcta(e), T0 + 1_000), responder(e, 'bea', incorrecta(e), T0 + 1_000),
             responder(e, 'carlos', incorrecta(e), T0 + 1_000));
+        // Tras la primera pregunta no hay con qué comparar.
+        expect(clasificacion(e).map(m => m.puestoAnterior)).toEqual([null, null, null]);
         e = aplicar(e, { tipo: 'siguiente', ahora: T0 + 30_000 });
         e = aplicar(e, responder(e, 'bea', correcta(e), T0 + 30_000), responder(e, 'ana', incorrecta(e), T0 + 30_000),
             responder(e, 'carlos', correcta(e), T0 + 40_000));

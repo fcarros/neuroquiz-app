@@ -24,7 +24,7 @@ export interface Marcador {
     mejorRacha: number;
     /** Empatados a puntos comparten puesto. */
     puesto: number;
-    /** Puesto antes de la última pregunta jugada (null si no había ninguna). */
+    /** Puesto antes de la última pregunta jugada (null si es la primera: no hay con qué comparar). */
     puestoAnterior: number | null;
 }
 
@@ -65,7 +65,7 @@ export function clasificacion(estado: EstadoPartida): Marcador[] {
     const jugadas = preguntasJugadas(estado);
     const cuentas = contar(estado, jugadas);
     const ahora = puestos(estado, cuentas);
-    const antes = jugadas.length > 0 ? puestos(estado, contar(estado, jugadas.slice(0, -1))) : null;
+    const antes = jugadas.length > 1 ? puestos(estado, contar(estado, jugadas.slice(0, -1))) : null;
     return estado.jugadores
         .map((j): Marcador => ({
             id: j.id,
