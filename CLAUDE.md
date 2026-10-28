@@ -134,7 +134,7 @@ comprobarlo en `app/src/mazo/ORIGEN.md`. Documentación: `docs/formato-mazo.md`.
 2. Nuevo proyecto, mazos y configuración de partida ✓
 3. Tiempo real y motor de partida
    - 3A. Motor, pantallas y conexión local entre pestañas ✓
-   - 3B. Ably y publicación en Vercel ✓ (falta enlazar el repositorio, ver Estado)
+   - 3B. Ably y publicación en Vercel ✓
 4. Prueba de carga y retirada de la v1 ← siguiente
 5. Interfaz
 6. Generador desde PDF
@@ -200,9 +200,13 @@ El servidor arranca sin ella, pero `/upload` devuelve error.
 
 ## Estado
 
-Fases 1, 2, 3A y 3B cerradas (rama `v2`, 2026-10-28), salvo la publicación:
-el proyecto de Vercel no se pudo crear porque la integración de GitHub de
-Vercel no tiene acceso a `fcarros/neuroquiz-app`.
+Fases 1, 2, 3A y 3B cerradas (rama `v2`, 2026-10-28).
+
+Publicada en **https://aula-quiz-fawn.vercel.app** (proyecto de Vercel
+`aula-quiz`, aparte del Trivial; directorio raíz `app`, rama de producción
+`v2`: cada push a `v2` se publica). Variables `ABLY_API_KEY` y
+`AULA_QUIZ_SECRETO_SALA` en el panel, como secretas (el secreto de Vercel es
+distinto del de `.env.local`).
 
 Hecho en la fase 3B:
 
@@ -215,14 +219,13 @@ Hecho en la fase 3B:
 - [x] 5 en las opciones de número de preguntas.
 - [x] 175 tests; prueba real contra Ably (30 jugadores, 10 preguntas,
   recargas): ≈ 2 800 mensajes, pregunta → móvil 46 ms de mediana.
-- [x] `vercel.json`.
+- [x] `vercel.json` y proyecto en Vercel. Comprobado en la web publicada:
+  la función (permisos, 403 con la prueba de otra sala, 405, 400) y una
+  partida completa con proyector y 3 móviles por Ably, sin parámetros en la
+  dirección (`TRANSPORTE=publicada`).
 
 Pendiente:
 
-- [ ] Dar acceso a la integración de Vercel en GitHub al repositorio,
-  crear el proyecto `aula-quiz` (raíz `app`, rama de producción `v2`) y
-  añadir `ABLY_API_KEY` y `AULA_QUIZ_SECRETO_SALA` en el panel; luego
-  desplegar y comprobar la web publicada.
 - [ ] Comprobar en el panel de Ably que no hay reglas de persistencia
   (Settings → Rules).
 - [ ] Probar con móviles reales en clase.

@@ -107,7 +107,7 @@ partida**.
 
 ### Cómo probarlo con móviles reales
 
-Con la web publicada en Vercel (o, para una prueba rápida, `npm run dev --
+Con la web publicada en Vercel, **https://aula-quiz-fawn.vercel.app** (o, para una prueba rápida, `npm run dev --
 --host` en el ordenador y los móviles en la misma wifi: la dirección `http://`
 de la red local no es segura y algunos navegadores no permiten ahí el cálculo
 del id del alumno, así que lo fiable es la web publicada).

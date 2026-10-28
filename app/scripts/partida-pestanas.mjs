@@ -3,7 +3,8 @@
 // BroadcastChannel. Usa el protocolo DevTools con el WebSocket de Node, sin
 // dependencias.
 //
-// Uso (TRANSPORTE=ably para probar con Ably de verdad), con
+// Uso (TRANSPORTE=ably para probar con Ably de verdad; TRANSPORTE=publicada,
+// sin parámetro en la dirección, para la web publicada), con
 // `npm run build && npx vite preview --port 4173 --strictPort` en marcha:
 //   node scripts/partida-pestanas.mjs http://localhost:4173/ <carpeta-capturas>
 // Otra ruta de Chrome: variable CHROME.
@@ -23,8 +24,9 @@ if (!raiz || !carpeta) { console.error('Uso: node scripts/partida-pestanas.mjs <
 mkdirSync(carpeta, { recursive: true });
 // Por defecto, transporte local (pestañas del mismo navegador). Con TRANSPORTE=ably,
 // Ably de verdad: cada móvil va en un contexto aislado (su propio localStorage).
-const TRANSPORTE = process.env.TRANSPORTE === 'ably' ? 'ably' : 'local';
-const base = `${raiz.replace(/\/$/, '')}/?transporte=${TRANSPORTE}`;
+// TRANSPORTE=publicada: sin parámetro, como lo abre un alumno (la web compilada usa Ably).
+const TRANSPORTE = ['ably', 'publicada'].includes(process.env.TRANSPORTE) ? 'ably' : 'local';
+const base = process.env.TRANSPORTE === 'publicada' ? `${raiz.replace(/\/$/, '')}/` : `${raiz.replace(/\/$/, '')}/?transporte=${TRANSPORTE}`;
 const CHROME = process.env.CHROME ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const PUERTO = 9334;
 const MAZO = resolve(dirname(fileURLToPath(import.meta.url)), 'datos/mazo-verificacion.json');
@@ -170,6 +172,8 @@ try {
     comprobar(qr && qr.ancho >= 300 && qr.modulos > 200, `QR dibujado (${JSON.stringify(qr)})`);
     comprobar((await proyector.texto()).includes('Usa tu nombre de pila o un apodo'), 'la sala recomienda nombre de pila o apodo');
     const urlJugar = `${base}#/jugar/${pin}`;
+    const enQr = await proyector.evalua(`document.querySelector('svg[role=img]') && [...document.querySelectorAll('strong')].map(e => e.textContent).join(' | ')`);
+    console.log(`      dirección en la sala: ${enQr}`);
     console.log(`      PIN ${pin}; los móviles abren ${urlJugar}`);
     await compruebaQueCabe(proyector, 'sala vacía');
     await proyector.captura('01-proyector-sala-vacia.png');
