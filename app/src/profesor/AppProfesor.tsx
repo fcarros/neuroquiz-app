@@ -3,7 +3,7 @@ import { crearEstado, type EstadoPartida, type Fase } from '../motor/estado';
 import type { PartidaPreparada } from '../partida/configuracion';
 import { Preparacion } from '../partida/Preparacion';
 import { Proyector } from '../proyector/Proyector';
-import { crearTransporte } from '../transporte/elegir';
+import { crearTransporte, tipoTransporte } from '../transporte/elegir';
 import { BotonPrincipal, BotonSecundario, Logo } from '../ui/comunes';
 import { borrarPartida, cargarPartida } from './persistencia';
 import { useArbitro } from './useArbitro';
@@ -48,9 +48,33 @@ export function AppProfesor() {
     }
 }
 
+/** Aviso sobre la dirección del QR: en local o en este ordenador, los móviles de verdad no podrán entrar. */
+function avisoDireccion(): string | null {
+    if (tipoTransporte() === 'local') return 'Modo local: los «móviles» son pestañas de este navegador.';
+    if (['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) {
+        return 'Esta dirección solo funciona en este ordenador: para móviles reales, abre la web publicada.';
+    }
+    return null;
+}
+
 function Partida({ inicial, onSalir }: { inicial: EstadoPartida; onSalir: () => void }) {
-    const { estado, despachar } = useArbitro(inicial);
-    return <Proyector estado={estado} despachar={despachar} urlJugar={urlJugar(estado.pin)} onSalir={onSalir} />;
+    const { estado, despachar, red, error } = useArbitro(inicial);
+    if (error) {
+        return (
+            <main className="mx-auto flex h-dvh max-w-[1920px] flex-col gap-10 p-12">
+                <Logo className="text-[56px]" />
+                <section className="flex max-w-[1100px] flex-col gap-6 rounded-tarjeta bg-superficie p-12">
+                    <h1 className="text-[48px] font-extrabold leading-tight">No se ha podido conectar con la sala</h1>
+                    <p className="font-texto text-[28px] text-texto-2">{error}</p>
+                    <div className="flex gap-4">
+                        <BotonPrincipal onClick={() => location.reload()} className="text-[30px]">Reintentar</BotonPrincipal>
+                        <BotonSecundario onClick={onSalir} className="text-[24px]">Volver a configurar</BotonSecundario>
+                    </div>
+                </section>
+            </main>
+        );
+    }
+    return <Proyector estado={estado} despachar={despachar} red={red} urlJugar={urlJugar(estado.pin)} avisoDireccion={avisoDireccion()} onSalir={onSalir} />;
 }
 
 const NOMBRE_FASE: Record<Fase, string> = {

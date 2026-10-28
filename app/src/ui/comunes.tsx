@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { LETRAS } from '../partida/configuracion';
+import type { EstadoRed } from '../transporte/transporte';
 
 /** Clases de cada opción (literales para que Tailwind las encuentre). */
 export const FONDO_OPCION = ['bg-opcion-a', 'bg-opcion-b', 'bg-opcion-c', 'bg-opcion-d'] as const;
@@ -61,5 +62,18 @@ export function Logo({ className = '' }: { className?: string }) {
         <span className={`font-titulo font-extrabold leading-none ${className}`}>
             Aula <span className="text-acento">Quiz</span>
         </span>
+    );
+}
+
+const TEXTO_RED = { conectando: 'Conectando…', reconectando: 'Reconectando…', 'sin-conexion': 'Sin conexión. Reintentando…' } as const;
+
+/** Aviso flotante mientras no hay conexión. `grande` para el proyector. */
+export function AvisoRed({ red, grande = false }: { red: EstadoRed; grande?: boolean }) {
+    if (red === 'conectado') return null;
+    return (
+        <div role="status" aria-live="assertive"
+            className={`fixed left-1/2 top-3 z-50 -translate-x-1/2 rounded-full bg-bajada font-titulo font-extrabold text-sobre-opcion shadow-lg ${grande ? 'px-10 py-3 text-[30px]' : 'px-5 py-2 text-[18px]'}`}>
+            {TEXTO_RED[red]}
+        </div>
     );
 }

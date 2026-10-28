@@ -5,16 +5,18 @@ import { Qr } from './Qr';
 interface Props {
     estado: EstadoPartida;
     urlJugar: string;
+    /** Aviso sobre la dirección (modo local o localhost). */
+    aviso: string | null;
     onEmpezar: () => void;
     onExpulsar: (id: string, nombre: string) => void;
     onCancelar: () => void;
 }
 
 /** Pantalla 1: sala de espera. */
-export function Sala({ estado, urlJugar, onEmpezar, onExpulsar, onCancelar }: Props) {
+export function Sala({ estado, urlJugar, aviso, onEmpezar, onExpulsar, onCancelar }: Props) {
     const { partida, pin, jugadores } = estado;
     const pinConEspacio = `${pin.slice(0, 3)} ${pin.slice(3)}`;
-    const direccion = urlJugar.replace(/^https?:\/\//, '').replace(/#.*$/, '');
+    const direccion = urlJugar.replace(/^https?:\/\//, '').replace(/[?#].*$/, '');
 
     return (
         <div className="flex min-h-0 flex-1 flex-col gap-8">
@@ -39,6 +41,7 @@ export function Sala({ estado, urlJugar, onEmpezar, onExpulsar, onCancelar }: Pr
                         {pinConEspacio}
                     </p>
                     <p className="font-texto text-[24px] text-texto-2">Usa tu nombre de pila o un apodo.</p>
+                    {aviso && <p role="note" className="font-texto text-[22px] font-semibold text-bajada">{aviso}</p>}
                 </div>
                 <Qr texto={urlJugar} tamano={340} etiqueta={`Código QR para entrar en la sala ${pin}`} />
             </section>

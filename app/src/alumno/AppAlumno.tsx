@@ -1,26 +1,31 @@
 import { useEffect, useState, useSyncExternalStore, type FormEvent, type ReactNode } from 'react';
 import { MAX_NOMBRE } from '../motor/estado';
 import type { VistaComun, VistaJugador } from '../motor/vistas';
-import { crearTransporte } from '../transporte/elegir';
-import { BotonPrincipal, BotonSecundario, FONDO_OPCION, Letra, Logo, letra, puntos, segundosConComa, useAhora } from '../ui/comunes';
-import { almacenSesion, crearCliente, type Cliente, type EstadoCliente } from './cliente';
+import { crearTransporte, tipoTransporte } from '../transporte/elegir';
+import { AvisoRed, BotonPrincipal, BotonSecundario, FONDO_OPCION, Letra, Logo, letra, puntos, segundosConComa, useAhora } from '../ui/comunes';
+import { almacenIdentidades, crearCliente, type Cliente, type EstadoCliente } from './cliente';
 
 type Dentro = Extract<VistaJugador, { estado: 'dentro' }>;
 const relojLocal = () => performance.now();
 
 /** La pestaña del alumno (el móvil). `pinRuta` viene del QR: #/jugar/123456. */
 export function AppAlumno({ pinRuta }: { pinRuta: string | null }) {
-    const [cliente] = useState(() => crearCliente({ transporte: crearTransporte(), almacen: almacenSesion() }));
+    // Con Ably, localStorage: algunos móviles cierran la pestaña al cambiar de aplicación.
+    // En local, sessionStorage: cada pestaña del navegador es un alumno distinto.
+    const [cliente] = useState(() => crearCliente({
+        transporte: crearTransporte(),
+        almacen: almacenIdentidades(tipoTransporte() === 'ably' ? localStorage : sessionStorage),
+    }));
     const e = useSyncExternalStore(cliente.suscribir, cliente.estado);
 
     useEffect(() => {
-        const guardada = almacenSesion().leer();
-        if (guardada && (!pinRuta || guardada.pin === pinRuta)) void cliente.reanudar();
+        void cliente.reanudar(pinRuta ?? undefined);
         return () => cliente.detener();
     }, [cliente, pinRuta]);
 
     return (
         <main className="mx-auto flex min-h-dvh w-full max-w-[520px] flex-col gap-5 p-5">
+            {e.conexion !== 'sin-sala' && <AvisoRed red={e.red} />}
             <Contenido e={e} cliente={cliente} pinRuta={pinRuta} />
         </main>
     );

@@ -1,5 +1,7 @@
 import type { EstadoPartida } from '../motor/estado';
 import type { AccionProfesor } from '../profesor/arbitro';
+import type { EstadoRed } from '../transporte/transporte';
+import { AvisoRed } from '../ui/comunes';
 import { Podio, Tabla } from './Podio';
 import { Pregunta } from './Pregunta';
 import { Respuesta } from './Respuesta';
@@ -9,12 +11,14 @@ interface Props {
     estado: EstadoPartida;
     despachar: (accion: AccionProfesor) => void;
     urlJugar: string;
+    red: EstadoRed;
+    avisoDireccion: string | null;
     /** Descarta la partida y vuelve a la configuración. */
     onSalir: () => void;
 }
 
 /** Lo que se ve en el proyector, con los controles del profesor. */
-export function Proyector({ estado, despachar, urlJugar, onSalir }: Props) {
+export function Proyector({ estado, despachar, urlJugar, red, avisoDireccion, onSalir }: Props) {
     const saltar = () => {
         if (confirm('¿Saltar esta pregunta? No contará para nadie.')) despachar({ tipo: 'saltar' });
     };
@@ -27,8 +31,9 @@ export function Proyector({ estado, despachar, urlJugar, onSalir }: Props) {
 
     return (
         <main className="mx-auto flex h-dvh max-w-[1920px] flex-col p-12">
+            <AvisoRed red={red} grande />
             {estado.fase === 'sala' && (
-                <Sala estado={estado} urlJugar={urlJugar}
+                <Sala estado={estado} urlJugar={urlJugar} aviso={avisoDireccion}
                     onEmpezar={() => despachar({ tipo: 'empezar' })}
                     onExpulsar={(id, nombre) => { if (confirm(`¿Expulsar a ${nombre}?`)) despachar({ tipo: 'expulsar', id }); }}
                     onCancelar={() => { if (confirm('¿Cancelar la partida y volver a la configuración?')) onSalir(); }} />

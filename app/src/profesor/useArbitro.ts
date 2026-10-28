@@ -14,6 +14,7 @@ const sinSuscripcion = () => () => {};
  */
 export function useArbitro(inicial: EstadoPartida) {
     const [arbitro, setArbitro] = useState<Arbitro | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const guardada = cargarPartida();
@@ -21,7 +22,10 @@ export function useArbitro(inicial: EstadoPartida) {
         guardarPartida(base);
         const a = crearArbitro(base, { transporte: crearTransporte(), reloj: Date.now, guardar: guardarPartida });
         let vivo = true;
-        void a.iniciar().then(() => { if (vivo) setArbitro(a); });
+        a.iniciar().then(
+            () => { if (vivo) setArbitro(a); },
+            (e: unknown) => { if (vivo) setError(e instanceof Error ? e.message : String(e)); },
+        );
         const t = setInterval(() => a.tick(), TICK_MS);
         return () => {
             vivo = false;
@@ -30,7 +34,9 @@ export function useArbitro(inicial: EstadoPartida) {
         };
     }, [inicial]);
 
-    const estado = useSyncExternalStore(arbitro?.suscribir ?? sinSuscripcion, () => arbitro?.estado() ?? inicial);
+    const suscribir = arbitro?.suscribir ?? sinSuscripcion;
+    const estado = useSyncExternalStore(suscribir, () => arbitro?.estado() ?? inicial);
+    const red = useSyncExternalStore(suscribir, () => arbitro?.red() ?? 'conectando');
     const despachar = (accion: AccionProfesor) => arbitro?.despachar(accion);
-    return { estado, despachar, listo: arbitro !== null };
+    return { estado, despachar, red, error };
 }

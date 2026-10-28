@@ -1,7 +1,7 @@
 import type { VistaComun, VistaJugador } from '../motor/vistas';
 import { leerMensajeProfesor } from '../transporte/mensajes';
 import { idDeSecreto } from '../transporte/canales';
-import type { Transporte } from '../transporte/transporte';
+import type { EstadoRed, Transporte } from '../transporte/transporte';
 
 /**
  * El móvil del alumno, sin interfaz: guarda su identidad (id público y
@@ -15,11 +15,12 @@ export interface Identificacion {
     secreto: string;
 }
 
-/** Dónde se guarda la identidad. En esta fase, sessionStorage (una por pestaña). */
+/** Dónde se guarda la identidad (ver `almacenIdentidades`). */
 export interface AlmacenIdentidad {
-    leer(): Identificacion | null;
+    /** La de esa sala o, sin PIN, la de la última sala. */
+    leer(pin?: string): Identificacion | null;
     guardar(identificacion: Identificacion): void;
-    borrar(): void;
+    borrar(pin: string): void;
 }
 
 export type Conexion =
@@ -40,6 +41,8 @@ export interface EstadoCliente {
     recibidaEn: number;
     /** Respuesta enviada a la pregunta abierta, a la espera de que la confirme el profesor. */
     elegida: { indice: number; opcion: number } | null;
+    /** Estado de la conexión, para el aviso «Reconectando…». */
+    red: EstadoRed;
 }
 
 export interface OpcionesCliente {
@@ -57,8 +60,8 @@ export interface OpcionesCliente {
 export interface Cliente {
     estado(): EstadoCliente;
     suscribir(fn: () => void): () => void;
-    /** Vuelve a la sala guardada, si la hay (al cargar la página). */
-    reanudar(): Promise<boolean>;
+    /** Vuelve a la sala guardada (la de ese PIN o la última), si la hay. */
+    reanudar(pin?: string): Promise<boolean>;
     entrar(pin: string, nombre: string): Promise<void>;
     responder(opcion: number): void;
     /** Olvida la identidad y deja la sala. */
@@ -71,7 +74,7 @@ export function claveAleatoria(): string {
     return Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');
 }
 
-const INICIAL: EstadoCliente = { conexion: 'sin-sala', pin: null, comun: null, personal: null, recibidaEn: 0, elegida: null };
+const INICIAL: EstadoCliente = { conexion: 'sin-sala', pin: null, comun: null, personal: null, recibidaEn: 0, elegida: null, red: 'conectado' };
 
 export function crearCliente({
     transporte, almacen, reloj = () => performance.now(), nuevaClave = claveAleatoria, reintentoMs = 1500, avisoMs = 4000,
@@ -82,6 +85,7 @@ export function crearCliente({
     let temporizador: ReturnType<typeof setInterval> | null = null;
     let conectadoDesde = 0;
     let dejarDeEscuchar: (() => void) | null = null;
+    let dejarRed: (() => void) | null = null;
     const oyentes = new Set<() => void>();
     /** Sube con cada `detener`: una conexión que termina después ya no vale. */
     let generacion = 0;
@@ -131,6 +135,8 @@ export function crearCliente({
         pararReintentos();
         dejarDeEscuchar?.();
         dejarDeEscuchar = null;
+        dejarRed?.();
+        dejarRed = null;
         transporte.desconectar();
         yo = null;
         saludo = null;
@@ -144,7 +150,14 @@ export function crearCliente({
         if (mia !== generacion) { transporte.desconectar(); return false; }
         yo = identificacion;
         dejarDeEscuchar = transporte.alRecibir(recibir);
-        cambiar({ ...INICIAL, conexion: 'conectando', pin: identificacion.pin });
+        dejarRed?.();
+        dejarRed = transporte.alCambiarRed(red => {
+            const volvio = red === 'conectado' && estado.red !== 'conectado';
+            cambiar({ red });
+            // Al recuperar la conexión se vuelve a saludar: lo que se perdió, llega en la respuesta.
+            if (volvio && saludo) saludarHastaRespuesta();
+        });
+        cambiar({ ...INICIAL, conexion: 'conectando', pin: identificacion.pin, red: transporte.estadoRed() });
         return true;
     };
 
@@ -155,8 +168,8 @@ export function crearCliente({
             return () => oyentes.delete(fn);
         },
 
-        async reanudar() {
-            const guardada = almacen.leer();
+        async reanudar(pin) {
+            const guardada = almacen.leer(pin);
             if (!guardada) return false;
             if (!await conectar(guardada)) return false;
             saludo = () => transporte.enviarAlProfesor({ tipo: 'hola', id: guardada.id, secreto: guardada.secreto });
@@ -165,8 +178,7 @@ export function crearCliente({
         },
 
         async entrar(pin, nombre) {
-            const guardada = almacen.leer();
-            let identificacion = guardada?.pin === pin ? guardada : null;
+            let identificacion = almacen.leer(pin);
             if (!identificacion) {
                 const secreto = nuevaClave();
                 identificacion = { pin, id: await idDeSecreto(secreto), secreto };
@@ -187,7 +199,7 @@ export function crearCliente({
         },
 
         salir() {
-            almacen.borrar();
+            if (estado.pin) almacen.borrar(estado.pin);
             detener();
             cambiar(INICIAL);
         },
@@ -196,23 +208,52 @@ export function crearCliente({
     };
 }
 
-/** Identidad en sessionStorage: sobrevive a recargar la pestaña, y cada pestaña tiene la suya. */
-export function almacenSesion(almacen: Storage = sessionStorage, clave = 'aula-quiz:jugador'): AlmacenIdentidad {
+const DIAS_GUARDADA = 3 * 24 * 60 * 60 * 1000;
+
+/**
+ * Identidad del alumno, una por sala (`aula-quiz:jugador:PIN`), más un
+ * apunte a la última sala para volver aunque se abra la dirección sin PIN.
+ * Con Ably va en localStorage (sobrevive a cerrar la pestaña al cambiar de
+ * aplicación); con el transporte local, en sessionStorage (cada pestaña es
+ * un alumno). Las de más de 3 días se borran.
+ */
+export function almacenIdentidades(almacen: Storage, prefijo = 'aula-quiz:jugador'): AlmacenIdentidad {
+    const ULTIMA = `${prefijo}:ultima`;
+    const clave = (pin: string) => `${prefijo}:${pin}`;
+    const leerEn = (k: string): (Identificacion & { guardada?: number }) | null => {
+        try {
+            const d = JSON.parse(almacen.getItem(k) ?? 'null');
+            return d && typeof d.pin === 'string' && typeof d.id === 'string' && typeof d.secreto === 'string' ? d : null;
+        } catch {
+            return null;
+        }
+    };
     return {
-        leer() {
+        leer(pin) {
             try {
-                const d = JSON.parse(almacen.getItem(clave) ?? 'null');
-                return d && typeof d.pin === 'string' && typeof d.id === 'string' && typeof d.secreto === 'string'
-                    ? { pin: d.pin, id: d.id, secreto: d.secreto } : null;
+                const destino = pin ?? almacen.getItem(ULTIMA);
+                const d = destino ? leerEn(clave(destino)) : null;
+                return d ? { pin: d.pin, id: d.id, secreto: d.secreto } : null;
             } catch {
                 return null;
             }
         },
         guardar(i) {
-            try { almacen.setItem(clave, JSON.stringify(i)); } catch { /* sin almacenamiento: no se podrá reanudar */ }
+            try {
+                const ahora = Date.now();
+                for (let n = almacen.length - 1; n >= 0; n--) {
+                    const k = almacen.key(n);
+                    if (k && k.startsWith(`${prefijo}:`) && k !== ULTIMA && (leerEn(k)?.guardada ?? 0) < ahora - DIAS_GUARDADA) almacen.removeItem(k);
+                }
+                almacen.setItem(clave(i.pin), JSON.stringify({ ...i, guardada: ahora }));
+                almacen.setItem(ULTIMA, i.pin);
+            } catch { /* sin almacenamiento: no se podrá reanudar */ }
         },
-        borrar() {
-            try { almacen.removeItem(clave); } catch { /* nada que hacer */ }
+        borrar(pin) {
+            try {
+                almacen.removeItem(clave(pin));
+                if (almacen.getItem(ULTIMA) === pin) almacen.removeItem(ULTIMA);
+            } catch { /* nada que hacer */ }
         },
     };
 }

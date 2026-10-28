@@ -1,5 +1,5 @@
 // Utilidades para los tests del árbitro y la simulación (no se usan en el juego).
-import { almacenSesion, crearCliente, type Cliente } from '../alumno/cliente';
+import { almacenIdentidades, crearCliente, type Cliente } from '../alumno/cliente';
 import { crearEstado } from '../motor/estado';
 import { partidaDePrueba } from '../motor/pruebas';
 import { crearTransporteLocal } from '../transporte/transporte';
@@ -54,6 +54,6 @@ export async function recargarProfesor(anterior: Arbitro, almacen: Storage, relo
 
 /** Un móvil con su propia «pestaña» (sessionStorage en memoria). */
 export function crearMovil(almacen = almacenEnMemoria()): { cliente: Cliente; almacen: Storage } {
-    const cliente = crearCliente({ transporte: crearTransporteLocal(), almacen: almacenSesion(almacen), reintentoMs: 30, avisoMs: 100 });
+    const cliente = crearCliente({ transporte: crearTransporteLocal(), almacen: almacenIdentidades(almacen), reintentoMs: 30, avisoMs: 100 });
     return { cliente, almacen };
 }

@@ -1,5 +1,5 @@
 import { describe, it, expect, afterEach } from 'vitest';
-import { almacenSesion, crearCliente, type Cliente } from '../src/alumno/cliente';
+import { almacenIdentidades, crearCliente, type Cliente } from '../src/alumno/cliente';
 import { crearEstado } from '../src/motor/estado';
 import { partidaDePrueba } from '../src/motor/pruebas';
 import { crearArbitro, type Arbitro } from '../src/profesor/arbitro';
@@ -29,7 +29,7 @@ async function profesor(m: ReturnType<typeof montar>, reloj: () => number) {
 }
 
 async function movil(m: ReturnType<typeof montar>, pin: string, nombre: string, almacen = almacenEnMemoria()) {
-    const cliente = crearCliente({ transporte: m.nuevoTransporte(), almacen: almacenSesion(almacen), reintentoMs: 30, avisoMs: 100 });
+    const cliente = crearCliente({ transporte: m.nuevoTransporte(), almacen: almacenIdentidades(almacen), reintentoMs: 30, avisoMs: 100 });
     abiertos.push(cliente);
     await cliente.entrar(pin, nombre);
     await espera(30);
@@ -140,4 +140,61 @@ describe('transporte Ably (con un doble que aplica los permisos firmados)', () =
         // …y el resto después: todos acaban con su resultado.
         for (const c of moviles) expect(c.estado().personal).toMatchObject({ resultado: { indice: 0 } });
     }, 15_000);
+
+    it('reconexión: el móvil avisa, y al volver recupera lo que se perdió', async () => {
+        const m = montar();
+        const { reloj } = relojFalso();
+        const { arbitro, pin } = await profesor(m, reloj);
+        const ana = await movil(m, pin, 'Ana');
+        await movil(m, pin, 'Bea');
+        const idAna = arbitro.estado().jugadores[0].id;
+        m.ably.cortar(idAna);
+        expect(ana.cliente.estado().red).toBe('reconectando');
+        // Mientras está cortada, empieza la partida: ese mensaje no le llega.
+        arbitro.despachar({ tipo: 'empezar' });
+        await espera(20);
+        expect(ana.cliente.estado().comun?.fase).toBe('sala');
+        m.ably.restablecer(idAna);
+        await espera(40);
+        expect(ana.cliente.estado().red).toBe('conectado');
+        expect(ana.cliente.estado().comun).toMatchObject({ fase: 'pregunta', indice: 0 });
+    });
+
+    it('reconexión del profesor: al volver reenvía todo y la respuesta perdida se puede repetir', async () => {
+        const m = montar();
+        const { reloj, avanzar } = relojFalso();
+        const { arbitro, pin } = await profesor(m, reloj);
+        const ana = await movil(m, pin, 'Ana');
+        await movil(m, pin, 'Bea');
+        arbitro.despachar({ tipo: 'empezar' });
+        await espera(20);
+        m.ably.cortar('profesor');
+        expect(arbitro.red()).toBe('reconectando');
+        ana.cliente.responder(0);
+        await espera(20);
+        expect(ana.cliente.estado().elegida).not.toBeNull();
+        m.ably.restablecer('profesor');
+        await espera(40);
+        expect(arbitro.red()).toBe('conectado');
+        // El profesor no recibió la respuesta (en el doble se pierde; Ably la reentregaría): Ana puede repetirla.
+        expect(ana.cliente.estado().elegida).toBeNull();
+        avanzar(1_000);
+        ana.cliente.responder(0);
+        await espera(20);
+        expect(arbitro.estado().respuestas[0][arbitro.estado().jugadores[0].id]).toEqual({ opcion: 0, ms: 1_000 });
+    });
+
+    it('recarga del móvil con Ably: vuelve con la identidad guardada en su almacén', async () => {
+        const m = montar();
+        const { reloj } = relojFalso();
+        const { arbitro, pin } = await profesor(m, reloj);
+        const ana = await movil(m, pin, 'Ana');
+        ana.cliente.detener();
+        const otra = crearCliente({ transporte: m.nuevoTransporte(), almacen: almacenIdentidades(ana.almacen), reintentoMs: 30 });
+        abiertos.push(otra);
+        expect(await otra.reanudar(pin)).toBe(true);
+        await espera(30);
+        expect(otra.estado().personal).toMatchObject({ estado: 'dentro', nombre: 'Ana' });
+        expect(arbitro.estado().jugadores).toHaveLength(1);
+    });
 });

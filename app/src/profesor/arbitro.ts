@@ -1,7 +1,7 @@
 import { esJugador, reducir, buscarJugador, type Accion, type EstadoPartida } from '../motor/estado';
 import { vistaComun, vistaJugador, type VistaComun } from '../motor/vistas';
 import { leerMensajeMovil, type MensajeProfesor } from '../transporte/mensajes';
-import type { Transporte } from '../transporte/transporte';
+import type { EstadoRed, Transporte } from '../transporte/transporte';
 
 /**
  * El árbitro: une el motor con el transporte en el navegador del profesor.
@@ -27,6 +27,8 @@ export interface Arbitro {
     /** Comprueba si se ha acabado el tiempo. Se llama varias veces por segundo. */
     tick(): void;
     suscribir(fn: () => void): () => void;
+    /** Estado de la conexión, para el aviso «Reconectando…». */
+    red(): EstadoRed;
     /** Mensajes descartados por no cumplir el esquema (para diagnóstico). */
     descartados(): number;
 }
@@ -45,6 +47,9 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
     let descartados = 0;
     let dejarDeEscuchar: (() => void) | null = null;
     let detenido = false;
+    let red: EstadoRed = 'conectando';
+    let dejarRed: (() => void) | null = null;
+    const avisar = () => { for (const fn of oyentes) fn(); };
 
     const enviarPersonal = (id: string, forzar = false) => {
         const vista = vistaJugador(estado, id);
@@ -64,6 +69,12 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
         }
         for (const j of estado.jugadores) enviarPersonal(j.id);
         for (const id of estado.expulsados) enviarPersonal(id);
+    };
+
+    const reenviarTodo = () => {
+        ultimaComun = null;
+        ultimaPersonal.clear();
+        sincronizar();
     };
 
     /** Respuesta completa a un móvil que llega o vuelve. */
@@ -109,13 +120,21 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
             await transporte.conectar(estado.pin, { rol: 'profesor' });
             if (detenido) { transporte.desconectar(); return; }
             dejarDeEscuchar = transporte.alRecibir(recibir);
+            red = transporte.estadoRed();
+            dejarRed = transporte.alCambiarRed(nuevo => {
+                const volvio = nuevo === 'conectado' && red !== 'conectado';
+                red = nuevo;
+                // Tras un corte, se reenvía todo: lo que se perdiera, llega ahora.
+                if (volvio) reenviarTodo();
+                avisar();
+            });
             // Tras recargar, los móviles que siguen abiertos reciben su vista sin pedirla.
-            ultimaComun = null;
-            ultimaPersonal.clear();
-            sincronizar();
+            reenviarTodo();
+            avisar();
         },
         detener() {
             detenido = true;
+            dejarRed?.();
             dejarDeEscuchar?.();
             transporte.desconectar();
         },
@@ -130,6 +149,7 @@ export function crearArbitro(inicial: EstadoPartida, { transporte, reloj, guarda
             oyentes.add(fn);
             return () => oyentes.delete(fn);
         },
+        red: () => red,
         descartados: () => descartados,
     };
 }

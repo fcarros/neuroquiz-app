@@ -3,7 +3,8 @@
 // BroadcastChannel. Usa el protocolo DevTools con el WebSocket de Node, sin
 // dependencias.
 //
-// Uso, con `npm run build && npx vite preview --port 4173 --strictPort` en marcha:
+// Usa el transporte local (?transporte=local). Uso, con
+// `npm run build && npx vite preview --port 4173 --strictPort` en marcha:
 //   node scripts/partida-pestanas.mjs http://localhost:4173/ <carpeta-capturas>
 // Otra ruta de Chrome: variable CHROME.
 //
@@ -17,9 +18,11 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const [base, carpeta] = process.argv.slice(2);
-if (!base || !carpeta) { console.error('Uso: node scripts/partida-pestanas.mjs <url> <carpeta>'); process.exit(2); }
+const [raiz, carpeta] = process.argv.slice(2);
+if (!raiz || !carpeta) { console.error('Uso: node scripts/partida-pestanas.mjs <url> <carpeta>'); process.exit(2); }
 mkdirSync(carpeta, { recursive: true });
+// Pestañas del mismo navegador: transporte local (la web compilada usa Ably por defecto).
+const base = `${raiz.replace(/\/$/, '')}/?transporte=local`;
 const CHROME = process.env.CHROME ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const PUERTO = 9334;
 const MAZO = resolve(dirname(fileURLToPath(import.meta.url)), 'datos/mazo-verificacion.json');
@@ -163,7 +166,7 @@ try {
     const qr = await proyector.evalua(`(() => { const s = document.querySelector('svg[role=img]'); return s && { etiqueta: s.getAttribute('aria-label'), ancho: s.getBoundingClientRect().width, modulos: s.querySelector('path').getAttribute('d').split('M').length - 1 }; })()`);
     comprobar(qr && qr.ancho >= 300 && qr.modulos > 200, `QR dibujado (${JSON.stringify(qr)})`);
     comprobar((await proyector.texto()).includes('Usa tu nombre de pila o un apodo'), 'la sala recomienda nombre de pila o apodo');
-    const urlJugar = `${base.replace(/\/$/, '')}/#/jugar/${pin}`;
+    const urlJugar = `${base}#/jugar/${pin}`;
     console.log(`      PIN ${pin}; los móviles abren ${urlJugar}`);
     await compruebaQueCabe(proyector, 'sala vacía');
     await proyector.captura('01-proyector-sala-vacia.png');
