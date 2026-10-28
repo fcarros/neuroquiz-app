@@ -202,10 +202,10 @@ El servidor arranca sin ella, pero `/upload` devuelve error.
 
 Fases 1, 2, 3A y 3B cerradas (rama `v2`, 2026-10-28).
 
-Publicada en **https://aulaquiz.vercel.app** (dominio de producción; la
-dirección inicial, aula-quiz-fawn.vercel.app, sigue activa) (proyecto de Vercel
-`aula-quiz`, aparte del Trivial; directorio raíz `app`, rama de producción
-`v2`: cada push a `v2` se publica). Variables `ABLY_API_KEY` y
+Publicada en **https://aulaquiz.vercel.app**, el dominio de producción (la
+dirección inicial, aula-quiz-fawn.vercel.app, sigue activa). Proyecto de
+Vercel `aula-quiz`, aparte del Trivial; directorio raíz `app`, rama de
+producción `v2`: cada push a `v2` se publica. Variables `ABLY_API_KEY` y
 `AULA_QUIZ_SECRETO_SALA` en el panel, como secretas (el secreto de Vercel es
 distinto del de `.env.local`).
 
