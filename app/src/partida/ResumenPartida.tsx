@@ -24,7 +24,7 @@ export function ResumenPartida({ partida, onVolver, onOtraSeleccion, onAbrirSala
 
     return (
         <section className="flex min-h-0 flex-1 flex-col gap-8 rounded-tarjeta bg-superficie p-10">
-            <div className="flex items-start justify-between gap-8">
+            <div className="flex shrink-0 items-start justify-between gap-8">
                 <div className="flex flex-col gap-2">
                     <p className="font-texto text-[22px] font-semibold uppercase tracking-wide text-correcto">Partida preparada</p>
                     <h2 className="text-[48px] font-extrabold leading-tight">{partida.mazo.titulo}</h2>
@@ -37,7 +37,7 @@ export function ResumenPartida({ partida, onVolver, onOtraSeleccion, onAbrirSala
                 </dl>
             </div>
 
-            <div className="flex flex-wrap gap-8">
+            <div className="flex shrink-0 flex-wrap gap-8">
                 <Reparto titulo="Por categoría" filas={porCategoria} />
                 <Reparto titulo="Por dificultad" filas={porDificultad} />
             </div>
@@ -55,7 +55,7 @@ export function ResumenPartida({ partida, onVolver, onOtraSeleccion, onAbrirSala
                 </ol>
             </div>
 
-            <div className="flex items-center justify-between gap-6">
+            <div className="flex shrink-0 items-center justify-between gap-6">
                 <div className="flex gap-4">
                     <BotonSecundario onClick={onVolver}>Volver a configurar</BotonSecundario>
                     <BotonSecundario onClick={onOtraSeleccion}>Elegir otras preguntas</BotonSecundario>

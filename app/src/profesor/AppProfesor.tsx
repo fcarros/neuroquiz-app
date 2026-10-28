@@ -4,7 +4,7 @@ import type { PartidaPreparada } from '../partida/configuracion';
 import { Preparacion } from '../partida/Preparacion';
 import { Proyector } from '../proyector/Proyector';
 import { crearTransporte, tipoTransporte } from '../transporte/elegir';
-import { BotonPrincipal, BotonSecundario, Logo } from '../ui/comunes';
+import { BotonPrincipal, BotonSecundario, Escenario, Logo } from '../ui/comunes';
 import { borrarPartida, cargarPartida } from './persistencia';
 import { useArbitro } from './useArbitro';
 
@@ -18,6 +18,10 @@ type Pantalla =
 
 /** La pestaña del profesor: preparar la partida y proyectarla. */
 export function AppProfesor() {
+    return <Escenario><PantallaProfesor /></Escenario>;
+}
+
+function PantallaProfesor() {
     const [pantalla, setPantalla] = useState<Pantalla>(() => {
         const guardada = cargarPartida();
         return guardada ? { tipo: 'recuperar', guardada } : { tipo: 'preparar' };
@@ -61,7 +65,7 @@ function Partida({ inicial, onSalir }: { inicial: EstadoPartida; onSalir: () => 
     const { estado, despachar, red, error } = useArbitro(inicial);
     if (error) {
         return (
-            <main className="mx-auto flex h-dvh max-w-[1920px] flex-col gap-10 p-12">
+            <main className="mx-auto flex h-full w-full max-w-[1920px] flex-col gap-10 p-12">
                 <Logo className="text-[56px]" />
                 <section className="flex max-w-[1100px] flex-col gap-6 rounded-tarjeta bg-superficie p-12">
                     <h1 className="text-[48px] font-extrabold leading-tight">No se ha podido conectar con la sala</h1>
@@ -88,7 +92,7 @@ const NOMBRE_FASE: Record<Fase, string> = {
 function Recuperar({ guardada, onContinuar, onDescartar }: { guardada: EstadoPartida; onContinuar: () => void; onDescartar: () => void }) {
     const { partida, pin, jugadores, fase, indice } = guardada;
     return (
-        <main className="mx-auto flex h-dvh max-w-[1920px] flex-col gap-10 p-12">
+        <main className="mx-auto flex h-full w-full max-w-[1920px] flex-col gap-10 p-12">
             <Logo className="text-[56px]" />
             <section className="flex max-w-[1100px] flex-col gap-6 rounded-tarjeta bg-superficie p-12">
                 <h1 className="text-[48px] font-extrabold leading-tight">Hay una partida sin terminar</h1>

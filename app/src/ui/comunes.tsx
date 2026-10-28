@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore, type ReactNode } from 'react';
 import { LETRAS } from '../partida/configuracion';
 import type { EstadoRed } from '../transporte/transporte';
 
@@ -76,4 +76,62 @@ export function AvisoRed({ red, grande = false }: { red: EstadoRed; grande?: boo
             {TEXTO_RED[red]}
         </div>
     );
+}
+
+// --- Proyector a cualquier tamaño ---
+
+/** Tamaño de diseño del proyector. */
+export const DISENO = { ancho: 1920, alto: 1080 };
+
+const escucharVentana = (fn: () => void) => {
+    addEventListener('resize', fn);
+    return () => removeEventListener('resize', fn);
+};
+const tamanoVentana = () => `${innerWidth}x${innerHeight}`;
+
+/**
+ * Lienzo del proyector: se dibuja en un espacio lógico de al menos 1920×1080
+ * (más ancho o más alto si la ventana tiene otra proporción) y se escala a la
+ * ventana. Así cada pantalla se ve igual a 1280×720 que a 1920×1080, solo que
+ * más pequeña; si algo no cabe, se desplaza dentro de su zona.
+ */
+export function Escenario({ children }: { children: ReactNode }) {
+    const [ancho, alto] = useSyncExternalStore(escucharVentana, tamanoVentana).split('x').map(Number);
+    const escala = Math.min(ancho / DISENO.ancho, alto / DISENO.alto);
+    return (
+        <div className="fixed inset-0 overflow-hidden bg-fondo">
+            <div className="flex origin-top-left flex-col"
+                style={{ width: ancho / escala, height: alto / escala, transform: `scale(${escala})` }}>
+                {children}
+            </div>
+        </div>
+    );
+}
+
+/**
+ * Texto que se reduce (de `max` a `min` px) hasta caber en su caja, en vez de
+ * desbordarse. El alto máximo lo pone quien lo usa en `className` (p. ej.
+ * `max-h-full` dentro de una celda de rejilla o `max-h-[300px]`).
+ */
+export function TextoAjustable({ max, min, className = '', children }: { max: number; min: number; className?: string; children: ReactNode }) {
+    const ref = useRef<HTMLSpanElement>(null);
+    useLayoutEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        const ajustar = () => {
+            let t = max;
+            el.style.fontSize = `${t}px`;
+            while (t > min && (el.scrollHeight > el.clientHeight + 1 || el.scrollWidth > el.clientWidth + 1)) {
+                t -= 2;
+                el.style.fontSize = `${t}px`;
+            }
+        };
+        ajustar();
+        // El espacio solo cambia al cambiar la ventana (el escenario se reescala).
+        let marco = 0;
+        const alCambiar = () => { cancelAnimationFrame(marco); marco = requestAnimationFrame(ajustar); };
+        addEventListener('resize', alCambiar);
+        return () => { removeEventListener('resize', alCambiar); cancelAnimationFrame(marco); };
+    }, [max, min, children]);
+    return <span ref={ref} className={`block min-h-0 overflow-hidden ${className}`}>{children}</span>;
 }

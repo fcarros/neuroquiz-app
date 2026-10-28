@@ -35,7 +35,7 @@ export function Podio({ estado, onVerTabla, onNuevaPartida }: Props & { onVerTab
                     valor={datos.masDificil ? `${porcentaje(datos.masDificil.acierto)} de aciertos` : '—'}
                     detalle={datos.masDificil ? `${datos.masDificil.indice + 1}. ${datos.masDificil.enunciado}` : undefined} />
                 <Dato titulo="Mejor racha"
-                    valor={datos.mejorRacha ? `${datos.mejorRacha.valor} seguidas` : '—'}
+                    valor={datos.mejorRacha ? `${datos.mejorRacha.valor} ${datos.mejorRacha.valor === 1 ? 'seguida' : 'seguidas'}` : '—'}
                     detalle={datos.mejorRacha?.nombres.join(', ')} />
             </dl>
 
@@ -65,7 +65,8 @@ function Dato({ titulo, valor, detalle }: { titulo: string; valor: string; detal
         <div className="flex min-w-0 flex-col gap-1 rounded-tarjeta bg-superficie px-8 py-6">
             <dt className="font-texto text-[24px] text-texto-2">{titulo}</dt>
             <dd className="cifras font-titulo text-[40px] font-extrabold leading-tight">{valor}</dd>
-            {detalle && <dd className="line-clamp-2 font-texto text-[22px] text-texto-2">{detalle}</dd>}
+            {/* El enunciado completo no cabe: se corta a dos líneas a propósito (está entero en el atributo title). */}
+            {detalle && <dd data-recorte-permitido title={detalle} className="line-clamp-2 font-texto text-[22px] text-texto-2">{detalle}</dd>}
         </div>
     );
 }

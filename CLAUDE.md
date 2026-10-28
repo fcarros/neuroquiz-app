@@ -103,6 +103,13 @@ Conviven dos versiones hasta la fase 4:
   `useArbitro.ts` lo conectan con React.
 - `src/proyector/`: sala (PIN, QR con `qrcode-generator`), pregunta,
   respuesta con top 5, podio y tabla con CSV.
+- **Pantallas del profesor a cualquier tamaño** (desde 1280×720):
+  `Escenario` (`src/ui/comunes.tsx`) dibuja todo en un lienzo lógico de al
+  menos 1920×1080 y lo escala a la ventana; las medidas en px de la guía son
+  de ese lienzo. Lo que no cabe se desplaza dentro de su zona (lista del
+  resumen, jugadores de la sala, tabla) y los botones quedan fuera de esas
+  zonas. `TextoAjustable` reduce enunciados, opciones y «Por qué» si un mazo
+  trae textos más largos de lo normal. El móvil no usa el escenario.
 - `src/alumno/cliente.ts`: el móvil sin interfaz (identidad, saludo con
   reintentos, respuestas, reenvío de una respuesta perdida, nuevo saludo al
   reconectar). Identidad por sala (`aula-quiz:jugador:PIN`): con Ably en
@@ -112,7 +119,11 @@ Conviven dos versiones hasta la fase 4:
   dependencias). `captura-configuracion.mjs` (fase 2) y
   `partida-pestanas.mjs` (proyector + 3 móviles, partida de 5 preguntas con
   el mazo `scripts/datos/mazo-verificacion.json`; `TRANSPORTE=ably` para
-  hacerlo con Ably, con un contexto aislado por móvil). Capturas e informes
+  hacerlo con Ably, con un contexto aislado por móvil; `TRANSPORTE=publicada`
+  sin parámetro en la dirección, y comprueba que el QR codifica la dirección
+  del móvil) y `capturas-proyector.mjs` (las 8 pantallas del proyector a
+  1280×720, 1366×768, 1440×900, 1470×956 y 1920×1080: sin scroll de página,
+  nada fuera ni cortado, botones principales visibles). Capturas e informes
   en `app/capturas/` (ignorado por git).
 - `pruebas/`: tests que juntan función y transporte (`ablyFalso.ts`, un
   doble de Ably que aplica los permisos firmados) y la prueba contra Ably de
@@ -155,6 +166,7 @@ npm run validar-mazos  # validar los mazos de app/mazos/
 # Con `npm run build && npx vite preview --port 4173 --strictPort` en marcha:
 node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
 TRANSPORTE=ably node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
+node scripts/capturas-proyector.mjs http://localhost:4173/ capturas   # tamaños de ventana
 npm run prueba:ably    # partida real contra Ably: 30 jugadores, 10 preguntas
 ```
 

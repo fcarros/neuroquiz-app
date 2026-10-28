@@ -1,6 +1,6 @@
 import { clasificacion, votos, type Marcador } from '../motor/calculos';
 import type { EstadoPartida } from '../motor/estado';
-import { BotonPrincipal, BotonSecundario, FONDO_OPCION, Letra, letra, puntos } from '../ui/comunes';
+import { BotonPrincipal, BotonSecundario, FONDO_OPCION, Letra, TextoAjustable, letra, puntos } from '../ui/comunes';
 import { CabeceraPregunta } from './Pregunta';
 
 interface Props {
@@ -26,19 +26,19 @@ export function Respuesta({ estado, onSiguiente, onTerminar }: Props) {
                 </span>
             </CabeceraPregunta>
 
-            <h1 className="text-[36px] font-bold leading-tight text-texto-2">{p.enunciado}</h1>
+            <h1 className="shrink-0 font-bold leading-tight text-texto-2">
+                <TextoAjustable max={36} min={24} className="max-h-[96px]">{p.enunciado}</TextoAjustable>
+            </h1>
 
-            <ul className="grid grid-cols-2 gap-4" aria-label="Respuestas">
+            <ul className="grid shrink-0 grid-cols-2 grid-rows-[repeat(2,112px)] gap-4" aria-label="Respuestas">
                 {p.opciones.map((texto, i) => {
                     const bien = i === p.correcta;
                     return (
                         <li key={i}
-                            className={`relative flex items-center gap-5 rounded-opcion px-6 py-3 text-sobre-opcion ${FONDO_OPCION[i]} ${bien ? 'ring-[6px] ring-correcto ring-offset-4 ring-offset-fondo' : 'opacity-35'}`}>
+                            className={`relative flex min-h-0 items-center gap-5 rounded-opcion px-6 py-3 text-sobre-opcion ${FONDO_OPCION[i]} ${bien ? 'ring-[6px] ring-correcto ring-offset-4 ring-offset-fondo' : 'opacity-35'}`}>
                             <Letra opcion={i} className="size-[64px] text-[36px]" />
-                            <span className="flex-1 font-texto text-[30px] font-bold leading-tight">
-                                <span className="sr-only">Opción {letra(i)}{bien ? ', correcta' : ''}: </span>
-                                {texto}
-                            </span>
+                            <span className="sr-only">Opción {letra(i)}{bien ? ', correcta' : ''}: </span>
+                            <TextoAjustable max={30} min={20} className="max-h-full min-w-0 flex-1 font-texto font-bold leading-tight">{texto}</TextoAjustable>
                             {bien && <span aria-hidden="true" className="flex size-14 shrink-0 items-center justify-center rounded-full bg-fondo text-[36px] font-extrabold text-correcto">✓</span>}
                             <span className="cifras min-w-[3ch] text-right font-titulo text-[48px] font-extrabold" aria-label={`${v[i]} votos`}>{v[i]}</span>
                         </li>
@@ -48,15 +48,15 @@ export function Respuesta({ estado, onSiguiente, onTerminar }: Props) {
 
             <div className="flex min-h-0 flex-1 gap-6">
                 {explicacion ? (
-                    <section className="flex min-w-0 flex-1 flex-col gap-3 self-start rounded-tarjeta border-2 border-correcto/40 bg-correcto-fondo px-10 py-7">
-                        <h2 className="text-[30px] font-extrabold text-correcto">Por qué</h2>
-                        <p className="font-texto text-[30px] leading-snug">{explicacion}</p>
+                    <section className="flex max-h-full min-w-0 flex-1 flex-col gap-3 self-start rounded-tarjeta border-2 border-correcto/40 bg-correcto-fondo px-10 py-7">
+                        <h2 className="shrink-0 text-[30px] font-extrabold text-correcto">Por qué</h2>
+                        <TextoAjustable max={30} min={22} className="font-texto leading-snug">{explicacion}</TextoAjustable>
                     </section>
                 ) : <div className="flex-1" />}
                 <Top5 marcadores={top} />
             </div>
 
-            <footer className="flex items-center justify-end gap-4">
+            <footer className="flex shrink-0 items-center justify-end gap-4">
                 <BotonSecundario onClick={onTerminar} className="text-[24px]">Terminar</BotonSecundario>
                 <BotonPrincipal onClick={onSiguiente} className="min-h-[72px] px-14 text-[32px]">
                     {ultima ? 'Ver podio' : 'Siguiente'}

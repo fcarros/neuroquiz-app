@@ -41,7 +41,8 @@ npm install
 npm run dev
 ```
 
-Abre `http://localhost:5173` (pensado para el proyector, a 1920×1080). En
+Abre `http://localhost:5173`. Diseñado para el proyector a 1920×1080; en
+ventanas más pequeñas (desde 1280×720) todo se reduce en proporción. En
 `npm run dev` se usa el transporte local (pestañas); con
 `http://localhost:5173/?transporte=ably` se usa Ably. La web compilada y
 publicada usa Ably por defecto.
@@ -55,6 +56,7 @@ Partida de prueba automática en Chrome sin ventana (proyector y 3 móviles):
 npm run build
 npx vite preview --port 4173 --strictPort   # en otra terminal
 node scripts/partida-pestanas.mjs http://localhost:4173/ capturas
+node scripts/capturas-proyector.mjs http://localhost:4173/ capturas   # pantallas del proyector de 1280×720 a 1920×1080
 ```
 
 ### Qué se puede hacer hoy

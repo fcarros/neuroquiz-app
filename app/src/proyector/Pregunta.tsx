@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { limiteMs, type EstadoPartida } from '../motor/estado';
-import { BotonSecundario, FONDO_OPCION, Letra, letra, useAhora } from '../ui/comunes';
+import { BotonSecundario, FONDO_OPCION, Letra, TextoAjustable, letra, useAhora } from '../ui/comunes';
 
 interface Props {
     estado: EstadoPartida;
@@ -47,15 +47,17 @@ export function Pregunta({ estado, onSaltar, onTerminar }: Props) {
 
             <div className="flex items-center gap-10">
                 <Temporizador fraccion={fraccion} segundos={segundos} />
-                <h1 className="flex-1 text-[64px] font-extrabold leading-[1.1]">{p.enunciado}</h1>
+                <h1 className="min-w-0 flex-1 font-extrabold leading-[1.1]">
+                    <TextoAjustable max={64} min={36} className="max-h-[300px]">{p.enunciado}</TextoAjustable>
+                </h1>
             </div>
 
             <ul className="grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-6" aria-label="Opciones">
                 {p.opciones.map((texto, i) => (
-                    <li key={i} className={`flex items-center gap-6 rounded-opcion px-8 py-4 text-sobre-opcion ${FONDO_OPCION[i]}`}>
+                    <li key={i} className={`flex min-h-0 items-center gap-6 overflow-hidden rounded-opcion px-8 py-4 text-sobre-opcion ${FONDO_OPCION[i]}`}>
                         <Letra opcion={i} className="size-[84px] text-[48px]" />
                         <span className="sr-only">Opción {letra(i)}: </span>
-                        <span className="font-texto text-[38px] font-bold leading-tight">{texto}</span>
+                        <TextoAjustable max={38} min={22} className="max-h-full min-w-0 flex-1 font-texto font-bold leading-tight">{texto}</TextoAjustable>
                     </li>
                 ))}
             </ul>

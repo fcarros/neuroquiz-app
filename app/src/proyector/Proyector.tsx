@@ -30,7 +30,7 @@ export function Proyector({ estado, despachar, urlJugar, red, avisoDireccion, on
     };
 
     return (
-        <main className="mx-auto flex h-dvh max-w-[1920px] flex-col p-12">
+        <main className="mx-auto flex h-full w-full max-w-[1920px] flex-col p-12">
             <AvisoRed red={red} grande />
             {estado.fase === 'sala' && (
                 <Sala estado={estado} urlJugar={urlJugar} aviso={avisoDireccion}

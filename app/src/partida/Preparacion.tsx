@@ -42,7 +42,7 @@ export function Preparacion({ onAbrirSala }: { onAbrirSala: (partida: PartidaPre
     };
 
     return (
-        <main className="mx-auto flex h-dvh max-w-[1920px] flex-col gap-8 p-12">
+        <main className="mx-auto flex h-full w-full max-w-[1920px] flex-col gap-8 p-12">
             <header className="flex items-baseline gap-6">
                 <h1 className="text-[56px] font-extrabold leading-none">
                     Aula <span className="text-acento">Quiz</span>
