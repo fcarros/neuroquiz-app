@@ -41,7 +41,9 @@ export default defineConfig(({ mode }) => {
             chunkSizeWarningLimit: 1000,
         },
         test: {
-            include: ['src/**/*.test.ts', 'api/**/*.test.ts'],
+            include: ['src/**/*.test.ts', 'api/**/*.test.ts', 'pruebas/**/*.test.ts'],
+            // La prueba contra Ably de verdad se lanza aparte: npm run prueba:ably.
+            exclude: ['pruebas/**/*.real.test.ts'],
         },
     };
 });

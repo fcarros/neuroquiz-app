@@ -1,6 +1,6 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
 import type { EstadoPartida } from '../motor/estado';
-import { crearTransporteLocal } from '../transporte/transporte';
+import { crearTransporte } from '../transporte/elegir';
 import { crearArbitro, type AccionProfesor, type Arbitro } from './arbitro';
 import { cargarPartida, guardarPartida } from './persistencia';
 
@@ -19,7 +19,7 @@ export function useArbitro(inicial: EstadoPartida) {
         const guardada = cargarPartida();
         const base = guardada?.pin === inicial.pin ? guardada : inicial;
         guardarPartida(base);
-        const a = crearArbitro(base, { transporte: crearTransporteLocal(), reloj: Date.now, guardar: guardarPartida });
+        const a = crearArbitro(base, { transporte: crearTransporte(), reloj: Date.now, guardar: guardarPartida });
         let vivo = true;
         void a.iniciar().then(() => { if (vivo) setArbitro(a); });
         const t = setInterval(() => a.tick(), TICK_MS);

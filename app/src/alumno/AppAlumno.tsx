@@ -1,7 +1,7 @@
 import { useEffect, useState, useSyncExternalStore, type FormEvent, type ReactNode } from 'react';
 import { MAX_NOMBRE } from '../motor/estado';
 import type { VistaComun, VistaJugador } from '../motor/vistas';
-import { crearTransporteLocal } from '../transporte/transporte';
+import { crearTransporte } from '../transporte/elegir';
 import { BotonPrincipal, BotonSecundario, FONDO_OPCION, Letra, Logo, letra, puntos, segundosConComa, useAhora } from '../ui/comunes';
 import { almacenSesion, crearCliente, type Cliente, type EstadoCliente } from './cliente';
 
@@ -10,7 +10,7 @@ const relojLocal = () => performance.now();
 
 /** La pestaña del alumno (el móvil). `pinRuta` viene del QR: #/jugar/123456. */
 export function AppAlumno({ pinRuta }: { pinRuta: string | null }) {
-    const [cliente] = useState(() => crearCliente({ transporte: crearTransporteLocal(), almacen: almacenSesion() }));
+    const [cliente] = useState(() => crearCliente({ transporte: crearTransporte(), almacen: almacenSesion() }));
     const e = useSyncExternalStore(cliente.suscribir, cliente.estado);
 
     useEffect(() => {

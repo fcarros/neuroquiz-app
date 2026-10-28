@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { nuevaSemilla } from '../mazo/azar';
-import { crearEstado, generarPin, type EstadoPartida, type Fase } from '../motor/estado';
+import { crearEstado, type EstadoPartida, type Fase } from '../motor/estado';
+import type { PartidaPreparada } from '../partida/configuracion';
 import { Preparacion } from '../partida/Preparacion';
 import { Proyector } from '../proyector/Proyector';
+import { crearTransporte } from '../transporte/elegir';
 import { BotonPrincipal, BotonSecundario, Logo } from '../ui/comunes';
 import { borrarPartida, cargarPartida } from './persistencia';
 import { useArbitro } from './useArbitro';
 
-/** Dirección que abre el móvil (la del QR). */
-export const urlJugar = (pin: string) => `${location.origin}${location.pathname}#/jugar/${pin}`;
+/** Dirección que abre el móvil (la del QR). Conserva `?transporte=` si lo hay. */
+export const urlJugar = (pin: string) => `${location.origin}${location.pathname}${location.search}#/jugar/${pin}`;
 
 type Pantalla =
     | { tipo: 'preparar' }
@@ -27,9 +28,19 @@ export function AppProfesor() {
         setPantalla({ tipo: 'preparar' });
     };
 
+    /** El PIN lo da el transporte: con Ably, la función de credenciales (que firma la prueba de profesor). */
+    const abrirSala = async (partida: PartidaPreparada) => {
+        try {
+            const pin = await crearTransporte().crearSala();
+            setPantalla({ tipo: 'jugar', inicial: crearEstado(partida, pin) });
+        } catch (e) {
+            alert(`No se ha podido abrir la sala. Comprueba la conexión a internet y vuelve a intentarlo.\n\n(${e instanceof Error ? e.message : String(e)})`);
+        }
+    };
+
     switch (pantalla.tipo) {
         case 'preparar':
-            return <Preparacion onAbrirSala={p => setPantalla({ tipo: 'jugar', inicial: crearEstado(p, generarPin(nuevaSemilla())) })} />;
+            return <Preparacion onAbrirSala={p => void abrirSala(p)} />;
         case 'recuperar':
             return <Recuperar guardada={pantalla.guardada} onContinuar={() => setPantalla({ tipo: 'jugar', inicial: pantalla.guardada })} onDescartar={salir} />;
         case 'jugar':

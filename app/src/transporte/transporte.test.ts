@@ -49,7 +49,7 @@ describe('transporte local (BroadcastChannel)', () => {
     async function conectar(sala: string, rol: 'profesor' | string) {
         const t = crearTransporteLocal();
         abiertos.push(t);
-        await t.conectar(sala, rol === 'profesor' ? { rol: 'profesor' } : { rol: 'jugador', id: rol });
+        await t.conectar(sala, rol === 'profesor' ? { rol: 'profesor' } : { rol: 'jugador', id: rol, secreto: 'secreto-de-prueba' });
         const recibidos: unknown[] = [];
         t.alRecibir(d => recibidos.push(d));
         return { t, recibidos };

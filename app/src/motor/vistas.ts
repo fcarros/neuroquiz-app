@@ -32,7 +32,11 @@ export type VistaJugador =
         nombre: string;
         puntos: number;
         puesto: number;
-        jugadores: number;
+        /**
+         * Cuántos juegan; solo con la pregunta cerrada o al final. Así una
+         * llegada no obliga a reenviar la vista de todos (mensajes de Ably).
+         */
+        jugadores: number | null;
         racha: number;
         aciertos: number;
         /** Lo que ha respondido en la pregunta abierta (sin decir si acierta). */
@@ -81,7 +85,7 @@ export function vistaJugador(estado: EstadoPartida, id: string): VistaJugador {
         nombre: jugador.nombre,
         puntos: m.puntos,
         puesto: m.puesto,
-        jugadores: tabla.length,
+        jugadores: estado.fase === 'sala' || estado.fase === 'pregunta' ? null : tabla.length,
         racha: m.racha,
         aciertos: m.aciertos,
         respondida: estado.fase === 'pregunta' && r ? { indice: estado.indice, opcion: r.opcion } : null,

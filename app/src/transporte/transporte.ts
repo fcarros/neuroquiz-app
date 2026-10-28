@@ -1,17 +1,24 @@
+import { nuevaSemilla } from '../mazo/azar';
+import { generarPin } from '../motor/estado';
 import type { MensajeMovil, MensajeProfesor } from './mensajes';
 
 /**
- * Capa de transporte propia. El resto del juego solo conoce esta interfaz:
- * hoy hay una versión local (BroadcastChannel, pestañas del mismo navegador)
- * y en la fase 3B se añadirá la de Ably sin tocar nada más.
+ * Capa de transporte propia. El resto del juego solo conoce esta interfaz.
+ * Dos versiones: la local (BroadcastChannel, pestañas del mismo navegador,
+ * para desarrollo) y la de Ably (`ably.ts`, móviles reales).
  *
  * Los móviles solo hablan con el profesor, nunca entre ellos. Lo recibido es
  * `unknown`: quien lo recibe lo valida con los esquemas de `mensajes.ts`.
  */
 
-export type Identidad = { rol: 'profesor' } | { rol: 'jugador'; id: string };
+export type Identidad = { rol: 'profesor' } | { rol: 'jugador'; id: string; secreto: string };
+
+/** Para el aviso «Reconectando…». */
+export type EstadoRed = 'conectando' | 'conectado' | 'reconectando' | 'sin-conexion';
 
 export interface Transporte {
+    /** Profesor: abre una sala nueva y devuelve su PIN. */
+    crearSala(): Promise<string>;
     /** Entra en la sala (el PIN). */
     conectar(sala: string, yo: Identidad): Promise<void>;
     /** Profesor → todos los móviles de la sala. */
@@ -22,6 +29,9 @@ export interface Transporte {
     enviarAlProfesor(mensaje: MensajeMovil): void;
     /** Devuelve la función para dejar de escuchar. */
     alRecibir(fn: (datos: unknown) => void): () => void;
+    estadoRed(): EstadoRed;
+    /** Avisa de cada cambio de conexión. Devuelve la función para dejar de escuchar. */
+    alCambiarRed(fn: (estado: EstadoRed) => void): () => void;
     desconectar(): void;
 }
 
@@ -56,6 +66,8 @@ export function crearTransporteLocal(crearCanal: (nombre: string) => BroadcastCh
     };
 
     return {
+        // En local no hay servidor: el PIN se elige aquí (6 cifras, sin cero delante).
+        crearSala: async () => generarPin(nuevaSemilla()),
         async conectar(sala, identidad) {
             canal?.close();
             yo = identidad;
@@ -72,6 +84,9 @@ export function crearTransporteLocal(crearCanal: (nombre: string) => BroadcastCh
             oyentes.add(fn);
             return () => oyentes.delete(fn);
         },
+        // Entre pestañas no se pierde la conexión.
+        estadoRed: () => 'conectado',
+        alCambiarRed: () => () => {},
         desconectar() {
             canal?.close();
             canal = null;

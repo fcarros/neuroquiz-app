@@ -1,5 +1,6 @@
 import type { VistaComun, VistaJugador } from '../motor/vistas';
 import { leerMensajeProfesor } from '../transporte/mensajes';
+import { idDeSecreto } from '../transporte/canales';
 import type { Transporte } from '../transporte/transporte';
 
 /**
@@ -45,7 +46,7 @@ export interface OpcionesCliente {
     transporte: Transporte;
     almacen: AlmacenIdentidad;
     reloj?: () => number;
-    /** Clave aleatoria para id y secreto. */
+    /** Clave aleatoria para el secreto (el id sale de él). */
     nuevaClave?: () => string;
     /** Cada cuánto se repite el saludo mientras el profesor no contesta. */
     reintentoMs?: number;
@@ -139,7 +140,7 @@ export function crearCliente({
     const conectar = async (identificacion: Identificacion) => {
         const mia = generacion;
         dejarDeEscuchar?.();
-        await transporte.conectar(identificacion.pin, { rol: 'jugador', id: identificacion.id });
+        await transporte.conectar(identificacion.pin, { rol: 'jugador', id: identificacion.id, secreto: identificacion.secreto });
         if (mia !== generacion) { transporte.desconectar(); return false; }
         yo = identificacion;
         dejarDeEscuchar = transporte.alRecibir(recibir);
@@ -165,10 +166,15 @@ export function crearCliente({
 
         async entrar(pin, nombre) {
             const guardada = almacen.leer();
-            const identificacion = guardada?.pin === pin ? guardada : { pin, id: nuevaClave(), secreto: nuevaClave() };
+            let identificacion = guardada?.pin === pin ? guardada : null;
+            if (!identificacion) {
+                const secreto = nuevaClave();
+                identificacion = { pin, id: await idDeSecreto(secreto), secreto };
+            }
             almacen.guardar(identificacion);
             if (!await conectar(identificacion)) return;
-            saludo = () => transporte.enviarAlProfesor({ tipo: 'unirse', id: identificacion.id, secreto: identificacion.secreto, nombre });
+            const { id, secreto } = identificacion;
+            saludo = () => transporte.enviarAlProfesor({ tipo: 'unirse', id, secreto, nombre });
             saludarHastaRespuesta();
         },
 

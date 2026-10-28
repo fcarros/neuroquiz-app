@@ -102,7 +102,7 @@ describe('anti-trampas', () => {
     async function tramposo(pin: string): Promise<Transporte> {
         const t = crearTransporteLocal();
         vigilar({ detener: () => t.desconectar() });
-        await t.conectar(pin, { rol: 'jugador', id: 'tramposo-0001' });
+        await t.conectar(pin, { rol: 'jugador', id: 'tramposo-0001', secreto: 'secreto-tramposo' });
         return t;
     }
 

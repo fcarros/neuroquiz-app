@@ -51,7 +51,7 @@ export const esquemaVistaJugador = z.discriminatedUnion('estado', [
         nombre: z.string().max(MAX_NOMBRE),
         puntos: cifra,
         puesto: cifra,
-        jugadores: cifra,
+        jugadores: cifra.nullable(),
         racha: cifra,
         aciertos: cifra,
         respondida: z.strictObject({ indice, opcion }).nullable(),
