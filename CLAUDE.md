@@ -54,7 +54,10 @@ Conviven dos versiones hasta la fase 4:
   fuentes (Bricolage Grotesque y Figtree) se alojan en la app con
   `@fontsource-variable`, sin Google Fonts.
 - `src/mazo/`: formato de mazo copiado del Trivial (ver abajo).
-- `mazos/`: mazos incluidos, empaquetados al compilar (`import.meta.glob`).
+- `mazos/`: mazos incluidos, empaquetados al compilar (`import.meta.glob`):
+  CDI Temas 1, 2 y 3 (240 preguntas cada uno, con dificultad y explicación)
+  e Industria 4.0. Para añadir uno basta con copiar su `.json` aquí y
+  actualizar la lista de `src/biblioteca/biblioteca.test.ts`.
 - `src/biblioteca/`: incluidos + importados (localStorage,
   `aula-quiz:mazos-importados`), importar, exportar y borrar. Todo mazo se
   valida cada vez que se carga.

@@ -27,7 +27,7 @@ describe('biblioteca de mazos', () => {
     it('carga los incluidos y todos son válidos', () => {
         const incluidos = cargarIncluidos();
         expect(incluidos.map(e => e.id).sort()).toEqual([
-            'cdi-t1-marco-global', 'cdi-t2-como-funciona-internet', 'industria-4-0',
+            'cdi-t1-marco-global', 'cdi-t2-como-funciona-internet', 'cdi-t3-herramientas-digitales', 'industria-4-0',
         ]);
         expect(incluidos.every(e => e.origen === 'incluido' && e.validacion.valido)).toBe(true);
     });

@@ -1,0 +1,3395 @@
+{
+  "formato": 1,
+  "id": "cdi-t3-herramientas-digitales",
+  "titulo": "Tema 3 · Herramientas digitales de trabajo",
+  "modulo": "Comercio Digital Internacional",
+  "descripcion": "Herramientas digitales de trabajo: información, comunicación y colaboración. 240 preguntas, 40 por categoría.",
+  "categorias": [
+    {
+      "color": "azul",
+      "nombre": "El navegador"
+    },
+    {
+      "color": "rosa",
+      "nombre": "Buscar información"
+    },
+    {
+      "color": "amarillo",
+      "nombre": "IA en el trabajo"
+    },
+    {
+      "color": "marron",
+      "nombre": "Cómo funciona el correo"
+    },
+    {
+      "color": "verde",
+      "nombre": "Correo profesional"
+    },
+    {
+      "color": "naranja",
+      "nombre": "Archivos y nube"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "p001",
+      "color": "azul",
+      "enunciado": "¿Qué es un navegador?",
+      "opciones": [
+        "El programa que rastrea la web y construye un índice de páginas",
+        "El servidor que guarda las páginas web de una empresa",
+        "El servicio que traduce los nombres de dominio en direcciones",
+        "El programa que pide páginas a los servidores y las muestra"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El navegador solicita las páginas a los servidores y las dibuja en pantalla."
+    },
+    {
+      "id": "p002",
+      "color": "azul",
+      "enunciado": "¿Cómo se llama la pieza interna del navegador que interpreta y dibuja la página?",
+      "opciones": [
+        "Servidor de nombres",
+        "Gestor de marcadores",
+        "Perfil de usuario",
+        "Motor de renderizado"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El motor de renderizado interpreta el código recibido y pinta la página."
+    },
+    {
+      "id": "p003",
+      "color": "azul",
+      "enunciado": "Al escribir una dirección web, ¿a quién pregunta el navegador por el nombre?",
+      "opciones": [
+        "Al servidor de correo saliente",
+        "Al buscador generalista",
+        "Al DNS",
+        "Al motor de renderizado"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "El navegador consulta al DNS para obtener la dirección del servidor."
+    },
+    {
+      "id": "p004",
+      "color": "azul",
+      "enunciado": "¿Qué recibe el navegador cuando solicita una página?",
+      "opciones": [
+        "Una imagen ya terminada de la página, lista para mostrar",
+        "Instrucciones de cómo dibujarla: HTML, estilos y programas",
+        "Una copia comprimida de la página que guarda el buscador web",
+        "Un documento en PDF generado por el servidor de la web"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "No recibe una imagen, sino código que el navegador interpreta y pinta."
+    },
+    {
+      "id": "p005",
+      "color": "azul",
+      "enunciado": "¿Qué empresa desarrolla el navegador Safari?",
+      "opciones": [
+        "Google",
+        "Apple",
+        "Fundación Mozilla",
+        "Microsoft"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Safari es de Apple y es el navegador por defecto en iPhone, iPad y Mac."
+    },
+    {
+      "id": "p006",
+      "color": "azul",
+      "enunciado": "¿Quién desarrolla Firefox?",
+      "opciones": [
+        "Apple, como versión de Safari para otros sistemas",
+        "Microsoft, como navegador preinstalado en sus equipos",
+        "Google, como alternativa más ligera a su navegador principal",
+        "Una organización sin ánimo de lucro, la Fundación Mozilla"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Firefox es software libre desarrollado por la Fundación Mozilla."
+    },
+    {
+      "id": "p007",
+      "color": "azul",
+      "enunciado": "¿Qué navegador viene preinstalado en Windows?",
+      "opciones": [
+        "Microsoft Edge",
+        "Mozilla Firefox",
+        "Brave",
+        "Safari"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Edge es de Microsoft, viene en Windows y está muy presente en entornos corporativos."
+    },
+    {
+      "id": "p008",
+      "color": "azul",
+      "enunciado": "¿Qué navegador es el más utilizado a escala mundial según el tema?",
+      "opciones": [
+        "Opera",
+        "Mozilla Firefox",
+        "Microsoft Edge",
+        "Google Chrome"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Chrome es el más extendido y destaca por su catálogo de extensiones."
+    },
+    {
+      "id": "p009",
+      "color": "azul",
+      "enunciado": "¿Qué función del navegador permite tener sesiones independientes para cuentas distintas?",
+      "opciones": [
+        "La ventana privada",
+        "Los perfiles separados",
+        "La traducción integrada",
+        "Los marcadores organizados"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Cada perfil guarda sus propias sesiones, separadas de las de los demás."
+    },
+    {
+      "id": "p010",
+      "color": "azul",
+      "enunciado": "¿Qué modo del navegador navega sin usar las sesiones ni el historial guardados?",
+      "opciones": [
+        "La traducción integrada",
+        "La carpeta de marcadores",
+        "La ventana privada",
+        "El perfil de empresa"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "La ventana privada no aprovecha lo guardado, como si se llegara por primera vez."
+    },
+    {
+      "id": "p011",
+      "color": "azul",
+      "enunciado": "¿Qué medidor recomienda el tema para conocer el uso de navegadores por país?",
+      "opciones": [
+        "INCIBE",
+        "Access2Markets",
+        "StatCounter",
+        "DataComex"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "StatCounter publica datos de uso de navegadores con desglose por país."
+    },
+    {
+      "id": "p012",
+      "color": "azul",
+      "enunciado": "¿Qué función del navegador describe el tema como «la versión moderna del archivador»?",
+      "opciones": [
+        "Los perfiles separados por cliente",
+        "La ventana privada sin sesiones",
+        "Los marcadores organizados por mercado",
+        "El historial de navegación del equipo"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Una carpeta de marcadores por mercado reúne las fuentes de cada país."
+    },
+    {
+      "id": "p013",
+      "color": "azul",
+      "enunciado": "¿Por qué la misma página puede verse algo distinta en dos navegadores?",
+      "opciones": [
+        "Porque cada navegador la descarga de un servidor diferente",
+        "Porque cada uno la interpreta con su propio motor de renderizado",
+        "Porque el servidor envía una imagen ya dibujada distinta a cada uno",
+        "Porque el DNS devuelve una versión distinta a cada navegador"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El dibujo lo hace el navegador, y cada motor interpreta el código a su manera."
+    },
+    {
+      "id": "p014",
+      "color": "azul",
+      "enunciado": "¿Por qué una tienda en línea debe probarse en varios navegadores y en móvil?",
+      "opciones": [
+        "Porque la tienda solo funciona en el navegador donde se creó",
+        "Porque cada navegador cobra una tarifa distinta por mostrarla",
+        "Porque los buscadores solo indexan tiendas probadas en varios de ellos",
+        "Porque el comprador usará el que tenga, no el que usemos nosotros"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Si no se prueba en lo que usa el cliente, los fallos los descubrirá él."
+    },
+    {
+      "id": "p015",
+      "color": "azul",
+      "enunciado": "¿Por qué una página se ve prácticamente igual en Edge y en Chrome?",
+      "opciones": [
+        "Porque Edge comparte base técnica con Chrome",
+        "Porque los dos usan el mismo buscador por defecto",
+        "Porque los dos son software libre sin ánimo de lucro",
+        "Porque los dos los desarrolla la misma empresa"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Edge y Chrome comparten base técnica, aunque sean de empresas distintas."
+    },
+    {
+      "id": "p016",
+      "color": "azul",
+      "enunciado": "¿Por qué el tema insiste en probar la tienda en Safari?",
+      "opciones": [
+        "Es el único navegador que muestra bien las fotografías",
+        "Es el único navegador que admite pagos con tarjeta",
+        "Es el navegador más utilizado del mundo en ordenadores de oficina",
+        "En varios mercados se compra mucho desde dispositivos Apple"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Safari viene por defecto en iPhone, iPad y Mac, muy usados para comprar en algunos mercados."
+    },
+    {
+      "id": "p017",
+      "color": "azul",
+      "enunciado": "¿Qué diferencia hay entre una ventana privada y un perfil separado?",
+      "opciones": [
+        "La privada oculta la empresa; el perfil cambia el idioma del sitio",
+        "La privada no usa lo guardado; el perfil guarda sus sesiones aparte",
+        "La privada guarda el historial; el perfil lo borra al cerrar",
+        "La privada cifra la conexión; el perfil la deja sin cifrar"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La ventana privada parte de cero; el perfil mantiene sesiones propias e independientes."
+    },
+    {
+      "id": "p018",
+      "color": "azul",
+      "enunciado": "¿Por qué la ventana privada sirve para revisar la tienda propia?",
+      "opciones": [
+        "Hace que la tienda cargue más rápido para los clientes",
+        "Permite editar los precios sin entrar como administrador",
+        "Elimina la publicidad que aparece dentro de la tienda",
+        "Muestra la tienda como la ve quien llega por primera vez"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Sin sesiones ni historial, se ve la tienda sin los precios ni el idioma que recuerda de nosotros."
+    },
+    {
+      "id": "p019",
+      "color": "azul",
+      "enunciado": "¿Qué error clásico evitan los perfiles separados del navegador?",
+      "opciones": [
+        "Que la página se vea mal en el móvil",
+        "Que el buscador no indexe la tienda",
+        "Publicar desde la cuenta equivocada",
+        "Perder los marcadores al cambiar de equipo"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Al separar las sesiones de la empresa y de cada cliente, no se mezclan las cuentas."
+    },
+    {
+      "id": "p020",
+      "color": "azul",
+      "enunciado": "¿Por qué la traducción integrada del navegador exige cautela?",
+      "opciones": [
+        "Modifica la página original guardada en el servidor",
+        "Solo traduce páginas escritas en idiomas de la Unión Europea",
+        "No es fiable para decidir con textos jurídicos o técnicos",
+        "Envía el contenido traducido a la empresa competidora"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Es útil para leer y orientarse, pero no para tomar decisiones sobre normativa."
+    },
+    {
+      "id": "p021",
+      "color": "azul",
+      "enunciado": "¿Por qué conviene consultar un medidor de uso antes de elegir en qué navegadores probar la tienda?",
+      "opciones": [
+        "Porque los navegadores solo funcionan en los países que aparecen",
+        "Porque el medidor prueba la tienda de forma automática en todos",
+        "Porque el uso cambia cada año y varía mucho de un país a otro",
+        "Porque el medidor certifica qué navegadores son legales en cada país"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Los datos de uso no son fijos ni iguales en todos los mercados."
+    },
+    {
+      "id": "p022",
+      "color": "azul",
+      "enunciado": "Tras obtener la dirección del servidor, ¿qué hace el navegador antes de pedir la página?",
+      "opciones": [
+        "Consulta el índice de un buscador generalista",
+        "Descarga el correo pendiente del usuario",
+        "Establece una conexión cifrada con el servidor",
+        "Activa el perfil de trabajo de la empresa"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "El orden es: preguntar al DNS, obtener la dirección, cifrar la conexión y solicitar la página."
+    },
+    {
+      "id": "p023",
+      "color": "azul",
+      "enunciado": "¿Por qué una carpeta de marcadores por mercado ahorra tiempo?",
+      "opciones": [
+        "Hace que el buscador priorice esas webs en los resultados",
+        "Traduce de forma automática las webs de cada país",
+        "Reúne a un clic las fuentes oficiales de cada país",
+        "Guarda una copia de cada web para consultarla sin conexión"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Evita buscar una y otra vez las mismas fuentes oficiales."
+    },
+    {
+      "id": "p024",
+      "color": "azul",
+      "enunciado": "¿Qué distingue a Firefox según la tabla de navegadores del tema?",
+      "opciones": [
+        "Es el navegador por defecto en los teléfonos de Apple",
+        "Es el que mejor se integra con la ofimática de Google",
+        "Es software libre y trae opciones de privacidad más estrictas",
+        "Viene preinstalado en Windows y domina en las grandes empresas"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Firefox lo desarrolla una organización sin ánimo de lucro y prioriza la privacidad."
+    },
+    {
+      "id": "p025",
+      "color": "azul",
+      "enunciado": "¿Por qué el tema menciona navegadores muy usados en mercados concretos de Asia?",
+      "opciones": [
+        "Son los únicos que traducen la tienda al alfabeto de esos mercados",
+        "Bloquean de serie las tiendas alojadas en Europa",
+        "Son obligatorios por ley para comprar en esos países",
+        "Si se vende allí, hay que ver cómo se ve la tienda en ellos"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La tienda debe probarse en los navegadores que usa de verdad el mercado de destino."
+    },
+    {
+      "id": "p026",
+      "color": "azul",
+      "enunciado": "¿Por qué Chrome resulta cómodo para un equipo que trabaja con la ofimática en la nube de Google?",
+      "opciones": [
+        "Porque viene preinstalado en todos los ordenadores con Windows",
+        "Porque es software libre con privacidad más estricta de serie",
+        "Porque es el único navegador que abre documentos de oficina",
+        "Por su buena integración con esas herramientas en la nube"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Chrome destaca por sus extensiones y su integración con la ofimática en la nube de Google."
+    },
+    {
+      "id": "p027",
+      "color": "azul",
+      "enunciado": "Una conservera de Cambados lanza su tienda para Estados Unidos y solo la ha probado en Chrome de escritorio. ¿Qué prueba debe añadir sin falta?",
+      "opciones": [
+        "Safari y el móvil, por el peso de los dispositivos Apple",
+        "Chrome con otro perfil, para separar las cuentas",
+        "Chrome en ventana privada, para ver la versión limpia",
+        "Edge de escritorio, por estar preinstalado en Windows"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Edge comparte base con Chrome; Safari y el móvil son los que pueden mostrar diferencias."
+    },
+    {
+      "id": "p028",
+      "color": "azul",
+      "enunciado": "Una agencia de Lugo gestiona el marketplace de un cliente y sus propias cuentas en el mismo navegador. Un empleado publicó en la cuenta equivocada. ¿Qué lo evita?",
+      "opciones": [
+        "Guardar el marketplace en los marcadores",
+        "Activar la traducción integrada del navegador",
+        "Abrir siempre el marketplace en ventana privada",
+        "Un perfil del navegador para cada cliente"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Los perfiles separados mantienen sesiones independientes para cada cuenta."
+    },
+    {
+      "id": "p029",
+      "color": "azul",
+      "enunciado": "Un comercial de una textil de Arteixo quiere ver su web con el idioma y los precios que vería un cliente francés nuevo, pero el sitio lo reconoce. ¿Qué hace?",
+      "opciones": [
+        "Pide al DNS la dirección del servidor francés",
+        "Abre la tienda en una ventana privada",
+        "Activa la traducción integrada al francés",
+        "Crea un marcador con la versión francesa"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La ventana privada no usa las sesiones guardadas y muestra la tienda como a un visitante nuevo."
+    },
+    {
+      "id": "p030",
+      "color": "azul",
+      "enunciado": "Una técnica lee con la traducción del navegador la norma japonesa de etiquetado y quiere fijar ya el texto de la etiqueta. ¿Qué debe hacer?",
+      "opciones": [
+        "Probar otro navegador y decidir con la segunda traducción obtenida",
+        "Abrir la norma en ventana privada para traducirla mejor",
+        "Copiar la traducción a la etiqueta, porque es literal",
+        "Usarla para orientarse y no decidir sin una traducción fiable"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La traducción automática de textos jurídicos o técnicos no es fiable para tomar decisiones."
+    },
+    {
+      "id": "p031",
+      "color": "azul",
+      "enunciado": "Una bodega riojana va a empezar a vender en Corea del Sur y el sudeste asiático. ¿Qué comprobación previa propone el tema para su tienda?",
+      "opciones": [
+        "Crear un perfil del navegador distinto para cada mercado",
+        "Guardar en marcadores las tiendas de los competidores",
+        "Ver qué navegadores se usan allí y probar la tienda en ellos",
+        "Traducir la tienda con el navegador al idioma de cada país asiático"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Hay navegadores muy usados en mercados concretos de Asia y conviene comprobar cómo se ve la tienda en ellos."
+    },
+    {
+      "id": "p032",
+      "color": "azul",
+      "enunciado": "Un técnico de una empresa de muebles de Valencia busca cada día, una a una, las mismas webs oficiales de los mercados con los que trabaja. ¿Qué le recomiendas?",
+      "opciones": [
+        "Una carpeta de marcadores con las fuentes de cada mercado",
+        "Un perfil del navegador distinto para cada una de las webs oficiales",
+        "La traducción integrada para todas las webs oficiales",
+        "Una ventana privada para que las webs carguen antes"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Los marcadores organizados por mercado ahorran ese tiempo de búsqueda repetida."
+    },
+    {
+      "id": "p033",
+      "color": "azul",
+      "enunciado": "Una clienta escocesa ve descolocados los botones de una tienda de cerámica en su iPhone; en el PC de la empresa todo está bien. ¿Qué explica mejor el fallo?",
+      "opciones": [
+        "La clienta navega en ventana privada sin saberlo",
+        "El servidor envía una página distinta a cada modelo de teléfono",
+        "Safari la interpreta con otro motor y no se probó en él",
+        "El DNS del Reino Unido entrega una versión antigua"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Cada navegador pinta la página con su motor de renderizado; por eso hay que probar en Safari y en móvil."
+    },
+    {
+      "id": "p034",
+      "color": "azul",
+      "enunciado": "En una empresa de Ourense todos los equipos usan Edge. ¿Qué navegador aporta poco como prueba adicional de su tienda?",
+      "opciones": [
+        "Firefox, porque tiene un motor y ajustes propios",
+        "Chrome, porque comparte base técnica con Edge",
+        "Safari, porque es exclusivo de dispositivos Apple",
+        "Los navegadores móviles, porque pintan en pantalla pequeña"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Edge y Chrome comparten base técnica y muestran las páginas prácticamente igual."
+    },
+    {
+      "id": "p035",
+      "color": "azul",
+      "enunciado": "Un analista lee con la traducción del navegador la web de un competidor chino para conocer su catálogo. ¿Es un uso adecuado?",
+      "opciones": [
+        "Sí: leer webs de competidores es justo para lo que sirve",
+        "Sí, pero solo si guarda la web en un perfil separado",
+        "No: la traducción integrada solo vale para textos oficiales",
+        "No: hay que usar siempre la ventana privada para traducir"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La cautela del tema afecta a los textos jurídicos o técnicos para decidir, no a leer webs de la competencia."
+    },
+    {
+      "id": "p036",
+      "color": "azul",
+      "enunciado": "Una empresa de Gijón decide en qué navegadores probar su tienda para Brasil fijándose en los que usa su propio equipo. ¿Qué falla en su criterio?",
+      "opciones": [
+        "Debe probar únicamente en el navegador de Windows",
+        "Debe guiarse solo por el navegador más moderno",
+        "Debe elegir el navegador con más extensiones",
+        "Debe guiarse por lo que usa el mercado de destino"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El comprador usará su navegador, y los datos de uso varían mucho por país."
+    },
+    {
+      "id": "p037",
+      "color": "azul",
+      "enunciado": "Una tienda de calzado de Elche recibe cada vez más visitas desde teléfonos, pero casi nadie termina la compra. Solo se probó en ordenadores. ¿Qué revisaría primero?",
+      "opciones": [
+        "Cómo se ve y funciona la tienda en el móvil",
+        "Cómo aparece la tienda en los marcadores",
+        "Cómo se traduce la tienda con el navegador",
+        "Cómo se ve la tienda en Edge de escritorio"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El tema pide probar la tienda en móvil antes de darla por buena."
+    },
+    {
+      "id": "p038",
+      "color": "azul",
+      "enunciado": "Una gestora de Santander lleva los marketplaces de tres clientes y además quiere ver cada tienda como un comprador nuevo. ¿Qué combinación usa?",
+      "opciones": [
+        "Marcadores por cliente y el mismo perfil para todas las sesiones",
+        "Ventana privada para gestionar y un perfil para ver como cliente",
+        "Un único perfil para todo y la traducción integrada para cada tienda",
+        "Un perfil por cliente y la ventana privada para la vista de cliente"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Los perfiles separan las cuentas; la ventana privada muestra la tienda sin sesiones guardadas."
+    },
+    {
+      "id": "p039",
+      "color": "azul",
+      "enunciado": "Al abrir la web de un proveedor, el navegador indica que no encuentra la dirección del servidor para ese nombre. ¿Qué paso de su funcionamiento ha fallado?",
+      "opciones": [
+        "La consulta al DNS por el nombre",
+        "La lectura de los estilos de la página",
+        "La carga del perfil del navegador",
+        "El dibujo del motor de renderizado"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Sin la respuesta del DNS no hay dirección del servidor a la que conectarse."
+    },
+    {
+      "id": "p040",
+      "color": "azul",
+      "enunciado": "Un becario dice que la web de un cliente alemán se ve mal porque el servidor le envía la página «ya dibujada» con fallos. ¿Qué le corriges?",
+      "opciones": [
+        "El servidor dibuja la página, pero el DNS la deforma en el viaje",
+        "El servidor envía instrucciones; el dibujo lo hace su navegador",
+        "El servidor envía una imagen, que el perfil del usuario recorta",
+        "El dibujo lo hace el buscador antes de entregar la página"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El navegador recibe HTML, estilos y programas, y su motor de renderizado los pinta."
+    },
+    {
+      "id": "p041",
+      "color": "rosa",
+      "enunciado": "¿Qué operador de búsqueda localiza una expresión exacta, en ese orden?",
+      "opciones": [
+        "Las comillas",
+        "El operador site:",
+        "El guion",
+        "El operador OR"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Las comillas buscan la expresión exacta y evitan resultados con solo una de las palabras."
+    },
+    {
+      "id": "p042",
+      "color": "rosa",
+      "enunciado": "¿Qué operador restringe la búsqueda a un sitio o a un tipo de dominio?",
+      "opciones": [
+        "El guion",
+        "filetype:",
+        "OR",
+        "site:"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "site: limita la búsqueda a un sitio web o a un tipo de dominio."
+    },
+    {
+      "id": "p043",
+      "color": "rosa",
+      "enunciado": "¿Qué operador devuelve solo archivos de un formato concreto?",
+      "opciones": [
+        "filetype:",
+        "Las comillas",
+        "OR",
+        "site:"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "filetype: filtra por formato, por ejemplo documentos en PDF."
+    },
+    {
+      "id": "p044",
+      "color": "rosa",
+      "enunciado": "¿Qué hace el guion delante de una palabra en una búsqueda?",
+      "opciones": [
+        "La excluye de los resultados",
+        "La busca en otros idiomas",
+        "La convierte en obligatoria",
+        "La busca de forma exacta"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "El guion quita los resultados que contienen esa palabra."
+    },
+    {
+      "id": "p045",
+      "color": "rosa",
+      "enunciado": "¿Qué hace el operador OR entre dos términos?",
+      "opciones": [
+        "Busca los dos como expresión exacta",
+        "Busca páginas con cualquiera de los dos",
+        "Busca solo páginas con los dos juntos",
+        "Excluye las páginas con el segundo"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "OR amplía la búsqueda a cualquiera de los términos indicados."
+    },
+    {
+      "id": "p046",
+      "color": "rosa",
+      "enunciado": "¿Cómo se llama la fase en que programas automáticos recorren la web de enlace en enlace?",
+      "opciones": [
+        "Ordenación",
+        "Respuesta",
+        "Rastreo",
+        "Índice"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "El rastreo es la primera fase; después se indexa y, ante una consulta, se responde."
+    },
+    {
+      "id": "p047",
+      "color": "rosa",
+      "enunciado": "¿Qué tipo de herramienta clasifica los sitios por categorías con revisión humana?",
+      "opciones": [
+        "Los índices o directorios",
+        "Los motores de búsqueda",
+        "Los multibuscadores",
+        "Los metabuscadores"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Los directorios organizan sitios por categorías revisadas por personas."
+    },
+    {
+      "id": "p048",
+      "color": "rosa",
+      "enunciado": "¿Qué herramienta lanza la misma consulta a varios buscadores y muestra sus resultados por separado?",
+      "opciones": [
+        "El buscador temático",
+        "El directorio",
+        "El metabuscador",
+        "El multibuscador"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El multibuscador presenta separados los resultados de cada buscador."
+    },
+    {
+      "id": "p049",
+      "color": "rosa",
+      "enunciado": "¿Qué base de datos ofrece las estadísticas oficiales del comercio exterior español?",
+      "opciones": [
+        "StatCounter",
+        "INCIBE",
+        "DataComex",
+        "Access2Markets"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "DataComex, del Ministerio, recoge qué exporta e importa España, a qué países y con qué evolución."
+    },
+    {
+      "id": "p050",
+      "color": "rosa",
+      "enunciado": "¿Qué organismo mantiene el portal Access2Markets?",
+      "opciones": [
+        "La Agencia Tributaria",
+        "La Comisión Europea",
+        "ICEX España Exportación",
+        "El Ministerio de Economía"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Access2Markets es el portal de la Comisión Europea para exportar e importar desde la UE."
+    },
+    {
+      "id": "p051",
+      "color": "rosa",
+      "enunciado": "¿Qué dato piden casi todas las bases de datos oficiales de mercados antes de responder?",
+      "opciones": [
+        "La dirección web de la empresa",
+        "El código arancelario del producto",
+        "El número de pedido del cliente",
+        "El certificado de origen firmado"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es la clasificación internacional que identifica cada mercancía; sin él, no devuelven nada útil."
+    },
+    {
+      "id": "p052",
+      "color": "rosa",
+      "enunciado": "¿Qué tipo de buscador indexa solo un ámbito, como normativa o patentes?",
+      "opciones": [
+        "El buscador temático o especializado",
+        "El metabuscador",
+        "El multibuscador",
+        "El motor de búsqueda generalista"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Los temáticos buscan dentro de un campo concreto y dan menos resultados, pero mejores."
+    },
+    {
+      "id": "p053",
+      "color": "rosa",
+      "enunciado": "¿Por qué una página excelente puede no aparecer nunca en un buscador?",
+      "opciones": [
+        "Si no está en su índice, para ese buscador no existe",
+        "Porque el buscador solo muestra páginas que pagan anuncios",
+        "Porque las páginas nuevas solo se ven en los directorios",
+        "Porque el buscador descarta las páginas con mucho texto"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El buscador responde desde su índice; lo que no está indexado es invisible para él."
+    },
+    {
+      "id": "p054",
+      "color": "rosa",
+      "enunciado": "¿Por qué la respuesta de un buscador aparece casi al instante?",
+      "opciones": [
+        "Porque ya estaba preparada en su índice",
+        "Porque la descarga de un directorio",
+        "Porque pregunta a cada servidor a la vez",
+        "Porque recorre la web a gran velocidad"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El buscador no recorre la web en ese momento: consulta su propia copia ya indexada."
+    },
+    {
+      "id": "p055",
+      "color": "rosa",
+      "enunciado": "¿Por qué un buscador generalista no encuentra los datos de las bases oficiales de mercados?",
+      "opciones": [
+        "Porque esas bases bloquean a los navegadores más usados",
+        "Su contenido se genera al consultar y el buscador no lo indexa",
+        "Porque el buscador las considera publicidad y las oculta",
+        "Porque solo publican sus datos en papel y en las cámaras de comercio"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Por eso los datos de comercio exterior no se encuentran buscando: se consultan en la base."
+    },
+    {
+      "id": "p056",
+      "color": "rosa",
+      "enunciado": "¿Qué diferencia a un motor de búsqueda de un índice o directorio?",
+      "opciones": [
+        "El motor es de pago; el directorio es gratuito y público",
+        "El motor solo busca en un sector; el directorio, en toda la web",
+        "El motor indexa automáticamente; el directorio, con revisión humana",
+        "El motor muestra listas separadas; el directorio las fusiona en una"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Los motores rastrean sin intervención humana; los directorios clasifican sitios revisados por personas."
+    },
+    {
+      "id": "p057",
+      "color": "rosa",
+      "enunciado": "¿Por qué los primeros resultados de un buscador no son necesariamente los mejores?",
+      "opciones": [
+        "Porque aparecen primero las páginas con menos visitas del día",
+        "Porque se ordenan siempre de la página más antigua a la más nueva",
+        "Porque el buscador los ordena por orden alfabético del dominio",
+        "El orden lo fija un algoritmo y los primeros suelen ser anuncios"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Los primeros puestos suelen ser anuncios pagados, lo que se estudia como SEM."
+    },
+    {
+      "id": "p058",
+      "color": "rosa",
+      "enunciado": "¿Por qué hoy sobreviven los directorios en forma de directorios sectoriales y de cámaras de comercio?",
+      "opciones": [
+        "Porque su revisión humana aporta fiabilidad",
+        "Porque indexan más páginas que los motores",
+        "Porque combinan los resultados de varios motores",
+        "Porque son los únicos que admiten operadores"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "La revisión humana filtra y da confianza, algo valioso al buscar empresas."
+    },
+    {
+      "id": "p059",
+      "color": "rosa",
+      "enunciado": "¿Cuándo conviene un buscador temático en lugar de uno generalista?",
+      "opciones": [
+        "Cuando se quieren comparar varios buscadores",
+        "Cuando se busca dentro de un campo concreto",
+        "Cuando se busca la expresión exacta de una frase",
+        "Cuando se quiere la máxima amplitud posible"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Indexa solo un ámbito y devuelve muchos menos resultados, pero mejores."
+    },
+    {
+      "id": "p060",
+      "color": "rosa",
+      "enunciado": "¿Por qué el filtro de rango de fechas es tan útil al consultar normativa?",
+      "opciones": [
+        "Descarta de golpe lo anterior a la última reforma",
+        "Traduce los textos legales a la lengua del usuario",
+        "Ordena los resultados del más leído al menos leído",
+        "Limita la búsqueda a las webs oficiales del país"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Con normativa o cifras, lo antiguo puede estar superado por una reforma."
+    },
+    {
+      "id": "p061",
+      "color": "rosa",
+      "enunciado": "Al buscar \"transitario\" OR \"freight forwarder\", ¿qué se consigue?",
+      "opciones": [
+        "Cubrir el mismo término en dos idiomas a la vez",
+        "Buscar solo páginas que tengan los dos términos",
+        "Limitar la búsqueda a webs de transitarios",
+        "Excluir las páginas que usan el término en inglés"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "OR busca cualquiera de los términos y las comillas mantienen cada expresión exacta."
+    },
+    {
+      "id": "p062",
+      "color": "rosa",
+      "enunciado": "¿Qué diferencia el uso de DataComex del de Access2Markets?",
+      "opciones": [
+        "DataComex da los aranceles; Access2Markets, las estadísticas españolas",
+        "DataComex dimensiona; Access2Markets da las condiciones de entrada",
+        "DataComex localiza distribuidores; Access2Markets, competidores",
+        "DataComex es de pago; Access2Markets es gratuito para las pymes"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "DataComex ofrece estadísticas del comercio exterior español; Access2Markets, aranceles, requisitos y normas de origen."
+    },
+    {
+      "id": "p063",
+      "color": "rosa",
+      "enunciado": "¿Por qué sin el código arancelario las bases oficiales no sirven de nada?",
+      "opciones": [
+        "Porque es el código que activa la traducción de cada base",
+        "Porque es la clasificación que identifica la mercancía en todas",
+        "Porque es el número que identifica a la empresa exportadora en ellas",
+        "Porque es la contraseña que da acceso a las bases de pago"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Las bases piden el código porque así identifican cada mercancía de forma internacional."
+    },
+    {
+      "id": "p064",
+      "color": "rosa",
+      "enunciado": "¿Cuándo conviene acudir a las bases estadísticas de Naciones Unidas o del Centro de Comercio Internacional?",
+      "opciones": [
+        "Cuando se quiere saber cuánto exporta España a un país concreto",
+        "Cuando se necesita el arancel de entrada en la Unión",
+        "Cuando se busca un directorio de empresas españolas",
+        "Cuando el mercado de destino queda fuera del ámbito europeo"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Son bases mundiales por producto y país, útiles fuera del ámbito europeo."
+    },
+    {
+      "id": "p065",
+      "color": "rosa",
+      "enunciado": "¿Qué diferencia hay entre los operadores site: y filetype:?",
+      "opciones": [
+        "site: busca la frase exacta; filetype:, cualquiera de los términos",
+        "site: excluye un dominio; filetype:, una palabra de los resultados",
+        "site: limita dónde se busca; filetype:, el formato del archivo",
+        "site: limita las fechas; filetype:, el idioma de los documentos"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Uno acota el sitio o dominio y el otro el tipo de archivo; se pueden combinar."
+    },
+    {
+      "id": "p066",
+      "color": "rosa",
+      "enunciado": "¿Qué aporta un metabuscador frente a un único motor de búsqueda?",
+      "opciones": [
+        "Resultados limitados a un único sector o ámbito",
+        "Acceso directo a las bases de datos oficiales que no se indexan",
+        "Resultados revisados uno a uno por un equipo humano",
+        "Más cobertura sin depender del criterio de un solo buscador"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Consulta varios buscadores y combina sus resultados en una lista sin duplicados."
+    },
+    {
+      "id": "p067",
+      "color": "rosa",
+      "enunciado": "Una conservera de Vigo quiere encontrar solo informes en PDF sobre aranceles dentro de la web del ICEX. ¿Qué búsqueda escribe?",
+      "opciones": [
+        "aranceles icex pdf informes",
+        "aranceles site:icex.es filetype:pdf",
+        "aranceles filetype:icex.es site:pdf",
+        "aranceles -icex.es -pdf"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "site: acota la web del ICEX y filetype: deja solo los PDF."
+    },
+    {
+      "id": "p068",
+      "color": "rosa",
+      "enunciado": "Una empresa de embalajes busca sobre embalaje de madera para exportar y le salen muchas páginas de bricolaje. ¿Qué consulta lo corrige?",
+      "opciones": [
+        "\"embalaje de madera\" exportación site:bricolaje",
+        "\"embalaje de madera\" exportación OR bricolaje",
+        "\"embalaje de madera\" exportación filetype:bricolaje",
+        "\"embalaje de madera\" exportación -bricolaje"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El guion excluye bricolaje y las comillas mantienen la expresión exacta."
+    },
+    {
+      "id": "p069",
+      "color": "rosa",
+      "enunciado": "Una importadora de Bilbao busca agentes de aduanas y quiere cubrir el término en español y en inglés en una sola consulta. ¿Qué escribe?",
+      "opciones": [
+        "\"agente de aduanas\" -\"customs broker\"",
+        "\"agente de aduanas customs broker\"",
+        "\"agente de aduanas\" OR \"customs broker\"",
+        "agente de aduanas site:customs broker"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "OR recoge cualquiera de las dos expresiones exactas."
+    },
+    {
+      "id": "p070",
+      "color": "rosa",
+      "enunciado": "Una almazara de Jaén quiere saber cuánto aceite exporta España a Japón y si esas ventas crecen o se estancan. ¿Dónde lo consulta?",
+      "opciones": [
+        "En DataComex",
+        "En un directorio sectorial",
+        "En Access2Markets",
+        "En un multibuscador"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "DataComex da las estadísticas oficiales del comercio exterior español y su evolución."
+    },
+    {
+      "id": "p071",
+      "color": "rosa",
+      "enunciado": "Una empresa introduce en Access2Markets solo «conservas de pescado» y Marruecos, y no obtiene condiciones concretas. ¿Qué le falta casi seguro?",
+      "opciones": [
+        "El dominio propio de la empresa",
+        "El operador filetype: en la consulta",
+        "Un perfil del navegador para la UE",
+        "El código arancelario del producto"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Sin el código arancelario, estas bases no identifican la mercancía."
+    },
+    {
+      "id": "p072",
+      "color": "rosa",
+      "enunciado": "Una quesería gallega busca posibles distribuidores en Polonia y quiere evitar un listado sin filtrar. ¿Dónde busca primero?",
+      "opciones": [
+        "En directorios sectoriales y de cámaras de comercio",
+        "En las estadísticas de DataComex sobre Polonia",
+        "En una herramienta de IA que le dé nombres",
+        "En los primeros resultados de un buscador generalista"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Los directorios con revisión humana aportan fiabilidad al buscar empresas."
+    },
+    {
+      "id": "p073",
+      "color": "rosa",
+      "enunciado": "Una marca de cosmética de Barcelona necesita estudios sectoriales por país sobre el mercado mexicano, pensados para exportadores. ¿Qué fuente encaja?",
+      "opciones": [
+        "Las estadísticas aduaneras de la Agencia Tributaria",
+        "La información de mercados del ICEX",
+        "Un buscador temático de patentes",
+        "El medidor de navegadores StatCounter"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El ICEX ofrece estudios sectoriales por país orientados a la empresa exportadora."
+    },
+    {
+      "id": "p074",
+      "color": "rosa",
+      "enunciado": "Un fabricante de maquinaria de Vitoria quiere saber qué importa Kenia de todo el mundo en su producto. ¿Qué fuente usa?",
+      "opciones": [
+        "DataComex, con las exportaciones españolas a Kenia",
+        "La Agencia Tributaria, con sus directorios",
+        "Un directorio de la cámara de comercio local",
+        "Las bases mundiales de Naciones Unidas o del ITC"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "DataComex solo cubre el comercio español; las bases internacionales dan el comercio mundial por país."
+    },
+    {
+      "id": "p075",
+      "color": "rosa",
+      "enunciado": "Un técnico prepara una etiqueta para Francia y el documento que encuentra es anterior a la última reforma de la norma. ¿Qué herramienta de búsqueda le habría ayudado?",
+      "opciones": [
+        "El operador OR con el nombre de la norma",
+        "Un multibuscador con listas separadas",
+        "El filtro de rango de fechas del buscador",
+        "El guion delante de la palabra norma"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "El rango de fechas descarta de un golpe lo anterior a la última reforma."
+    },
+    {
+      "id": "p076",
+      "color": "rosa",
+      "enunciado": "Una becaria publicó ayer la nueva web de su empresa y no sale al buscarla. Cree que el buscador recorre la web en cada consulta. ¿Qué le explicas?",
+      "opciones": [
+        "Solo aparecerá cuando la incluya un directorio con revisión",
+        "Aún no está en el índice y hasta entonces no existe para él",
+        "Debe repetir la búsqueda en ventana privada para que aparezca",
+        "El buscador la recorre, pero su servidor responde muy lento"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El buscador responde desde su índice, construido antes por el rastreo."
+    },
+    {
+      "id": "p077",
+      "color": "rosa",
+      "enunciado": "El gerente de una bodega ve a un competidor en el primer resultado y concluye que es el mejor proveedor del sector. ¿Qué le matizas?",
+      "opciones": [
+        "El primer resultado es siempre el que más tiempo lleva indexado",
+        "El primer resultado lo eligen las cámaras de comercio",
+        "Ese orden lo fija un algoritmo y puede ser un anuncio pagado",
+        "El primer resultado es siempre la web con más ventas"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Los primeros resultados suelen ser anuncios pagados y el orden no mide la calidad."
+    },
+    {
+      "id": "p078",
+      "color": "rosa",
+      "enunciado": "Un analista quiere ampliar la cobertura de una consulta sin depender del criterio de un solo buscador, en una única lista sin duplicados. ¿Qué usa?",
+      "opciones": [
+        "Un metabuscador",
+        "Un buscador temático",
+        "Un multibuscador",
+        "Un directorio sectorial"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El metabuscador combina en una sola lista los resultados de varios buscadores."
+    },
+    {
+      "id": "p079",
+      "color": "rosa",
+      "enunciado": "Una empresa de Vigo ha diseñado un abrefácil para latas y quiere saber si ya está protegido antes de lanzarlo. ¿Qué herramienta es la más adecuada?",
+      "opciones": [
+        "Un buscador temático de patentes",
+        "Un multibuscador generalista",
+        "Un directorio de cámara de comercio",
+        "DataComex por código arancelario"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Los buscadores especializados indexan un ámbito concreto, como las patentes."
+    },
+    {
+      "id": "p080",
+      "color": "rosa",
+      "enunciado": "La técnica de una conservera ya sabe por DataComex que el mercado polaco crece. ¿Qué consulta a continuación para conocer aranceles y normas de origen?",
+      "opciones": [
+        "Un directorio sectorial de empresas polacas",
+        "Una herramienta de IA que resuma la normativa",
+        "Access2Markets, con producto y país de destino",
+        "Las estadísticas del ICEX sobre el sector en Polonia"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Access2Markets devuelve aranceles, requisitos y normas de origen de esa operación concreta."
+    },
+    {
+      "id": "p081",
+      "color": "amarillo",
+      "enunciado": "¿Qué es una herramienta de inteligencia artificial conversacional?",
+      "opciones": [
+        "Una base de datos oficial con aranceles y requisitos de cada mercado",
+        "Un programa al que se pregunta en lenguaje corriente y que redacta",
+        "Un buscador que devuelve enlaces a páginas reales ordenadas por calidad",
+        "Un traductor automático clásico que traduce palabra por palabra"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Se le pregunta como a una persona y responde generando un texto."
+    },
+    {
+      "id": "p082",
+      "color": "amarillo",
+      "enunciado": "¿Cómo genera su respuesta una herramienta de IA conversacional?",
+      "opciones": [
+        "Calculando qué palabras encajan mejor a continuación",
+        "Consultando las bases de datos oficiales",
+        "Copiando el texto del primer resultado de un buscador",
+        "Preguntando a un equipo humano de expertos"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Genera texto nuevo a partir de los textos con los que se ha entrenado."
+    },
+    {
+      "id": "p083",
+      "color": "amarillo",
+      "enunciado": "Una IA inventa un tipo arancelario con apariencia perfectamente creíble. ¿Cómo se llama este fallo?",
+      "opciones": [
+        "Suplantación",
+        "Fecha de corte",
+        "Alucinación",
+        "Indexación"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Se llama alucinación a la información inventada que parece cierta."
+    },
+    {
+      "id": "p084",
+      "color": "amarillo",
+      "enunciado": "¿Cuál de estas tareas se le da bien a la IA conversacional?",
+      "opciones": [
+        "Ordenar las notas de una feria en un informe",
+        "Confirmar el plazo vigente de un trámite",
+        "Dar el artículo exacto de una norma aduanera",
+        "Decidir el margen de una oferta a un cliente"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Ordenar y estructurar es uno de sus puntos fuertes; los datos concretos y decidir, no."
+    },
+    {
+      "id": "p085",
+      "color": "amarillo",
+      "enunciado": "¿Cuál de estas tareas se le da mal a la IA conversacional?",
+      "opciones": [
+        "Explicar un término técnico",
+        "Reescribir un texto más formal",
+        "Dar cifras y fechas concretas",
+        "Resumir un documento largo"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Los datos concretos puede inventarlos; redactar, resumir y explicar los hace bien."
+    },
+    {
+      "id": "p086",
+      "color": "amarillo",
+      "enunciado": "¿Qué limita lo que una IA sabe sobre hechos muy recientes?",
+      "opciones": [
+        "Su fecha de corte",
+        "Su perfil de usuario",
+        "Su motor de renderizado",
+        "Su índice de páginas"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Lo posterior a su fecha de corte no lo conoce o lo conoce mal, salvo que consulte internet."
+    },
+    {
+      "id": "p087",
+      "color": "amarillo",
+      "enunciado": "¿Qué puede ocurrir si se le piden a una IA referencias o fuentes?",
+      "opciones": [
+        "Que devuelva enlaces del índice de un buscador",
+        "Que solo cite fuentes oficiales de la Unión Europea",
+        "Que se niegue siempre a dar cualquier referencia",
+        "Que cite informes inexistentes, con autor y año"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Puede inventar referencias con apariencia completa y creíble."
+    },
+    {
+      "id": "p088",
+      "color": "amarillo",
+      "enunciado": "¿Qué regla de uso manda comprobar un arancel aunque la respuesta de la IA parezca impecable?",
+      "opciones": [
+        "Revisar siempre antes de enviar",
+        "Verificar siempre en la fuente oficial",
+        "Comprobar si la empresa tiene una política",
+        "No introducir información confidencial"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "El dato se comprueba en Access2Markets o en la fuente que corresponda."
+    },
+    {
+      "id": "p089",
+      "color": "amarillo",
+      "enunciado": "¿Cuál de estos datos no debe escribirse en una herramienta de IA de terceros?",
+      "opciones": [
+        "Un texto público de la propia web",
+        "El nombre de un concepto técnico",
+        "Los precios de coste de la empresa",
+        "Una pregunta general sobre un término"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Precios de coste, contratos sin firmar o datos de clientes son información confidencial."
+    },
+    {
+      "id": "p090",
+      "color": "amarillo",
+      "enunciado": "¿Qué regla de uso de la IA resume la idea «un borrador es un borrador»?",
+      "opciones": [
+        "No introducir información confidencial",
+        "Revisar siempre antes de enviar",
+        "No delegar el criterio profesional",
+        "Verificar siempre en la fuente oficial"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Quien firma el correo responde de su contenido, aunque lo haya redactado la IA."
+    },
+    {
+      "id": "p091",
+      "color": "amarillo",
+      "enunciado": "Según el tema, cuando se usa la IA en el trabajo comercial, ¿quién toma la decisión?",
+      "opciones": [
+        "La fuente oficial que la IA haya consultado",
+        "El proveedor de la herramienta de IA utilizada",
+        "La IA, porque ha leído todo sobre comercio exterior",
+        "La persona, porque la decisión sigue siendo humana"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "La IA no conoce el margen, la relación con el cliente ni lo negociado."
+    },
+    {
+      "id": "p092",
+      "color": "amarillo",
+      "enunciado": "¿Qué conviene preguntar en la empresa antes de empezar a usar herramientas de IA?",
+      "opciones": [
+        "Si el correo de la empresa usa el protocolo IMAP",
+        "Si el navegador de la empresa admite las herramientas de IA actuales",
+        "Si la IA tiene acceso a las bases de datos oficiales",
+        "Si hay una política sobre qué herramientas y datos se autorizan"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Cada vez más organizaciones fijan por escrito qué herramientas y qué información se permiten."
+    },
+    {
+      "id": "p093",
+      "color": "amarillo",
+      "enunciado": "¿Por qué una herramienta de IA no es un buscador?",
+      "opciones": [
+        "El buscador consulta un índice de páginas; la IA genera texto nuevo",
+        "El buscador usa operadores; la IA solo entiende órdenes en inglés",
+        "El buscador es de pago; la IA es gratuita para las empresas",
+        "El buscador redacta respuestas; la IA solo devuelve enlaces"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Esa diferencia explica que la IA escriba bien y que a veces afirme cosas falsas."
+    },
+    {
+      "id": "p094",
+      "color": "amarillo",
+      "enunciado": "¿Por qué la IA escribe tan bien y, a la vez, puede afirmar cosas falsas con total seguridad?",
+      "opciones": [
+        "Porque copia textos de páginas que a veces no están actualizadas",
+        "Porque sus respuestas las revisa un equipo que comete errores",
+        "Porque traduce del inglés y pierde precisión en la traducción",
+        "Porque genera las palabras más probables, no consulta los datos"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Al generar texto plausible, la forma es impecable aunque el contenido sea inventado."
+    },
+    {
+      "id": "p095",
+      "color": "amarillo",
+      "enunciado": "¿Por qué la IA traduce mejor que un traductor automático clásico?",
+      "opciones": [
+        "Porque traduce palabra por palabra sin alterar nada",
+        "Porque entiende el contexto y el tono del texto",
+        "Porque solo traduce entre idiomas de la Unión",
+        "Porque consulta diccionarios oficiales de cada país"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Al entender contexto y tono, puede además adaptar culturalmente el texto."
+    },
+    {
+      "id": "p096",
+      "color": "amarillo",
+      "enunciado": "El tema dice: «úsala para redactar y entender; no para averiguar datos que no puedas comprobar». ¿Por qué?",
+      "opciones": [
+        "Porque comprobar datos con ella está prohibido por ley",
+        "Si no recuerda un dato exacto, lo compone con la misma seguridad",
+        "Porque sus datos solo valen para el mercado europeo",
+        "Porque redactar y entender son las dos únicas funciones que tiene"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La IA no dice «no lo sé»: inventa el dato con la misma seguridad que lo verdadero."
+    },
+    {
+      "id": "p097",
+      "color": "amarillo",
+      "enunciado": "¿Qué significa que «la IA sirve para saber qué preguntar; la fuente oficial, para saber la respuesta»?",
+      "opciones": [
+        "La fuente oficial redacta y la IA comprueba lo que redacta",
+        "La IA orienta la consulta y el dato se toma de la fuente oficial",
+        "La IA da el dato y la fuente oficial solo confirma el formato",
+        "La IA y la fuente oficial son igual de fiables para los datos"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La IA ayuda a entender y a plantear la búsqueda; la cifra fiable está en la fuente."
+    },
+    {
+      "id": "p098",
+      "color": "amarillo",
+      "enunciado": "¿Por qué no deben escribirse precios de coste en una herramienta de IA de terceros?",
+      "opciones": [
+        "No se sabe qué hace esa herramienta con la información",
+        "Porque la IA los publicaría en los buscadores",
+        "Porque los precios hacen que la IA alucine más",
+        "Porque la IA no sabe hacer cálculos con precios ni con márgenes"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Es información confidencial y se entrega a un tercero sin control sobre su uso."
+    },
+    {
+      "id": "p099",
+      "color": "amarillo",
+      "enunciado": "¿Por qué la IA no puede decidir por el comercial en una negociación?",
+      "opciones": [
+        "Porque solo responde a preguntas sobre aranceles y normas",
+        "Porque tarda demasiado en responder a preguntas complejas",
+        "Porque no sabe redactar correos formales en otros idiomas",
+        "No conoce el margen, la relación ni lo acordado por teléfono"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Le falta el conocimiento del negocio; sirve para ganar tiempo, no para sustituir el criterio."
+    },
+    {
+      "id": "p100",
+      "color": "amarillo",
+      "enunciado": "¿Por qué hay que revisar un correo redactado por IA antes de enviarlo?",
+      "opciones": [
+        "Porque la IA escribe los correos solo en un lenguaje muy informal",
+        "Quien firma responde, y un tono equivocado puede costar la venta",
+        "Porque la IA siempre deja el correo sin asunto ni firma",
+        "Porque el correo generado por IA no se puede reenviar"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "La responsabilidad es de quien lo envía, y en un mercado poco conocido el tono importa."
+    },
+    {
+      "id": "p101",
+      "color": "amarillo",
+      "enunciado": "¿Por qué una IA puede fallar al preguntarle por una norma aprobada la semana pasada?",
+      "opciones": [
+        "Porque necesita el código arancelario para responder sobre normas",
+        "Porque solo conoce las normas de su país de origen",
+        "Porque las normas nuevas no se publican en internet",
+        "Lo posterior a su fecha de corte no lo conoce o lo conoce mal"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Salvo que consulte internet en ese momento, lo muy reciente queda fuera de lo que sabe."
+    },
+    {
+      "id": "p102",
+      "color": "amarillo",
+      "enunciado": "En el ejemplo del colaborador que lo ha leído todo, ¿qué rasgo lo hace peligroso para dar cifras?",
+      "opciones": [
+        "Explica muy bien los conceptos",
+        "Resume contratos largos",
+        "Escribe en seis idiomas",
+        "Nunca dice «no lo sé»"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Cuando no recuerda algo, no lo reconoce: lo compone con apariencia creíble."
+    },
+    {
+      "id": "p103",
+      "color": "amarillo",
+      "enunciado": "¿Por qué introducir datos personales de clientes en una IA es, además, un asunto legal?",
+      "opciones": [
+        "Porque incumple la normativa de firma electrónica",
+        "Porque vulnera la normativa de comercio exterior",
+        "Porque afecta a la protección de datos personales",
+        "Porque infringe las normas de origen de la mercancía"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Entregar datos de clientes a terceros sin control es un problema de protección de datos."
+    },
+    {
+      "id": "p104",
+      "color": "amarillo",
+      "enunciado": "¿Qué añade «adaptar culturalmente» a traducir un texto comercial?",
+      "opciones": [
+        "Añadir el código arancelario al texto traducido",
+        "Sustituir los datos técnicos del producto por los del cliente",
+        "Ajustar el tono y el registro a lo que espera ese mercado",
+        "Cambiar los precios a la moneda del país de destino"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La IA entiende contexto y tono, y puede adecuar el mensaje al mercado, no solo las palabras."
+    },
+    {
+      "id": "p105",
+      "color": "amarillo",
+      "enunciado": "¿Por qué el tema dice que la IA sirve para ganar tiempo, no para sustituir el conocimiento del negocio?",
+      "opciones": [
+        "Porque solo funciona bien fuera del horario laboral de la empresa",
+        "Porque acelera tareas, pero desconoce lo que la empresa sabe",
+        "Porque es más lenta que una persona al redactar",
+        "Porque solo sabe trabajar con textos en inglés"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "No sabe qué se acordó en la última visita ni cuánto margen hay; ese criterio es humano."
+    },
+    {
+      "id": "p106",
+      "color": "amarillo",
+      "enunciado": "¿Por qué la IA resulta útil para entender una cláusula contractual complicada?",
+      "opciones": [
+        "Puede explicarla en lenguaje llano y poner ejemplos",
+        "Porque cita el artículo exacto de la norma que la regula",
+        "Porque confirma si la cláusula es legal en cada país",
+        "Porque conoce lo negociado con ese cliente en concreto"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Explicar lo que no se entiende es una de sus fortalezas; confirmar normas o artículos, no."
+    },
+    {
+      "id": "p107",
+      "color": "amarillo",
+      "enunciado": "Una comercial de una conservera de Bueu necesita un primer borrador formal de correo para un importador sueco. ¿Cómo usa la IA?",
+      "opciones": [
+        "Le pide el borrador y lo envía tal cual sin leerlo",
+        "Le pide además el arancel sueco y lo incluye en la oferta",
+        "No la usa: redactar correos comerciales se le da mal",
+        "Le pide el borrador y lo revisa antes de enviarlo"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Redactar borradores se le da bien, pero quien firma debe revisar el contenido y el tono."
+    },
+    {
+      "id": "p108",
+      "color": "amarillo",
+      "enunciado": "Un becario pidió a la IA el arancel de su vino en la India y lo metió en el precio de venta. ¿Qué debió hacer antes?",
+      "opciones": [
+        "Preguntar el arancel a otra herramienta de IA",
+        "Pedir a la IA que repitiera la respuesta",
+        "Traducir la respuesta con el navegador",
+        "Comprobar ese arancel en Access2Markets"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Un dato verificable se comprueba en la fuente oficial, por creíble que parezca."
+    },
+    {
+      "id": "p109",
+      "color": "amarillo",
+      "enunciado": "Un técnico quiere pegar en una IA gratuita el contrato sin firmar con un distribuidor chileno, con todas las condiciones, para que lo resuma. ¿Qué haría?",
+      "opciones": [
+        "Pegarlo y borrar la conversación cuando termine el resumen",
+        "No pegarlo sin saber qué hace la herramienta con esa información",
+        "Pegarlo, porque resumir contratos largos se le da muy bien",
+        "Pegarlo solo después de traducirlo al inglés para que lo entienda"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Contratos sin firmar y condiciones negociadas son información confidencial."
+    },
+    {
+      "id": "p110",
+      "color": "amarillo",
+      "enunciado": "Tras una feria en Düsseldorf, una técnica tiene apuntes desordenados sobre tendencias y estands visitados. ¿Qué uso de la IA es adecuado?",
+      "opciones": [
+        "Pedirle las cifras de ventas de cada estand visitado",
+        "Pedirle que decida qué proveedor contratar en la feria",
+        "Pedirle las fuentes oficiales que respaldan cada tendencia",
+        "Pedirle que los ordene en un informe y revisarlo después"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Ordenar y estructurar notas es una de sus capacidades; cifras, fuentes y decisiones, no."
+    },
+    {
+      "id": "p111",
+      "color": "amarillo",
+      "enunciado": "Una IA da a una empresa de marisco una lista de informes sobre el mercado coreano, con autor y año. El jefe quiere citarlos en un estudio. ¿Qué haces?",
+      "opciones": [
+        "Comprobar antes que cada informe existe de verdad",
+        "Citarlos, porque traen autor y año completos",
+        "Citar solo los que tienen un título en inglés",
+        "Pedir a la IA que confirme que son reales"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La IA puede inventar referencias con todos sus datos; hay que verificarlas."
+    },
+    {
+      "id": "p112",
+      "color": "amarillo",
+      "enunciado": "Un exportador pregunta a una IA, que no consulta internet, si le afecta una norma aprobada hace unos días. ¿Qué debe tener presente?",
+      "opciones": [
+        "Si la IA no la menciona, es que no afecta al producto",
+        "Puede desconocerla y debe verificarlo en la fuente oficial",
+        "Basta con repetir la pregunta con otras palabras",
+        "La IA conoce siempre la normativa al día por definición"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Lo posterior a su fecha de corte no lo conoce o lo conoce mal."
+    },
+    {
+      "id": "p113",
+      "color": "amarillo",
+      "enunciado": "El gerente de una empresa de mobiliario quiere que una IA decida qué descuento ofrecer a un cliente de Emiratos. ¿Qué le aconsejas?",
+      "opciones": [
+        "Dejar que la IA decida y revisar solo la ortografía",
+        "Aceptar el descuento que proponga la IA sin cambios",
+        "Decidirlo él: la IA no sabe el margen ni la relación",
+        "Pedir el descuento a dos IA y quedarse con la media"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La decisión sigue siendo humana: la IA no conoce el negocio ni lo negociado."
+    },
+    {
+      "id": "p114",
+      "color": "amarillo",
+      "enunciado": "Una técnica no entiende un requisito técnico de un documento oficial europeo de etiquetado. ¿Cómo usa bien la IA?",
+      "opciones": [
+        "Pide que se lo explique en llano y lo verifica en el texto oficial",
+        "Pide que redacte la etiqueta final sin leer el documento",
+        "Pide que confirme si el documento oficial es correcto",
+        "Pide que le dé la versión vigente del requisito y la aplica sin más"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Explicar lo que no se entiende se le da bien; después se comprueba en el original."
+    },
+    {
+      "id": "p115",
+      "color": "amarillo",
+      "enunciado": "Una empleada recién llegada a una transitaria de Valencia quiere usar una IA gratuita con datos de envíos para redactar avisos. ¿Qué debe hacer primero?",
+      "opciones": [
+        "Preguntar si la empresa tiene una política sobre IA",
+        "Usarla solo con los envíos a países de la Unión",
+        "Usarla solo desde una ventana privada del navegador",
+        "Empezar a usarla y avisar si surge algún problema"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Muchas empresas fijan qué herramientas están autorizadas y con qué información."
+    },
+    {
+      "id": "p116",
+      "color": "amarillo",
+      "enunciado": "Un comercial envía sin leer un correo generado por IA a un cliente japonés y el tono resulta demasiado coloquial. ¿Qué regla incumplió?",
+      "opciones": [
+        "Comprobar la política de la empresa",
+        "Verificar siempre en la fuente oficial",
+        "Revisar siempre antes de enviar",
+        "No introducir información confidencial"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Quien firma responde del contenido, y un tono inadecuado puede costar una operación."
+    },
+    {
+      "id": "p117",
+      "color": "amarillo",
+      "enunciado": "Una marca de aceite quiere adaptar la ficha de su producto al tono del mercado mexicano. ¿Qué uso de la IA es adecuado?",
+      "opciones": [
+        "Pedirle además los requisitos legales de etiquetado",
+        "Pedirle una adaptación cultural del texto y revisarla",
+        "Pedirle que fije el precio de venta para México",
+        "Pedirle que elija a qué distribuidor enviar la ficha"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Traducir y adaptar culturalmente es una de sus fortalezas."
+    },
+    {
+      "id": "p118",
+      "color": "amarillo",
+      "enunciado": "Un técnico va a exportar por primera vez a Brasil y no sabe ni qué documentos suelen pedirse. ¿Qué uso de la IA sigue las reglas del tema?",
+      "opciones": [
+        "Pedirle que rellene y firme los documentos de la operación",
+        "Pedirle los plazos exactos de cada trámite y aplicarlos",
+        "Tomar la lista de documentos que da la IA como la lista definitiva",
+        "Orientarse sobre qué consultar y comprobarlo en la fuente oficial"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La IA sirve para saber qué preguntar; la fuente oficial, para saber la respuesta."
+    },
+    {
+      "id": "p119",
+      "color": "amarillo",
+      "enunciado": "Un compañero pide a la IA los enlaces de las páginas de donde «saca» cada dato, convencido de que funciona como un buscador. ¿Qué error de concepto tiene?",
+      "opciones": [
+        "La IA genera texto y puede inventar fuentes; no consulta un índice",
+        "La IA consulta un índice, pero lo oculta por seguridad",
+        "La IA solo busca en bases oficiales, que no ofrecen enlaces públicos",
+        "La IA busca en directorios con revisión humana"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Un buscador devuelve páginas reales; la IA compone texto nuevo y puede citar fuentes inexistentes."
+    },
+    {
+      "id": "p120",
+      "color": "amarillo",
+      "enunciado": "Para segmentar un boletín, una empresa quiere pegar en una IA externa su lista de clientes con nombres y correos. ¿Qué problema plantea?",
+      "opciones": [
+        "Que la IA no sabe ordenar listas de nombres y correos",
+        "Entregar datos personales a un tercero sin saber qué hace",
+        "Que la lista quedará indexada en el buscador al instante",
+        "Que la IA traducirá los nombres al idioma de cada país"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Son datos personales de clientes: confidencialidad y protección de datos."
+    },
+    {
+      "id": "p121",
+      "color": "marron",
+      "enunciado": "¿Qué signo separa las dos partes de una dirección de correo?",
+      "opciones": [
+        "La barra",
+        "La arroba",
+        "El punto",
+        "El guion"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "A la izquierda de la arroba va el buzón y a la derecha, el dominio."
+    },
+    {
+      "id": "p122",
+      "color": "marron",
+      "enunciado": "En una dirección de correo, ¿qué hay a la derecha de la arroba?",
+      "opciones": [
+        "El nombre del buzón o de la persona destinataria",
+        "La dirección del servidor de salida del remitente",
+        "El protocolo que se usa para recoger el mensaje",
+        "El dominio de la organización que gestiona el buzón"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El dominio permite localizar el servidor de destino."
+    },
+    {
+      "id": "p123",
+      "color": "marron",
+      "enunciado": "En una dirección de correo, ¿qué hay a la izquierda de la arroba?",
+      "opciones": [
+        "El dominio",
+        "El buzón",
+        "El protocolo",
+        "El servidor"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "La parte izquierda identifica el buzón dentro de ese dominio."
+    },
+    {
+      "id": "p124",
+      "color": "marron",
+      "enunciado": "¿Qué protocolo se encarga de enviar el correo?",
+      "opciones": [
+        "SMTP",
+        "FTP",
+        "POP",
+        "IMAP"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "SMTP lleva el mensaje desde el remitente hasta el servidor del destinatario."
+    },
+    {
+      "id": "p125",
+      "color": "marron",
+      "enunciado": "¿Qué significan las siglas SMTP?",
+      "opciones": [
+        "Simple Mail Tracking Protocol",
+        "Server Mail Transport Protocol",
+        "Simple Mail Transfer Protocol",
+        "Secure Message Transfer Protocol"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "SMTP es el protocolo simple de transferencia de correo."
+    },
+    {
+      "id": "p126",
+      "color": "marron",
+      "enunciado": "¿Qué protocolo descarga los mensajes al dispositivo y, por defecto, los borra del servidor?",
+      "opciones": [
+        "SMTP",
+        "IMAP",
+        "POP",
+        "FTP"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "POP recoge los mensajes y se los lleva al equipo."
+    },
+    {
+      "id": "p127",
+      "color": "marron",
+      "enunciado": "¿Qué protocolo mantiene los mensajes en el servidor y sincroniza los dispositivos?",
+      "opciones": [
+        "POP",
+        "IMAP",
+        "FTP",
+        "SMTP"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Con IMAP cada dispositivo muestra una copia sincronizada del mismo buzón."
+    },
+    {
+      "id": "p128",
+      "color": "marron",
+      "enunciado": "¿Qué significan las siglas IMAP?",
+      "opciones": [
+        "Instant Message Answer Protocol",
+        "Internet Mail Address Protocol",
+        "Internal Mail Archive Protocol",
+        "Internet Message Access Protocol"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "IMAP es el protocolo de acceso a mensajes de internet."
+    },
+    {
+      "id": "p129",
+      "color": "marron",
+      "enunciado": "¿Qué es el correo web o webmail?",
+      "opciones": [
+        "Una plataforma para enviar correos masivos",
+        "Un protocolo que envía el correo entre servidores",
+        "Un programa instalado que descarga el correo al equipo",
+        "Acceder al buzón desde el navegador, en una página web"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Se entra en el buzón desde el navegador, sin instalar nada."
+    },
+    {
+      "id": "p130",
+      "color": "marron",
+      "enunciado": "¿Qué es un programa cliente de correo?",
+      "opciones": [
+        "El protocolo que recoge los mensajes guardados en el servidor",
+        "Una página web desde la que se consulta el buzón",
+        "El servidor de destino que guarda los mensajes",
+        "Un programa instalado en el equipo que se conecta al servidor"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Es software instalado que se configura para conectarse al servidor de correo."
+    },
+    {
+      "id": "p131",
+      "color": "marron",
+      "enunciado": "Al configurar un programa cliente, ¿qué protocolo corresponde al servidor de salida?",
+      "opciones": [
+        "IMAP",
+        "FTP",
+        "POP",
+        "SMTP"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "El servidor de salida usa SMTP; el de entrada, POP o IMAP."
+    },
+    {
+      "id": "p132",
+      "color": "marron",
+      "enunciado": "¿Qué protocolo resume el tema con la idea «me lo llevo»?",
+      "opciones": [
+        "SMTP",
+        "POP",
+        "FTP",
+        "IMAP"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "POP descarga el mensaje al dispositivo y normalmente lo borra del servidor."
+    },
+    {
+      "id": "p133",
+      "color": "marron",
+      "enunciado": "¿Por qué el dominio de una dirección de correo es clave en el viaje del mensaje?",
+      "opciones": [
+        "Indica el protocolo con el que se recogerá el mensaje",
+        "Señala el idioma en que debe redactarse el mensaje",
+        "Identifica el dispositivo en el que se leerá el mensaje",
+        "Permite localizar el servidor de destino, como en una web"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Gracias al dominio se sabe a qué servidor debe llegar el correo."
+    },
+    {
+      "id": "p134",
+      "color": "marron",
+      "enunciado": "¿Por qué se dice que SMTP y POP o IMAP nunca se solapan?",
+      "opciones": [
+        "SMTP cifra el correo; POP e IMAP lo descifran",
+        "SMTP es para webmail; POP e IMAP, para clientes",
+        "SMTP solo recoge; POP e IMAP solo envían",
+        "SMTP solo envía; POP e IMAP solo recogen"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Cada uno cubre un tramo distinto del viaje: la salida o la recogida."
+    },
+    {
+      "id": "p135",
+      "color": "marron",
+      "enunciado": "¿Por qué POP genera desorden cuando se consulta el correo desde varios dispositivos?",
+      "opciones": [
+        "Cada mensaje acaba en el único dispositivo que lo descarga",
+        "Borra los mensajes antes de que lleguen a ningún dispositivo",
+        "Envía los mensajes leídos de vuelta al remitente",
+        "Duplica cada mensaje en todos los dispositivos conectados"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Quien descarga primero se lleva el mensaje y los demás no lo ven."
+    },
+    {
+      "id": "p136",
+      "color": "marron",
+      "enunciado": "¿Cuál es la diferencia esencial entre POP e IMAP?",
+      "opciones": [
+        "Dónde queda el mensaje: en el dispositivo o en el servidor",
+        "Cómo se cifra el mensaje: con clave o sin ella",
+        "En qué idioma se muestra el buzón al usuario",
+        "Quién envía el mensaje: el remitente o el propio destinatario"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "POP se lleva el mensaje al equipo; IMAP lo deja en el servidor y muestra copias."
+    },
+    {
+      "id": "p137",
+      "color": "marron",
+      "enunciado": "Si un correo no sale del buzón, ¿en qué protocolo está el problema?",
+      "opciones": [
+        "En FTP, porque transfiere los adjuntos",
+        "En IMAP, porque sincroniza los mensajes entre equipos",
+        "En POP, porque descarga los mensajes",
+        "En SMTP, el único que se ocupa de la salida"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Solo SMTP interviene en el envío."
+    },
+    {
+      "id": "p138",
+      "color": "marron",
+      "enunciado": "¿Por qué IMAP es la opción adecuada para una empresa?",
+      "opciones": [
+        "Porque borra del servidor todo lo que ya se ha leído",
+        "Porque solo funciona en un único equipo de la oficina",
+        "Mismo buzón, carpetas y estado en todos los dispositivos",
+        "Porque permite enviar correos sin un servidor de salida"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Lo leído, archivado o borrado se refleja en el ordenador, el portátil y el móvil."
+    },
+    {
+      "id": "p139",
+      "color": "marron",
+      "enunciado": "¿En qué situación sigue sirviendo el protocolo POP?",
+      "opciones": [
+        "Cuando varias personas comparten un mismo buzón",
+        "Cuando el correo se consulta desde un único equipo",
+        "Cuando se lee el correo en el móvil y el portátil",
+        "Cuando se quiere ver el mismo estado en todo"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Con un solo dispositivo, que el mensaje se descargue no genera desorden."
+    },
+    {
+      "id": "p140",
+      "color": "marron",
+      "enunciado": "En la comparación del apartado postal, ¿qué equivale a usar POP?",
+      "opciones": [
+        "Dejar las cartas en la oficina para todos",
+        "Enviar las cartas por correo certificado",
+        "Leer las cartas en el mostrador de correos",
+        "Recoger las cartas y llevártelas a casa"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Con POP, quien va primero se lleva el sobre y los demás no lo ven."
+    },
+    {
+      "id": "p141",
+      "color": "marron",
+      "enunciado": "¿Por qué el correo web y el programa cliente no son excluyentes?",
+      "opciones": [
+        "Porque los dos usan el mismo programa instalado",
+        "Porque el cliente solo funciona dentro del webmail",
+        "Se puede usar uno en la oficina y otro en el móvil",
+        "Porque el webmail necesita un cliente para enviar"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Son dos formas de acceder al mismo buzón y pueden combinarse."
+    },
+    {
+      "id": "p142",
+      "color": "marron",
+      "enunciado": "¿Qué ventaja ofrece un programa cliente frente al correo web?",
+      "opciones": [
+        "Trabajar sin conexión con lo ya descargado",
+        "Funcionar en cualquier equipo sin instalar nada",
+        "No necesitar configurar ningún servidor",
+        "No depender de ningún protocolo de correo"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El cliente permite además gestionar varias cuentas y organizar mejor."
+    },
+    {
+      "id": "p143",
+      "color": "marron",
+      "enunciado": "¿Qué inconveniente tiene el correo web?",
+      "opciones": [
+        "Exige conexión y en un equipo ajeno hay que cerrar sesión",
+        "Solo permite gestionar una cuenta por cada equipo",
+        "Hay que instalarlo y configurarlo en cada dispositivo que se use",
+        "No permite leer correos enviados desde otro país"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Sin conexión no funciona y, en un equipo prestado, dejar la sesión abierta es un riesgo."
+    },
+    {
+      "id": "p144",
+      "color": "marron",
+      "enunciado": "¿Por qué al configurar un programa cliente se piden dos servidores distintos?",
+      "opciones": [
+        "Uno de entrada para recoger y otro de salida para enviar",
+        "Uno para el correo nacional y otro para el internacional",
+        "Uno para los mensajes leídos y otro para los no leídos",
+        "Uno para el correo personal y otro para el de empresa"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El de entrada usa POP o IMAP y el de salida, SMTP."
+    },
+    {
+      "id": "p145",
+      "color": "marron",
+      "enunciado": "¿Qué protocolo interviene siempre, se use POP o IMAP para recoger?",
+      "opciones": [
+        "FTP, porque transporta los adjuntos",
+        "IMAP, porque sincroniza también el envío",
+        "POP, porque es el modelo más antiguo",
+        "SMTP, porque sin él el mensaje no sale"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "SMTP siempre interviene; POP e IMAP son alternativos entre sí."
+    },
+    {
+      "id": "p146",
+      "color": "marron",
+      "enunciado": "En la comparación del apartado postal y la oficina, ¿qué equivale a usar IMAP?",
+      "opciones": [
+        "Recoger las cartas del apartado y llevártelas a casa",
+        "Devolver las cartas al remitente tras leerlas",
+        "Tener las cartas en la oficina y consultarlas allí",
+        "Enviar una copia de cada carta a cada persona"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Con IMAP el sobre sigue en la oficina y cualquiera lo encuentra en el mismo estado."
+    },
+    {
+      "id": "p147",
+      "color": "marron",
+      "enunciado": "Una comercial consulta su correo desde el móvil, el portátil y la oficina, y le desaparecen los mensajes de los demás dispositivos. ¿Qué debe cambiar?",
+      "opciones": [
+        "Configurar el servidor de salida con POP",
+        "Pasar a recibir el correo mediante SMTP",
+        "Usar solo el móvil para descargar todo el correo por POP",
+        "Configurar la recepción con IMAP en lugar de POP"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Con POP el mensaje se va al primer dispositivo; con IMAP queda en el servidor para todos."
+    },
+    {
+      "id": "p148",
+      "color": "marron",
+      "enunciado": "Un exportador de Lugo recibe correos con normalidad, pero los que escribe no salen. ¿Qué revisa en la configuración?",
+      "opciones": [
+        "El servidor de entrada IMAP",
+        "El servidor de salida SMTP",
+        "El motor del navegador",
+        "El modo de descarga de POP"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Si recibe pero no envía, el fallo está en la salida, que corresponde a SMTP."
+    },
+    {
+      "id": "p149",
+      "color": "marron",
+      "enunciado": "En una feria en Shanghái, un exportador solo dispone de un ordenador prestado del recinto para leer su correo. ¿Qué forma de acceso le conviene?",
+      "opciones": [
+        "Una conexión FTP con su servidor",
+        "El correo web, sin instalar nada",
+        "Un programa cliente recién instalado",
+        "Una descarga por POP a ese equipo"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El webmail funciona desde cualquier ordenador sin instalar nada."
+    },
+    {
+      "id": "p150",
+      "color": "marron",
+      "enunciado": "Tras leer su correo web en el ordenador de un hotel de Lisboa, un comercial cierra la ventana y se va. ¿Qué error ha cometido?",
+      "opciones": [
+        "No descargar los mensajes por POP",
+        "No usar un programa cliente instalado",
+        "No cerrar la sesión en un equipo ajeno",
+        "No configurar el servidor de salida"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "En un equipo ajeno hay que cerrar sesión sin falta."
+    },
+    {
+      "id": "p151",
+      "color": "marron",
+      "enunciado": "Un técnico va a pasar un vuelo largo sin conexión y quiere leer y preparar respuestas a correos ya recibidos. ¿Qué forma de acceso le permite hacerlo?",
+      "opciones": [
+        "Un programa cliente con los mensajes descargados",
+        "El servidor de salida SMTP bien configurado en el móvil",
+        "Una ventana privada del navegador",
+        "El correo web abierto en el navegador"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El programa cliente permite trabajar sin conexión con lo ya descargado."
+    },
+    {
+      "id": "p152",
+      "color": "marron",
+      "enunciado": "Una responsable gestiona tres cuentas de correo (empresa, marketplace y asociación) y quiere verlas juntas y bien organizadas. ¿Qué le conviene?",
+      "opciones": [
+        "Reenviar todo a una cuenta gratuita",
+        "Un programa cliente que reúna las tres cuentas",
+        "Una única cuenta con el protocolo POP",
+        "Tres pestañas de correo web en el mismo navegador"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El cliente gestiona varias cuentas a la vez y ofrece más opciones de organización."
+    },
+    {
+      "id": "p153",
+      "color": "marron",
+      "enunciado": "Una tienda de Tui consulta su correo en un único ordenador y quiere que los mensajes no se queden guardados en el servidor. ¿Qué protocolo de recogida encaja?",
+      "opciones": [
+        "FTP",
+        "IMAP",
+        "POP",
+        "SMTP"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "POP descarga los mensajes y, por defecto, los elimina del servidor; con un solo equipo no genera desorden."
+    },
+    {
+      "id": "p154",
+      "color": "marron",
+      "enunciado": "Con IMAP configurado, Ana borra desde el móvil un pedido duplicado. ¿Qué verá Luis después en el ordenador de la oficina?",
+      "opciones": [
+        "El pedido intacto, porque cada equipo tiene su copia",
+        "Que el pedido ya no está, porque se refleja en todos",
+        "Un aviso para descargarlo de nuevo por POP",
+        "El pedido marcado como no leído en su bandeja"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Con IMAP lo que se lee, archiva o borra se refleja en todos los dispositivos."
+    },
+    {
+      "id": "p155",
+      "color": "marron",
+      "enunciado": "Un cliente de Lyon escribe mal el dominio tras la arroba de un proveedor de Vigo. ¿Qué ocurrirá con su mensaje?",
+      "opciones": [
+        "No llegará al servidor de destino correcto",
+        "Llegará, pero se descargará por POP",
+        "Llegará, porque basta con acertar el buzón",
+        "Llegará solo si se usa el correo web"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El dominio es lo que permite localizar el servidor de destino."
+    },
+    {
+      "id": "p156",
+      "color": "marron",
+      "enunciado": "Un correo sale de una empresa de Vigo hacia un importador de Montreal. ¿En qué tramo del viaje interviene IMAP?",
+      "opciones": [
+        "En todos los tramos, de principio a fin",
+        "Cuando el destinatario lo recoge de su servidor",
+        "Entre el servidor de salida y el servidor de destino",
+        "Entre el remitente y su servidor de salida"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Los tramos de envío usan SMTP; IMAP solo actúa en la recogida."
+    },
+    {
+      "id": "p157",
+      "color": "marron",
+      "enunciado": "Una exportadora usa el correo web en la oficina y quiere leer el mismo buzón con un programa en el móvil. ¿Qué le dirías?",
+      "opciones": [
+        "Solo puede hacerlo si recoge el correo por POP",
+        "Debe elegir uno, porque se bloquean entre sí",
+        "Debe pasar todo el buzón a una cuenta nueva",
+        "Puede combinar ambos: no son excluyentes"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Se puede usar una forma de acceso en la oficina y otra en el móvil."
+    },
+    {
+      "id": "p158",
+      "color": "marron",
+      "enunciado": "En una agencia de Huesca quieren «configurar SMTP en el móvil para recibir los pedidos». ¿Qué les corriges?",
+      "opciones": [
+        "SMTP recibe, pero solo si se usa el correo web",
+        "SMTP solo funciona en ordenadores, no en móviles",
+        "SMTP es de envío; para recibir hay que usar IMAP o POP",
+        "SMTP sí recibe, pero borra los mensajes del servidor al leerlos"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "SMTP se ocupa de la salida; la recogida corresponde a POP o IMAP."
+    },
+    {
+      "id": "p159",
+      "color": "marron",
+      "enunciado": "Un empleado configura su programa cliente y pone el servidor IMAP en la casilla del servidor de salida. ¿Qué problema tendrá?",
+      "opciones": [
+        "No podrá enviar, porque la salida corresponde a SMTP",
+        "Perderá el correo, porque IMAP borra el servidor",
+        "No podrá leer, porque IMAP solo sirve para enviar",
+        "Ninguno, porque las dos casillas son intercambiables"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El servidor de salida usa SMTP; IMAP es un protocolo de recogida."
+    },
+    {
+      "id": "p160",
+      "color": "marron",
+      "enunciado": "La gerente de una ferretería va a configurar el correo de empresa en el programa de su portátil. ¿Qué datos debe tener a mano?",
+      "opciones": [
+        "Dirección, contraseña, dominio web, DNS del país y clave del router wifi",
+        "Solo la contraseña y el nombre del navegador que usa la oficina",
+        "Solo la dirección y el protocolo FTP del servidor de la empresa",
+        "Dirección, contraseña, servidores de entrada y salida, puertos y cifrado"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Son los datos que pide siempre un cliente y que publica el proveedor de correo."
+    },
+    {
+      "id": "p161",
+      "color": "verde",
+      "enunciado": "¿Qué es el correo no deseado o spam?",
+      "opciones": [
+        "El correo con archivos adjuntos",
+        "El mensaje masivo no solicitado",
+        "El mensaje enviado en copia oculta",
+        "El correo que llega sin asunto"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es el envío masivo que el destinatario no ha pedido."
+    },
+    {
+      "id": "p162",
+      "color": "verde",
+      "enunciado": "¿De qué fraude es vehículo habitual el correo no deseado?",
+      "opciones": [
+        "Del fraude en las patentes",
+        "Del fraude en los aranceles",
+        "Del fraude por suplantación",
+        "Del fraude en el transporte"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "El spam es el canal habitual de la suplantación, que se estudia más adelante."
+    },
+    {
+      "id": "p163",
+      "color": "verde",
+      "enunciado": "¿Desde qué tipo de cuenta conviene escribir el correo comercial de la empresa?",
+      "opciones": [
+        "Desde el dominio propio de la empresa",
+        "Desde una cuenta gratuita del comercial",
+        "Desde una cuenta nueva para cada cliente",
+        "Desde la cuenta personal del gerente"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "El dominio propio aporta credibilidad comercial y mejora la entrega."
+    },
+    {
+      "id": "p164",
+      "color": "verde",
+      "enunciado": "¿Con qué herramientas se hacen los envíos a muchos destinatarios a la vez?",
+      "opciones": [
+        "Con un programa cliente con POP",
+        "Con un servidor FTP sin cifrar",
+        "Con plataformas de email marketing",
+        "Con la copia visible del correo normal"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Estas plataformas gestionan la entrega y las bajas."
+    },
+    {
+      "id": "p165",
+      "color": "verde",
+      "enunciado": "¿Qué es una lista de correo?",
+      "opciones": [
+        "El registro de todos los mensajes que ha enviado la empresa",
+        "Un grupo de direcciones a las que se envía un mismo mensaje",
+        "El listado de servidores de salida de un proveedor",
+        "La carpeta donde se guardan los correos no deseados"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Es la base del boletín comercial y de los avisos a distribuidores."
+    },
+    {
+      "id": "p166",
+      "color": "verde",
+      "enunciado": "¿Cuáles son las dos reglas de partida de una lista de correo?",
+      "opciones": [
+        "Adjuntos pesados y envío desde el correo normal",
+        "Lista comprada y envío desde cuenta gratuita",
+        "Consentimiento previo y baja fácil en cada envío",
+        "Asunto en mayúsculas y envío en copia visible"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Quien integra la lista debe haberlo consentido y poder darse de baja fácilmente."
+    },
+    {
+      "id": "p167",
+      "color": "verde",
+      "enunciado": "¿Qué opción de envío oculta las direcciones de los destinatarios entre sí?",
+      "opciones": [
+        "El reenvío",
+        "La copia oculta",
+        "La respuesta a todos",
+        "La copia visible"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "En la copia oculta ningún destinatario ve las direcciones de los demás."
+    },
+    {
+      "id": "p168",
+      "color": "verde",
+      "enunciado": "¿Qué tipo de asunto ayuda a que un correo comercial no acabe como no deseado?",
+      "opciones": [
+        "Un asunto en mayúsculas",
+        "Un asunto descriptivo",
+        "Un asunto con exclamaciones",
+        "Un asunto con grandes promesas"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Mayúsculas, exclamaciones y promesas exageradas activan los filtros."
+    },
+    {
+      "id": "p169",
+      "color": "verde",
+      "enunciado": "¿Qué conviene enviar en lugar de un adjunto pesado?",
+      "opciones": [
+        "El archivo dividido en varios correos",
+        "Un enlace al archivo alojado en la nube",
+        "El archivo en un formato poco común",
+        "El archivo comprimido con contraseña"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "El enlace llega mejor y permite actualizar el archivo."
+    },
+    {
+      "id": "p170",
+      "color": "verde",
+      "enunciado": "¿Qué debe incluir un asunto que identifique la operación?",
+      "opciones": [
+        "Referencia del pedido, cliente y mercado",
+        "Una oferta destacada para captar atención",
+        "El nombre del comercial y su teléfono",
+        "La fecha de envío y la hora del día"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Así, buscar dentro del buzón años después es cuestión de segundos."
+    },
+    {
+      "id": "p171",
+      "color": "verde",
+      "enunciado": "Según el tema, ¿cuál sigue siendo el canal formal del comercio internacional?",
+      "opciones": [
+        "Las redes profesionales",
+        "La mensajería instantánea",
+        "El correo electrónico",
+        "La videollamada"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "En el correo se envían ofertas, se confirman pedidos y se deja constancia de lo acordado."
+    },
+    {
+      "id": "p172",
+      "color": "verde",
+      "enunciado": "¿Qué carpeta del buzón conviene revisar de vez en cuando por si retiene algo legítimo?",
+      "opciones": [
+        "La de archivados",
+        "La de correo no deseado",
+        "La de borradores pendientes",
+        "La de enviados"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "Los filtros a veces retienen el mensaje legítimo de un cliente nuevo."
+    },
+    {
+      "id": "p173",
+      "color": "verde",
+      "enunciado": "¿Por qué el correo no deseado tiene «dos caras» para una empresa?",
+      "opciones": [
+        "Recibirlo cuesta dinero, y enviarlo masivamente es siempre gratis",
+        "Ocupa espacio en el servidor y ralentiza el navegador",
+        "Recibirlo es un riesgo, y que te marquen, un problema comercial",
+        "Llega por SMTP y se lee por IMAP en todos los equipos"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La segunda cara, que el correo propio acabe como no deseado, suele pasarse por alto."
+    },
+    {
+      "id": "p174",
+      "color": "verde",
+      "enunciado": "¿Por qué es grave que el correo de la empresa acabe en la carpeta de no deseados del cliente?",
+      "opciones": [
+        "Una oferta que nunca se lee equivale a no haberla enviado",
+        "Porque impide al cliente responder a cualquier otro correo",
+        "Porque borra la oferta del servidor de salida de la empresa",
+        "Porque obliga a pagar una sanción al proveedor de correo"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Es un problema comercial serio: la oferta no llega a leerse."
+    },
+    {
+      "id": "p175",
+      "color": "verde",
+      "enunciado": "¿Por qué se dice que una lista comprada «no es una lista»?",
+      "opciones": [
+        "Porque sus direcciones caducan al poco de comprarlas",
+        "Porque solo funcionan con cuentas de correo gratuitas",
+        "Es un problema legal y una fuente de marcas de no deseado",
+        "Porque las listas compradas no admiten el envío en copia oculta"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Sus integrantes no han dado su consentimiento previo."
+    },
+    {
+      "id": "p176",
+      "color": "verde",
+      "enunciado": "¿Por qué escribir a quien no ha dado su consentimiento es un doble problema?",
+      "opciones": [
+        "Acaba como no deseado y además infringe la normativa",
+        "Retrasa la entrega y además duplica el mensaje en el servidor",
+        "Exige usar POP y además impide responder",
+        "Ocupa más espacio y además se envía sin cifrar"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Además de perjudicar la entrega, incumple la normativa de comunicaciones comerciales."
+    },
+    {
+      "id": "p177",
+      "color": "verde",
+      "enunciado": "¿Qué diferencia hay entre la copia visible y la copia oculta?",
+      "opciones": [
+        "En la oculta nadie ve las direcciones de los demás",
+        "En la oculta el mensaje no queda guardado en enviados",
+        "En la oculta el mensaje llega cifrado y en la visible no",
+        "En la oculta el destinatario no puede responder"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "La copia visible muestra a todos las direcciones del resto; la oculta, no."
+    },
+    {
+      "id": "p178",
+      "color": "verde",
+      "enunciado": "¿Por qué poner en copia visible a varios clientes entre sí es un problema?",
+      "opciones": [
+        "Es una cesión de datos personales sin amparo",
+        "Obliga a cada cliente a responder a todos",
+        "Impide adjuntar archivos al mismo correo",
+        "Hace que el mensaje tarde más en llegar"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Cada cliente ve las direcciones de los demás sin haberlo autorizado."
+    },
+    {
+      "id": "p179",
+      "color": "verde",
+      "enunciado": "¿Por qué el correo puede tener valor en una discrepancia comercial?",
+      "opciones": [
+        "Porque todo correo se registra ante notario al enviarse",
+        "Porque solo vale lo que se acuerda por mensajería",
+        "Porque el proveedor de correo arbitra los conflictos",
+        "Un intercambio de correos puede ser prueba de un acuerdo"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Oferta, aceptación o reclamación suelen quedar únicamente en correos."
+    },
+    {
+      "id": "p180",
+      "color": "verde",
+      "enunciado": "¿Por qué conviene confirmar por escrito lo hablado en una llamada o en una feria?",
+      "opciones": [
+        "Porque lo exige el protocolo SMTP del envío",
+        "Es la forma más barata de prevenir conflictos",
+        "Porque la llamada no es legal sin un correo",
+        "Porque así el cliente no puede cambiar de idea"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Un correo breve que recoja lo acordado deja constancia y evita malentendidos."
+    },
+    {
+      "id": "p181",
+      "color": "verde",
+      "enunciado": "¿Qué ventaja tiene una plataforma de email marketing frente al correo normal para un envío masivo?",
+      "opciones": [
+        "Gestiona la entrega y las bajas de los destinatarios",
+        "Evita tener que pedir consentimiento a los destinatarios",
+        "Permite poner a todos los destinatarios en copia visible",
+        "Envía los mensajes desde una cuenta gratuita y anónima"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Enviar masivamente desde el correo normal es una causa frecuente de acabar como no deseado."
+    },
+    {
+      "id": "p182",
+      "color": "verde",
+      "enunciado": "¿Qué aporta escribir desde el dominio propio de la empresa?",
+      "opciones": [
+        "Permiso para enviar sin consentimiento a cualquier contacto",
+        "Acceso gratuito a una plataforma de email marketing",
+        "Mensajes cifrados de extremo a extremo de forma automática",
+        "Credibilidad comercial y mejor entrega de los mensajes"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "La cuenta gratuita es una de las causas por las que el correo acaba como no deseado."
+    },
+    {
+      "id": "p183",
+      "color": "verde",
+      "enunciado": "¿Por qué las mayúsculas y las exclamaciones en el asunto perjudican a un correo comercial?",
+      "opciones": [
+        "Porque convierten el correo en un documento sin valor",
+        "Porque activan los filtros de correo no deseado",
+        "Porque obligan a usar la copia oculta en el envío",
+        "Porque el servidor de salida no las sabe enviar"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "El aspecto publicitario agresivo dispara los filtros; un asunto descriptivo funciona mejor."
+    },
+    {
+      "id": "p184",
+      "color": "verde",
+      "enunciado": "¿Por qué el enlace a la nube es mejor que un adjunto pesado?",
+      "opciones": [
+        "Evita que el correo pase por el servidor",
+        "Obliga al cliente a responder al instante",
+        "Hace que el correo se envíe con copia oculta",
+        "Llega mejor y permite actualizar el archivo"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Los adjuntos pesados o con formatos sospechosos favorecen que el correo se filtre."
+    },
+    {
+      "id": "p185",
+      "color": "verde",
+      "enunciado": "¿Por qué conviene guardar el correo en carpetas por cliente u operación con una política de conservación?",
+      "opciones": [
+        "Evita que los mensajes acaben como no deseados",
+        "Libera el servidor de salida para enviar más rápido",
+        "Convierte el buzón en un archivo comercial fiable",
+        "Permite borrar sin riesgo los correos de ofertas"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Además enlaza con la obligación de conservación documental."
+    },
+    {
+      "id": "p186",
+      "color": "verde",
+      "enunciado": "¿Qué se consigue con un asunto que incluye pedido, cliente y mercado?",
+      "opciones": [
+        "Encontrar el correo en segundos aunque pasen años",
+        "Que el correo llegue antes al servidor de destino",
+        "Que el correo no necesite confirmación escrita",
+        "Que el cliente no pueda reenviar el mensaje"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Un asunto que identifica la operación hace utilizable el buzón como archivo."
+    },
+    {
+      "id": "p187",
+      "color": "verde",
+      "enunciado": "Una marca de cosmética de Sevilla escribe a los visitantes de su estand en Milán con todas las direcciones en copia visible. ¿Qué problema legal añade?",
+      "opciones": [
+        "Ha usado un protocolo de recogida no autorizado",
+        "Ha incumplido las normas de origen de la Unión",
+        "Ha enviado el correo sin cifrar por el servidor de salida",
+        "Ha cedido las direcciones de unos contactos a otros"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Poner las direcciones en copia visible es una cesión de datos personales sin amparo."
+    },
+    {
+      "id": "p188",
+      "color": "verde",
+      "enunciado": "Una empresa de Ferrol escribe sus ofertas a clientes chilenos desde una cuenta gratuita y muchas no se leen. ¿Qué cambio aplica primero?",
+      "opciones": [
+        "Escribir desde otra cuenta gratuita distinta",
+        "Repetir el envío hasta recibir respuesta",
+        "Poner el asunto completo en mayúsculas",
+        "Escribir desde el dominio propio de la empresa"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La cuenta gratuita resta credibilidad y empeora la entrega."
+    },
+    {
+      "id": "p189",
+      "color": "verde",
+      "enunciado": "Un exportador de vino envía sus ofertas con el asunto «¡¡OFERTA INCREÍBLE, SOLO HOY!!» y casi nadie las ve. ¿Qué debe cambiar?",
+      "opciones": [
+        "El mismo asunto, pero enviado desde el móvil",
+        "Un asunto vacío para que no lo detecten",
+        "El mismo asunto con aún más exclamaciones",
+        "Un asunto descriptivo que identifique la oferta"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Mayúsculas, exclamaciones y promesas exageradas activan los filtros."
+    },
+    {
+      "id": "p190",
+      "color": "verde",
+      "enunciado": "Una editorial de Pamplona adjunta un catálogo muy pesado a cada oferta y muchas quedan retenidas. ¿Qué hace?",
+      "opciones": [
+        "Enviar el catálogo partido en varios mensajes",
+        "Cambiar el catálogo a un formato poco habitual",
+        "Enviar un enlace al catálogo alojado en la nube",
+        "Enviar el catálogo a todos en una lista comprada"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Un enlace llega mejor que un adjunto pesado y permite actualizar el catálogo."
+    },
+    {
+      "id": "p191",
+      "color": "verde",
+      "enunciado": "Un comercial acuerda por teléfono con un cliente de Marruecos retrasar una semana la entrega. ¿Qué hace a continuación?",
+      "opciones": [
+        "Comunicarlo solo por mensajería instantánea",
+        "Esperar a que el cliente lo confirme por escrito",
+        "Enviarle un correo breve que recoja lo acordado",
+        "Anotarlo en una libreta personal del comercial"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Confirmar por escrito lo hablado es la prevención de conflictos más barata."
+    },
+    {
+      "id": "p192",
+      "color": "verde",
+      "enunciado": "Una empresa busca la reclamación de un pedido antiguo entre miles de correos con asuntos como «Re: hola» y no la encuentra. ¿Qué hábito lo habría evitado?",
+      "opciones": [
+        "Asuntos cortos y en mayúsculas para destacarlos",
+        "Respuestas siempre en copia oculta a todos",
+        "Envío de todos los pedidos desde el móvil",
+        "Asuntos con referencia de pedido, cliente y mercado"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Con asuntos que identifican la operación, la búsqueda es cuestión de segundos."
+    },
+    {
+      "id": "p193",
+      "color": "verde",
+      "enunciado": "Una empresa de Badajoz compra una base de direcciones de importadores alemanes para su boletín. ¿Qué le recomiendas?",
+      "opciones": [
+        "Usarla, pero enviando siempre desde el dominio propio",
+        "Usarla, pero poniendo las direcciones en copia oculta",
+        "Usarla, pero con un asunto descriptivo y sin adjuntos",
+        "No usarla y crear una lista con consentimiento previo"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Una lista comprada es un problema legal y una fuente segura de marcas de no deseado."
+    },
+    {
+      "id": "p194",
+      "color": "verde",
+      "enunciado": "Sin plataforma de envíos, una empresa debe avisar hoy a todos sus distribuidores de un cambio de tarifas sin que vean las direcciones de los demás. ¿Qué usa?",
+      "opciones": [
+        "La copia oculta",
+        "La respuesta a todos",
+        "El reenvío en cadena",
+        "La copia visible"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La copia oculta evita ceder las direcciones de unos distribuidores a otros."
+    },
+    {
+      "id": "p195",
+      "color": "verde",
+      "enunciado": "Un cliente nuevo de Perú asegura haber enviado un pedido hace días, pero no aparece en la bandeja de entrada. ¿Qué revisas primero?",
+      "opciones": [
+        "La lista de distribuidores en copia",
+        "La configuración del servidor de salida",
+        "La carpeta de correo no deseado",
+        "La carpeta de correos enviados"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Los filtros a veces retienen el mensaje legítimo de un cliente nuevo."
+    },
+    {
+      "id": "p196",
+      "color": "verde",
+      "enunciado": "Llega a la carpeta de no deseados un correo que parece de un proveedor habitual y pide pagar en una cuenta bancaria nueva. ¿Cómo lo tratas?",
+      "opciones": [
+        "Con cautela, como posible suplantación, sin actuar",
+        "Respondiendo para pedir la cuenta en un adjunto",
+        "Moviéndolo a la bandeja para que no se filtre más",
+        "Pagando, porque el remitente parece el de siempre"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "El correo no deseado es el vehículo habitual del fraude por suplantación."
+    },
+    {
+      "id": "p197",
+      "color": "verde",
+      "enunciado": "Un distribuidor de Oporto pide salir del boletín de una empresa y no encuentra cómo hacerlo. ¿Qué falla en esa lista?",
+      "opciones": [
+        "Debería enviarse con todos los contactos en copia visible",
+        "Debería enviarse desde una cuenta gratuita y no del dominio",
+        "Cada envío debe incluir una forma fácil de darse de baja",
+        "Debería enviarse solo a contactos de listas compradas"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "La baja fácil en cada envío es una de las dos reglas de partida de una lista."
+    },
+    {
+      "id": "p198",
+      "color": "verde",
+      "enunciado": "Un exportador borra los correos de cada pedido en cuanto lo cobra, para tener el buzón limpio. ¿Qué riesgo corre?",
+      "opciones": [
+        "Que sus ofertas pasen a la carpeta de no deseados",
+        "Que los clientes vean las direcciones de los demás",
+        "Perder la prueba de lo acordado si surge una discrepancia",
+        "Que el servidor de salida deje de enviar sus correos nuevos"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "El correo puede ser prueba de un acuerdo; hay que conservarlo ordenado."
+    },
+    {
+      "id": "p199",
+      "color": "verde",
+      "enunciado": "Un comercial envía la oferta definitiva a un cliente australiano solo por mensajería instantánea. ¿Qué le aconsejas?",
+      "opciones": [
+        "Publicarla en las redes profesionales",
+        "Confirmarla con una videollamada sin más",
+        "Repetir la oferta por la misma aplicación de mensajería",
+        "Dejar constancia de la oferta también por correo"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "El correo sigue siendo el canal formal donde se deja constancia de lo acordado."
+    },
+    {
+      "id": "p200",
+      "color": "verde",
+      "enunciado": "Una cooperativa de Lalín quiere enviar su boletín a cientos de clientes que lo han pedido. ¿Desde dónde lo envía?",
+      "opciones": [
+        "Desde una plataforma de email marketing",
+        "Desde el correo normal en copia visible",
+        "Desde una cuenta gratuita creada para ello",
+        "Desde el correo normal con copia oculta"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Los envíos masivos se hacen con plataformas que gestionan la entrega y las bajas."
+    },
+    {
+      "id": "p201",
+      "color": "naranja",
+      "enunciado": "¿Qué significan las siglas FTP?",
+      "opciones": [
+        "File Tracking Protocol",
+        "Free Transfer Port",
+        "Fast Transfer Process",
+        "File Transfer Protocol"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "FTP es el protocolo de transferencia de archivos."
+    },
+    {
+      "id": "p202",
+      "color": "naranja",
+      "enunciado": "¿Con qué modelo funciona el FTP?",
+      "opciones": [
+        "Cadena de bloques",
+        "Entre iguales",
+        "Nube colaborativa",
+        "Cliente-servidor"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "Un servidor guarda los archivos y un cliente se conecta para subirlos o descargarlos."
+    },
+    {
+      "id": "p203",
+      "color": "naranja",
+      "enunciado": "¿Qué necesita el cliente FTP para conectarse al servidor?",
+      "opciones": [
+        "Un código arancelario",
+        "Un enlace público abierto",
+        "Un usuario y una contraseña",
+        "Una cuenta de correo web"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "El cliente se identifica con sus credenciales para subir o descargar."
+    },
+    {
+      "id": "p204",
+      "color": "naranja",
+      "enunciado": "¿Cómo se llaman las versiones seguras del FTP que cifran la conexión?",
+      "opciones": [
+        "SMTP e IMAP",
+        "POP y P2P",
+        "FTPS y SFTP",
+        "HTTP y DNS"
+      ],
+      "correcta": 2,
+      "dificultad": "facil",
+      "explicacion": "Hoy el FTP solo debe usarse en sus versiones cifradas."
+    },
+    {
+      "id": "p205",
+      "color": "naranja",
+      "enunciado": "¿Qué significa P2P?",
+      "opciones": [
+        "Peer-to-peer, una red entre iguales",
+        "Point-to-point, una línea dedicada",
+        "Port-to-port, una conexión de servidores",
+        "Pay-to-print, un servicio de impresión"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "En una red entre iguales no hay servidor central."
+    },
+    {
+      "id": "p206",
+      "color": "naranja",
+      "enunciado": "En una red P2P, ¿qué papel tiene cada participante?",
+      "opciones": [
+        "Es a la vez cliente y servidor",
+        "Es solo un punto de paso",
+        "Es solo servidor de archivos",
+        "Es solo cliente del servidor"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Cada participante comparte con los demás las partes que ya tiene."
+    },
+    {
+      "id": "p207",
+      "color": "naranja",
+      "enunciado": "Según el tema, ¿qué ha desplazado en la práctica al FTP?",
+      "opciones": [
+        "Las memorias externas enviadas por mensajería",
+        "Los adjuntos de correo electrónico de gran tamaño",
+        "Las redes entre iguales para el intercambio de archivos grandes",
+        "Los servicios de almacenamiento y colaboración en la nube"
+      ],
+      "correcta": 3,
+      "dificultad": "facil",
+      "explicacion": "La nube ha sustituido al FTP en la mayoría de usos."
+    },
+    {
+      "id": "p208",
+      "color": "naranja",
+      "enunciado": "¿Qué se comparte al compartir un archivo en la nube?",
+      "opciones": [
+        "Un acceso al archivo original",
+        "Un archivo comprimido",
+        "Una copia del archivo",
+        "Un resumen del archivo"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "En la nube no se envía el archivo: se da acceso al original."
+    },
+    {
+      "id": "p209",
+      "color": "naranja",
+      "enunciado": "¿Qué se comparte al adjuntar un archivo a un correo?",
+      "opciones": [
+        "Una copia del archivo",
+        "Un permiso de edición",
+        "Un acceso al original",
+        "Un historial de cambios"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "Cada envío genera una copia, y circulan tantas versiones como envíos."
+    },
+    {
+      "id": "p210",
+      "color": "naranja",
+      "enunciado": "¿Cuál de estos es un uso legítimo actual del modelo entre iguales?",
+      "opciones": [
+        "El correo web",
+        "Las videollamadas",
+        "El servidor FTP",
+        "El buscador generalista"
+      ],
+      "correcta": 1,
+      "dificultad": "facil",
+      "explicacion": "En las videollamadas la conexión se establece directamente entre los participantes."
+    },
+    {
+      "id": "p211",
+      "color": "naranja",
+      "enunciado": "¿Qué tecnología tiene una arquitectura enteramente entre iguales?",
+      "opciones": [
+        "La cadena de bloques",
+        "El correo electrónico",
+        "El sistema DNS",
+        "El servidor FTP"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La cadena de bloques funciona sin servidor central."
+    },
+    {
+      "id": "p212",
+      "color": "naranja",
+      "enunciado": "¿Qué tipos de permiso por persona permite la nube?",
+      "opciones": [
+        "Solo lectura o edición, y con caducidad",
+        "Solo lectura, y para todo el público",
+        "Solo edición, y para un único usuario",
+        "Solo descarga, y siempre sin caducidad"
+      ],
+      "correcta": 0,
+      "dificultad": "facil",
+      "explicacion": "La nube concede permisos por persona, con distinto nivel y fecha de caducidad."
+    },
+    {
+      "id": "p213",
+      "color": "naranja",
+      "enunciado": "¿Por qué adjuntar archivos al correo deja de funcionar antes de lo que parece?",
+      "opciones": [
+        "Los adjuntos obligan a usar el protocolo POP para recibirlos",
+        "Los adjuntos solo pueden abrirse con un programa cliente",
+        "Los buzones limitan el tamaño y nadie sabe qué versión es la buena",
+        "Los adjuntos se borran del servidor al cabo de pocas horas"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Hay límite de tamaño y, cuando el documento se corrige, se multiplican las versiones."
+    },
+    {
+      "id": "p214",
+      "color": "naranja",
+      "enunciado": "¿Por qué el FTP original no cifraba nada, ni siquiera la contraseña?",
+      "opciones": [
+        "Porque el cifrado ralentizaba demasiado la web de aquella época",
+        "Se diseñó cuando la red era un club académico sin fraude",
+        "Porque estaba pensado solo para archivos públicos",
+        "Porque la contraseña la protegía el propio navegador"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Nadie preveía entonces el fraude; por eso hoy se usan versiones cifradas."
+    },
+    {
+      "id": "p215",
+      "color": "naranja",
+      "enunciado": "¿Por qué en una red P2P el contenido circula más rápido cuantos más participan?",
+      "opciones": [
+        "Porque los archivos se comprimen al circular",
+        "Cada uno comparte con los demás las partes que ya tiene",
+        "Porque los participantes pagan una cuota por más velocidad",
+        "Porque el servidor central amplía su capacidad"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Al revés que un servidor único, que se satura, la red mejora con más participantes."
+    },
+    {
+      "id": "p216",
+      "color": "naranja",
+      "enunciado": "¿Cuál es la diferencia de fondo entre FTP y una red P2P?",
+      "opciones": [
+        "El FTP es para vídeo; la P2P, para textos",
+        "El FTP cifra siempre; la P2P nunca cifra",
+        "El FTP es reciente; la P2P es más antigua",
+        "El FTP tiene un servidor central; la P2P no"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "En P2P cada participante es cliente y servidor a la vez."
+    },
+    {
+      "id": "p217",
+      "color": "naranja",
+      "enunciado": "¿Por qué una red P2P no se usa como canal de intercambio comercial?",
+      "opciones": [
+        "Porque solo admite archivos de música y de vídeo",
+        "Porque exige un servidor central de pago en cada país",
+        "Porque solo funciona dentro de una misma oficina",
+        "No ofrece control de acceso, trazabilidad ni integridad"
+      ],
+      "correcta": 3,
+      "dificultad": "media",
+      "explicacion": "Esas tres garantías son justo lo que una operación necesita."
+    },
+    {
+      "id": "p218",
+      "color": "naranja",
+      "enunciado": "¿Por qué una aplicación P2P instalada en un equipo de la empresa es un riesgo?",
+      "opciones": [
+        "Puede cambiar el navegador predeterminado del equipo",
+        "Puede exponer carpetas enteras sin que nadie lo note",
+        "Puede borrar el correo descargado por el protocolo POP",
+        "Puede bloquear el acceso a las bases de datos oficiales"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Como riesgo conviene conocerla aunque no se use como canal comercial."
+    },
+    {
+      "id": "p219",
+      "color": "naranja",
+      "enunciado": "¿Por qué el uso empresarial de las redes P2P es prácticamente nulo?",
+      "opciones": [
+        "Porque necesita un servidor central demasiado caro",
+        "Su fama la marcó el intercambio no autorizado de música y cine",
+        "Porque solo funciona con conexiones de fibra muy rápidas",
+        "Porque la ley prohíbe esta tecnología en todas las empresas europeas"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Esa asociación pesa, aunque la tecnología en sí sea legítima en otros ámbitos."
+    },
+    {
+      "id": "p220",
+      "color": "naranja",
+      "enunciado": "Tanto el FTP como la nube admiten archivos grandes. ¿Qué los diferencia de verdad?",
+      "opciones": [
+        "En el FTP queda registro completo de quién ha cambiado cada cosa",
+        "En la nube los archivos se comparten siempre en copia, sin permisos",
+        "En la nube hay una sola versión, con historial y registro de accesos",
+        "En el FTP se permite el trabajo simultáneo sobre el mismo archivo"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "La ventaja decisiva de la nube no es el tamaño: es la versión única y saber quién tocó qué."
+    },
+    {
+      "id": "p221",
+      "color": "naranja",
+      "enunciado": "¿Por qué un enlace «para cualquiera que tenga el enlace» es arriesgado?",
+      "opciones": [
+        "Es público de hecho: quien lo recibe puede reenviarlo",
+        "Solo permite abrir el archivo desde un ordenador de la empresa",
+        "Obliga a cada destinatario a crear una cuenta",
+        "Caduca de forma automática a las pocas horas"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "No hay control sobre quién acaba accediendo al archivo."
+    },
+    {
+      "id": "p222",
+      "color": "naranja",
+      "enunciado": "¿Por qué conviene revisar periódicamente los accesos concedidos en la nube?",
+      "opciones": [
+        "Porque los accesos se convierten en edición con el tiempo",
+        "Porque cada acceso concedido cuesta una cuota mensual",
+        "Los de antiguos proveedores y empleados se quedan abiertos años",
+        "Porque el proveedor borra los archivos que no tienen accesos recientes"
+      ],
+      "correcta": 2,
+      "dificultad": "media",
+      "explicacion": "Si nadie los revisa, quien ya no debería ver los archivos sigue pudiendo hacerlo."
+    },
+    {
+      "id": "p223",
+      "color": "naranja",
+      "enunciado": "¿Por qué importa dónde están los servidores del proveedor de nube?",
+      "opciones": [
+        "Afecta a la protección de datos cuando hay datos de clientes",
+        "Fija el tamaño máximo de los archivos que pueden subirse",
+        "Decide qué navegador debe usarse para abrir los archivos",
+        "Determina el idioma en el que se muestran todos los documentos"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "La ubicación de los servidores influye en el cumplimiento de la normativa de protección de datos."
+    },
+    {
+      "id": "p224",
+      "color": "naranja",
+      "enunciado": "En la comparación del almacén con mostrador, ¿cómo se comporta el servidor FTP?",
+      "opciones": [
+        "Espera abierto y atiende a quien llega con su credencial",
+        "Sale a buscar a los clientes para entregarles la mercancía",
+        "Controla qué hace cada cliente con lo que se lleva",
+        "Reparte la mercancía entre transportistas que se la pasan"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "El almacén ni va a buscar a nadie ni sabe qué hace el cliente con lo que retira."
+    },
+    {
+      "id": "p225",
+      "color": "naranja",
+      "enunciado": "¿Qué cambio de planteamiento supone la nube frente a enviar archivos?",
+      "opciones": [
+        "Ya no se guarda el original: solo circulan copias más ligeras",
+        "Ya no se envía un archivo: se da acceso a uno que está en un sitio",
+        "Ya no se necesita conexión: el archivo se abre en cualquier lugar",
+        "Ya no hacen falta permisos: todo el mundo puede editar el archivo"
+      ],
+      "correcta": 1,
+      "dificultad": "media",
+      "explicacion": "Todos trabajan sobre el mismo archivo en lugar de sobre copias."
+    },
+    {
+      "id": "p226",
+      "color": "naranja",
+      "enunciado": "¿Qué ventaja tiene una red P2P frente a un servidor único?",
+      "opciones": [
+        "No hay un punto único que pueda fallar ni que se sature",
+        "Garantiza quién responde de cada archivo que circula",
+        "Permite controlar quién accede a cada archivo compartido",
+        "Cifra siempre los archivos y las contraseñas de acceso"
+      ],
+      "correcta": 0,
+      "dificultad": "media",
+      "explicacion": "Sin servidor central no hay un punto único de fallo; a cambio, nadie controla el conjunto."
+    },
+    {
+      "id": "p227",
+      "color": "naranja",
+      "enunciado": "Una imprenta de Santiago pide a una conservera que suba los artes finales, muy pesados, a su servidor FTP. ¿Cómo debe hacerse?",
+      "opciones": [
+        "Con el FTP original, que es el más compatible",
+        "Adjuntando los artes finales a varios correos",
+        "Con una versión cifrada del FTP, como SFTP o FTPS",
+        "Compartiéndolos por una red P2P para ir más rápido"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "El intercambio con imprentas es un uso vigente del FTP, pero solo en versiones seguras."
+    },
+    {
+      "id": "p228",
+      "color": "naranja",
+      "enunciado": "Un proveedor ofrece a una empresa de Gijón un acceso FTP sin cifrar para intercambiar documentación comercial. ¿Qué hace?",
+      "opciones": [
+        "Aceptarlo solo para los catálogos",
+        "Aceptarlo con una contraseña larga",
+        "Usarlo solo desde el correo web",
+        "Pedirle una alternativa cifrada"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "En el FTP original la contraseña viaja en texto legible."
+    },
+    {
+      "id": "p229",
+      "color": "naranja",
+      "enunciado": "El catálogo con precios por mercado de una empresa de muebles circula en cinco versiones por correo y un cliente italiano pidió con la antigua. ¿Qué lo evita?",
+      "opciones": [
+        "Un enlace en la nube que muestre siempre la vigente",
+        "Adjuntar el catálogo nuevo con otro nombre",
+        "Subir cada versión a una red entre iguales",
+        "Enviar el catálogo nuevo con copia oculta a todos"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "Con la nube hay una sola versión, la vigente, en lugar de copias que circulan."
+    },
+    {
+      "id": "p230",
+      "color": "naranja",
+      "enunciado": "Para la documentación de un embarque a Colombia, el transitario y el cliente necesitan acceso. ¿Qué solución propone el tema?",
+      "opciones": [
+        "Un correo con todos los documentos adjuntos",
+        "Un enlace público para cualquiera que lo tenga",
+        "Una red P2P entre la empresa y los dos",
+        "Una carpeta en la nube con permisos para cada uno"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "La nube permite reunir la documentación y dar a cada parte sus permisos."
+    },
+    {
+      "id": "p231",
+      "color": "naranja",
+      "enunciado": "El equipo comercial de una empresa de Vigo y su delegada en México esperan a que el otro «devuelva» la oferta para seguir. ¿Qué lo resuelve?",
+      "opciones": [
+        "Trabajar a la vez sobre el mismo documento en la nube",
+        "Compartir la oferta por una red P2P entre los dos",
+        "Adjuntar la oferta con un nombre distinto en cada envío",
+        "Enviar la oferta por FTP cada vez que se modifique"
+      ],
+      "correcta": 0,
+      "dificultad": "dificil",
+      "explicacion": "La nube permite trabajo simultáneo desde husos horarios distintos."
+    },
+    {
+      "id": "p232",
+      "color": "naranja",
+      "enunciado": "Terminada la relación con un distribuidor alemán, una empresa ve que el enlace a sus tarifas sigue funcionando. ¿Qué rutina lo habría evitado?",
+      "opciones": [
+        "Guardar las tarifas en un servidor FTP sin cifrar",
+        "Enviar las tarifas solo como adjunto del correo",
+        "Cambiar el nombre del archivo de tarifas cada año",
+        "Revisar cada cierto tiempo los accesos concedidos"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Los accesos de antiguos socios tienden a quedarse abiertos años si nadie los revisa."
+    },
+    {
+      "id": "p233",
+      "color": "naranja",
+      "enunciado": "Un empleado instala en el ordenador de la oficina una aplicación de intercambio P2P para descargar contenidos. ¿Qué riesgo supone?",
+      "opciones": [
+        "Puede cambiar el idioma de la tienda en línea",
+        "Puede desordenar los marcadores del navegador",
+        "Puede ralentizar el envío de correos con SMTP",
+        "Puede dejar expuestas carpetas de la empresa"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Una aplicación de intercambio puede exponer carpetas enteras sin que nadie se dé cuenta."
+    },
+    {
+      "id": "p234",
+      "color": "naranja",
+      "enunciado": "Un socio propone enviar los documentos de una operación por una red P2P porque «es más rápida». ¿Qué le respondes?",
+      "opciones": [
+        "Sí: la red entre iguales es el estándar del comercio",
+        "No: las redes P2P no transfieren archivos de texto",
+        "Sí: cuantos más participan, más segura es la operación",
+        "No: no da control de acceso, trazabilidad ni integridad"
+      ],
+      "correcta": 3,
+      "dificultad": "dificil",
+      "explicacion": "Como canal de intercambio comercial no se utiliza por falta de esas garantías."
+    },
+    {
+      "id": "p235",
+      "color": "naranja",
+      "enunciado": "Una empresa comparte sus tarifas con un distribuidor canadiense mediante un enlace abierto, y este lo reenvía a un competidor. ¿Qué debió hacer?",
+      "opciones": [
+        "Compartir el archivo por un servidor FTP sin cifrar",
+        "Compartir el enlace abierto con una contraseña débil",
+        "Compartir por persona, con permisos y caducidad",
+        "Compartir el enlace solo por mensajería instantánea"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Los enlaces «para cualquiera que tenga el enlace» son públicos de hecho."
+    },
+    {
+      "id": "p236",
+      "color": "naranja",
+      "enunciado": "Una empresa va a guardar en la nube fichas de clientes europeos y el proveedor tiene sus servidores fuera de la Unión. ¿Qué debe comprobar?",
+      "opciones": [
+        "Que el proveedor ofrece un acceso FTP gratuito",
+        "Que cumple la normativa de protección de datos",
+        "Que los servidores usan el mismo idioma que ella",
+        "Que los servidores admiten archivos muy pesados"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Dónde están los servidores afecta al cumplimiento de la protección de datos."
+    },
+    {
+      "id": "p237",
+      "color": "naranja",
+      "enunciado": "Un distribuidor chileno solo debe consultar la ficha técnica compartida en la nube, sin cambiarla. ¿Qué permiso se le da?",
+      "opciones": [
+        "Edición con caducidad",
+        "Solo lectura",
+        "Edición",
+        "Propietario"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "Si solo debe consultarla, el permiso adecuado es de solo lectura."
+    },
+    {
+      "id": "p238",
+      "color": "naranja",
+      "enunciado": "En una hoja de tarifas compartida en la nube alguien ha cambiado un precio y la empresa quiere saber quién fue. ¿Qué hace?",
+      "opciones": [
+        "Pedir a cada cliente la copia que recibió",
+        "Consultar el historial de cambios del documento",
+        "Revisar los adjuntos enviados ese mes",
+        "Consultar el registro del servidor de correo"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "La nube guarda registro de accesos y cambios; un adjunto no deja ese rastro."
+    },
+    {
+      "id": "p239",
+      "color": "naranja",
+      "enunciado": "Un comercial se alarma al saber que la videollamada con un cliente japonés conecta directamente a los participantes, sin servidor central. ¿Qué le dices?",
+      "opciones": [
+        "Es un fallo: debería pasar por un servidor FTP",
+        "Es peligroso, porque expone el correo del equipo",
+        "Es un uso legítimo y actual del modelo entre iguales",
+        "Es ilegal, porque el modelo P2P está prohibido"
+      ],
+      "correcta": 2,
+      "dificultad": "dificil",
+      "explicacion": "Las videollamadas son uno de los usos legítimos del modelo entre iguales."
+    },
+    {
+      "id": "p240",
+      "color": "naranja",
+      "enunciado": "Una empresa sube su catálogo al servidor FTP y espera que este se lo «envíe» al distribuidor. ¿Qué no ha entendido?",
+      "opciones": [
+        "El servidor lo adjunta en un correo al distribuidor",
+        "El servidor espera: el cliente del distribuidor debe conectarse",
+        "El servidor lo reparte entre varios equipos de la red",
+        "El servidor lo envía, pero solo si el archivo va cifrado con SFTP"
+      ],
+      "correcta": 1,
+      "dificultad": "dificil",
+      "explicacion": "El servidor FTP queda a la espera; es el cliente quien se conecta y descarga."
+    }
+  ]
+}

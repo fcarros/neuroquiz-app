@@ -61,8 +61,8 @@ node scripts/capturas-proyector.mjs http://localhost:4173/ capturas   # pantalla
 
 ### Qué se puede hacer hoy
 
-1. **Elegir mazo.** Vienen incluidos dos temas de Comercio Digital
-   Internacional y uno de Industria 4.0, agrupados por módulo.
+1. **Elegir mazo.** Vienen incluidos tres temas de Comercio Digital
+   Internacional (1, 2 y 3) y uno de Industria 4.0, agrupados por módulo.
 2. **Importar un mazo** propio (`.json`, formato de Aula Trivial, ver
    `docs/formato-mazo.md`). Se valida y se guarda en ese navegador. Los
    importados se pueden exportar y borrar.
